@@ -94,7 +94,7 @@ By setting the $\lambda$ parameter to $1$ (instead of $\alpha$) we get a reverse
   \\ \notag & = \frac{1}{B(\alpha, \alpha) |\pScale|} [\op{sech} \left(\tfrac{x-\pLoc}{2\pScale}  \right)]^{2\alpha}  
 \\ \notag & = \opr{BetaLogistic}(x\given \pLoc,\pScale,\alpha,\alpha) \checked
 \end{align}
-With equal shape parameters the  beta-logistic is symmetric. This distribution limits to the Laplace distribution~\eqref{Lapalce}.
+With equal shape parameters the  beta-logistic is symmetric. This distribution limits to the Laplace distribution~\eqref{Laplace}.
 
 
 \dist{Logistic} (sech-square, hyperbolic secant square, logit) distribution~\cite{Verhulst1845, Balakrishnan1991, Johnson1995}:
@@ -158,7 +158,7 @@ Negating the scale parameter is equivalent to interchanging the two shape parame
 
 
 
-The beta-logistic distribution, with integer $\alpha$ and $\gamma$ is the logistic order statistics distribution~\cite{Birnbaum1963,Jones2004}~\secref{sec:OrderStatistic}.  
+The beta-logistic distribution, with integer $\alpha$ and $\gamma$ is the logistic order statistics distribution~\cite{Birnbaum1963,Jones2004}~\secref{OrderStatistic}.  
 \[
  \opr{OrderStatistic}_{\opr{Logistic}(\pLoc,\pScale)}  (x \given \gamma, \alpha ) =  \opr{BetaLogistic}(x\given \pLoc, \pScale, \alpha, \gamma) \checked
  \notag
@@ -167,7 +167,7 @@ The beta-logistic distribution, with integer $\alpha$ and $\gamma$ is the logist
 
 The beta-logistic limits to the gamma exponential~\eqref{GammaExp} and Laplace \eqref{Laplace} distributions.
 \[
-opr{GammaExp}(x\given \nu, \lambda, \alpha)  & =
+\opr{GammaExp}(x\given \nu, \lambda, \alpha)  & =
 {\lim_{\gamma\rightarrow\infty} \opr{BetaLogistic}(x \given \nu+\lambda/\ln\gamma,\lambda, \alpha, \gamma)  }
 \checked
 \notag

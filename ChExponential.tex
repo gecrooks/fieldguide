@@ -54,12 +54,14 @@ The exponential distribution is common limit of many distributions.
 The sum of independent exponentials is an Erlang distribution, a special case of the gamma distribution~\eqref{Gamma}.
 \[
 \sum_{i=1}^{n} \opr{Exp}_i(0,\theta) \sim \opr{Gamma}(0, \theta, n) \checked
+\notag
 \]
 
 
 The minima of a collection of exponentials, with positive scales $\theta_i>0$, is  also exponential,
 \[
 \op{min}\bigl( \opr{Exp}_1(0,\theta_1),\ \opr{Exp}_2(0,\theta_2),\ \ldots\ ,\ \opr{Exp}_n(0,\theta_n) \bigr) \sim \opr{Exp}(0, \theta') \, , \checked
+\notag
 \]
 where $\theta' = (\sum_{i=1}^{n} \tfrac{1}{\theta_i})^{-1}$. \checked
 
@@ -67,12 +69,14 @@ where $\theta' = (\sum_{i=1}^{n} \tfrac{1}{\theta_i})^{-1}$. \checked
 The order statistics \secref{OrderStatistic} of the exponential distribution are the beta-exponential distribution~\eqref{BetaExp}.
 \begin{align*}
 \opr{OrderStatistic}&_{\opr{Exp}(\pLoc,\pScale)}  (x \given \alpha, \gamma) =  \opr{BetaExp}(x\given \pLoc, \pScale, \alpha, \gamma)  \checked
+\notag
 \end{align*}
 
 
 A Weibull transform of the standard exponential distribution yields the Weibull distribution  \eqref{Weibull}.
 \[
 \opr{Weibull}(a,\theta,\beta) \sim a+ \theta\ \oprr{StdExp}{Exp}()^{\tfrac{1}{\beta}} \checked
+\notag
 \]
 
 
@@ -80,5 +84,6 @@ The ratio of independent anchored exponential distributions is the exponential r
 \label{sec:ExpRatio}
 \[
 \opr{BetaPrime}(0,\tfrac{\theta_1}{\theta_2} , 1,1) \sim \opr{ExpRatio}(0,\tfrac{\theta_1}{\theta_2}) \sim \frac{\opr{Exp}_1(0,\theta_1)}{\opr{Exp}_2(0,\theta_2) }
+\notag
 \]
 

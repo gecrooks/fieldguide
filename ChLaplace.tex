@@ -36,17 +36,20 @@ As $\theta$ limits to infinity, the Laplace distribution limits to a degenerate 
 The difference between two independent identically distributed exponential random variables is Laplace, and therefore so is the time difference between two independent Poisson events.
 \[
 \opr{Laplace}(\pLoc, \theta) \sim  \opr{Exp}(\pLoc,\theta) - \opr{Exp}(\pLoc,\theta)
+\notag
 \]
 
 Conversely, the absolute value (about the centre of symmetry) is exponential. 
 \[
 \opr{Exp}(\pLoc, |\theta|) \sim  |\opr{Laplace}(\pLoc,\theta) - \pLoc | +\pLoc
+\notag
 \]
 
 
 The log ratio of standard uniform distributions is a standard Laplace.
 \[
 \opr{Laplace}(0,1) \sim \ln \frac{\opr{StdUniform}_1() }{\opr{StdUniform}_2()} \checked
+\notag
 \]
 
 
@@ -54,6 +57,7 @@ The Fourier transform of a standard Laplace distribution is the standard Cauchy 
 \[
 \int_{-\infty}^{+\infty} \frac{1}{2}e^{-| x |} e^{i t x} dx = \frac{1}{1+t^2}
 \checked
+\notag
 \]
 
 

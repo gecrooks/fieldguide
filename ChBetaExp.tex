@@ -72,6 +72,7 @@ A special case similar in shape to the gamma or Weibull \eqref{Weibull} distribu
 \[
 \op{ExpExpCDF}(x\given \pLoc,\pScale,\gamma) = \big[\op{ExpCDF}(x\given \pLoc,\pScale)\big]^{\gamma}
 \checked
+\notag
 \]
 % Possibly rename Exponentiated exponential to Verhulst
 
@@ -136,12 +137,12 @@ The  beta-exponential distribution is a limit of the generalized beta distributi
 The beta-exponential distribution is the log transform of the beta distribution~\eqref{Beta}.
 \[
 \oprr{StdBetaExp}{BetaExp}(\alpha,\gamma)  \sim - \ln\bigl( \opr{StdBeta}(\alpha,\gamma) \bigr) 
-\checked
+\checked \notag
 \]
 It follows that  beta-exponential variates are related to ratios of gamma variates.
 \[
 \oprr{StdBetaExp}{BetaExp}(\alpha,\gamma)  \sim - \ln  \frac{\opr{StdGamma}_1(\alpha)}{\opr{StdGamma}_1(\alpha)+ \opr{StdGamma}_2(\gamma) }
-\checked
+\checked \notag
 \]
 
 
@@ -154,7 +155,7 @@ The beta-exponential distribution describes the order statistics \secref{OrderSt
 With  $\gamma=1$ we recover the exponential distribution. 
 \[
 \opr{BetaExp}(x\given \pLoc, \pScale, \alpha,1) = \opr{Exp}(x\given \pLoc, \tfrac{\pScale}{\alpha})
-\checked
+\checked \notag
 \]
 
 The beta-exponential distribution is a limit of the generalized beta distribution~\eqref{GenBeta}, and itself limits to the gamma-exponential distriution~\eqref{GammaExp}.
@@ -162,7 +163,7 @@ The beta-exponential distribution is a limit of the generalized beta distributio
  \notag
 \opr{GammaExp}(x\given \nu, \lambda, \alpha)  & =
 {\lim_{\gamma\rightarrow\infty} \opr{BetaExp}(x \given \nu+\lambda/\ln\gamma, \lambda, \alpha, \gamma)  }
-\checked
+\checked \notag
 \]
 
 

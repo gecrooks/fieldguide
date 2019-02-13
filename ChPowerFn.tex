@@ -70,6 +70,7 @@ With positive $\beta$ we obtain a distribution with finite support. But by allow
 \notag
 \\
 =&  \opr{PowerFn}(x\given \pLoc+\frac{\theta}{1-q},-\frac{\theta}{1-q},\frac{2-q}{1-q}) \checked
+\notag
 \\
 \notag  \text{for } & x, \pLoc, \theta, q \text{ in } \mathbb{R}
 \end{align}
@@ -197,6 +198,7 @@ An exponential ratio~\eqref{ExpRatio} distribution with a shift parameter. So na
 With $\beta=1$ we recover the uniform distribution.
 \[
 \opr{PowerFn}(a,s,1) \sim \opr{Uniform}(a,s) \checked
+\notag
 \]
 
 As $\beta$ limits to infinity, the power function distribution limits to the exponential distribution \eqref{Exp}.
@@ -235,6 +237,7 @@ The order statistics \secref{OrderStatistic} of the power function distribution 
 Since the power function distribution is a special case of the generalized beta distribution \eqref{GenBeta},
 \[
  \opr{GenBeta}(x\given a, s, \alpha,1, \beta) = \opr{PowerFn}(x\given a,s,\alpha\beta) \checked
+ \notag
 \]
 it follows that the power function family is closed under maximization for $\tfrac{\beta}{s} > 0$ and minimization for  $\tfrac{\beta}{s}<0$.
 
@@ -243,16 +246,19 @@ it follows that the power function family is closed under maximization for $\tfr
 The product of independent power function distributions (With zero location parameter, and the same $\beta$) is a unit-gamma distribution \eqref{UnitGamma}~\cite{Consul1971}.
 \[
 \prod_{i=1}^{\alpha} \opr{PowerFn}_i(0,s_i,\beta) \sim \opr{UnitGamma}(0, \prod_{i=1}^{\alpha} s_i, \alpha, \beta) \checked
+\notag
 \]
 Consequently, the geometric mean of independent, anchored power function distributions (with common $\beta$) is also unit-gamma.
 \[
 \sqrt[\alpha]{\prod_{i=1}^{\alpha} \opr{PowerFn}_i(0,s_i,\beta)} \sim \opr{UnitGamma}(0, \prod_{i=1}^{\alpha} s_i, \alpha, \alpha \beta) \checked
+\notag
 \]
 
 
 The power function distribution can be obtained from the Weibull transform  $x\rightarrow (\tfrac{x-a}{s})^{\beta}$ of the uniform distribution \eqref{Uniform}. 
 \[
 \opr{PowerFn}(a,s,\beta) \sim a + s\ \opr{StdUniform}()^{\tfrac{1}{\beta}} \checked
+\notag
 \]
 
 The power function distribution limits to the exponential distribution \secref{sec:Exp}.

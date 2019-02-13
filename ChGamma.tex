@@ -41,7 +41,7 @@ The gamma distribution often appear as a solution to problems in statistical phy
 \[
 \opr{StdGamma}(x\given \alpha) & = \frac{1}{\Gamma(\alpha)} x^{\alpha-1} e^{-x}		\checked
 \label{StdGamma}
-\\ & = \opr{Gamma}(x\given 0, 1, \alpha)
+\\ & = \opr{Gamma}(x\given 0, 1, \alpha)\notag
 \]
     
 
@@ -103,6 +103,7 @@ The Amoroso distribution can be obtained from the standard gamma distribution by
 \opr{Amoroso}(a ,\theta,\alpha,\beta) \sim
 a+\theta \Big[{\opr{StdGamma}}(\alpha)\Big]^{1/\beta} 
 \checked
+\notag
 \]
 
 
@@ -111,12 +112,14 @@ For large $\alpha$ the gamma distribution limits to normal~\eqref{Normal}.
 \opr{Normal}(x\given \mu,\sigma)   = 
 \lim_{\alpha\rightarrow\infty} \opr{Gamma} (x\given  \mu- \sigma\sqrt{\alpha}, \tfrac{\sigma}{\sqrt{\alpha}}, \alpha)
 \checked %Checked with MM
+\notag
 \]
 Conversely, the sum of squares of normal distributions is a gamma distribution. See chi-square~\eqref{ChiSqr}.
 \begin{align*}
 \sum_{i=1,k}\oprr{StdNormal}{Normal}_i()^{2} & \sim \opr{ChiSqr}(k)  
  \sim \opr{Gamma}(0, 2,\frac{k}{2})  
  \checked
+ \notag
 \end{align*}
 
 

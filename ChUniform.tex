@@ -54,6 +54,7 @@ The order statistics \secref{OrderStatistic} of the uniform distribution is the 
 \[
 \opr{OrderStatistic}_{\opr{Uniform}(a,s)}(x \given \alpha, \gamma) =  \opr{Beta}(x\given a, s, \alpha, \gamma) 
 \checked
+\notag
 \]
 
 
@@ -68,21 +69,25 @@ The order statistics \secref{OrderStatistic} of the uniform distribution is the 
 The standard uniform distribution is related to every other continuous distribution via the  inverse probability integral transform (Smirnov transform)\index{Smirnov transform}\index{inverse probability integral transform}. If $X$ is a random variable and $F_X^{-1}(z)$ the inverse of the corresponding cumulative distribution function then 
 \[ 
 X \sim F_X^{-1}\bigl( \opr{StdUniform}() \bigr) \ .  \checked
+\notag
 \]
 If the inverse cumulative distribution function has a tractable closed form, then inverse transform sampling\index{inverse transform sampling} can provide an efficient method of sampling random numbers from the distribution of interest. See appendix~\secref{sec:random}.
 
 The power function distribution \eqref{PowerFn} is related to the uniform distribution via a Weibull transform.
 \[
 \opr{PowerFn}(a,s,\beta) \sim a + s\ \opr{StdUniform}()^{\tfrac{1}{\beta}}  \checked
+\notag
 \]
 
 The sum of $n$ independent standard uniform variates is the  Irwin-Hall \eqref{IrwinHall} distribution,
 \[
 \sum_{i=1}^{n} \opr{Uniform}_i(0,1)  \sim \opr{IrwinHall}(n) \checked
+\notag
 \]
 and the product is the uniform-product distribution \eqref{UniformProduct}.
 \[
 \prod_{i=1}^{n} \opr{Uniform}_i(0,1)  \sim \opr{UniformProduct}(n) \checked
+\notag
 \]
 
 \input{PropertiesTableUniform}
