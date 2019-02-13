@@ -1,0 +1,50 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+%\addcontentsline{toc}{subsection}{Pearson  IV} 
+ \caption[Pearson  IV distribution -- Properties]{Properties of the Pearson  IV distribution}
+
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \text{PearsonIV}(x \given a,s, m,v)  
+\\
+\text{PDF}\quad &    \frac{{}_{2}F_1(-i v, i v ; m;1)  }{|s| B(m-\frac{1}{2}, \frac{1}{2} )} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-m}
+\\ \notag & \qquad \qquad \qquad \qquad \times \exp \left\{ - 2 v \arctan \left( \frac{x-a}{s}\right) \right\}
+\checked
+\\
+\text{CDF} \quad  &    \text{PearsonIV}(x\given a,s, m,v)  \\ & \quad  \times \frac{|s|}{2m-1}\left( i - \frac{x-a}{s}\right) {}_2F_1\left(1,m+iv; 2m; \tfrac{2}{i-i\tfrac{x-a}{s}} \right) \checked
+% What if s is negative? Must flip to ccdf as usual!?
+% Checked against source. Good to actual check locally.
+\\
+\text{parameters}\quad &   a,\  s,\  m,\ v \text{ in } \Real
+\\ & m>\tfrac{1}{2}
+\\
+\text{support} \quad &   x \in [-\infty, + \infty]
+\\
+%\text{median} \quad  &  \cdots
+%\\
+\text{mode} \quad  & a - \frac{sv}{m}  \checked
+\\
+\text{mean} \quad  &  a - \frac{sv}{(m-1)} \qquad (m>1) \checked
+\\
+\text{variance} \quad  & \frac{s^2}{2m-3} (1 + \frac{v^2}{(m-1)^2})  \qquad (m>\frac{3}{2}) \checked
+\\
+\text{skew} \quad  &  \text{not simple}
+\\
+\text{kurtosis} \quad  &  \text{not simple}
+\\
+\text{entropy} \quad  & \text{unknown}
+\\
+\text{MGF} \quad  &  \text{unknown}
+\\
+\text{CF} \quad  &  \text{unknown}
+\end{align*}
+\end{table*}
+
+
+
+
+
+

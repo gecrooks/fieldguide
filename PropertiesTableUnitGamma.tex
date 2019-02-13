@@ -1,0 +1,46 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+\caption[Unit gamma distribution -- Properties]{Properties of the unit gamma distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \text{UnitGamma}(x\given a,s,\alpha,\beta) 
+\\
+\text{PDF}\quad &  \frac{1}{\Gamma(\alpha)} \left|\frac{\beta}{ s}\right|
+\left(\frac{x-a}{s}\right)^{\beta-1} \left(-\beta \ln   \frac{x-a}{s} \right)^{\alpha-1} \checked
+\\
+\text{CDF} \big/ \text{CCDF}  \quad  & 1-Q\left(\alpha, -\beta \ln \tfrac{x-a}{s} \right)
+& \tfrac{\beta}{s}  >0 \ \big{/} \ \tfrac{\beta}{s}<0   \checked
+\\
+\text{parameters}\quad &   a, s,\alpha,\beta \text{ in } \Real  ,\  \alpha, \beta>0
+\\
+\text{support}\checked \quad 
+	&   [a,a+s] ,\ s>0,\ \beta>0 \\
+	&  [a+s,a], \ s<0,\ \beta>0 \\
+	& [a+s,+\infty]  s>0,\ \beta<0  \\
+ 	& [-\infty,a+s], s<0,\ \beta<0 \\
+%\text{median} \quad  &  \cdots
+%\\
+%\text{mode} \quad  & a+s \exp \left(\tfrac{1-\alpha}{1-\beta} \right)  \text{ if } \alpha,\beta>0 \text{ or } \alpha,\beta<0 \text{ (antimode)} \hspace{-4em}
+%  ????
+\\
+\text{mean} \quad  &  a + s \left(\tfrac{\beta}{\beta+1} \right)^{\alpha} \checked
+\\
+\text{variance} \quad  & s^2 \left(\tfrac{\beta}{\beta+2} \right)^{\alpha} - s^2 \left(\tfrac{\beta}{\beta+1} \right)^{2\alpha} \checked
+\\
+\text{skew} \quad  &   \text{not simple}
+\\
+\text{kurtosis} \quad  &   \text{not simple}
+\\
+\text{entropy} \quad  & \cdots
+\\
+\text{MGF} \quad  &  \cdots
+\\
+\text{CF} \quad  &  \cdots
+\\
+E(X^h) \quad & \left(\tfrac{\beta}{\beta+h} \right)^{\alpha} \qquad  & a=0 \
+\text{\cite{Grassia1977}} \checked
+\end{align*}
+\end{table*}

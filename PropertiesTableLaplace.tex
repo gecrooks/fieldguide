@@ -1,0 +1,42 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+\caption[Laplace distribution -- Properties]{Properties of the Laplace distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation}\quad & \op{Laplace}(x\given \pLoc, \theta) 				\checked
+\\ 
+\text{PDF} \quad & \frac{1}{2 |\theta|} e^{- \left|\frac{x-\pLoc}{\theta}\right|} 	\checked
+\\
+\text{CDF} \quad & 
+\begin{cases}
+\phantom{\tfrac{1}{2} -\ } \frac{1}{2} e^{ - \left|\frac{x-\pLoc}{\theta}\right| } & x\leq \pLoc  \checked
+\\
+1 - \tfrac{1}{2} e^{ - \left|\frac{x-\pLoc}{\theta}\right| } & x\geq \pLoc 			\checked
+\end{cases}
+\\
+\text{parameters}\quad & \pLoc,\ \theta \text{ in } \mathbb{R}				\checked
+\\
+\text{support} \quad & x \in [ -\infty, +\infty] 							\checked
+\\
+\text{median} \quad & \pLoc                            							\checked
+\\
+\text{mode} \quad & \pLoc 										\checked
+\\
+\text{mean} \quad & \pLoc  										\checked
+\\
+\text{variance} \quad & 2\theta^2 									\checked
+\\
+\text{skew} \quad & 0 											\checked
+\\ 
+\text{kurtosis} \quad & 3 											\checked
+\\ 
+\text{entropy} \quad & 1+ \ln( 2 \theta) 								\checked
+\\ 
+\text{MGF} \quad &  \frac{\exp(\pLoc t) }{1- \theta^2 t^2}					\checked
+\\
+\text{CF} \quad & \frac{\exp(i\pLoc t) }{1+ \theta^2 t^2}					\checked
+\end{align*}
+\end{table*}

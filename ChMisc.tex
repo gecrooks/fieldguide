@@ -1,0 +1,492 @@
+
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\subpart{Miscellanea}
+
+% ====================================================================
+\Sec{Miscellaneous Distributions}
+
+
+In this section we detail various related distributions that do not fall into the previously discussed families; either because they are not continuous, not univariate, not unimodal, or simply not simple. The notation is less uniform in this section and we do not provide detailed properties for each distribution, but instead list a few pertinent citations.
+
+
+%===========================================================================
+\dist{Bates} distribution~\cite{Bates1955, Johnson1995}: 
+\begin{align}
+\label{Bates}
+\opr{Bates}(n)&\sim \frac{1}{n}\sum_{i=1}^{n} \opr{Uniform}_i(0,1) \checked  \\
+\notag&\sim\frac{1}{n}\opr{IrwinHall}(n) \checked
+\end{align}
+The mean of $n$ independent standard uniform variates.
+
+
+
+
+%-----------------------------------------------------------------------------
+\secbreak
+\dist{Beta-Fisher-Tippett} (generalized beta-exponential) distribution~\cite{\self}:
+\begin{align}
+\label{BetaFisherTippett}
+&\opr{BetaFisherTippett}(x\given \pLoc,\pScale,\alpha, \gamma,\beta) 
+\\ \notag
+& =
+ \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{\pScale}\right| \left(\frac{x-\pLoc}{\pScale}\right)^{\beta-1}
+ e^{-\alpha (\frac{x-\pLoc}{\pScale})^{\beta} }  \left(1 - e^{-(\frac{x-\pLoc}{\pScale})^\beta  }\right)^{\gamma-1} 
+ \\ \notag
+ & \text{for } x,\ \pLoc,\ \pScale,\ \alpha,\  \gamma,\ \beta \text{ in } \mathbb{R}, 
+ \\ \notag & \alpha,\ \gamma >0,\quad  \tfrac{x-\pLoc}{\pScale} >0
+\end{align}
+A five parameter,  continuous, univariate probability density, with semi-infinite support.
+The Beta-Fisher-Tippett occurs as the weibullization of the beta-exponential distribution \eqref{BetaExp}, and as the order statistics of the Fisher-Tippett distribution \eqref{FisherTippett}.
+\begin{align*}
+\opr{OrderStatistic}_{\opr{FisherTippett}(a,s,\beta)} & (x \given \alpha, \gamma) 
+\\ 
+&= \opr{BetaFisherTippett}(x\given a, s, \alpha,\gamma, \beta) \checked
+\end{align*}
+The order statistics of the Weibull \eqref{Weibull} and Fr\'{e}chet \eqref{Frechet} distributions are therefore also Beta-Fisher-Tippett.
+
+With $\beta=1$ we recover the beta-exponential distribution~\eqref{BetaExp}. Other special cases include the {\bf inverse beta-exponential}, $\beta=-1$~\cite{\self} (The order statistics of the inverse exponential distribution, \eqref{InvExp} ), and the {\bf exponentiated Weibull} (Weibull-exponential) distribution, $\alpha=1$~\cite{Zacks1984,Mudholkar1995}. 
+
+
+%===========================================================================
+\secbreak
+\dist{Birnbaum-Saunders} (fatigue life distribution) distribution~\cite{Birnbaum1969,Johnson1995}:
+\begin{align}
+\label{BirnbaumSaunders}
+&\opr{BirnbaumSaunders}  (x\given a,s,\gamma) \\
+&= \frac{1}{2\gamma \sqrt{2 \pi s^2 } } \frac{s}{x-a} (\sqrt{\frac{x-a}{s}}  +\sqrt{\frac{s}{x-a}} ) \exp\left\{  \frac{(\sqrt{\frac{x-a}{s}}  -\sqrt{\frac{s}{x-a}} ) ^2}{2\gamma^2}   \right\} \checked
+\notag \\ \notag 
+\notag
+\end{align}
+Models physical fatigue failure due to crack growth. 
+
+
+
+
+%===========================================================================
+\secbreak
+\dist{Exponential power} (Box-Tiao, generalized normal, generalized error, Subbotin\checked) distribution~\cite{Box1962,Nadarajah2005}:
+\begin{align}
+\label{ExpPower}
+\opr{ExpPower}(x\given \pLoc,\theta,\beta) = \frac{\beta}{2 |\theta| \Gamma(\tfrac{1}{\beta})}
+e^{-\left|\frac{x-\pLoc}{\theta} \right|^\beta} \checked
+\end{align}
+A generalization of the normal distribution. Special cases include the normal, Laplace and uniform distributions.
+\begin{align*}
+\opr{ExpPower}(x\given \pLoc,\theta,1) &= \opr{Laplace}(x\given \pLoc,\theta) \checked \\
+\opr{ExpPower}(x\given \pLoc,\theta,2) &= \opr{Normal} (x\given \pLoc, \theta/\sqrt{2}) \checked \\
+\lim_{\beta\rightarrow\infty}\opr{ExpPower}(x\given \pLoc,\theta,\beta) &= \opr{Uniform}(x\given \pLoc-\theta, 2\theta) \checked
+\end{align*}
+
+%-----------------------------------------------------------------------------
+
+\secbreak
+\dist{Generalized K} distribution~\cite{Malik1968}:
+\begin{align}
+\label{GenK}
+\opr{GenK}(x\given s, \alpha_1, \alpha_2,\beta) &= 
+\frac{2 |\beta| }{|s| \Gamma(\alpha_1)\Gamma(\alpha_2)}
+ \Bigl( \frac{x}{s} \Bigr)^{\half(\alpha_1+\alpha_2 )\beta -1} K_{\alpha_1-\alpha_2} \Bigl(2 \bigl(\frac{x}{s}\bigr)^{\sfrac{\beta}{2} } \Bigr)
+\checked
+\\
+& x\geq 0, \alpha_1>0, \alpha_2>0 \notag
+\end{align}
+The Weibull transform of the K-distribution \eqref{K}. Arises as the product of anchored Amoroso distributions  with common Weibull parameters.
+\begin{align*}
+\opr{GenK}(s_1 s_2, \alpha_1, \alpha_2,\beta) &  \sim \opr{Amoroso}_1(0, s_1,\alpha_1, \beta) 
+ \opr{Amoroso}_2 (0,s_2,\alpha_2, \beta)  \checked
+ \\
+& \sim s_1 \opr{Gamma}_1(0,\alpha_1)^{\sfrac{1}{\beta}} \  s_2 \opr{Gamma}_2(0,\alpha_2)^{\sfrac{1}{\beta}} \checked
+\\ & \sim s_1 s_2 \bigl( \opr{Gamma}_1(1,\alpha_1) \opr{Gamma}_2(1,\alpha_2) \bigr)^{\sfrac{1}{\beta}} \checked
+\\ & \sim s_1 s_2 \opr{K}(1,\alpha_1,\alpha_2)^{\sfrac{1}{\beta}} \checked
+\end{align*}
+
+
+
+\secbreak
+%-----------------------------------------------------------------------------
+\dist{Generalized Pearson VII} (generalized Cauchy, generalized-t) distribution\linebreak\cite{Rider1957,Miller1972,McDonald1988,McDonald1991,Nadarajah2003,Aysal2007}:
+\begin{align}
+\label{GenPearsonVII}
+\opr{GenPearsonVII}&(x\given a,s, m,\beta)  
+\\= & \frac{\beta}{2 |s| B(m-\frac{1}{\beta}, \frac{1}{\beta} )} \left( 1 +\left| \frac{x-a}{s}\right|^{\beta} \right)^{-m} \checked
+\notag \\
+\notag & x, a,s, m,\beta \text{ in } {\mathbb R} \\
+&  \beta>0,\ m>0,\ \beta m >1
+\notag
+\end{align}
+A  generalization of the Pearson type VII distribution \eqref{PearsonVII}. Special cases include Pearson VII \eqref{PearsonVII}, Cauchy \eqref{Cauchy},   Laha \eqref{Laha},   Meridian \eqref{Meridian} and exponential power \eqref{ExpPower} distributions,
+\begin{align*}
+\opr{GenPearsonVII}(x\given a,s, m,2) &= \opr{PearsonVII}(x\given a,s,m) \checked \\
+\opr{GenPearsonVII}(x\given a,s, 1,2) &= \opr{Cauchy}(x\given a,s) \checked \\
+\opr{GenPearsonVII}(x\given a,s, 1,4) &= \opr{Laha}(x\given a,s) \checked \\
+\opr{GenPearsonVII}(x\given a,s, 2,1) &= \opr{Meridian}(x\given a,s)  \checked \\
+\lim_{m\rightarrow\infty} \opr{GenPearsonVII}(x\given a,m^{1/\beta}\theta, m,\beta) & = \opr{ExpPower}(x\given a,\theta,\beta)
+\checked
+\end{align*}
+
+A related distribution is the {\bf half generalized Pearson VII} \eqref{HalfGenPearsonVII}, a special case of generalized beta prime 
+\eqref{GenBetaPrime}.
+
+
+\secbreak
+%===========================================================================
+\dist{Holtsmark} distribution~\cite{Holtsmark1919}:
+\begin{align}
+	\label{Holtsmark}
+	\opr{Holtsmark}(x\given \mu,c) = \opr{Stable}(x\given \mu,c,\sfrac{3}{2},0)  \checked
+\end{align}
+A symmetric stable distribution \eqref{Stable}.
+Although the Holtsmark distribution cannot be expressed with elementary functions, it does have an analytic form in terms of hypergeometric functions~\cite{Garoni2002}.
+\begin{align*}
+\opr{Holtsmark}(x\given \mu,c)
+=& \sfrac{1}{\pi} {\Gamma(\tfrac{5}{3})}\ {}_2F_3\bigl(\tfrac{5}{12},\tfrac{11}{12};\tfrac{1}{3},\tfrac{1}{2},\sfrac{5}{6};-\sfrac{4}{729}(\sfrac{x-\mu}{c})^6\bigr) \\
+& {} - \sfrac{1}{3\pi} (\sfrac{x-\mu}{c})^2 \ {}_3F_4\bigl( \sfrac{3}{4},1,\sfrac{5}{4};\sfrac{2}{3},\sfrac{5}{6},\sfrac{7}{6},\sfrac{4}{3};-\sfrac{4}{729}(\sfrac{x-\mu}{c})^6 \bigr) \\
+&  {}  + \sfrac{7}{81\pi}   {\Gamma(\sfrac{4}{3})}  (\sfrac{x-\mu}{c})^4 \  {}_2F_3\bigl( \sfrac{13}{12},\sfrac{19}{12};\sfrac{7}{6},\sfrac{3}{2},\sfrac{5}{3};- \sfrac{4}{729} (\sfrac{x-\mu}{c})^6 \bigr) \checked
+\end{align*}
+
+%===========================================================================
+\secbreak
+\dist{K} distribution~\cite{Malik1968,Jakeman1978,Redding1999,Withers2013}:
+\begin{align}
+\label{K}
+\opr{K}(x\given s, \alpha_1, \alpha_2) &= 
+\frac{2}{|s| \Gamma(\alpha_1)\Gamma(\alpha_2)}
+ \Bigl( \frac{x}{s} \Bigr)^{\half(\alpha_1+\alpha_2 )-1} K_{\alpha_1-\alpha_2} \Bigl(2 \sqrt{\frac{x}{s}} \Bigr) \checked
+\\
+& x\geq 0, \alpha_1>0, \alpha_2>0 \notag
+\end{align}
+Note that modified Bessel function of the second kind  (p.\pageref{ModBesselSecond}) is symmetric with respect to its argument,   $K_{v}(+z)=   K_{v}(-z)$. Thus the K-distribution is symmetric with respect to the two shape parameters, $\opr{K}(x\given s, \alpha_1, \alpha_2)  = \opr{K}(x\given s, \alpha_2,\alpha_1)$.
+
+The K-distribution arises as the product of Gamma distributions~\cite{Malik1968,Redding1999,Withers2013}.
+\begin{align*}
+\opr{K}(s_1 s_2, \alpha_1, \alpha_2)  
+\sim  \opr{Gamma}_1(0,s_1, \alpha_1)  \opr{Gamma}_2(0,s_2, \alpha_2) \checked
+\end{align*}
+
+
+
+%
+%\begin{align}
+%\label{K}
+%\opr{K}(x\given s, \alpha, \gamma) &= 
+%\frac{2}{\Gamma(\alpha)\Gamma(\gamma)} \frac{1}{x} \bigl(\alpha \gamma \frac{x}{s} \bigr)^{\half(\alpha+\gamma)} K_{\alpha-\gamma} \bigl(2 \sqrt{\alpha\gamma \frac{x}{s}} \bigr)
+%\\
+%& x\geq 0, \alpha>0, \gamma>0 \notag
+%\end{align}
+
+
+%The K-distribution arrises as both a mixture~\cite{Jakeman1978} and product~\cite{Redding1999} of %Gamma distributions.
+%\begin{align*}
+%\opr{K}( s, \alpha, \gamma) &=  \opr{Gamma}(0,\sfrac{\sigma}{\gamma},\gamma) \mix{\sigma}
+% \opr{Gamma}(0,\sfrac{s}{\alpha}, \alpha)
+% \\
+%\opr{K}(s, \alpha, \gamma)  & =  \opr{Gamma}(0,\sfrac{1}{\gamma}, \gamma)  \opr{Gamma}(0,\sfrac{s}{\alpha}, \alpha) 
+%\end{align*}
+
+The K-distribution has applications to radar scattering~\cite{Jakeman1978,Redding1999} and superstatistical thermodynamics~\cite[Eq.~21]{Dixit2013}.
+
+% Generalized K distribution?
+%Jakeman, E. and Tough, R. J. A. (1987) "Generalized K distribution: a statistical model for weak scattering," J. Opt. Soc. Am., 4, (9), pp. 1764 - 1772.
+
+\secbreak
+%===========================================================================
+\dist{Irwin-Hall} (uniform sum) distribution~\cite{Irwin1927, Hall1927, Johnson1995}:
+\begin{align}
+\label{IrwinHall}
+\opr{IrwinHall} (x\given n) =\frac{1}{2\left(n-1\right)!}\sum_{k=0}^{n}\left(-1\right)^k\binom{n}{k}\left(x-k\right)^{n-1}\op{sgn}(x-k)
+\checked
+\end{align}
+The sum of $n$ independent standard uniform variates. 
+\[
+\opr{IrwinHall}(n) \sim \sum_{i=1}^{n} \opr{Uniform}_i(0,1) \checked
+\]
+Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the uniform distribution \eqref{Uniform}, and with $n=2$ the triangular distribution~\eqref{Triangular}.
+
+
+\secbreak
+%===========================================================================
+\dist{Landau} distribution~\cite{Landau1944}:
+\begin{align}
+	\label{Landau}
+	\opr{Landau}(x\given \mu,c) = \opr{Stable}(x\given \mu,c,1,1) \checked
+\end{align}
+A stable distribution~\eqref{Stable}. 
+Describes the average energy loss of a charged particles traveling through a thin layer of matter~\cite{Landau1944}.
+
+
+
+\secbreak
+%===========================================================================
+\dist{Meridian} distribution~\cite[Eq.\ 18]{Aysal2007} :
+\begin{align}
+\label{Meridian}
+	\opr{Meridian}(x\given a,s) = \frac{1}{2|s|} \frac{1}{\left(1 + |\tfrac{x-a}{s}| \right)^2} \checked
+\end{align}
+The Laplace ratio distribution~\cite{Aysal2007}.
+\[
+\opr{Meridian}(x\given 0,\tfrac{s_1}{s_2}) \sim \frac{\opr{Laplace}_1(0,s_1)} {\opr{Laplace}_2(0,s_2)} \checked
+\]
+A special case of the generalized Pearson VII distribution \eqref{GenPearsonVII}. 
+
+
+
+\secbreak
+%===========================================================================
+\dist{Noncentral chi-square} (Noncentral $\chi^2$, ${\chi'}^2$) distribution \cite{Fisher1928,Johnson1995}:
+\begin{align}
+\label{NoncentralChiSqr}
+\opr{NoncentralChiSqr}&(x\given k,\lambda)  = 
+\frac{1}{2}e^{-(x+\lambda)/2} \left(\frac{x}{\lambda}\right)^{\frac{k}{4} -\frac{1}{2}} I_{\frac{k}{2}-1}(\sqrt{\lambda x})
+\checked
+\\ & k, \lambda, x \text{ in } \mathbb{R}, >0
+\notag
+\end{align}
+Here, $I_v(z)$ is a modified Bessel function of the first kind (p.\pageref{ModBesselFirst}). A generalization of the chi-square distribution. The distribution of the sum of $k$ squared, independent, normal random variables with means $\mu_i$ and standard deviations $\sigma_i$,
+\[
+\opr{NoncentralChiSqr}(k,\lambda) \sim \sum_{i=1}^{k} \bigl(\frac{1}{\sigma_i} \opr{Normal}_i(\mu_i, \sigma_i)\bigr)^2 \checked
+\]
+where the non-centrality parameter $\lambda= \sum_{i=1}^k (\mu_i/\sigma_i)^2$. \checked
+
+
+
+\secbreak
+%===========================================================================
+
+\dist{Non-central F} distribution~\cite{Fisher1928, Johnson1995} : \begin{align}
+\label{NoncentralF}
+\opr{NoncentralF}(k_1,k_2,\lambda_1,\lambda_2) &\sim \frac{\opr{NoncentralChiSqr}_1(k_1,\lambda_1)/k_1 }{\opr{NoncentralChiSqr}_2(k_2,\lambda_2)/k_2 }
+\checked
+\notag
+\\
+& \text{for } k_1,k_2,\lambda_1,\lambda_2 > 0  \notag \\
+& \text{support } x>0
+\end{align}
+The ratio distribution of non-central chi square distributions. If both centrality parameters $\lambda_1,\lambda_2$ are non zero, then we have a {\bf doubly non-central F} distribution; if one is zero then we have a {\bf singly non-central F distribution}; and if both are zero we recover the standard F distribution~\eqref{F}.
+
+
+
+
+
+%===========================================================================
+\secbreak
+\dist{Pseudo Voigt} distribution~\cite{Wertheim1974}: 
+\begin{align}
+\label{PseudoVoigt}
+\opr{PseudoVoigt}(x\given a,\sigma, s, \eta) &= (1-\eta) \opr{Normal}(x\given a,\sigma) + \eta \opr{Cauchy}(x\given a,s)
+\notag \checked
+\\
+& \text{ for } 0\leq\eta\leq1
+\end{align}
+A linear mixture of Cauchy (Lorentzian) and normal distributions. Used as a more analytically tractable approximation to the Voigt distribution \eqref{Voigt}. 
+
+
+\secbreak
+%===========================================================================
+\dist{Rice} (Rician, Rayleigh-Rice, generalized Rayleigh, noncentral-chi) distribution~\cite{Rice1945,Talukdar1991}:
+\begin{align}
+\label{Rice}
+\opr{Rice}(x\given \nu,\sigma) = & \frac{x}{\sigma^2} \exp\left(-\frac{x^2+\nu^2 }{2\sigma^2}  \right) I_0(\frac{x |\nu|}{\sigma^2})
+\checked
+\\ 
+& x>0 \notag
+\end{align}
+Here, $I_0(z)$ is a modified Bessel function of the first kind (p.\pageref{ModBesselFirst}). 
+
+The absolute value of a circular bivariate normal distribution, with non-zero mean,
+\[
+\opr{Rice}(\nu,\sigma) \sim \sqrt{\opr{Normal}^2_1(\nu \cos \theta,\sigma)  +\opr{Normal}^2_2(\nu \sin \theta,\sigma)   }
+\checked \notag
+\]
+thus directly related to a special case of the noncentral chi-square distribution~\eqref{NoncentralChiSqr}. 
+\[
+\opr{Rice}(\nu,1)^2 \sim  \opr{NoncentralChiSqr}(2,\nu^2) \checked
+\notag
+\]
+
+
+
+\secbreak
+%===========================================================================
+\dist{Slash} distribution~\cite{Rogers1972, Johnson1994}:
+\begin{align}
+\label{Slash}
+	\opr{Slash}(x) = \frac{\oprr{StdNormal}{Normal}(x)-\oprr{StdNormal}{Normal}(x)}{x^2} \checked
+\end{align}
+The standard normal -- standard uniform ratio distribution,
+\[
+\opr{Slash}() \sim \frac{\oprr{StdNormal}{Normal}()}{\opr{StdUniform}()} \checked
+\]
+Note that $lim_{x\rightarrow 0} \opr{Slash}(x)= 1/\sqrt{8\pi}$\checked.
+
+
+%===========================================================================
+\secbreak
+
+\dist{Stable} (L\'evy skew alpha-stable, L\'{e}vy stable) distribution~\cite{Nolan2015}:
+ The PDF of the stable distribution does not have a closed form in general. Instead,  the stable distribution can be defined via the characteristic function 
+\begin{align}
+\label{Stable}
+\op{StableCF}(t\given \mu,c,\alpha,\beta) = 
+\exp \bigl(i t \mu - |c t|^{\alpha} (1 - i\beta \op{sgn}(t) \Phi(\alpha) \bigr) \checked
+\end{align}
+where $\Phi(\alpha)=\tan(\pi \alpha/2)$ if $\alpha \neq 1$, else $\Phi(1)=-(2/\pi)\log|t|$. Location parameter $\mu$, scale $c$, and two shape parameters, the index of stability or characteristic exponent $\alpha\in(0,2]$ and a skewness parameter $\beta \in[-1,1]$. This distribution is continuous and unimodal~\cite{Yamazato1978}, symmetric if $\beta=0$ ({\bf L\'evy symmetric alpha-stable}), and indefinite support, unless $\beta=\pm1$ and $0<\alpha\leq1$, in which case the support is semi-infinite. If $c$ or $\alpha$ is zero, the distribution limits to the degenerate distribution,  \secref{sec:Uniform}. Non-normal stable distributions ($\alpha<2$) are called {\bf stable Paretian distributions}, since they all have long, Pareto tails.
+
+\begin{table*}[bth]
+\begin{center}
+\caption[Stable distribution -- Special cases]{Special cases of the stable family}
+~\\
+{\renewcommand{\arraystretch}{1.25} 
+\begin{tabular}{llcccc}
+\eqref{Stable} & stable & $\mu$&$c$&$\alpha$&$\beta$ \\
+\hline  
+\eqref{Cauchy} & Cauchy & . & . & 1 & 0 \\
+\eqref{Holtsmark} &  Holtsmark	 &. & . & \sfrac{3}{2} &0 \\
+\eqref{Normal} & normal & . & . & 2 & 0 \\
+\eqref{Levy} & L\'{e}vy &. & .  & \half & 1 \\
+\eqref{Landau} &	Landau	&. & . &1  & 1	
+\end{tabular}
+}
+\end{center}
+\end{table*}
+
+
+A distribution is stable if it is closed under scaling and addition, 
+\begin{align*}
+a_1\, \opr{Stable}_1(\mu,c,\alpha,\beta) + a_2\, \opr{Stable}_2(\mu,c,\alpha,\beta) 
+ \sim a_3 \,\opr{Stable}_3(\mu,c,\alpha,\beta) + b \checked
+\end{align*}
+for real  constants $a_1,a_2,a_3,b$. 
+
+
+There are three special cases of the stable distribution where the probability density functions can be expressed with elementary functions: The  normal \eqref{Normal}, Cauchy \eqref{Cauchy}, and L\'evy \eqref{Levy} distributions, all of which are simple.
+
+
+
+
+%===========================================================================
+\secbreak
+\dist{Suzuki}  distribution~\cite{Suzuki1977}. A compounded mixture of Rayleigh and log-normal distributions
+\begin{align}
+\label{Suzuki}
+\opr{Suzuki}(\vartheta,\sigma) & \sim \opr{Rayleigh}(\sigma') \mix{\sigma'} \opr{LogNormal}(0, \vartheta,\sigma) 
+\checked
+\end{align}
+Introduced to model radio propagation in cluttered urban environments.
+
+
+%===========================================================================
+\secbreak
+\dist{Triangular} (tine) distribution~\cite{Evans2000}:
+\begin{align}
+\label{Triangular}
+\opr{Triangular}(x\given a,b,c) = 
+\begin{cases}
+\frac{2 (x-a)}{(b-a)(c-a)} & a\leq x \leq c \checked \\
+\frac{2 (b-x)}{(b-a)(b-c)} & c\leq x \leq b \checked
+\end{cases}
+\end{align}
+Support $x\in[a,b]$ and mode $c$. The wedge distribution \eqref{Wedge} is a special case.
+
+
+\secbreak
+\dist{Uniform difference} distribution~\cite{Springer1979a}:
+\begin{align}
+\label{UniformDiff}
+\opr{UniformDiff}(x) \checked & = 
+\begin{cases}
+(1+x) & -1\geq x \geq 0 \\
+(1-x) & 0\geq x \geq 1
+\end{cases}
+\\ \notag & = \opr{Triangular}(x\given -1,1,0) \checked
+\end{align}
+The difference of two independent standard uniform distributions~\eqref{StdUniform}.
+
+
+
+
+
+%===========================================================================
+\secbreak
+\dist{Voigt} (Voigt profile, Voigtian) distribution~\cite{Armstrong1967}:
+\begin{align}
+\label{Voigt}
+\opr{Voigt}(a,\sigma,s) = \opr{Normal}(0,\sigma) + \opr{Cauchy}(a,s) \checked
+\end{align}
+The convolution of a Cauchy (Lorentzian) distribution with a normal distribution. Models the broadening of spectral lines in spectroscopy~\cite{Armstrong1967}. See also Pseudo Voigt distribution~\eqref{PseudoVoigt}.
+
+
+
+
+
+%===========================================================================
+%\secbreak
+
+
+\SSec{Apocrypha}
+The following non-simple univariate continuous distributions are not included in this compendium:
+%
+%
+%
+%
+alpha;
+alpha Laplace (Linnik);	% Not interesting
+%alpha semi Laplace;
+anglit;				% Obscure and uninteresting
+%Bates;
+Benini;
+beta warning time;
+Bradford; 	% truncated beta prime 
+Burr types IV, V, VI, VII, VIII, IX, X and XI;
+double gamma; % Reflected
+double Weibull; 
+Champernowne;
+Chernoff;
+chi-bar-square;
+Dagum types II and III;	% II is Dagum with extra probability at origin, III is truncated type II
+entropic;
+Erlang-B;
+Erlang-C;
+%Exponentiated Weibull; %Choudhury2005
+%fatigue lifetime;	% Another name for Birgam-sanders
+%folded normal;
+Gaussian tail;	% Check uninteresting
+%Gompertz;
+Hoyt (Nakagami-q); % (Uncommon and complicated)
+inbe;
+%Irwin-Hall (uniform sum);
+%K;
+Kummer;
+Johnson B;
+Johnson U;
+%Landau;
+Leipnik;
+%L\'{e}vy  skew alpha-stable; 
+log-Laplace;
+normal-inverse Gaussian;
+McLeish;			% Uninteresting
+Muth;
+%noncentral t;
+raised cosine (cosine);
+rectangular mean;
+%Rice (generalized Rayleigh, Rayleigh-Rice, noncentral-chi);
+Sargan;								% Complicated and uninteresting
+%Sichel (generalized inverse Gaussian);		% Complicated and not interesting. Nope: Part of Ext Pearson. ADD!
+%slash;
+skew Laplace;
+skew normal;
+Stoppa;	% Looks like special case of generalized beta, negative beta, but has finite support, so isn't. 
+%Subbotin (power-exponential, Box-Tiao, error, generalized normal);Turkey lambda;
+Tweedie distributions;		
+U-quadratic;				% Not interesting
+variance gamma; 
+% Von Mises (circular normal);
+%Voigt profile;
+Wakeby;
+%Wald (inverse normal,  inverse Gaussian);
+Wiebull-exponential.
+
+
+

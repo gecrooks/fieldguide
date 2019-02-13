@@ -1,0 +1,181 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+
+\Sec{Beta-Logistic Distribution}
+\label{sec:BetaLogistic} 
+\phantomsection
+\addcontentsline{toc}{subsection}{~~~~~~~~~~~~Beta-Logistic} 
+\phantomsection
+\addcontentsline{toc}{subsection}{~~~~~~~~~~~~Standard Beta-Logistic}  
+
+
+
+The {\bf beta-logistic } (Prentice, beta prime exponential, generalized logistic type IV, exponential generalized beta prime, exponential generalized beta type II, log-F, generalized F, Fisher-Z, generalized Gompertz-Verhulst type II) distribution~\cite{Prentice1976, McDonald1991, Johnson1995, Morton2000}
+ is a four parameter, continuous, univariate, unimodal probability density, with infinite  support. The functional form in the most straightforward parameterization is
+\begin{align}
+\notag
+\label{BetaLogistic}
+\opr{BetaLogistic}(x\given  \pLoc, \pScale,\alpha,\gamma) 
+& =
+ \frac{1}{B(\alpha, \gamma) \left| \pScale\right|}
+ \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\alpha+\gamma} } \checked
+\\  &
+\ x, \pLoc, \pScale,\alpha,\gamma \text{ in } {\mathbb R}
+\\ \notag & \alpha,\gamma >0
+\end{align}
+The four real parameters consist of a location parameter $\pLoc$, a scale parameter $\pScale$, and two positive shape parameters $\alpha$ and $\gamma$.  The {\bf standard beta-logistic} distribution has zero location $\pLoc=0$ and unit scale $\pScale=1$.
+
+The beta-logistic distribution is perhaps most commonly referred to as `generalized logistic', but this terminology is ambiguous, since many types of generalized logistic distribution have been investigated, and this distribution is not `generalized' in the same sense used elsewhere in this survey (See `generalized' \S \ref{sec:notation}). Therefore, we select the name `beta-logistic' as a less ambiguous terminology that mirrors the names beta, beta-prime, and beta-exponential.
+
+
+
+
+\SSec{Special cases}
+
+\dist{Burr type II} (generalized logistic type I, exponential-Burr, skew-logistic) distribution~\cite{Burr1942,Johnson1994}:
+\begin{align}
+\label{BurrII}
+\opr{BurrII}(x\given \pLoc, \pScale,  \gamma) 
+& = \frac{\gamma}{|\pScale|} \frac{e^{- \frac{x-\pLoc}{\pScale} } } { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\gamma+1} }
+\checked
+\\
+& = \opr{BetaLogistic}(x\given \pLoc, \pScale, 1, \gamma) \checked
+\notag
+\end{align}
+
+
+\dist{Reversed Burr type II} (generalized logistic type II) distribution~\cite{Johnson1994}:
+\begin{align}
+\label{RevBurrII}
+\opr{RevBurrII}(x\given \alpha) 
+& = \frac{\gamma}{|\pScale|}   \frac{e^{+ \frac{x-\pLoc}{\pScale} } } { \left(1 + e^{+\frac{x-\pLoc}{\pScale}  }\right)^{\gamma+1} }
+\checked
+\\
+& = \opr{BurrII}(x\given \pLoc, -\pScale,  \gamma) \notag \checked \\
+& = \opr{BetaLogistic}(x\given \pLoc, -\pScale, 1, \gamma) \notag \checked \\
+& = \opr{BetaLogistic}(x\given \pLoc, +\pScale, \gamma, 1)  \notag \checked
+\notag
+\end{align}
+By setting the $\lambda$ parameter to $1$ (instead of $\alpha$) we get a reversed Burr type II.
+
+
+\begin{table*}[ptb]
+%\addcontentsline{toc}{subsection}{Logistic} 
+\begin{center}
+\caption[Beta-logistic distribution -- Special cases]{Special cases of the beta-logistic distribution}
+~\\
+{\renewcommand{\arraystretch}{1.25} 
+\begin{tabular}{llccccl}
+\eqref{BetaLogistic} & Beta-Logistic & $\pLoc$ & $\pScale$ & $\alpha$ &  $\gamma$ \\
+\hline  
+\eqref{BurrII} & Burr type II					&. & . & 1 & . & \\
+\eqref{RevBurrII}& Reversed Burr type II		&	. & . & . & 1 &\\
+\eqref{SymBetaLogistic}& Symmetric Beta-Logistic		&	. &   . & $\alpha$ & $\alpha$ & \\
+\eqref{Logistic}& Logistic					& 	. & . & 1 & 1 & \\
+\eqref{HyperbolicSecant}& Hyperbolic secant	&	. & . & $\tfrac{1}{2}$ & $\tfrac{1}{2}$ & \\
+\end{tabular}
+}
+\end{center}
+\end{table*}
+
+
+\input{PropertiesTableBetaLogistic}
+
+
+\dist{Symmetric Beta-Logistic} (generalized logistic type III, inverse cosh) distribution~\cite{Johnson1995}:
+\begin{align}
+\label{SymBetaLogistic}
+\opr{SymBetaLogistic}(x\given \pLoc,\pScale,\alpha) 
+& =
+\frac{1}{B(\alpha, \alpha) |\pScale|}
+ \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{2\alpha} } \checked
+  \\ \notag & = \frac{1}{B(\alpha, \alpha) |\pScale|} [\op{sech} \left(\tfrac{x-\pLoc}{2\pScale}  \right)]^{2\alpha}  
+\\ \notag & = \opr{BetaLogistic}(x\given \pLoc,\pScale,\alpha,\alpha) \checked
+\end{align}
+With equal shape parameters the  beta-logistic is symmetric. This distribution limits to the Laplace distribution~\eqref{Lapalce}.
+
+
+\dist{Logistic} (sech-square, hyperbolic secant square, logit) distribution~\cite{Verhulst1845, Balakrishnan1991, Johnson1995}:
+\begin{align}
+\label{Logistic}
+\opr{Logistic}(x\given \pLoc,\pScale) 
+& =
+ \frac{1}{ \left| \pScale\right|}
+ \frac{e^{-\frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{2} }	\checked
+ \\ \notag & = \frac{1}{4 |\pScale|} \op{sech}^2 \left(\frac{x-\pLoc}{\pScale}  \right)  \checked
+ \\ \notag & = \opr{BetaLogistic}(x\given \pLoc,\pScale,1,1)	\checked
+\end{align}
+
+
+
+
+
+\dist{Hyperbolic secant} (Perks, inverse hyperbolic cosine, inverse cosh) distribution~\cite{Perks1932,Talacko1956, Johnson1995}:
+\begin{align}
+\label{HyperbolicSecant}
+\opr{HyperbolicSecant}(x\given \pLoc, \pScale) 
+& =
+\frac{1}{\pi |\pScale|}
+ \frac{1}{e^{+\sfrac{x-\pLoc}{2\pScale}} + e^{- \sfrac{x-\pLoc}{2\pScale} }} \checked
+ \\ & = \frac{1}{2 \pi  |\pScale|} \op{sech}(\sfrac{x-\pLoc}{2\lambda}) \notag \checked
+ \\ \notag & = \opr{BetaLogistic}(x\given  \pLoc, \pScale,\tfrac{1}{2},\tfrac{1}{2}) \checked
+\end{align}
+The hyperbolic secant cumulative distribution function features the Gudermannian sigmoidal function, $\op{gd}(z)$ . \index{Gudermannian function}
+\begin{align*}
+\op{HyperbolicSecantCDF}(x\given \pLoc, \pScale)  & = \frac{1}{\pi}\op{gd}(\frac{x-\pLoc}{2 \pScale}) \checked \\
+& =  \frac{2}{\pi} \arctan(e^\frac{x-\pLoc}{2\pScale}) - \frac{1}{2} \checked
+\end{align*}
+The standardized hyperbolic secant distribution (zero mean, unit variance) is $\opr{HyperbolicSecant}(x\given 0, 1/\pi)\checked$.
+
+
+
+
+
+\SSec{Interrelations}
+The beta-logistic distribution arises as a limit of the generalized beta prime distribution \secref{sec:BetaPrime}. The analogous limit of the generalized beta distribution leads to the beta-exponential family \secref{sec:BetaExp}. 
+
+
+The beta-logistic distribution is the log transform of the beta prime distribution. 
+\[
+ \opr{BetaLogistic}(0,1,\alpha,\gamma)  \sim - \ln \opr{BetaPrime}(0,1,\alpha,\gamma)  \checked
+ \notag
+\] 
+It follows that beta-logistic variates are related to ratios of gamma variates.
+\[
+\opr{BetaLogistic}(\pLoc,\pScale,\alpha,\gamma)  \sim \pLoc - \pScale \ln  \frac{\opr{StdGamma}_1(\gamma)}{\opr{StdGamma}_2(\alpha) }
+\notag
+\checked
+\]
+
+
+Negating the scale parameter is equivalent to interchanging the two shape parameters.
+\[
+\opr{BetaLogistic}(x\given \pLoc,+\pScale,\alpha,\gamma)  = \opr{BetaLogistic}(x\given \pLoc, - \pScale,\gamma,\alpha) \checked
+\notag
+\]
+
+
+
+The beta-logistic distribution, with integer $\alpha$ and $\gamma$ is the logistic order statistics distribution~\cite{Birnbaum1963,Jones2004}~\secref{sec:OrderStatistic}.  
+\[
+ \opr{OrderStatistic}_{\opr{Logistic}(\pLoc,\pScale)}  (x \given \gamma, \alpha ) =  \opr{BetaLogistic}(x\given \pLoc, \pScale, \alpha, \gamma) \checked
+ \notag
+\]
+
+
+The beta-logistic limits to the gamma exponential~\eqref{GammaExp} and Laplace \eqref{Laplace} distributions.
+\[
+opr{GammaExp}(x\given \nu, \lambda, \alpha)  & =
+{\lim_{\gamma\rightarrow\infty} \opr{BetaLogistic}(x \given \nu+\lambda/\ln\gamma,\lambda, \alpha, \gamma)  }
+\checked
+\notag
+\\
+\opr{Laplace}(x\given \eta,\theta)   & = 
+\lim_{\alpha\rightarrow 0} \opr{BetaLogistic}( x\given \eta, \theta\sqrt{\alpha},\alpha,\alpha)
+\notag
+\]
+
+
+

@@ -1,0 +1,48 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[p]
+\caption[Beta-logistic distribution -- Properties]{Properties of the beta-logistic distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad &  \op{BetaLogistic}(x\given \pLoc,\pScale,\alpha,\gamma)  
+\checked
+\\
+\text{PDF}\quad &  
+\frac{1}{B(\alpha, \gamma) \left| \pScale\right|}
+ \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\alpha+\gamma} }
+\checked 
+\\
+\text{CDF / CCDF} \quad  &  
+ \frac{B\big(\gamma, \alpha ;  ( 1+e^{-\frac{x-\pLoc}{\pScale}} )^{-1}  \big) }{B(\alpha,\gamma)}
+& \pScale>0 \, \big/ \, \pScale<0 \checked
+ \text{ \cite{\self}} \\
+& \qquad  = I\big(  \gamma, \alpha;  ( 1+e^{-\frac{x-\pLoc}{\pScale}} )^{-1}  \big) \checked
+\\
+\text{parameters}\quad &   \pLoc,\ \pScale,\ \alpha, \gamma  \text{ in } \mathbb{R} \checked \\
+& \alpha,\ \gamma >0 \checked
+\\
+\text{support} \quad &   x \in [-\infty,+\infty] \checked
+\\
+%\text{median} \quad  &  \cdots
+%\\
+\text{mode} \quad  & \cdots
+\\
+\text{mean} \quad  &  \pLoc +\pScale [ \psi(\gamma)-\psi(\alpha) ]  \checked %\cite{McDonnald1991} Has difference in scale sign
+\\
+\text{variance} \quad  & \pScale^2 [\psi_1(\alpha) + \psi_1(\gamma) ] \checked %\cite{McDonnald1991}
+\\
+\text{skew} \quad  &  \frac{ \psi_2(\gamma) - \psi_2(\alpha)}{[\psi_1(\alpha) + \psi_1(\gamma)]^{3/2}} \checked
+\\
+\text{kurtosis} \quad  &   \frac{\psi_3(\alpha) + \psi_3(\gamma)}{[\psi_1(\alpha) + \psi_1(\gamma)]^{2}} \checked
+\\
+\text{entropy} \quad  & \cdots
+\\
+\text{MGF} \quad  &  e^{ \pLoc t}\frac{\Gamma(\alpha-\pScale  t) \Gamma(\gamma+\pScale t)}{\Gamma(\alpha)\Gamma(\gamma)}
+& \text{\cite{Johnson1995}} \checked
+\\
+\text{CF} \quad  &    e^{i \pLoc t} \frac{\Gamma(\alpha+ i \pScale  t) \Gamma(\gamma-i \pScale t)}{\Gamma(\alpha)\Gamma(\gamma)} \checked
+\end{align*}
+\end{table*}
+

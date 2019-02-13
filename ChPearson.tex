@@ -1,0 +1,168 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\Sec{Pearson Distribution}
+\label{sec:Pearson}
+\phantomsection
+\addcontentsline{toc}{subsection}{~~~~~~~~~~~~Pearson} 
+The {\bf Pearson} distributions~\cite{Pearson1895, Pearson1901, Pearson1916, Ord1972, Johnson1994} are a family of continuous, univariate, unimodal probability densities with distribution function
+\begin{align}
+\label{Pearson}
+ \opr{Pearson}&(x\given a, s; a_1, a_2;  b_0, b_1, b_2) 
+ \\ \notag
+ &=  \tfrac{1}{N_{\text{P}}} \left(1- \tfrac{1}{r_0}\tfrac{x-a}{s} \right)^{e_0} \left(1- \tfrac{1}{r_1}\tfrac{x-a}{s} \right)^{e_1}
+\\ \notag
+&  a,\ s,\  a_1,\ a_2,\ b_0,\ b_1,\ b_2,\ x\  \text{ in } \mathbb{R}
+\\ \notag
+& r_0 = \tfrac{-b_1+\sqrt{b_1^2 - 4b_2b_0} }{2b_2} \checked  \qquad e_0 = \tfrac{-a_1-a_2 r_0}{r_1-r_0} \\
+\notag
+& r_1 = \tfrac{-b_1-\sqrt{b_1^2 - 4b_2b_0} }{2b_2} \checked \qquad e_1 = \tfrac{a_1+a_2 r_1}{r_1-r_0} 
+\end{align}
+Here $N_{\text{P}}$ is the normalization constant. Note that the parameter $a_2$  is redundant, and can be absorbed into the scale. Thus the Pearson distribution effectively has 4 shape parameters. We retain $a_2$ in the general definition since this makes parameterization of subtypes easier. 
+
+
+Pearson constructed his family of distributions by requiring that they satisfy the differential equation
+\begin{align*}
+\frac{d}{dx} \ln  \opr{Pearson}(x\given 0, 1; a_1, a_2; b_0, b_1, b_2) 
+&= - \frac{a_1 + a_2 x  }{b_0+ b_1 x+ b_2 x^2  } \ ,  \checked \\
+&= - \frac{1}{x} \frac{\phantom{a_0 + {} } a_1 x + a_2 x^2  }{b_0+ b_1 x+ b_2 x^2  } \ ,  \checked \\
+&= \frac{e_0}{x-r_0} + \frac{e_1}{x-r_1} \ . \checked
+\end{align*}
+Pearson's original motivation was that the discrete hypergeometric distribution obeys an analogous finite difference relation~\cite{Ord1972}, and that at the time very few continuous, univariate, unimodal probability distributions had been described. The numbering of the $a_1, a_2$ coefficients is chosen to be consistent with Weibull transformed generalization of the Pearson distribution \eqref{GUD}, where an $a_0$ parameter naturally arises. 
+
+
+The Pearson distribution has three main subtypes determined by~$r_0$ and~$r_1$, the roots of the quadratic denominator. First, we can have two roots located on the real line, at the minimum and maximum of the distribution. This is commonly known as the beta distribution \eqref{Beta}. (The parameterization is based on standard conventions.)
+\[
+p(x) \propto x^{\alpha-1} (1-x)^{\gamma-1}, \qquad 0<x<1 \checked
+\notag
+\]
+The second possibility is that the distribution has semi infinite support, with one root at the boundary, and the other located outside the distribution's support. This is the beta prime distribution.  \eqref{BetaPrime} (Again, the parameterization is based on standard conventions.)
+\[
+p(x) \propto x^{\alpha-1} (1+x)^{-\alpha-\gamma}, \qquad 0<x<+\infty
+\notag
+\checked
+\]
+The third possibility is that the distribution has an infinite support with both roots located off the real axis in the complex plane.  To ensure that the distribution remains real, the roots must be complex conjugates of one another. In this case, the root order can also be complex conjugates of one another. This is Pearson's type IV distribution \eqref{PearsonIV}. (The complex roots and powers can be disguised with trigonometric functions and some algebra, at the cost of making the distribution look more complex than it actually is.)
+\[
+p(x) \propto (i-x)^{m+iv} (i+x)^{m-iv}, \qquad -\infty <x<+ \infty \checked
+\]
+The Cauchy distribution, for instance, is a special case of Pearson's type IV distribution.
+
+
+
+
+\SSec{Special cases}
+
+A large number of useful distributions are members of Pearson's family (See Fig.~\ref{PearsonHierarchy}). Pearson identified 13 principal subtypes -- the normal distribution and types I through XII (See table~\ref{PearsonTypesTable}). 
+In Fig.~\ref{PearsonHierarchy} and table~\ref{PearsonTable2} we consider 12 principal subtypes. (We include the uniform, inverse exponential and Cauchy as distributions important in their own right, and give less prominence to Pearson's types VIII, IX, XI and XII.)
+All of the Pearson distributions have great utility and are widely applied, with the exception of Pearson IV (infinite support, complex roots with complex powers) \eqref{PearsonIV}, which appears rarely (if at all) in practical applications. 
+
+\dist{q-Gaussian} (symmetric Pearson) distribution~\cite{Leeuwen1995} :
+\begin{align}
+\label{QGaussian}
+\opr{QGaussian}(x\given \mu,\sigma,q) &= \frac{1}{\sqrt{2\sigma^2}  \ \mathcal{N}} \exp_q\left(-\half \left(\tfrac{x-\mu}{\sigma}\right)^2 \right) \checked
+\\
+ \notag
+& = \frac{1}{\sqrt{2\sigma^2} \ \mathcal{N}}  \left(1- \half (1-q) \left(\tfrac{x-\mu}{\sigma}\right)^2 \right)^{\frac{1}{1-q} } \checked
+\\
+& -2 < q < 3
+\notag
+\\
+x \in (-\infty, +\infty) &\text{ for } 1\leq q < 3
+\notag
+\\
+x \in (\mu-{\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}}}, \mu+{\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}}}) & \text{ for } q < 1
+\notag
+\end{align}
+Here $ \exp_q$ is the q-generalized exponential function \secref{sec:math}. The normalization constant is
+\begin{align*}
+\mathcal{N} &=
+ \begin{cases} 
+ \sqrt{\pi} \frac{   {2  \Gamma\left({\frac{1}{1-q}}\right)} }{ {(3-q) \sqrt{1-q} \Gamma\left(\frac{3-q }{ 2(1-q)} \right)}  } 
+ & -2 <q < +1 \checked
+\\
+  \sqrt{\pi} & \phantom{-2<}q=+1  \checked
+\\
+ \sqrt{\pi}  \frac{{\Gamma\left({\frac{3-q}{2(q-1)}}\right)} }{ {\sqrt{q-1} \Gamma\left(\frac{1 }{ q-1}\right)}}&  +1<q<+3 \checked
+\end{cases}
+ \end{align*}
+
+A special case of the Pearson family that interpolates between all of the symmetric Pearson distributions: the Pearson II \eqref{PearsonII}, normal \eqref{Normal} and Pearson VII \eqref{PearsonVII} families. See also the hierarchy of symmetric distributions in Fig.~\ref{SymmetricHierarchy}.
+\begin{align*}
+\opr{QGaussian}&(x\given \mu,\sigma,q) \\ &=
+%\\
+ \begin{cases}
+\opr{Beta}(x\given a-\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}},\tfrac{2\sqrt{2}\sigma}{\sqrt{1-q}},\tfrac{2-q}{1-q},\tfrac{2-q}{1-q}) 
+ & -2 <q < 1 \checked
+ \\
+\opr{PearsonII}(x\given a,\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}}, \tfrac{2-q}{1-q}) 
+ & -2 <q < 1 \checked
+\\
+\opr{Normal}(x\given \mu,\sigma)   & \phantom{1<}q=1  \checked
+\\
+ \opr{PearsonVII}(x\given a,\tfrac{\sqrt{2}\sigma}{\sqrt{q-1}}, \tfrac{1}{q-1}) &  1<q<3 \checked
+\end{cases}
+ \end{align*}
+
+
+
+\begin{table}
+\begin{center}
+\label{PearsonTypesTable}
+\caption{Pearson's categorization}
+\begin{tabular}{clll}
+\\
+type & notes & Eq. & Ref.\\
+\hline
+ & normal & \eqref{Normal} & \cite{Pearson1895}  \\
+I  & beta & \eqref{Beta} & \cite{Pearson1895}  \\
+II &  symmetric beta & \eqref{PearsonII} & \cite{Pearson1895}  \\
+III  &   gamma & \eqref{Gamma}& \cite{Pearson1893}  \\
+IV  & Includes Pearson VII & \eqref{PearsonIV}& \cite{Pearson1895}  \\
+V   &  inverse gamma & \eqref{InvGamma}& \cite{Pearson1901}  \\
+VI   & beta prime &  \eqref{BetaPrime} & \cite{Pearson1901}  \\
+VII   & Includes Cauchy and Student's t  &\eqref{PearsonVII} & \cite{Pearson1916}  \\ 
+VIII   & Special case of power function & \eqref{PowerFn} & \cite{Pearson1916}  \\
+IX  & Special case of power function & \eqref{PowerFn} & \cite{Pearson1916}  \\
+X   & exponential & \eqref{Exp} & \cite{Pearson1916}  \\
+XI   & Pareto & \eqref{Pareto} & \cite{Pearson1916}  \\
+XII   & J-shaped beta  &\eqref{PearsonXII} & \cite{Pearson1916}  \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+\begin{table*}[tb]
+\begin{center}
+\caption[Pearson distribution -- Special cases]{Special cases of the Pearson distribution}
+\label{PearsonTable2}
+{\renewcommand{\arraystretch}{1.25} 
+\begin{tabular}{llccccrrr}
+\\
+\eqref{Pearson}  & Pearson & $a$ & $s$ & $a_1$ & $a_2$  & $b_0$ & $b_1$ & $b_2$ \\
+\hline
+\eqref{Uniform} 	& uniform 		&  $a$  &  $s$  &  $0$  &  $0$    &     $0$    & $1$ & $-1$  \checked\\
+\eqref{PearsonII} 	& Pearson II 	&  $\mu$-$b$  &  $2b$  &  $\alpha-1$  &  $2\alpha-2$    &    $0$   & $1$ &$-1$ \\
+\eqref{Beta}     		& {beta} 		&  $a$  &  $s$  &  $\alpha-1$  &  $\alpha+\gamma-2$  &  $0$    &    $1$    &  $-1$  \checked \\
+\eqref{Exp} 		& exponential 	&  $a$  &  $\theta$  &  $0$  &  $-1$    &    $0$    & $1$ & $0$ \checked \\
+\eqref{Gamma} 	& gamma 		&  $a$  &  $\theta$  &  $\alpha-1$  &  $-1$    &    $0$    & $1$ & $0$ \checked \\
+\eqref{BetaPrime} 	& {beta prime} 	&  $a$  &  $s$  &  $\alpha-1$  &  $-\gamma-1$  &  $0$    &    $1$    &  $1$\\
+\eqref{InvGamma} 	& inv. gamma 	&  $a$  &  $\theta$  &  $-1$  &  $\alpha+1$  &      $0$    & $0$ & $1$ \checked \\
+\eqref{InvExp} 		& inv. exp.&$a$ &  $\theta$  &  $-1$  &  $2$    &     $0$    & $0$ & $1$ \checked \\
+\eqref{PearsonIV} 	& {Pearson IV} 	&  $a$  &  $s$  &  $2v$  &  $2m$  &  $1$    &    $0$    & $1$\\
+\eqref{PearsonVII} 	& Pearson VII 	&  $a$  &  $s$  &  0  &  $2m$  &  $1$    &    $0$    & $1$ \checked\\
+\eqref{Cauchy} 	& Cauchy 		&  $a$  &  $s$  &  0  &  $2$  &    $1$    &    $0$    & $1$  \checked \\
+\eqref{Normal} 		& normal 		&$\mu$&  $\sigma$  &  $0$  &  $2$    &    $1$    &    $0$    & $0$ \\
+\end{tabular} 
+}
+\end{center}
+% Uniform could actual be any b's?
+% Gamma	D[Log[x^{a-1} Exp[-x] ], x]
+% Beta 		D[Log[x^{a-1} (1-x)^{g-1} ], x]
+% Inv Gamma  D[Log[ x^(-a-1) Exp[-x^{-1}]],x]
+% Inv Exp		D[Log[ x^(-2) Exp[-x^{-1}]], x]
+\end{table*}
+

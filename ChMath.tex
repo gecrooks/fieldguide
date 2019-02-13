@@ -1,0 +1,338 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\clearpage
+% ========================================================================================
+%\Sec{Special functions and other miscellaneous mathematics}
+\Sec{Miscellaneous mathematics}
+\label{sec:math}
+\SSec{Special functions}
+
+
+\paragraph*{Gamma function}\hspace{-0.8em}\cite{Abramowitz1965}:
+\index{gamma function}
+\index{$\Gamma(a)$|see{gamma function}}
+\begin{align*}
+\Gamma(a) &= \int_0^{\infty} t^{a-1} e^{-t} dt 		\checked \\
+& =(a-1)!									\checked
+\\ & = (a-1) \Gamma(a-1)						\checked
+\\
+\\
+%\end{align*}
+%Important special cases include:
+%\begin{align*}
+\Gamma(\tfrac{1}{2}) &= \sqrt{\pi}				\checked \\
+\Gamma(1) &= 1 							\checked \\
+\Gamma(\tfrac{3}{2})&= \frac{ \sqrt{\pi} }{2}  		\checked  \\
+\Gamma(2) & =1 							\checked
+\end{align*}
+
+
+\paragraph*{Incomplete gamma function}\hspace{-0.8em}\cite{Abramowitz1965}:%
+\index{incomplete gamma function}
+\index{$\Gamma(a,z)$|see{incomplete gamma function}}
+ \begin{align*} 
+\Gamma(a,z) &= \int_z^{\infty} t^{a-1} e^{-t} dt				\checked
+\\
+\\
+ \Gamma(a,0)&=\Gamma(a)  							\checked \\
+\Gamma(1,z)&=\exp(-x) 								\checked	\\
+ \Gamma(\tfrac{1}{2},z)&=\sqrt{\pi}\op{erfc}(\sqrt{z}) 		\checked
+ \end{align*}
+ 
+\paragraph*{Regularized gamma function}\hspace{-0.8em}\cite{Abramowitz1965}:%
+\index{regularized gamma function}\index{$Q(a;z)$|see{regularized gamma function}}
+ \begin{align*} 
+Q(a;z)& = \frac{\Gamma(a;z) }{\Gamma(a)} 				\checked
+\\
+\\
+Q(\tfrac{1}{2}; z) &= \op{erfc}(\sqrt{z})					\checked
+\\
+Q(1;z) &= \exp(-z)									\checked
+\\
+\tfrac{d}{dz} Q(a;z) &= -\tfrac{1}{\Gamma(a)} z^{a-1} e^{-z} 	\checked
+%\\
+%\lim_{a\rightarrow\infty} Q(a;z) &= \tfrac{1}{2} \op{erfc} \left(\frac{z-a}{\sqrt{2a} }\right) 
+%+ O\left( \frac{1}{\sqrt{a}} \right) 
+%&\text{\cite{Tricomi1950}}
+%%{Check. Do we still care? \\}
+\end{align*}
+%The derivative is $\tfrac{d}{dz} Q(a;z) = -\tfrac{1}{\Gamma(a)} z^{a-1} e^{-z}$. 
+
+
+
+
+
+\paragraph*{Beta function}\hspace{-0.8em}\cite{Abramowitz1965}:%
+\index{beta function}%
+\index{$B(a,b)$|see{beta function}}
+\begin{align*}
+B(a,b) & 
+= \int_0^1 t^{a-1}(1-t)^{b-1} dt						\checked
+\\ &= \frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}		\checked
+\\
+\\ B(a,b) & = B(b,a) 								\checked
+\\ B(1, b) &= \tfrac{1}{b}							\checked
+\\ B(\tfrac{1}{2}, \tfrac{1}{2}) &= \pi					\checked
+\end{align*}
+
+
+
+\paragraph*{Incomplete beta function}\hspace{-0.8em}\cite{Abramowitz1965}:%
+\index{incomplete beta function}%
+\index{$B(a,b;z)$|see{incomplete beta function}}%
+\begin{align*}
+B(a,b;z) & = \int_0^z t^{a-1} (1-t)^{b-1} dt 				\checked			
+%\\ & = \frac{z^p}{p}  {}_2 F_1(p,1-q,p+1;z) 
+\\
+\\
+\tfrac{d}{dz} B(a,b;z) & = z^{a-1} (1-z)^{b-1} 			\checked \\
+B(1,1;z) & = z										\checked
+\end{align*}	
+
+
+
+
+\paragraph*{Regularized beta function}\hspace{-0.8em}:
+\index{regularized beta function}
+\index{$I(a,b; z)$|see{regularized beta function}}
+\label{RegBeta}
+\begin{align*}
+I(a,b;z) & = \frac{B(a,b;z)}{B(a,b)}				\checked
+\\
+\\ I(a,b;0) & = 0 							\checked
+\\ I(a,b;1) & = 1 							\checked
+\\ I(a,b;z) & = 1 - I(b,a;1-z)					\checked
+\end{align*}
+
+
+
+
+
+\paragraph*{Error function}\hspace{-0.8em}\cite{Abramowitz1965}:
+\index{error function}
+\index{$\op{erf}(z)$|see{error function}}
+\begin{align*}
+\op{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2} dt		\checked
+\end{align*}
+
+
+\paragraph*{Complimentary error function}\hspace{-0.8em}\cite{Abramowitz1965}:
+\index{complimentary error  function}
+\index{$\op{erfc}(z)$|see{complimentary error function}}
+\begin{align*}
+             \op{erfc}(z) & = 1-\op{erf}(z) 		\checked \\
+                                    & = \frac{2}{\sqrt{\pi}} \int_z^{\infty} e^{-t^2}\,dt. \checked
+\end{align*}
+
+
+\paragraph*{Gudermannian function}\hspace{-0.8em}\cite{Abramowitz1965}:
+\index{Gudermannian function}
+\index{$\op{gd}(z)$|see{Gudermannian function}}
+\begin{align*}
+\op{gd}(z) & = \int_0^{z} \op{sech}(t)\  dt 				\checked \\			
+& = 2 \arctan(e^x) - \tfrac{\pi}{2}					\checked
+\end{align*}
+A sinusoidal function. 
+
+\paragraph*{Modified Bessel function of the first kind}\hspace{-0.8em}\cite{Abramowitz1965}:
+\label{ModBesselFirst}
+\index{modified Bessel function of the first kind}
+\index{$I_v(z)$|see {modified Bessel function of the first kind}}
+\[
+I_v(z) = \left(\half z \right)^v \sum_{k=0}^{\infty}  \frac{ (\sfrac{1}{4} z^2)^k } { k!\ \Gamma(v+k+1)}
+\checked
+\notag
+\]
+A monotonic, exponentially growing function. 
+
+\paragraph*{Modified Bessel function of the second kind}\hspace{-0.8em}\cite{Abramowitz1965}: %
+\label{ModBesselSecond}
+\index{modified Bessel function of the second kind}
+\index{$K_v(z)$|see {modified Bessel function of the second kind}}
+\[
+K_v(z) =  \frac{\pi}{2} \frac{I_{-v} (z) - I_v (z)}{\sin (v \pi)}
+\checked
+\notag
+\]
+Another monotonic, exponentially growing function. 
+
+
+% tan and sin? or too standard to bother including?
+\paragraph*{Arcsine function}\hspace{-0.8em}: 
+\index{arcsine function}
+\index{$\arcsin(z)$|see {arcsine function}}
+\[
+\arcsin(z) & = \int_0^z \frac{1}{\sqrt{1-x^2}} dx \checked
+\notag
+\\
+\arcsin( \sin(z) ) &= z \notag \checked
+\\
+\sfrac{d}{dz} \arcsin(z) & = \frac{1}{\sqrt{1-z^2}} \checked
+\notag
+\]
+The functional inverse of the sin function.
+
+\paragraph*{Arctangent function}\hspace{-0.8em}: 
+\index{arctangent function}
+\index{$\arctan(z)$|see {arctangent function}}
+\[
+\arctan(z) &= \tfrac{1}{2} i \ln \frac{1-i z}{1+iz} \checked
+\notag \\ 
+\arctan(z)  &= \int_0^z \frac{1}{1+x^2} dx \checked
+\notag \\
+\arctan( \tan(z) ) &= z \checked
+\notag \\
+\sfrac{d}{dz} \arctan(z) & = \frac{1}{1+z^2}
+\checked \notag \\
+\arctan(z) & = - \arctan(-z)  \checked
+\notag
+\]
+The functional inverse of the tangent function.
+
+\paragraph*{Hyperbolic sine function}\hspace{-0.8em}:
+\index{hyperbolic sine function}\index{$\sinh(z)$|see{hyperbolic sine function}}
+\[
+\sinh(z) = \frac{e^{+x} - e^{-x} }{2} \notag \checked
+\]
+
+\paragraph*{Hyperbolic cosine function}\hspace{-0.8em}:
+\index{hyperbolic cosine function}\index{$\op{cosh}(z)$|see{hyperbolic cosine function}}
+\[
+\cosh(z) = \frac{e^{+x} + e^{-x} }{2} \notag \checked
+\]
+
+% Put up top
+\newcommand{\sech}{\op{sech}}
+\newcommand{\csch}{\op{csch}}
+
+
+\paragraph*{Hyperbolic secant function}\hspace{-0.8em}:
+\index{hyperbolic secant function}\index{$\sech(z)$|see{hyperbolic secant function}}
+\[
+\sech(z) = \frac{2}{e^{+x} + e^{-x} } = \frac{1}{\cosh(z)} \notag \checked
+\]
+
+
+\paragraph*{Hyperbolic cosecant function}\hspace{-0.8em}:
+\index{hyperbolic cosecant function}\index{$\csch(z)$|see{hyperbolic cosecant function}}
+% Not used? Included for completeness
+\[
+\csch(z) = \frac{2}{e^{+x} - e^{-x} } = \frac{1}{\sinh(z)} \notag \checked
+\]
+
+
+\paragraph*{Hypergeometric function}\hspace{-0.8em}\cite{Abramowitz1965,Graham1994}: All of the preceding functions can be expressed in terms of the hypergeometric function:
+\index{hypergeometric function}
+\index{$F$@${}_p F_q$|see{hypergeometric function}}
+\[
+{}_p F_q (a_1, a_2, \ldots, a_p ; b_1, b_2, \ldots, b_q; z) = \sum_{n=0}^{\infty} \frac{a_1^{\bar{n}},\ldots,a_p^{\bar{n}}} {b_1^{\bar{n}},\ldots,b_q^{\bar{n}}}  \frac{z^n}{n!} \checked
+\notag
+\]
+where $x^{\bar{n}}$ are rising factorial powers~\cite{Abramowitz1965, Graham1994}
+\[
+x^{\bar{n}} = x (x+1) \cdots (x+n-1) = \frac{ (x+n-1)!} {(x-1)!}  \ .	\checked
+\]
+
+The most common variant is ${}_2 F_1 (a,b;c;z)$, the Gauss hypergeometric function\index{Gauss hypergeometric function}, which can also be defined using an integral formula due to Euler, 
+\[
+{}_2 F_1 (a,b;c;z) = \frac{1}{B(b,c-b)} \int_0^1 \frac{t^{b-1} (1-t)^{c-b-1} }{ (1- z t)^a } dt \qquad |z|\leq 1
+\checked
+\ .
+\]
+The variant ${}_1 F_1 (a;c;z)$ is called the confluent hypergeometric function,\index{confluent hypergeometric function}
+and ${}_0 F_1 (c;z)$ the confluent hypergeometric limit function\index{confluent hypergeometric limit function}.
+
+
+
+Special cases include,
+\begin{align*}
+B(a,b;z) &= \frac{z^a}{a}\  {}_2 F_1(a,1-b;a+1;z						\checked) \\
+B(a,b) &= \frac{1}{a}\ {}_2 F_1(a,1-b;a+1;1) 							\checked\\
+\Gamma(a;z) &= \Gamma(a)- \frac{z^a}{a}\  {}_1 F_1(a; a+1;-z) 			\checked \\
+\op{erfc}(z) & = \frac{2 z}{\sqrt{\pi} }\  {}_1 F_1(\tfrac{1}{2}; \tfrac{3}{2} ;-z^2)	\checked \\
+ \sinh(z) & = z {}_0 F_1(; \tfrac{3}{2};\tfrac{z^2}{4} ) 						\checked \\		
+ \cosh(z) & = {}_0 F_1(; \tfrac{1}{2};\tfrac{z^2}{4} ) 						\checked \\
+\op{arctan}(z)& = z\ {}_2 F_1( \tfrac{1}{2},  1 ;  \tfrac{3}{2}; - z^2) 			\checked \\
+\op{arcsin}(z)& = z\ {}_2 F_1( \tfrac{1}{2},  \tfrac{1}{2} ;  \tfrac{3}{2}; z^2) 	\checked \\
+%\op{arccos}(x)& = \\
+I_v(z) & = \sfrac{( \half v)^v}{\Gamma(v+1)}\ {}_0 F_1(; v+1;\tfrac{z^2}{4} ) \checked \\
+\\
+\tfrac{d}{dz}\ {}_2 F_1 (a,b;c;z) & = \tfrac{a b}{c} {}_2 F_1  (a+1,b+1;c+1;z) 	\checked
+\end{align*}
+
+
+\paragraph*{Sign function}\hspace{-0.8em}:
+\index{sign function}
+\index{$\op{sgn}(x)$|see{sign function}}
+The sign of the argument. For real arguments, the sign function is defined as 
+\begin{align*}	
+\checked \op{sgn}(x)  = \begin{cases}
+-1 & \text{if } x < 0 \\
+\phantom{+}0 & \text{if } x = 0 \\
++1 & \text{if } x > 0  \end{cases}	 \ , 
+\end{align*}
+and for complex arguments the sign function can be defined as
+\begin{align*}	
+\checked \op{sgn}(z) = \begin{cases}
+\tfrac{z}{|z|} & \text{if } z \neq 0 \\
+0 & \text{if } z = 0
+\end{cases}	\ .
+\end{align*}
+
+
+\paragraph*{Polygamma function}\hspace{-0.8em}\cite{Abramowitz1965}:
+The $(n+1)$th logarithmic derivative of the gam\-ma function. The first derivative is called the 
+the {\bf digamma function} (or psi function) $\psi(x)\equiv\psi_0(x)$, and the second the {\bf trigamma function} $\psi_1(x)$.
+\index{digamma function}
+\index{psi function|see{digamma function}}
+\index{$\psi(x)$|see{digamma function}}
+\index{trigamma function}
+\index{polygamma function}
+\index{$\psi_1(x)$|see{trigamma function}}
+\index{$\psi_n(x)$|see{polygamma function}}
+\begin{align*}
+	\psi_n(x)&= \tfrac{d^{n+1}}{dz^{n+1}} \ln \Gamma(x) 	\checked
+	\\ &=  \tfrac{d^{n}}{dz^{n}} \psi(x) 					\checked
+\end{align*}
+
+
+
+\paragraph*{q-exponential and q-logarithmic functions}
+\index{limits}
+Two common and important limits are
+\[
+\lim_{c\rightarrow0} \frac{x^c -1}{c} = \ln x
+\notag \checked
+\]
+and
+\[
+\lim_{c\rightarrow+\infty} \left(1 + \frac{x}{c} \right)^{a c} = e^{a x} \ . \checked
+\notag
+\]
+
+
+
+It is sometimes useful to introduce `q-deformed' exponential and logarithmic functions that extrapolate across these limits~\cite{Tsallis1994,Yamano2002}.
+\index{q-exponential function} 
+\index{q-logarithm function} 
+\index{q-deformed functions}
+\begin{align*}
+\exp_q(x) &=  
+\begin{cases}
+\exp(x) & q= 1 \\
+\bigl(1+ (1-q) x \bigr)^{\frac{1}{1-q} }& q\neq 1, \quad 1+(1-q)x>0 \\
+0 & q< 1, \quad 1+(1-q)x\leq0 \\
++\infty & q> 1, \quad 1+(1-q)x\leq0 
+\end{cases}
+\\
+\ln_q(x) &=  
+\begin{cases}
+\frac{x^{1-q} -1}{1-q}& q\neq 1\\
+\ln(x) & q= 1 \\
+\end{cases}
+\end{align*}
+Note that these q-functions  are unrelated to the q-exponential function defined in combinatorial mathematics.
+
+

@@ -1,0 +1,43 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+\caption[Power function distribution -- Properties]{Properties of the power function distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation}\quad &   \text{PowerFn}(x\given a,s,\beta) 
+\\
+\text{PDF}\quad &   \left|\frac{\beta}{ s}\right|\left(\frac{x-a}{s} \right)^{\beta -1}  \checked
+\\
+ \text{CDF}  \big/ \text{CCDF} \quad  &   \left(\frac{x-a}{s} \right)^{\beta } & \tfrac{s}{\beta}  >0 \ \big{/} \ \tfrac{s}{\beta}<0  \checked
+\\
+\text{parameters}\quad &   a, s, \beta \text{ in } \Real
+\\
+\text{support} \quad &    x \in [a,a+s] & s>0,\ \beta >0 \checked
+ \\ 			 &  x\in[a+s,a] &s<0,\ \beta >0   \checked
+ \\  			 &  x\in[a+s,+\infty]& s>0,\ \beta<0 \checked
+ \\  			&  x\in[-\infty,a+s] & s<0,\ \beta<0  \checked
+\\
+%\text{median} \quad  &  \cdots
+%\\
+\text{mode} \quad  & a & \beta >0 \checked
+\\
+& a+s & \beta <0  \checked
+\\
+\text{mean} \quad  &a+  \frac{s\beta}{\beta+1} &  \beta \notin [-1,0] \checked
+\\
+\text{variance} \quad  & \frac{ s^2 \beta }{ (\beta+1)^2 (\beta+2) } & \beta \notin [-2,0] \checked
+\\
+\text{skew} \quad  & \op{sgn}(\tfrac{\beta}{s}) \frac{2(1-\beta)}{(\beta+3)}  \sqrt{\frac{\beta+2}{\beta}}
+& \beta \notin [-3,0] 
+\\
+\text{kurtosis} \quad  &  \frac{6(\beta^3-\beta ^2- 6 \beta +2)}{\beta(\beta +3)(\beta +4)} & \beta \notin [-4,0] \checked
+\\
+\text{entropy} \quad  &  \ldots
+\\
+\text{MGF} \quad  &  \text{undefined}
+\\
+\text{CF} \quad  & \ldots
+\end{align*}
+\end{table*}

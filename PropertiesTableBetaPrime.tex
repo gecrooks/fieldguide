@@ -1,0 +1,63 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[tp]
+\caption[Beta prime distribution -- Properties] {Properties of the beta prime distribution}
+\begin{align*}
+ \text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \op{BetaPrime}(x\given a, s, \alpha,\gamma)  	\checked
+\\
+\text{PDF}\quad &    \frac{1}{B(\alpha, \gamma)} \frac{1}{|s|}
+\left(\frac{x-a}{s}\right)^{\alpha -1} \left(1+ \frac{x-a}{s} \right)^{-\alpha-\gamma } \checked
+\hspace{-2em}
+\\
+\text{CDF / CCDF} \quad  &  
+\frac{B\big(\alpha, \gamma; (1+(\tfrac{x-a}{s})^{-1})^{-1} \big) }{B(\alpha,\gamma)} \checked
+\hspace{-8em}
+& s >0 \,\big/ \, s<0
+\\ 
+& \quad = I\left(  \alpha,\gamma; (1+(\tfrac{x-a}{s})^{-1})^{-1} \right) 			\checked
+\\
+\text{parameters}\quad &   a,\ s,\ \alpha,\ \gamma, \text{ in } \Real \checked 
+\\ & \alpha>0, \gamma>0 \checked
+\\
+\text{support} \quad &    x \geq a &  s > 0 			\checked
+\\
+&  x\leq a  &  s < 0 							\checked
+\\
+%\text{median} \quad  &  \cdots
+%\\
+\text{mode} \quad  & a + s \frac{\alpha-1}{\gamma+1} & \alpha\geq 1 \checked \\
+& a &\alpha<1 \checked
+\\
+\text{mean} \quad  &   a+s \frac{ \alpha}{\gamma-1} \checked
+& \gamma >1
+\\
+\text{variance} \quad  &s^2
+\frac{\alpha(\alpha+\gamma-1)}{(\gamma-2)(\gamma-1)^2} \checked
+  \hspace{-8em}
+&   \gamma>2
+\\
+\text{skew} \quad  &  \text{not simple}
+\\
+\text{kurtosis} \quad  &  \text{not simple}
+\\
+\text{entropy} \quad  &   \ln \frac{1}{B(\alpha, \gamma)} \left|\frac{1}{s}\right|
+  +(1-\alpha) \big[ \psi(\alpha) - \psi(\gamma)\big]
+  \hspace{-8em}
+\\
+& \quad +(\alpha+\gamma) \big[ \psi(\alpha+\gamma) - \psi(\gamma)\big] \checked &  \text{\cite[Eq.~(15)]{Tahmasebi2010}}
+\\
+\text{MGF} \quad  &  \text{none}
+\\
+\text{CF} \quad  &  \cdots 
+% Possible expression in terms of second confluence hypergeometric function?
+% See wikipedia under F distribution
+%\\
+%\text{moments} \quad & \frac{B(\alpha+k,\gamma-k)}B(\alpha,\gamma)}
+% Only if a =0, s=1. How do moments scale with scale?
+\end{align*}
+\end{table*}
+
+

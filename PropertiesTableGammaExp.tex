@@ -1,0 +1,39 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[tp!]
+\caption[Gamma-exponential distribution -- Properties]{Properties of the gamma-exponential distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad &  \op{GammaExp}(x \given \nu, \lambda, \alpha)  			\checked
+\\
+\text{PDF}\quad &   \frac{1}{ \Gamma(\alpha) |\lambda|}  \exp\left\{- \alpha \left(\frac{x-\nu}{\lambda}\right) - \exp\left(-\frac{x-\nu}{\lambda}\right)  \right\} \checked \hspace{-8em}												
+\\
+\text{CDF} \big/ \text{CCDF} \quad  &   Q\left(\alpha, e^{-\frac{x-\nu}{\lambda} }\right) 
+& \lambda>0 \ \big/ \ \lambda<0  \checked
+\\
+\text{parameters}\quad &   \nu,\ \lambda,\ \alpha,\   \text{in } \Real, \ \alpha>0, \ 		\checked
+\\
+\text{support} \quad &   x \in [-\infty, +\infty]									\checked
+\\
+\text{mode} \quad  & \nu -\lambda \ln \alpha \checked
+\\
+\text{mean} \quad  &   \nu- \lambda \psi(\alpha)	\checked
+\\
+\text{variance} \quad  &  \lambda^2 \psi_1(\alpha)	\checked
+\\
+\text{skew} \quad  &   -\text{sgn}(\lambda) \tfrac{\psi_2(\alpha) }{  \psi_1(\alpha)^{3/2} }  \checked
+\\
+\text{kurtosis} \quad  &     \tfrac{ \psi_3(\alpha) }{  \psi_1(\alpha)^{2}} \checked
+\\
+%\text{entropy} \quad  &  \ln \Gamma(\alpha) |\lambda|  - \alpha \psi(\alpha) + \alpha
+%\\
+\text{MGF} \quad  &   e^{\nu t } \frac{\Gamma(\alpha-\lambda t)}{\Gamma(\alpha)}  \checked
+& \text{\cite{Johnson1995}}  %after Eq 22.227
+\\
+\text{CF} \quad  &  e^{i \nu t } \frac{\Gamma(\alpha-i \lambda t)}{\Gamma(\alpha)} \checked
+% Johnson1995, Eq 22.211, modulo typos
+\end{align*}
+\end{table*}
+

@@ -1,0 +1,39 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+\caption[Normal distribution -- Properties]{Properties of the normal distribution}
+
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \op{Normal}(x\given \mu,\sigma)	\checked
+\\
+\text{PDF}\quad &   \frac{1}{\sqrt{2 \pi \sigma^2}}  \exp\left\{ - \frac{( x-\mu)^2}{2\sigma^2} \right\} \checked
+\\
+\text{CDF} \quad  &   \frac{1}{2}\left[  1 + \text{erf}\left(\frac{x-\mu}{\sqrt{2 \sigma^2}} \right) \right]	\checked
+\\
+\text{parameters}\quad &   \mu,\ \sigma \text{ in } \mathbb{R}						\checked
+\\
+\text{support} \quad &   x \in [-\infty, + \infty]									\checked
+\\
+\text{median} \quad  &  \mu												\checked
+\\
+\text{mode} \quad  & \mu													\checked
+\\
+\text{mean} \quad  &  \mu													\checked
+\\
+\text{variance} \quad  & \sigma^2											\checked
+\\
+\text{skew} \quad  &  0													\checked
+\\
+\text{kurtosis} \quad  &  0													\checked
+\\	
+\text{entropy} \quad  & \tfrac{1}{2} \ln(2\pi e \sigma^2)							\checked
+\\
+\text{MGF} \quad  &  \exp\left({\mu t + \tfrac{1}{2} \sigma^2 t^2 }\right)				\checked
+\\
+\text{CF} \quad  &  \exp\left({i \mu t - \tfrac{1}{2} \sigma^2 t^2}\right)					\checked
+\end{align*}
+
+\end{table*}

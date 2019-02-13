@@ -1,0 +1,39 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+\caption[Exponential distribution -- Properties]{Properties of the exponential distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \op{Exp}(x\given a,\theta)					\checked
+\\
+\text{PDF}\quad &    \frac{1}{|\theta|} \exp\left\{-\frac{x-a}{\theta}\right\} 	\checked
+\\
+\text{CDF}\big  / \text{CCDF}  \quad  &   1- \exp\left\{-\frac{x-a}{\theta}\right\} & \theta>0 \ \big{/} \  \theta<0
+\\
+\text{parameters}\quad &   a,\ \theta, \text{ in } \Real 				\checked
+\\
+\text{support} \quad &   [ a, +\infty]      & \theta>0					\checked
+\\
+				&   [-\infty,  a]     & \theta <0					\checked
+\\
+\text{median} \quad  &  a + \theta \ln 2							\checked
+%\\
+\text{mode} \quad  & a										\checked
+\\
+\text{mean} \quad  &  a+ \theta									\checked						
+\\
+\text{variance} \quad  & \theta^2								\checked
+\\
+\text{skew} \quad  &  2										\checked
+\\
+\text{kurtosis} \quad  &  6										\checked
+\\
+\text{entropy} \quad  & 1 + \ln |\theta|							\checked
+\\
+\text{MGF} \quad  & \frac{\exp(at) }{ \left(1- \theta t\right)}				\checked
+\\
+\text{CF} \quad  & \frac{\exp(iat) }{ \left(1- i \theta t\right)}				\checked
+\end{align*}
+\end{table*}

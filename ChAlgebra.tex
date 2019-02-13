@@ -1,0 +1,339 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\clearpage
+\Sec{Algebra of Random Variables}
+
+Various operations can be applied to combine or transform random variables, providing a rich tapestry of interrelations between different distributions~\cite{Springer1979a, Devroye1986}.
+
+
+\SSec{Transformations}
+\label{transforms}\index{transforms}
+
+
+Given a continuous random variable $X$, with distribution function $F_X$ and density $f_X$, and a monotonic function $h(x)$ (either strictly increasing or strictly decreasing) on the range of $X$, we can create a new random variable $Y$, 
+\begin{align*}
+Y &\sim h(X) \checked \\
+F_Y(y) &= \begin{cases}
+	F_X\bigl( h^{-1}(y) \bigr) & \text{$h(x)$ is increasing function} \checked \\ 
+	1- F_X\bigl( h^{-1}(y) \bigr) &  \text{$h(x)$ is decreasing function} \checked
+	\end{cases}
+	\\
+f_Y(y) &= \left|\tfrac{d}{dy}h^{-1}(y)\right| f_X\bigl( h^{-1}(y) \bigr) \checked
+\end{align*}
+In the last line above, the prefactor is the {\em Jacobian} of the transformation. \index{Jacobian}
+
+For $h$ (And $h^{-1}$) increasing we have
+\[
+F_Y\bigl(y) = P\bigl(Y\leq y\bigr) = P\bigl(h(X) \leq y\bigr) = P\bigl(X \leq h^{-1}(y) \bigr) =
+ F_X\bigl( h^{-1}(y) \bigr) \checked
+\notag
+\]
+and decreasing
+\[
+F_Y\bigl(y) = P\bigl(Y\leq y\bigr) = P\bigl(h(X) \leq y\bigr) = P\bigl(X \geq h^{-1}(y) \bigr) =
+ 1- F_X\bigl( h^{-1}(y) \bigr) \checked
+\notag \ .
+\]
+
+
+\paragraph*{Linear transformation}
+\index{linear transformation}
+\[
+h(x) = a+ s x \checked
+\notag
+\]
+A linear transform creates a {\sl location-scale family} of distributions. \index{location-scale family}
+\index{scale parameter}
+\index{location parameter}
+
+
+
+\paragraph*{Weibull transformation}
+\[
+h(x) = a+ s x^{\tfrac{1}{\beta} } \checked
+\notag
+\]
+\index{Weibull transform}
+The Weibull transform only applies to distributions with non-negative support.
+\begin{align*}
+\opr{PowerFn}(a,s,\beta) &\sim a + s\ \opr{StdUniform}()^{\tfrac{1}{\beta}} 
+\checked \\
+\opr{Weibull}(a,\theta,\beta) &\sim a+ \theta\ \oprr{StdExp}{Exp}()^{\sfrac{1}{\beta}} 
+\checked \\
+\opr{LogNormal}(a, \vartheta, \beta) &\sim a+ \vartheta\ \oprr{StdLogNormal}{LogNormal}()^{\sfrac{1}{\beta}} 
+% \\ \text{UnitGamma}(a,s,\alpha,\beta) &\sim a + s\ \text{StdUnitGamma}(\alpha)^{\tfrac{1}{\beta}} 
+\checked \\
+\opr{Amoroso}(a,\theta,\alpha,\beta) &\sim a + \theta\ \opr{StdGamma}(\alpha)^{\tfrac{1}{\beta}} 
+\checked \\
+\opr{GenBeta}(a,s,\alpha,\gamma,\beta) & \sim a + s\ \opr{StdBeta}(\alpha,\gamma)^{\tfrac{1}{\beta}} 
+\checked \\
+\opr{GenBetaPrime}(a,s,\alpha,\gamma,\beta) & \sim a + s\ \opr{StdBetaPrime}(\alpha,\gamma)^{\tfrac{1}{\beta}} 
+\checked
+\end{align*}
+
+
+The Weibull transform is increasing if $\tfrac{s}{\beta}>0$, and decreasing if $\tfrac{s}{\beta}<0$. 
+%{Which is what causes cdf/ccdf flip.}
+
+%\[
+%\frac{d}{dy} h(y) = \tfrac{s}{\beta} y^{\tfrac{1}{\beta}-1}
+%\]
+
+\paragraph*{Inverse (reciprocal) transformation}
+\[
+h(x) = x^{-1} 
+\notag
+\]
+The Weibull transform with $a=0$, $s=1$, and $\beta=-1$.
+\index{inverse transform}
+\index{reciprocal transform}
+\[
+\opr{Gamma}(0,1,\alpha) \sim \opr{InvGamma}(0,1,\alpha)^{-1} \notag  \\
+\opr{Exp}(0,1) \sim \opr{InvExp}(0,1)^{-1} \notag  \\
+\opr{Cauchy}(0,1) \sim \opr{Cauchy}(0,1)^{-1} \notag  \\
+\]
+
+
+\paragraph*{Log and anti-log transformations}
+\label{logtransform}
+\index{log transform}\index{anti-log transform}
+\[
+h(x) = - \ln(x) \, \qquad
+h(x) = \exp(-x)
+\notag
+\checked
+\]
+The log and anti-log transforms are inverses of one another. See p.\pageref{log-transform-name} for a discussion of transformed distribution naming conventions.
+\begin{align*}
+\opr{StdUniform}() &\sim \exp\bigl(-\oprr{StdExp}{Exp}()\bigr) \checked
+\\
+\oprr{StdLogNormal}{LogNormal}() &\sim \exp\bigl(-\oprr{StdNormal}{Normal}()\bigr) \checked
+% \\ \opr{StdUnitGamma}(\alpha) &\sim \exp\bigl(- \opr{StdGamma}(\alpha)\bigr)
+\\
+\opr{StdGamma}(\alpha) &\sim \exp\bigl(-\opr{StdGammaExp}(\alpha)\bigr)  \checked
+\\
+\opr{StdBeta}(\alpha,\gamma) & \sim \exp\bigl(-\oprr{StdBetaExp}{BetaExp}(\alpha,\gamma)\bigr)  \checked
+\\
+ \opr{StdBetaPrime}(\alpha,\gamma) & \sim \exp\bigl(-\oprr{StdBetaLogistic}{BetaLogistic}(\alpha,\gamma)\bigr)  \checked
+\end{align*}
+
+The anti-log transform converts a location parameter into a scale parameter, and a scale parameter into a Weibull shape parameter. 
+\begin{align*}
+\opr{PowerFn}(0,s,\beta) &\sim  \exp\bigl(-\opr{Exp}(-\ln s ,\sfrac{1}{\beta} )\bigr) 
+\checked
+\\
+\opr{LogLogistic}(0,s,\beta) &\sim  \exp\bigl(-\opr{Logistic}(-\ln s,\sfrac{1}{\beta})\bigr) 
+\checked
+\\
+\opr{FisherTippett}(0,s,\beta) & \sim \exp\bigl(-\opr{Gumbel}(-\ln s,\sfrac{1}{\beta})\bigr) 
+\checked
+\\
+\opr{Amoroso}(0,s, \alpha,\beta) &\sim \exp\bigl(-\opr{GammaExp}(-\ln s, \sfrac{1}{\beta}, \alpha)\bigr) 
+\checked
+\\
+\opr{LogNormal}(0,\vartheta,\beta) &\sim \exp\bigl(-\opr{Normal}(-\ln \vartheta,\sfrac{1}{\beta})\bigr)  
+\checked
+ \\ 
+ \opr{UnitGamma}(0,s, \alpha, \beta) &\sim \exp\bigl(- \opr{Gamma}(0, -\ln s,\sfrac{1}{\beta}, \alpha)\bigr) 
+ \checked
+\\
+\opr{GenBeta}(0,s,\alpha,\gamma,\beta) & \sim \exp\bigl(-\opr{BetaExp}(-\ln s,\sfrac{1}{\beta},\alpha,\gamma)\bigr) 
+\checked
+\\
+ \opr{GenBetaPrime}(0,s,\alpha,\gamma,\beta) & \sim \exp\bigl(-\opr{BetaLogistic}(-\ln s, \sfrac{1}{\beta}, \alpha,\gamma)\bigr) 
+\checked
+\end{align*}
+
+
+
+\paragraph*{Prime transformation}~\cite{\self}\index{prime transform}
+\[
+\op{prime}(x) =\frac{1}{\sfrac{1}{x}-1 }\ ,  \quad
+\op{prime}^{-1}(y) = \frac{1}{\sfrac{1}{y}+1 }  \checked
+\notag
+\]
+This transformation relates the beta and beta-prime distributions.
+\begin{align*}
+\oprr{StdUniPrime}{UniPrime}() & \sim \op{prime}\bigl( \opr{StdUniform}() \bigr) \checked \\
+\opr{StdBetaPrime}(\alpha, \gamma) & \sim \op{prime}\bigl( \opr{StdBeta}(\alpha, \gamma) \bigr) \checked
+\end{align*}
+
+
+\SSec{Combinations}
+\paragraph*{Sum}\index{sum distributions}\index{convolution}
+The sum of two random variables is
+\[
+Z \sim X + Y \checked
+\notag
+\]
+The resultant probability distribution function is the convolution of the component distribution functions.
+\[
+f_Z(z) = (f_X * f_Y)(z) = \int_{-\infty}^{+\infty}  f_X(x)\ f_Y(z-x)\ dx
+\notag \checked
+\]
+The characteristic function for a sum of independent random variables is the product of the respective characteristic functions (p\pageref{characteristic_function}). \index{characteristic function}
+\[
+\phi_{X+Y}(t) = \phi_{X}(t) \phi_{Y}(t) 
+\notag
+\]
+
+\[
+\opr{Normal}_1(\mu_1, \sigma_1) + \opr{Normal}_2(\mu_2, \sigma_2) &\sim \opr{Normal}_3(\mu_1+\mu_2, \sqrt{\sigma^2_1 + \sigma^2_2}) 
+\notag \\
+\opr{Exp}_1(a_1, \theta) + \opr{Exp}(a_2, \theta) &\sim \opr{Gamma}(a_1, a_2, \theta, 2) 
+\notag \\
+\opr{Gamma}_1(a_1, \theta, \alpha_1) + \opr{Gamma}_2(a_2, \theta, \alpha_2) &\sim \opr{Gamma}_3(a_1+a_2,\theta, \alpha_1+\alpha_2) 
+\notag
+\]
+Stable distributions \eqref{Stable} are those that are invariant under summation, changing only location and scale. 
+
+
+\paragraph*{Difference}\index{difference distribution}
+The difference of two random variables.
+\[
+Z \sim X - Y  \checked
+\notag
+\]
+\[
+\phi_{X-Y}(t) = \phi_{X}(t) \phi_{Y}(-t) 
+\notag
+\]
+
+Examples:
+\begin{align*}
+\opr{UniformDiff}(x) &\sim \opr{StdUniform}_1(x) -  \opr{StdUniform}_2(x) \checked
+\\
+\opr{BetaLogistic}(x\given \pLoc_1-\pLoc_2,\pScale,\alpha,\gamma)   
+& \sim \opr{GammaExp}_1(x\given \pLoc_1,\pScale,\alpha)   \\ & \qquad -\opr{GammaExp}_2(x\given \pLoc_2,\pScale,\gamma)
+\checked  
+\end{align*}
+
+\paragraph*{Product}
+A {\sl product distribution}\index{product distributions} is the product of two independent  random variables.
+\[
+Z \sim X Y  \checked
+\notag
+\]
+The probability distribution of $Z$ is
+\[
+f_Z(z) = \int f_X(x)\  f_Y\bigl(\frac{z}{x}\bigr) \frac{1}{| x |} dx \checked
+\notag
+\]
+Examples:
+\[
+\prod_{i=1}^{n} \opr{Uniform}_i(0,1) & \sim \opr{UniformProduct}(n) 
+\notag \checked
+\\
+\prod_{i=1}^{n} \opr{PowerFn}_i(0,s_i,\beta)& \sim \opr{UnitGamma}(0, \prod_{i=1}^{n} s_i, n, \beta) \checked
+\notag
+\\
+\prod_{i=1}^{n}  \opr{UnitGamma}_i (0,s_i,\alpha_i, \beta ) 
+&\sim \opr{UnitGamma}(0,\prod_{i=1}^{n} s_i, \sum_{i=1}^n \alpha_i , \beta ) \checked
+\notag
+\\
+\prod_{i=1}^{n} \opr{LogNormal}_i(0, \vartheta_i, \beta_i) & \sim 
+\opr{LogNormal}_i(0, \prod_{i=1}^{n} \vartheta_i, (\sum_{i=0}^{n}\beta_i^{-2})^{-\half})  \checked
+\notag
+\]
+
+\paragraph*{Ratio}
+The ratio (or quotient) distribution\index{ratio distributions}\index{quotient distributions|see{ratio distributions}} is the ratio of two random variables.
+\[
+R \sim \frac{X}{Y} \checked
+\notag
+\]
+
+
+Examples:
+\begin{align*}
+\opr{StdBetaPrime}(\alpha,\gamma) & \sim  \frac{\opr{StdGamma}_1(\alpha)}{\opr{StdGamma}_2(\gamma) }
+\checked
+\notag
+\\
+\opr{StdCauchy}() & \sim  \frac{\oprr{StdNormal}{Normal}_1()}{\oprr{StdNormal}{Normal}_2() }
+\end{align*}
+
+
+
+\paragraph*{Mixture}
+\index{$\wedge$|see{mixture distributions}}\index{compound distributions}\index{mixture distributions}
+A mixture (or compound) of two distributions is formed by selecting a parameter of one distribution from the probability distribution of the other. 
+\begin{align*}
+Z(x\given \alpha) &= \int X(x\given \beta) Y(\beta\given \alpha) \ d\beta  \checked
+\end{align*}
+
+
+For random variables this can be notated as 
+\begin{align*}
+Z(\alpha) &\sim X\bigl( Y(\alpha) \bigr)\checked  \\ 
+\text{or}\quad
+Z(\alpha) & \sim X(\beta) \mix{\beta} Y(\alpha)  \checked\ .
+\end{align*}
+The name `X-Y' is sometimes assigned to a compound of distributions `X' and `Y', although this is ambiguous when there are multiple parameters that could be compounded.
+
+
+\SSec{Transmutations}
+\paragraph*{Fold}\index{fold}
+Folded distributions arise when only magnitude, and not the sign, of a random variable is observed. 
+\[
+\op{Folded}_X(\pLoc) \sim |X-\pLoc |
+\notag \checked
+\] 
+An important % continuous, univariate, unimodal 
+example is the {\bf folded normal} distribution
+\index{folded distributions}
+\begin{align*}
+\op{FoldedNormal}&(x\given \mu,\sigma) 
+\\ \notag
+= & \half  { \opr{Normal}(x\given +\mu,\sigma) +  \half \opr{Normal}(x\given -\mu,\sigma) } \checked
+ \\ \notag
+\text{for} \quad & x, \mu, \sigma  \text{ in } \mathbb{R}, x\geq0
+\end{align*}
+If we fold about  the  center of a symmetric distribution we obtain a `halved' distribution.\index{halved-distribution}\index{half} Examples already encountered are the half normal  \eqref{HalfNormal}, half-Pearson type VII  \eqref{HalfPearsonVII}, and half-Cauchy \eqref{HalfCauchy} distributions. A halved Laplace \eqref{Laplace} distribution is exponential \eqref{Exp}. 
+
+
+
+\paragraph*{Truncate} \index{truncate}
+A truncated distribution arises from restricting the support of a distribution.
+\[
+\op{Truncated}_X(x\given a,b) = \frac{f(x)}{|F(a) - F(b)|} \checked
+\notag
+\]
+ The truncation of a continuous, univariate, unimodal distribution is also continuous, univariate and unimodal.
+  Examples include the {\bf Gompertz} distribution (a left-truncated Gumbel \eqref{Gumbel} distribution) and the
+  {\bf truncated normal distribution}.
+
+\paragraph*{Dual}\index{dual distributions}
+We create a dual distribution by interchanging the role of a variable and parameter in the probability density function.
+\[
+Z(z\given x) = \frac{ X(x\given z)}{ \int dz\  X(x\given z)} \checked
+\notag
+\]
+The integral (or sum, if $z$ takes discrete values) in the denominator ensures that the dual distribution is normalized.
+
+
+
+\paragraph*{Tilt} (exponential tilt, Esscher transform, exponential change of measure (ECM), twist)~\cite{Esscher1932,Siegmund1976} 
+\index{tilt}\index{exponential tilt}\index{Esscher transform}\index{exponential change of measure}
+\[
+\op{Tilted}_\theta\bigr( f(x) \bigl) =  \frac{ f(x) e^{\theta x} }{\int f(x) e^{\theta x} dx }
+= f(x) e^{\theta x - \kappa(\theta) }  \checked
+\notag
+\]
+Here $\kappa(\theta)= \ln \int  f(x) e^{\theta x} dx\checked$ is the cumulant generating function~\pageref{CGF}.
+
+
+
+
+\SSec{Generation}
+\label{sec:random}
+\index{random number generation}
+For an introduction to uniform random generation see Knuth~\cite{Knuth1997}, and for generating non-uniform variates from uniform random numbers see  Devroye (1986)~\cite{Devroye1986}. 
+
+Fast, high quality algorithms are widely available for uniform random variables (e.g.\ the Mersenne Twister~\cite{Matsumoto1998}), for the gamma distribution (e.g.\ the Marsaglia-Tsang fast gamma method~\cite{Marsaglia2001}) and normal distributions (e.g.\ the ziggurat algorithm of Marsaglia and Tsang (2000)~\cite{Marsaglia2000}). The exponential \secref{sec:Exp}, Laplace \secref{sec:Laplace} and power function~\secref{sec:PowerFn} distributions can be obtained from straightforward transformations of the uniform distribution.
+
+The remaining  simple distributions can be obtained from transforms of 1~or~2 gamma random variables~\cite{Devroye1986} (See gamma distribution interrelations, \secref{GammaInterrelations}, p\pageref{gammatransforms}), with the exception of the Pearson IV distribution, which can be sampled with a rejection method~\cite{Devroye1986,Heinrich2004}.
+
+

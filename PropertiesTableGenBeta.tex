@@ -1,0 +1,54 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[tp]
+\caption[Generalized beta distribution-- Properties]{Properties of the generalized beta distribution}
+ \begin{align*}
+ \text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{name} \quad & \text{GenBeta}(x\given a,s,\alpha, \gamma,\beta) 
+\\
+\text{PDF}\quad &   \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{s}\right|
+\left(\frac{x-a}{s} \right)^{\alpha \beta -1} \left(1-\left(\frac{x-a}{s}\right)^\beta\right)^{\gamma -1}
+\checked
+\hspace{-8em}
+\\
+\text{CDF / CCDF} \quad  &   \frac{B\left( \alpha,\gamma; (\tfrac{x-a}{s})^\beta  \right)}{B(\alpha,\gamma)}
+\checked
+% McDonald1984 table 3.1 GB1
+& \tfrac{\beta}{s} >0 \,\big/ \, \tfrac{\beta}{s} <0
+\\ & \quad = I\left(  \alpha,\gamma; (\tfrac{x-a}{s})^\beta \right) \checked
+\\ 
+\text{parameters}\quad &   a,\ s,\ \alpha,\ \gamma,\ \beta, \text{ in } \Real, \\ &  \alpha,\gamma\geq0
+\\
+\text{support} \quad 
+&   \ x \in [a,a+s],  \quad & 0<s,\ 0<\beta  \checked
+ \\ 	 		 & \ x\in[a+s,a],  \quad & s<0,\ 0<\beta   \checked
+ \\  			 & \ x\in[a+s,+\infty], \quad  & 0<s,\ \beta<0  \checked
+ \\  			& \ x\in[-\infty,a+s], \quad & s<0,\ \beta<0 \checked
+\\
+%\text{median} \quad  &  \cdots
+%\\
+%\text{mode} \quad  & \cdots
+%\\
+\text{mean} \quad  &   a+ \frac{s B(\alpha+\tfrac{1}{\beta},\gamma) }{B(\alpha,\gamma)}  \quad & \alpha+\tfrac{1}{\beta} >0
+\checked
+\\
+\text{variance} \quad  & \frac{s^2 B(\alpha+\tfrac{2}{\beta},\gamma) }{B(\alpha,\gamma)} -\frac{s^2 B(\alpha+\tfrac{1}{\beta},\gamma)^2 }{B(\alpha,\gamma)^2} \checked
+\\
+\text{skew} \quad  &   \text{not simple}
+\\
+\text{kurtosis} \quad  &   \text{not simple}
+\\
+% \text{entropy} \quad  & \cdots
+% \\
+\text{MGF} \quad  &  \text{none} % Can't exist because beta mgf doesn't exist
+\\
+% \text{CF} \quad  &  \cdots
+% \\
+E(X^h) \quad & \frac{s^h B(\alpha+\tfrac{h}{\beta},\gamma) }{B(\alpha,\gamma)}  \qquad  & \!\!a=0,\ \alpha+\tfrac{h}{\beta} >0
+\ \text{\cite{McDonald1984}} \checked
+%{Normalize style, use similar style in beta properties table.}
+\end{align*}
+\end{table*}
+

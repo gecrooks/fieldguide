@@ -1,0 +1,46 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[tp!]
+\caption[Beta-exponential distribution -- Properties]{Properties of the beta-exponential distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \op{BetaExp}(x\given \pLoc,\pScale,\alpha, \gamma)  \checked
+\\
+\text{PDF}\quad &   \frac{1}{B(\alpha, \gamma)} \frac{1}{|\pScale|} e^{-\alpha \frac{x-\pLoc}{\pScale} }  \left(1 - e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\gamma-1}  \checked
+\\
+\text{CDF} \big/ \text{CCDF} \quad  & I\left(\alpha,\gamma; e^{-\frac{x-\pLoc}{\pScale}} \right)\checked & \hspace{-2em}\pScale>0 \ \big/ \ \pScale<0
+\\
+\text{parameters}\quad &   \pLoc,\ \pScale,\ \alpha,\  \gamma \text{ in } \Real	\checked \\
+& \alpha,\ \gamma >0	\checked
+\\
+\text{support} \quad &     x \geq \pLoc \checked&  \pScale > 0
+\\
+&   x\leq \pLoc  \checked&  \pScale < 0 
+\\
+%\text{median} \quad  &  \cdots
+%\\
+%\text{mode} \quad  & \text{not simple}  &\text{\cite{Nadarajah2006}}
+%\\
+\text{mean} \quad  &  \pLoc+ \pScale [\psi(\alpha+\gamma) -\psi(\alpha)  ]  \checked & \text{\cite{Nadarajah2006}}
+\\
+\text{variance} \quad  & \pScale^2 [\psi_1(\alpha)-\psi_1(\alpha+\gamma) ]  \checked & \text{\cite{Nadarajah2006}}
+\\
+\text{skew} \quad  &-\bigl[{\psi_2(\alpha)-\psi_2(\alpha+\gamma)}\bigr] \bigm/ {  \bigl[\psi_1(\alpha)-\psi_1(\alpha+\gamma) \bigr]^{\tfrac{3}{2}} } \checked \hspace{-2em} &  \text{\cite{Nadarajah2006}}
+\\
+\text{kurtosis} \quad  &
+\bigl[3\psi_1(\alpha)^2- 6\psi_1(\alpha)\psi_1(\alpha+\gamma)+ 3\psi_1(\alpha+\gamma)^2+\psi_3(\alpha)
+\hspace{-4em} \\ &\qquad -\psi_3(\alpha+\gamma)\bigr] \bigm/ \bigl[ \psi_1(\alpha)-\psi_1(\alpha+\gamma) \bigr]^2
+\checked	
+ 				&  \text{\cite{Nadarajah2006}}
+\\
+\text{entropy} \quad  & \ln |\pScale| +\ln B(\alpha,\gamma) + (\alpha+\gamma-1) \psi(\alpha+\gamma) 
+\\ & \qquad 
+- (\gamma -1) \psi(\gamma) - \alpha \psi(\alpha) \checked &\text{\cite{Nadarajah2006}}
+\\
+\text{MGF} \quad  &e^{\pLoc t }  \frac{B(\alpha-\pScale t, \gamma) }{B(\alpha,\gamma)} \checked & \text{\cite{Nadarajah2006}}
+\\                                                                                                                                              
+\text{CF} \quad  & e^{i \pLoc t }   \frac{B(\alpha-i \pScale t, \gamma) }{B(\alpha,\gamma)}  \checked & \text{\cite{Nadarajah2006}}
+\end{align*}
+\end{table*}

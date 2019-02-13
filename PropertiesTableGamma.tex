@@ -1,0 +1,54 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[tp!]
+
+\caption[Gamma distribution -- Properties]{Properties of the gamma distribution}
+
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad &  \op{Gamma}(x\given a, \theta, \alpha) 	\checked
+\\
+\text{PDF} \quad &
+\frac{1}{\Gamma(\alpha)\left|\theta\right|} 
+\left(\frac{x-a}{\theta}\right)^{\alpha  -1}
+\exp \left\{
+-  \frac{x-a}{\theta}
+\right\}
+\checked \hspace{-8em}						
+\\ 
+\text{CDF / CCDF } \quad  &    1-Q\left(\alpha, \tfrac{x - a }{\theta} \right) \checked
+& \theta>0 \, \big/ \,  \theta<0
+\\
+\text{parameters}\quad &   a,\ \theta,\ \alpha,\  \text{in } \Real, \ \alpha>0
+\\
+\text{support} \quad &     x \geq a &  \theta > 0
+\\
+&   x\leq a  &  \theta < 0 
+\\
+%\text{median} \quad  &  \cdots
+%\\
+\text{mode} \quad&   a+ \theta (\alpha-1)
+& \alpha   \geq 1 \checked
+\\ & a & \alpha   \le 1 \checked
+\\
+\text{mean} \quad& a  + \theta \alpha \checked
+\\
+\text{variance}  \quad&   \theta^2 \alpha \checked & 
+\\
+\text{skew} \quad  &  \frac{2}{\sqrt{\alpha}}  \checked
+\\
+\text{kurtosis} \quad  &  \frac{6}{\alpha} \checked
+\\
+\text{entropy} \quad& 
+\ln \bigl(|\theta| \Gamma(\alpha) \bigr)+\alpha + \left( 1 - \alpha\right) \psi(\alpha) \checked
+\\
+\text{MGF} \quad  &   e^{a t} (1- \theta t)^{-\alpha}	\checked
+% Wikipedia claims restriction that I don't immediately see in other texts.
+\\
+\text{CF} \quad  &  e^{i a t} (1- i \theta t)^{-\alpha}		\checked
+\end{align*}
+\end{table*}
+
+

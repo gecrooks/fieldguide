@@ -1,0 +1,163 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\clearpage
+\Sec{Order statistics}
+
+
+%\secbreak
+%===========================================================================
+%\dist{Order statistics}
+\label{OrderStatistic}
+\index{order statistics}
+\SSec{Order statistics}
+Order statistics~\cite{David2005}: If we draw $m+n-1$ independent samples from a distribution, then the distribution of the $m$th smallest value (or equivalently the $n$th largest) is
+\begin{align*}
+&\opr{OrderStatistic}_{X}(x \given m, n)  
+%\\ \notag &\quad
+= \frac{(m+n-1)!}{(m-1)!(n-1)!} \ F(x)^{m-1}\ f(x)\ (1- F(x))^{n-1}
+\end{align*}
+Here $X$ is a random variable, $f(x)$ is the corresponding probability density and $F(x)$ is the cumulative distribution function. The first term is the number of ways to separate $m+n-1$ things into three groups containing 1,$m-1$ and $n-1$ things; the second is the probability of drawing $m-1$ samples smaller than the sample of interest; the third term is the distribution of the $m$th sample; and the fourth term is the probability of drawing $n-1$ larger samples. Note that the smallest value is obtained if $m=1$, the largest value if $n=1$, and the median value if $m=n$.
+
+The cumulative distribution function (CDF) for order statistics can be written in terms of the regularized beta function, $I(p,q;z)$.
+\begin{align*}
+\op{OrderStatisticCDF}_{X}(x \given m, n)  = I\bigl(m,n; F(x) \bigr)
+\end{align*}
+Conversely, if a CDF for a distribution has the form $I\bigl(m,n; F(x) \bigr)$, then $F(x)$ is the cumulative distribution function of the corresponding ordering distribution. Since $I\bigl(\alpha,\gamma;x \bigr)$ is the CDF of the beta distribution~\eqref{Beta}, beta-generalized distributions\index{beta-generalized distributions} of the form $I\bigl(\alpha,\gamma; F_X(x) \bigr)$ (with arbitrary positive $\alpha$ and $\gamma$) are often referred to as `beta-X`~\cite{Eugene2002}, e.g.\ the beta-exponential distribution~\eqref{BetaExp}.
+
+
+The order statistic of the uniform distribution~\eqref{Uniform} is the beta distribution~\eqref{Beta}, that of the exponential distribution~\eqref{Exp} is the beta-exponential distribution~\eqref{BetaExp}, and that of the  power function distribution~\eqref{PowerFn} is the generalized beta distribution~\eqref{GenBeta}.
+\begin{align*}
+\opr{OrderStatistic}_{\opr{Uniform}(a,s)}(x \given \alpha, \gamma)
+%\\ & = 
+ & = 
+ \opr{Beta}(x\given a, s, \alpha, \gamma) 
+\checked
+\\
+\opr{OrderStatistic}_{\opr{Exp}(\pLoc,\pScale)}  (x \given  \gamma, \alpha) 
+%\\&=  
+& = \opr{BetaExp}(x\given \pLoc, \pScale,  \alpha, \gamma) 
+\checked
+\\
+\opr{OrderStatistic}_{\opr{PowerFn}(a,s,\beta)} (x \given \alpha, \gamma) 
+%\\ &
+&= \opr{GenBeta}(x\given a, s,\alpha, \gamma, \beta) 
+\checked
+\\
+\opr{OrderStatistic}_{\opr{UniPrime}(a,s)}(x \given \alpha, \gamma)
+%\\ & 
+&=  \opr{BetaPrime}(x\given a, s, \alpha, \gamma) 
+\checked
+\\
+\opr{OrderStatistic}_{\opr{Logistic}(\pLoc,\pScale)}  (x \given  \gamma, \alpha)
+%\\ & 
+&=  \opr{BetaLogistic}(x\given \pLoc, \pScale,   \alpha, \gamma)
+\\
+ \opr{OrderStatistic}_{\opr{LogLogistic}(a,s,\beta)}  (x \given \alpha, \gamma ) 
+ %\\ & 
+& =  \opr{GenBetaPrime}(x\given a, s, \alpha, \gamma , \beta) 
+\checked
+\end{align*}
+
+
+%The order of arguments changes for beta-exponential and beta-logistic. This is because of sign flip in scale when taking limits.}
+
+
+\SSec{Extreme order statistics}\index{extreme order statistics}
+In the limit that $n\gg m$ (or equivalently $m\gg n$) we obtain the distributions of {\it extreme order statistics}. Extreme order statistics depends only on the tail behavior of the sampled distribution; whether the tail is finite, exponential or power-law. This explains the central importance of the generalized beta distribution \eqref{GenBeta} to order statistics, since the power function distribution \eqref{PowerFn} displays all three classes of tail behavior, depending on the parameter $\beta$. Consequentially, the generalized beta distribution limits to the generalized Fisher-Tippett distribution \eqref{GenFisherTippett}, which is the parent of the other, specialized extreme order statistics. See also extreme order statistics, \secref{SecExtremeOrderStatistic}.
+
+
+%\SSec{Extreme value statistics}\index{extreme value statistics}
+
+
+\SSec{Median statistics} If we draw $N$ independent samples from a distribution (Where $N$ is odd), then the distribution of the statistical median value is \index{median}\index{median statistics}
+\label{MedianStatistic}
+\begin{align*}
+\op{MedianStatistic}_{X}(x \given N) = \opr{OrderStatistic}_{X}(x \given \tfrac{N-1}{2},  \tfrac{N-1}{2}) 
+\end{align*}
+Notable examples of median statistic distributions include
+\begin{align*}
+\op{MedianStatistics}&_{\opr{Uniform}(a,s)}(x \given 2 \alpha +1 )
+%\\ & 
+=  \opr{PearsonII}(x\given a+s, 2s, \alpha) 
+\\
+\op{MedianStatistics}&_{\opr{Logistic}(a,s)}  (x \given 2 \alpha +1 )
+%\\ & 
+=  \opr{SymBetaLogistic}(x\given a, s, \alpha)
+\end{align*}
+The median statistics of symmetric distributions are also symmetric.
+
+
+
+\definecolor{darkgreen}{RGB}{0,128,0}
+\begin{figure*}
+\caption[Order Statistics]{Order Statistics} 
+\begin{center}
+\scalebox{0.58} {
+\begin{tikzpicture}
+
+\draw (5,15) node (genbeta) {\hyperref[sec:GenBeta]{Gen. Beta}};
+
+\draw (10,15) node (genbetaprime) {\hyperref[sec:GenBetaPrime]{Gen. Beta Prime}};
+
+\draw (2.5,12.5) node (beta) {\hyperref[sec:Beta]{Beta}};
+\draw (5,12.5) node (betaexp) {\hyperref[sec:BetaExp]{Beta Exp.}};
+\draw (7.5,12.5) node (betaprime) {\hyperref[sec:BetaPrime]{Beta Prime}};
+\draw (10,12.5) node (betalogistic) {\hyperref[sec:BetaLogistic]{Beta-Logistic}};
+
+\draw (2.5,5) node (power)  {\hyperref[sec:PowerFn]{Power Func.}};
+\draw (7.5,5) node  (loglogistic) {\hyperref[LogLogistic]{Log-Logistic}};
+
+
+\draw (0,2.5) node (uniform) {\hyperref[sec:Uniform]{Uniform}};
+\draw (2.5,2.5) node (exp) {\hyperref[sec:Exp]{Exponential}};
+
+\draw (5,2.5) node (uniprime) {\hyperref[Logistic]{Uni. Prime}};
+\draw (7.5,2.5) node (logistic) {\hyperref[Logistic]{Logistic}};
+
+\draw [blue]  (genbeta) --  (beta) node [midway,  fill=white, sloped] (TextNode) {$\beta=1$} ; 
+\draw [blue]  (genbeta) --  (betaexp) node [midway,  fill=white, sloped] (TextNode) {$\beta\rightarrow\infty$} ;
+\draw [blue]  (genbeta) --  (betaprime) node [midway,  fill=white, sloped] (TextNode) {$\beta=-1$} ;
+
+\draw [blue]  (genbetaprime) -- (betalogistic) node [midway,  fill=white, sloped] (TextNode) {$\beta\rightarrow\infty$} ;
+\draw [blue]  (genbetaprime) -- (betaprime) node [midway, fill=white, sloped] (TextNode) {$\beta=\pm1$} ;
+
+\draw [blue]  (power) -- (uniform) 	 node [midway,  fill=white, sloped] (TextNode) {$\beta=1$} ;
+\draw [blue]  (power) -- (exp) 			node [midway,  fill=white, sloped] (TextNode) {$\beta\rightarrow\infty$} ;
+
+\draw [blue] (loglogistic) -- (logistic) node [midway, fill=white, sloped] (TextNode) {$\beta\rightarrow\infty$};
+%\draw [dashed] (symbetalogistic) -- (logistic);
+\draw [blue] (loglogistic) -- (uniprime) node [midway, fill=white, sloped] (TextNode) {$\beta\pm1$};
+\draw [blue] (power) -- (uniprime) node [midway, fill=white, sloped] (TextNode) {$\beta=-1$};
+
+
+\draw[->, dashed] (uniform) -- (beta);
+\draw[->, dashed] (power) -- (genbeta);
+\draw[->, dashed] (exp) -- (betaexp);
+\draw[->, dashed] (uniprime) -- (betaprime);
+\draw[->, dashed] (loglogistic) -- (genbetaprime);
+\draw[->, dashed] (logistic) -- (betalogistic);
+
+\draw (2.5,5) node [fill=white] (power)  {\hyperref[sec:PowerFn]{Power Func.}};
+\draw (7.5,5) node [fill=white]  (loglogistic) {\hyperref[LogLogistic]{Log-Logistic}};
+
+
+
+\draw[|-|, very thin] (-1.5,2) -- node[fill=white, midway] {0} (-1.5,3);
+\draw[|-|, very thin]  (-1.5,4.5) -- node[fill=white, midway] {1} (-1.5,8);
+\draw[|-|, very thin]  (-1.5,9.5) -- node[fill=white, midway] {2} (-1.5,13);
+\draw[|-|, very thin]  (-1.5,14.5) -- node[fill=white, midway] {3} (-1.5,15.5);
+\draw[|-|, very thin]  (-1.5,16) -- node[fill=white, midway] {4} (-1.5,17);
+%
+\draw (-1, 15.75) node[rotate=90]  {\small shape parameters};
+%
+
+
+
+\draw[white] (-2, 0) rectangle (17,17.5); % Bounding box
+\end{tikzpicture}
+}
+\end{center}
+\end{figure*}
+

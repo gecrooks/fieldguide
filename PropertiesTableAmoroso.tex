@@ -1,0 +1,79 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[pt!]
+
+\caption[Amoroso distribution -- Properties]{Properties of the Amoroso distribution}
+%\addcontentsline{toc}{subsection}{Amoroso} 
+
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad &  \op{Amoroso}(x\given a, \theta, \alpha, \beta)  \checked
+\\
+\text{PDF} \quad &
+\frac{1}{\Gamma(\alpha)} 
+\left|\frac{\beta}{\theta}\right|
+\left(\frac{x-a}{\theta}\right)^{\alpha \beta -1}
+\exp \left\{
+-  \left(\frac{x-a}{\theta}\right)^{\beta}
+\right\}
+\checked
+\hspace{-8em}
+\\ 
+\text{CDF / CCDF } \quad  &    1-Q\left(\alpha, \left(\tfrac{x - a }{\theta}\right)^{\beta}\right) 
+\checked & \tfrac{\theta}{\beta}>0 \, \big/ \,  \tfrac{\theta}{\beta}<0
+%\\
+%& Q(\alpha, \left(\tfrac{x - a }{\theta}\right)^{\beta}) 
+%& \tfrac{\beta}{\theta}<0
+\\
+\text{parameters}\quad &   a,\ \theta,\ \alpha,\ \beta\  \text{in } \Real, \ \alpha>0	\checked
+\\
+\text{support} \quad &     x \geq a &  \theta > 0 \checked
+\\
+&   x\leq a  &  \theta < 0 	\checked
+\\
+%\text{median} \quad  &  \cdots
+%\\
+\text{mode} \quad&   a+ \theta (\alpha-\tfrac{1}{\beta})^{\frac{1}{\beta}}  \checked
+& \alpha \beta  \geq 1		\checked
+\\ & a & \alpha \beta  \le 1
+\\
+\text{mean} \quad& a  + \theta \frac{\Gamma(\alpha+\frac{1}{\beta})}{\Gamma(\alpha)}  \checked
+& \alpha + \tfrac{1}{\beta} \geq 0
+\\
+\text{variance}  \quad&   \theta^2 \left[  \frac{\Gamma(\alpha+\frac{2}{\beta})}{\Gamma(\alpha)}  - 
+\frac{\Gamma(\alpha+\frac{1}{\beta})^2}{\Gamma(\alpha)^2}    \right] \checked
+& \alpha + \tfrac{2}{\beta} \geq 0
+\\
+\text{skew} \quad  &  \left[  \tfrac{\Gamma(\alpha+\frac{3}{\beta})}{\Gamma(\alpha)} - 3 \tfrac{\Gamma(\alpha+\frac{2}{\beta})\Gamma(\alpha+\frac{1}{\beta})}{\Gamma(\alpha)^2}    + 2  \tfrac{\Gamma(\alpha+\frac{1}{\beta})^3}{\Gamma(\alpha)^3}   \right]
+ \hspace{-3em}
+ \\ & \qquad \qquad \qquad \qquad \Big /
+ \left[  \tfrac{\Gamma(\alpha+\frac{2}{\beta})}{\Gamma(\alpha)}  - 
+\tfrac{\Gamma(\alpha+\frac{1}{\beta})^2}{\Gamma(\alpha)^2}    \right]^{3/2}
+\hspace{-3em}
+\\
+\text{kurtosis} \quad  &  
+ \bigg[  \tfrac{\Gamma(\alpha+\frac{4}{\beta})}{\Gamma(\alpha)} 
+ - 4 \tfrac{\Gamma(\alpha+\frac{3}{\beta})\Gamma(\alpha+\frac{1}{\beta})}{\Gamma(\alpha)^2}    
+ + 6 \tfrac{\Gamma(\alpha+\frac{2}{\beta})\Gamma(\alpha+\frac{1}{\beta})^2}{\Gamma(\alpha)^3}    
+\hspace{-3em}
+ \\ & \qquad 
+ -3  \tfrac{\Gamma(\alpha+\frac{1}{\beta})^4}{\Gamma(\alpha)^4}   \bigg]
+ \Big /
+ \left[  \tfrac{\Gamma(\alpha+\frac{2}{\beta})}{\Gamma(\alpha)}  - 
+\tfrac{\Gamma(\alpha+\frac{1}{\beta})^2}{\Gamma(\alpha)^2}    \right]^{2}
+-3 
+\hspace{-3em}
+\\
+\text{entropy} \quad& 
+\ln \frac{|\theta| \Gamma(\alpha)}{|\beta|} +\alpha + \left( \sfrac{1}{\beta} - \alpha\right) \psi(\alpha) \checked &
+\text{\cite{Dadpay2007}}
+%\\
+%\text{MGF} \quad  &  \cdots
+%\\
+%\text{CF} \quad  &  \cdots
+\end{align*}
+\end{table*}
+
+

@@ -1,0 +1,293 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX TS-program = xelatex
+ 
+% Compile: 
+%    latexmk -xelatex FieldGuide.tex 
+% Clean:
+%    latexmk -C
+ 
+\documentclass[mediaeval, pagebackref, book]{gecstyle}
+
+\usepackage{gecmath}
+
+% These should be moved to style
+%\newcommand{\given}{\mathrel{\vert}}
+\newcommand{\given}{\mathrel{;}}
+\newcommand{\op}{\operatorname}
+\newcommand{\expect}{\operatorname{\mathbb E}}
+\newcommand{\arxiv}[1]{{arXiv}:\href{http://arxiv.org/abs/#1}{#1}}
+
+%\hidenotes		% Comment this line to hide notes and checkmarks
+%\overfullrule=1mm
+
+\newcommand{\normalhbadness}{9000}
+\hbadness=\normalhbadness
+%\newcommand{\normalvbadness}{9000} % 10000 is infinite
+%\vbadness=\normalvbadness
+
+%\showboxbreadth=50 
+%\showboxdepth=50
+
+\usepackage{graphicx}
+\graphicspath{ {./figs/} }
+\usepackage{makeidx} 
+%\usepackage[letter,center]{crop}
+\makeindex
+\renewcommand{\indexname}{Subject Index}
+
+
+\usepackage{tikz}
+
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}% {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {4.3ex \@plus.2ex}% {2.3ex \@plus.2ex}%
+                                   {\center\Large\normalfont\scshape\color{\titlecolor}}}
+\makeatother
+
+
+\newcommand{\Sec}[2][]{\clearpage \thispagestyle{chapter}  \ifblank{#1}{\section{#2}}{\section[#1]{#2}}}
+
+\newcommand{\SSec}[1]{\subsection*{#1}\phantomsection\addcontentsline{toc}{subsection}{~~~~#1}}
+\newcommand{\SSSec}[1]{\subsubsection{#1}}
+\newcommand{\SecS}[1]{\clearpage \thispagestyle{chapter}  \section*{#1}}
+\newcommand{\SSecS}[1]{\subsection*{#1}}
+\newcommand{\SSSecS}[1]{\subsubsection*{#1}}
+
+\numberwithin{equation}{section}
+
+\numberwithin{table}{section}
+
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+\newcommand{\mix}[1]{\ \underset{#1}{\wedge}\ }
+
+\setcounter{tocdepth}{10}
+
+%\usepackage{color}
+
+\newcommand{\dist}[1]{%\index{#1 distribution}
+ \vspace{10pt} {\noindent \textbf{\color{\titlecolor} #1} \hspace{-6pt} }
+\phantomsection\addcontentsline{toc}{subsection}{~~~~~~~~~~~~#1}} 
+
+\newcommand{\secbreak}{\vspace{35pt}}
+
+
+% Operator reference. Doesn't work with math accents such as levy
+\newcommand{\opr}[1]{\op{\hyperref[#1]{#1}}}
+\newcommand{\oprr}[2]{\op{\hyperref[#2]{#1}}}
+\newcommand{\Levy}{\hyperref[Levy]{\op{L\acute{e}vy}}}
+\newcommand{\GenFrechet}{\hyperref[GenFrechet]{\op{GenFr\acute{e}chet}}}
+\newcommand{\Frechet}{\hyperref[Frechet]{\op{Fr\acute{e}chet}}}
+\newcommand{\StudentsTT}{\hyperref[StudentsT2]{\op{StudentsT_2}}}
+\newcommand{\StudentsTTT}{\hyperref[StudentsT3]{\op{StudentsT_3}}}
+
+\newcommand{\Real}{\mathbb{R}}
+
+
+% Parametersr for log-logistic, beta-exp, and exponential.
+\newcommand{\pScale}{\lambda}
+\newcommand{\pLoc}{\zeta}	% Or \nu?
+
+% \subpart has to go in with included files for some reason
+\newcommand{\subpart}[1]{\addtocontents{toc}{\protect\contentsline{part}{#1}{ }{ }} }
+
+%\newcommand{\bar}[1]{#1}
+
+
+
+% Increase spacing for table and figure number in listoftables and listofigures
+\makeatletter
+\renewcommand*\l@table{\@dottedtocline{1}{1.5em}{2.8em}}
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.8em}}
+\renewcommand{\@pnumwidth}{1.75em}  % Enough room for triple digit page numbers
+\makeatother
+
+\newcommand{\version}{v~0.12~{\sc{beta}}}
+
+\renewcommand{\titlemark}{G.~E.~Crooks -- Field Guide to  Probability Distributions} 
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection~~#1}}{}}
+
+
+\hypersetup{ 
+	pdfauthor={Gavin E. Crooks}, 
+	pdftitle={Field Guide to Continuous Probability Distributions}
+}
+
+
+
+% Use so that sections open on left hand pages
+\makeatletter
+\renewcommand*\cleardoublepage{\clearpage\if@twoside
+  \ifodd\c@page \hbox{}\newpage\if@twocolumn\hbox{}%
+  \newpage\fi\fi\fi}
+\makeatother
+
+
+\texorpdfstring{}{}
+
+
+% Hacks because font doesn't seem to support these accents
+% (These are in style file, but need to be redone here for some reason)
+\renewcommand{\v}[1]{$\check{\text{#1}}$}
+\renewcommand{\=}[1]{$\bar{\text{#1}}$}
+\renewcommand{\:}[1]{$\ddot{\text{#1}}$}
+
+\begin{document} 
+%\sloppy
+\newcommand{\self}{_fieldguide}
+%\nocite{???}
+\nocite{\self}
+\nocite{Johnson1994,Johnson1995}
+\nocite{Pearson1893,Pearson1895,Pearson1901,Pearson1916}
+
+\iftoggle{formatArticle}{\onecolumn}{}	% If article format, set to one column for title pages
+
+\pagestyle{plain} 
+%\setcounter{page}{0}
+
+
+\title{\vspace{3em}\scshape{Field Guide  \\ to  \\ Continuous \\ Probability  Distributions} \vspace{1em} }
+
+\author{{\Large Gavin E. Crooks}}
+
+
+\date{\vspace{1em}\version\\ ~\\ \number\year}
+\maketitle
+\thispagestyle{empty}
+% \clearpage % BOOK
+\thispagestyle{empty}
+
+\iftoggle{formatArticle}{}{\clearpage \thispagestyle{chapter} }
+ 
+~ \vfill
+
+
+{\center
+
+\version  \\ ~ \\ Copyright \copyright~2010-\number\year~ Gavin E. Crooks
+\\
+~ 
+\\
+\url{http://threeplusone.com/fieldguide} 
+\\
+\url{https://github.com/gecrooks/fieldguide}
+~
+\\
+~
+\\
+typeset on \isotoday~with XeTeX version  \the\XeTeXversion\XeTeXrevision
+\\
+fonts: Trump Mediaeval (text), Euler (math)
+\\
+% 2~7~1~8~2~8~1~8~2~8~4~5~9~0~4~5~2~3~5~3~6~0~2~8~7~4~7~1~3~5~2~7
+    2~7~1~8~2~8~1~8~2~8~4~5~9~0
+\\
+~ 
+\\
+
+}
+%\thispagestyle{empty}
+\vspace{3em}
+
+\iftoggle{formatArticle}{\twocolumn}{}	% If article format, reset to two column format
+
+
+%\vfill
+\clearpage
+
+
+
+\SecS{Preface: The search for GUD}
+\phantomsection\addcontentsline{toc}{section}{Preface: The search for GUD} 
+
+A common problem is that of describing the probability distribution of a single, continuous variable. A few distributions, such as the normal and exponential, were discovered in the 1800's or earlier. But about a century ago the great statistician, Karl Pearson, realized that the known probability distributions were not sufficient to handle all of the phenomena then under investigation, and set out to create new distributions with useful properties. 
+
+During the 20th century this process continued with abandon and a vast menagerie of distinct mathematical forms were discovered and invented, investigated, analyzed, rediscovered and renamed, all for the purpose of describing the probability of some interesting variable. There are  hundreds of named distributions and synonyms in current usage. The apparent diversity is unending and disorienting.
+
+
+Fortunately, the situation is less confused than it might at first appear. Most common, continuous, univariate, unimodal distributions  can be organized into a small number of distinct families, which are all special cases of a single Grand Unified Distribution. This compendium details these hundred or so simple distributions, their properties and their interrelations. 
+ ~\\~\\
+ \null\hfill~Gavin~E.~Crooks
+
+
+\include{ChAcknowledgments}
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{Contents} 
+\thispagestyle{chapter}
+\tableofcontents
+\clearpage
+
+% Use short alternative Table and Figure captions to keep one line per
+\listoftables
+\thispagestyle{chapter}
+% \clearpage % BOOK
+\newpage
+\listoffigures
+\thispagestyle{chapter}
+\clearpage
+
+
+
+\include{FigPrincipalHierarchy}
+\include{FigPearsonHierarchy}
+\include{FigExtremeOrderStatistics}
+\include{FigSymmetricHierarchy}
+
+
+% ====================================================================
+
+% Zero shape parameters
+\include{ChUniform}
+\include{ChExponential}
+\include{ChLaplace}
+\include{ChNormal}
+
+
+% One shape parameter
+\include{ChPowerFn}
+\include{ChLogNormal}
+\include{ChGamma}
+\include{ChGammaExp}
+\include{ChPearsonVII}
+
+
+% Two shape parameter
+\include{ChUnitGamma}
+\include{ChAmoroso}
+\include{ChBeta}
+\include{ChBetaPrime}
+\include{ChBetaExp}
+\include{ChBetaLogistic}
+\include{ChPearsonIV}
+
+
+% Three (or more) shape parameters
+\include{ChGenBeta}
+\include{ChGenBetaPrime}
+\include{ChPearson}
+\include{ChGUD}
+
+
+% Miscellanea
+\include{ChMisc}
+
+
+% Appendix
+\appendix
+\include{ChNotation}
+\include{ChOrderStats}
+\include{ChLimits}
+\include{ChAlgebra}
+\include{ChMath}
+\include{ChBibliography}
+\include{ChDistIndex}
+\include{ChIndex}
+
+
+\end{document}
+

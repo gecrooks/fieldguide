@@ -1,0 +1,49 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[p]
+\caption[Pearson VII distribution -- Properties]{Properties of the Pearson VII distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \text{PearsonVII}(x\given a,s, m) \checked
+\\
+\text{PDF}\quad &   \frac{1}{|s| B(m-\frac{1}{2}, \frac{1}{2} )} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-m} \checked
+\\
+\text{CDF / CCDF} \quad  &  
+     \frac{1}{2} +  \left(\frac{x-a}{s}\right) 
+     \frac{1}{B(m-\frac{1}{2}, \frac{1}{2})}
+     \,_2F_1 \left ( \frac{1}{2},m;\frac{3}{2}; -\left(\frac{x-a}{s}\right)^2 \right)
+     \checked
+     % Checked with Wolfram Alpha
+     % D[1/2+ (x/s) Hypergeometric2F1[1/2, m , 3/2, -(x/s)^2] / Beta(m-1/2, 1/2), x]
+     \hspace{-4em}
+     \\
+     &
+\\
+\text{parameters}\quad &   a,\ s,\ m  \in \Real \\ & m>\tfrac{1}{2} \checked
+\\
+\text{support} \quad &   -\infty < x < +\infty	\checked
+\\
+\text{median} \quad  &  a					\checked
+\\
+\text{mode} \quad  & a	\checked
+\\
+\text{mean} \quad  &  a & m>1	\checked
+\\
+\text{variance} \quad  & \frac{s^2}{2m-3} & m>\tfrac{3}{2} \checked
+\\
+\text{skew} \quad  &  0 \checked & m>2 \checked
+\\
+%\text{kurtosis} \quad  &  \cdots & m>\tfrac{5}{2}  
+%\\ 
+%\text{entropy} \quad  & \cdots
+%\\
+\text{MGF} \quad  &  \text{undefined}
+\\
+\text{CF} \quad  &   e^{iat} \frac{2 K_{m-\half} \left( s |t|\right)
+                    \cdot \left(\half s |t| \right)^{m-\half}}
+                    {\Gamma(m-\half)}  & m > \half
+                    \checked
+\end{align*}
+\end{table*}

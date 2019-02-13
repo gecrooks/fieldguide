@@ -1,0 +1,294 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\subpart{Appendix}
+
+\Sec{Notation and Nomenclature}
+\label{sec:notation}
+\index{shape parameter}
+\index{scale parameter}
+\index{location parameter}
+\index{Weibull transform}
+
+\SSec{Notation}
+We write  $\opr{Amoroso}(x\given a, \theta, \alpha, \beta)$ for a density function,  $\oprr{AmorosoCDF}{Amoroso}(x\given a, \theta, \alpha, \beta)$ for the cumulative distribution function, $\opr{Amoroso}(a, \theta, \alpha, \beta)$ for the corresponding random variable,  and  $X\sim\opr{Amoroso}(a, \theta, \alpha, \beta)$ to indicate that two random variables have the same probability distribution~\cite{Gelman2004}. The semicolon, which we verbalize as ``given'' or ``parameterized by``, separates the arguments from the parameters.  \index{given} 
+
+\begin{center}
+\begin{tabular}{ccl}
+parameter & type &  notes\\
+\hline
+$a$			&location& power-function \\
+$b$			&location& arcsine, $b= a+s$\\
+$\pLoc$		 & location &	exponential \\
+$\mu$		 & location & normal \\
+$\nu$	& location & gamma-exponential \\	% Change?
+$s$			&scale& power function\\
+$\pScale$		 & scale & 		exponential \\
+$\sigma$		 & scale	& normal\\
+$\ \vartheta^\dagger$ & scale&	log-normal \\
+$\theta$		& scale & Amoroso \\
+$\omega$		 &scale& gen. Fisher Tippett \\
+%$c$			& &scale & Levy, stable \\
+$\beta$		& power & power function	 \\
+$\alpha$		& shape	& $>0$, beta and beta prime families \\
+$\gamma$	& shape	& $>0$, beta and beta prime families \\
+$n$			 &  shape& integer $>0$, number of samples  or events\\
+$k$	& shape	& integer $>0$, degrees of freedom\\%, e.g.\ Chi, Students-t, F\\
+$m$   		& shape & $>\tfrac{1}{2}$, Pearson IV\\
+$v$			& shape & $>0$, Pearson IV\\ % Perhaps use u instead of v, too close to nu\\
+\\
+&& \footnotesize{$\dagger$ A curly theta, or ``vartheta''.}
+\end{tabular}
+\end{center}
+
+
+Throughout I have endeavored to use consistent parameterization, both within families, and between subfamilies and superfamilies. For instance, $\beta$ is always the Weibull parameter. Location (or translation) parameters: $a$, $b$, $\nu$, $\mu$. Scale parameters: $s$, $\theta$, $\sigma$. Shape parameters: $\alpha$, $\gamma$, $m$, $v$. All parameters are real and the shape parameters $\alpha$, $\gamma$ and $m$ are positive. The negation of a standard parameter is indicated by a bar, e.g.\ $\beta = -\bar{\beta}$. 
+%The parameter $\mu$ is the mean, $\sigma$ the standard deviation, $a$ a boundary point (finite or semi infinite support), $b$ the other boundary (finite support).
+In tables of special cases, for clarity we use a dot `.' to indicate repetition of the base distribution's parameters. 
+
+
+
+\SSec{Nomenclature}
+ 
+ 
+\paragraph*{interesting} \index{interesting} Informally, an ``interesting distribution'' is one that has acquired a name, which generally indicates that the distribution is the solution to one or more interesting problems.
+
+\paragraph*{generalized-X}\index{generalized}  The only consistent meaning is that distribution ``X'' is a special case of the distribution ``generalized-X''.  In practice, often means ``add another parameter''.  We use alternative nomenclature whenever practical, and generally reserve ``generalized'' for the power (Weibull) transformed distribution. 
+
+\paragraph*{standard-X} \index{standard} \index{standardized} The distribution ``X'' with the location parameter set to 0 and scale to 1. Not to be confused with {\it standardized} which generally indicates zero mean and unit variance. 
+
+\paragraph*{shifted-X} \index{shifted} (or translated-X) A distribution with an additional location parameter. \index{location parameters}
+
+\paragraph*{anchored-X} \index{anchored} A distribution without a location parameter (typically set to zero).
+
+\paragraph*{scaled-X} \index{scaled}(or scale-X) A distribution with an additional scale parameter. \index{scale parameter}
+
+\paragraph*{inverse-X}\index{inverse}\index{reciprocal}\index{inverted} (Occasionally inverted-X, reciprocal-X, or negative-X) Generally labels the transformed distribution with $x\mapsto\tfrac{1}{x}$, or more generally the distribution with the Weibull shape parameter negated, $\beta\mapsto-\beta$. An exception is the inverse Gaussian distribution \eqref{InvGaussian}~\cite{Johnson1994}. 
+
+\paragraph*{log-X}  \index{log transform}\index{anti-log transform} Either the anti-logarithmic or logarithmic transform of the random variable X, i.e.\ either  $\exp - \op{X}() \sim \op{log-X}()$ (e.g.\ log-normal)  or $-\ln \text{X}() \sim \op{log-X}()$.  This ambiguity arises because although the second convention may seem more logical, the log-normal convention has historical precedence. Herein, we follow the log-normal convention. 
+\label{log-transform-name}
+
+\paragraph*{X-exponential} \index{log transform} The logarithmic transform of distribution X, i.e.\ $\ln \text{X}() \sim \text{X-exponential}()$. This naming convention, which arises from the beta-exponential distribution \eqref{BetaExp}, sidesteps the confusion surrounding the log-X naming convention.
+
+
+\paragraph*{reversed-X}\index{reversed} (Occasionally negative-X)  The scale is negated. 
+\paragraph*{X of the Nth kind} See ``X type N''.
+
+\paragraph*{folded-X}\index{folded} The distribution of the absolute value of random variable $X$. % See also folded-normal~\eqref{FoldedNormal}
+
+\paragraph*{beta-X} A distribution formed by inserting the cumulative distribution function of X into the CDF of the standard beta distribution \eqref{StdBeta}. Distributions of this form arise naturally in the study of order statistics \secref{OrderStatistic}.
+
+
+\clearpage
+%\twocolumn
+\Sec{Properties of Distributions}
+\label{PropertiesSec}
+\index{MGF|see{moment generating function}}
+\index{CGF|see{cumulant generating function}}
+\index{CF|see{characteristic function}}
+
+
+\paragraph*{notation} The multi-letter, camel-cased function name, arguments and parameters used for the probability
+density of the family in this text. 
+
+
+
+\paragraph*{probability density function (PDF)} 
+\index{PDF|see{probability density function}}
+\index{probability density function }
+\index{density}
+The probability density $f_X(x)$ of a continuous random variable is the relative likelihood that the random variable will occur at a particular point. The probability to occur  within a particular interval is given by the integral
+\[
+P[ a\leq X \leq b] = \int_a^b f_X(x) dx \ . \checked
+\notag
+\]
+
+
+
+\paragraph*{cumulative density function (CDF)} 
+\index{CDF|see{cumulative distribution function}}
+\index{CCDF|see{complimentary cumulative distribution function}}
+\index{$F(x)$|see{cumulative distribution function}}
+\index{cumulative distribution function}
+\index{complimentary cumulative distribution function}
+\index{distribution function|see{cumulative distribution function}}
+The probability that a random variable has a value equal or less than $x$, typically denoted by $F_X(x)$, and also called the distribution function for short.
+\[
+F_X(x) = \int^x_{-\infty} f_X(z) dz \checked
+\notag
+\]
+The probability density is equal to the derivative of the distribution function, assuming that the distribution function is continuous.
+\[
+f_X(x) = \frac{d}{dx} F_X(x) \checked
+\notag
+\]
+Negating a scale parameter gives a reversed distribution with the cumulative distribution function replaced by the complimentary cumulative distribution function ($\text{CCDF}=1-\text{CDF}$).
+
+
+
+\paragraph*{complimentary cumulative density function (CCDF)}  (survival function, reliability function)
+\index{CCDF|see{complimentary cumulative distribution function}}
+\index{complimentary cumulative distribution function}
+\index{survival function}
+\index{reliability function}
+One minus the cumulative distribution function,  $1-F_X(x)$.\checked The probability that a random variable has a value greater than~$x$. In lifetime analysis the complimentary cumulative distribution function is also called the survival function or reliability function.
+
+
+
+\paragraph*{support}\index{range}\index{support}\index{image}
+The support of a probability density function are the set of values that have non-zero probability. The compliment of the support has zero probability. The range (or image) of a random variable (the set of values that can be generated) is the support of the corresponding probability density.
+
+
+
+\paragraph*{mode}\index{mode}\index{anti-mode}
+The point where the distribution reaches its maximum value. An anti-mode is the point where the distribution reaches its minimum value. 
+A distribution is called unimodal\index{unimodal} if there is only one local extremum away from the boundaries of the distribution. In other words, the distribution can have one mode $\frown$ or one anti-mode $\smile$, or be monotonically increasing $/$ or decreasing~$\backslash$.
+
+
+
+
+\paragraph*{mean}\index{mean} The expectation value of the random variable. \index{$\expect$|see{mean}}
+\[
+\expect[X] = \int x\ f_X(x)\ dx \checked
+\notag
+\]
+Not all interesting distributions have finite means, notably the Cauchy family~\eqref{Cauchy}. Often denoted by the symbol $\mu$.
+
+
+\paragraph*{variance}\index{variance}\index{standard deviation} The variance measures the spread of a distribution.
+\[
+\op{var}[X] =  
+ \expect\Left[ (X-\expect[X])^2\Right]     = \expect\bigl[X^2\bigr] - \expect\bigl[X\bigr]^2
+\notag \checked
+\]
+The variance is also know as the second central moment, or second cumulant, and commonly denoted by the symbol $\sigma$. The standard deviation is the square root of the variance.
+
+
+\paragraph*{central moment}\index{central moment}
+\[
+\mu_n[X] =  
+ \expect\Left[ (X-\expect[X])^n\Right]   
+\]
+The $n$th moment about the mean. The first central moment is zero, and the second is the variance. 
+
+\paragraph*{skew} \index{skew}  A distribution is skewed if it is not symmetric. A positively skewed distribution tends to have a majority of the probability density above the mean; a negatively skewed distribution tends to have a majority of density below the mean. 
+
+The standard measure of skew is the third cumulant (third central moment) normalized by the $\tfrac{3}{2}$ power of the second cumulant.
+\[
+\op{skew}[X]    
+=  \expect\Left[ \Left( \frac{X-\expect[X]} {\op{var}[X]} \Right)^3 \Right]
+=\frac{\kappa_3\phantom{^{\tfrac{3}{2}}}}{{\kappa_2}^{\tfrac{3}{2}}} 
+\notag 
+\]
+
+
+\paragraph*{kurtosis} \index{kurtosis}\index{excess kurtosis} Kurtosis measures the peakedness of a distribution. The normal distribution has zero excess kurtosis. A positive kurtosis distribution has a sharper peak and longer tails, while a negative kurtosis distribution has a more rounded peak and shorter tails.
+
+The standard measure of kurtosis is the forth cumulant normalized by the square of the second cumulant.
+\[
+\op{ExKurtosis}[X] = \frac{\kappa_4}{{\kappa_2}^{2}} \checked
+\notag
+\]
+This measure is called the excess kurtosis to distinguish it from an older definition of kurtosis that used the forth central moment $\mu_4$ instead of the forth cumulant. (Note that  $\tfrac{\kappa_4}{{\kappa_2}^{2}} =  \frac{\mu_4}{{\kappa_2}^{2}} -3$\checked).
+
+
+\paragraph*{entropy} 
+\index{entropy}
+The differential (or continuous) entropy of a continuous probability distribution is
+\[
+\op{entropy}[X] = - \int f(x) \ln f(x)\  dx  \checked
+\notag
+\]
+Note that unlike the entropy of a discrete variable, the differential entropy is not invariant under a change of variables, and can be negative. 
+
+\paragraph*{moment generating function (MGF) } 
+\index{moment generating function}
+\index{moments}
+The expectation
+\[
+\op{MGF}_X(t) = \expect[e^{t X}]  \ . \checked
+\notag
+\]
+The $n$th derivative of the moment generating function, evaluated at $0$, is equal to the $n$th moment of the distribution. 
+\[
+\frac{d^n}{dt^n}\op{MGF}_X(t)\Big|_0 = \expect[X^n]  \checked
+\notag
+\]
+If two random variables have identical moment generating functions, then they have identical probability densities.
+
+
+\paragraph*{cumulant generating function (CGF) }
+\label{CGF}
+\index{cumulant generating function}
+\index{cumulants}
+The logarithm of the moment generating function.
+\[
+\op{CGF}_X(t) = \ln \expect[e^{t X}] \checked
+\notag
+\]
+Note that some authors define the cumulant generating function as the logarithm of the characteristic function.
+
+The $n$th derivative of the cumulant generating function, evaluated at $0$, is equal to the $n$th cumulant of the distribution. 
+\[
+\frac{d^n}{dt^n}\op{CGF}_X(t)\Big|_0 = \kappa_n(X)  \checked
+\]
+The $n$th cumulant is a function of the first $n$ moments of the distribution, and the second and third are equal to the second and third central moments.
+\begin{align*}
+\kappa_1 &= \expect[X] \checked \\
+\kappa_2 &= \expect\left[ (X-\expect[X])^2 \right] \checked\\
+\kappa_3 &= \expect\left[ (X-\expect[X])^3 \right] \checked \\
+\kappa_4 &= \expect\left[ (X-\expect[X])^4 \right]  - 3 \expect\left[ (X-\expect[X])^2 \right] \checked
+\end{align*}
+The cumulant expansion, if it exists, either terminates at second order (normal distribution), or continues to infinite order.
+
+Cumulants are often more useful than central moments, since cumulants are additive under summation of independent random variables. 
+\[
+\op{CGF}_{X+Y}(t) = \op{CGF}_{X}(t) + \op{CGF}_{Y}(t)  \checked
+\notag
+\]
+
+
+\paragraph*{characteristic function (CF)} 
+\label{characteristic_function}
+\index{characteristic function}
+\index{$\phi(t)$| see{characteristic function}}
+Neither the moment nor cumulant generating functions need exist for a given distribution. An alternative that always exists is the characteristic function
+\[
+\phi_X(t) = \expect[e^{i t X}]  \ , \checked
+\notag
+\]
+essentially the Fourier transform of the probability density function. The characteristic function for a  sum of independent random variables is the product of the respective characteristic functions. 
+\[
+\phi_{ X+ Y}(t) = \phi_{X}( t)\  \phi_{Y}(t) 
+\notag
+\]
+More generally, the characteristic function of any linear sum of independent random variables is
+\[
+\phi_{Z}(t) = \prod_i \phi_{X_i}(c_i t), \quad Z = \sum_i c_i X_i \ .
+\notag
+\]
+
+
+\paragraph*{quantile function} 
+ \index{quantile function}\index{inverse cumulative distribution function|see{quantile function}}\index{median}
+\index{$F$@$F^{-1}(p)$|see{quantile function}}
+The inverse of the cumulative distribution function, typically denoted  $F^{-1}(p)$ (or occasionally
+ $Q(p)$).
+ The median is the middle value of the inverse cumulative distribution function. 
+\[
+\op{median}[X] = F_X^{-1}(\tfrac{1}{2}) \checked
+\notag
+\]
+Half the probability density is above the median, half below. 
+The quantile and median rarely have simple forms.
+
+
+\paragraph*{hazard function}\index{hazard function}\index{survival function}
+The ratio of the probability density function to the complimentary cumulative distribution function
+\[
+\op{hazard}_X(x) = \frac{f_X(x)}{1-F_X(x)} \checked
+\notag
+\]
+
+

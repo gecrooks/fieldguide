@@ -1,0 +1,60 @@
+\clearpage
+\thispagestyle{chapter}
+\begin{figure*}
+\phantomsection\addcontentsline{toc}{subsection}{Extreme order statistics} 
+\caption{Extreme order statistics} 
+\begin{center}
+\scalebox{0.58} {
+\begin{tikzpicture}
+%\draw[help lines, very thin, step=1] (-2,0) grid (17,17);
+%
+\draw (5,5) node (weibull) {\hyperref[Weibull]{Weibull}};
+\draw (10,5) node (frechet) {\hyperref[Frechet]{Frechet}};
+%\draw (13.75,5) node (lognormal) {\hyperref[LogNormal]{Log Normal}};
+%
+%\draw (0,2.5) node (uniform) {\hyperref[sec:Uniform]{Uniform}};
+\draw (2.5,2.5) node (exp) {\hyperref[sec:Exp]{Exponential}};
+%\draw (5,2.5) node (laplace) {\hyperref[sec:Laplace]{Laplace}};
+%\draw (7.5,2.5) node (normal) {\hyperref[sec:Normal]{Normal}};
+%%\draw (10,2.5) node (logistic) {\hyperref[Logistic]{Logistic}};
+\draw (12.5,2.5) node (invexp) {\hyperref[InvExp]{Inv. Exponential}};
+%\draw (15,2.5) node (cauchy) {\hyperref[Cauchy]{Cauchy}};
+%
+\draw (7.5,2.5) node (gumbel) {\hyperref[Gumbel]{Gumbel}};
+%
+\draw [dashed]  (weibull) -- (exp);
+\draw [dashed]  (weibull) -- (gumbel);
+\draw [dashed]  (frechet) -- (gumbel);
+\draw [dashed]  (frechet) -- (invexp);
+%
+\draw[|-|, very thin] (-1.5,2) -- node[fill=white, midway] {0} (-1.5,3);
+\draw[|-|, very thin]  (-1.5,4.5) -- node[fill=white, midway] {1} (-1.5,8);
+\draw[|-|, very thin]  (-1.5,8.5) -- node[fill=white, midway] {2} (-1.5,13);
+\draw[|-|, very thin]  (-1.5,14.5) -- node[fill=white, midway] {3} (-1.5,15.5);
+\draw[|-|, very thin]  (-1.5,16) -- node[fill=white, midway] {4} (-1.5,17);
+%
+\draw (-1, 15.75) node[rotate=90]  {\small shape parameters};
+%
+\draw[white] (-2, 0) rectangle (17,17.5); % Bounding box
+%
+\draw (5,8.75) node (GenWeibull) {\hyperref[GenWeibull]{Gen. Weibull}};
+\draw (7.5,10) node (GenFisherTippett) {\hyperref[GenFisherTippett]{Gen. Fisher-Tippett}};
+\draw (10,8.75) node (GenFrechet) {\hyperref[GenFrechet]{Gen. Frechet}};
+\draw (7.5,7.5) node (FisherTippett) {\hyperref[FisherTippett]{Fisher-Tippett}};
+\draw (7.5,5) node (GenGumbel) {\hyperref[GenGumbel]{Gen. Gumbel}};
+%
+\draw [dashed]  (GenFisherTippett) -- (GenWeibull);
+\draw [dashed]  (GenFisherTippett) -- (FisherTippett);
+\draw [dashed]  (GenFisherTippett) -- (GenFrechet);
+\draw [dashed]  (GenWeibull) -- (weibull);
+\draw [dashed]  (GenWeibull) -- (GenGumbel);
+\draw [dashed]  (FisherTippett) -- (weibull);
+\draw [dashed]  (FisherTippett) -- (frechet);
+\draw [dashed]  (GenFrechet) -- (GenGumbel);
+\draw [dashed]  (GenFrechet) -- (frechet);
+\draw [dashed]  (GenGumbel) -- (gumbel);
+\end{tikzpicture}
+}
+\end{center}
+\end{figure*}
+

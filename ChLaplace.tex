@@ -1,0 +1,68 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\Sec{Laplace Distribution} 
+\label{sec:Laplace}
+\dist{Laplace} (Laplacian, double exponential, Laplace's first law of error, two-tailed exponential, bilateral exponential, biexponential) distribution~\cite{Laplace1774,Stigler1986,Kotz2001}
+ is  a two parameter, symmetric, continuous, univariate, unimodal probability density with infinite support, smooth expect for a single cusp.
+The functional form is
+\begin{align}
+\label{Laplace}
+\opr{Laplace}(x\given \pLoc, \theta) = & 
+\frac{1}{2 |\theta|} e^{- \left| \frac{x-\pLoc}{\theta}\right|} 		\checked
+\\
+\notag
+& \text{for } x,\ \pLoc,\  \theta \text{ in }  \mathbb{R}			\checked
+\end{align}
+The two real parameters consist of a location parameter $\pLoc$,  and a scale parameter $\theta$.
+
+
+
+
+\SSec{Special cases}
+\phantomsection\addcontentsline{toc}{subsection}{~~~~~~~~~~~~Standard Laplace}
+The {\bf standard Laplace} (Poisson's first law of error) distribution occurs when $\pLoc=0$ and $\theta=1$.
+
+
+
+\SSec{Interrelations}
+
+The Laplace distribution is a limit of the symmetric beta-logistic~\eqref{SymBetaLogistic}, exponential power~\eqref{ExpPower} and generalized Pearson VII~\eqref{GenPearsonVII} distributions.
+
+As $\theta$ limits to infinity, the Laplace distribution limits to a degenerate distribution. In the alternative limit that $\theta$ limits to zero, we obtain an indefinite uniform distribution.
+
+
+The difference between two independent identically distributed exponential random variables is Laplace, and therefore so is the time difference between two independent Poisson events.
+\[
+\opr{Laplace}(\pLoc, \theta) \sim  \opr{Exp}(\pLoc,\theta) - \opr{Exp}(\pLoc,\theta)
+\]
+
+Conversely, the absolute value (about the centre of symmetry) is exponential. 
+\[
+\opr{Exp}(\pLoc, |\theta|) \sim  |\opr{Laplace}(\pLoc,\theta) - \pLoc | +\pLoc
+\]
+
+
+The log ratio of standard uniform distributions is a standard Laplace.
+\[
+\opr{Laplace}(0,1) \sim \ln \frac{\opr{StdUniform}_1() }{\opr{StdUniform}_2()} \checked
+\]
+
+
+The Fourier transform of a standard Laplace distribution is the standard Cauchy distribution \eqref{Cauchy}.
+\[
+\int_{-\infty}^{+\infty} \frac{1}{2}e^{-| x |} e^{i t x} dx = \frac{1}{1+t^2}
+\checked
+\]
+
+
+
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfLaplace}
+\end{center}
+\caption[Standard Laplace distribution]{Standard Laplace distribution, $\opr{Laplace}(x\given 0,1)$}
+\end{figure}
+
+\input{PropertiesTableLaplace}

@@ -1,0 +1,189 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+
+\clearpage
+
+%\thispagestyle{}
+%~
+%\vspace{18em}
+%~
+\SecS{Acknowledgments}
+\phantomsection\addcontentsline{toc}{section}{Acknowledgments \& Version History} 
+%\begin{center}
+%\textsc{Acknowledgments}
+%\end{center}
+
+
+In curating this collection of distributions, I have benefited greatly from Johnson, Kotz, and Balakrishnan's monumental compendiums~\cite{Johnson1994, Johnson1995}, Eric Weisstein's MathWorld, the Leemis chart of Univariate Distribution Relationships~\cite{Leemis2008, Leemis2012}, and myriad pseudo-anonymous contributors to Wikipedia. Additional contributions are noted in the version history below.
+
+% Add Devroye1986 ?
+
+
+\begin{center}
+\textsc{Version History}
+\end{center}
+
+{
+\small \tightstretch
+
+0.12 (2019-02-??) 
+Added
+Epanechnikov \eqref{Epanechnikov}, 
+Libby-Novick \eqref{LibbyNovick},
+Gauss hypergeometric \eqref{GaussHypergeometric},
+and
+confluent hypergeometric \eqref{Confluent}
+distributions. 
+% Fixed many typos
+% Merged Pearson III and gamma distributions.
+% Added figure for log-gamma
+% Renamed Prentice to beta-logistic
+
+~
+
+0.11 (2017-06-19)
+\sloppy{ Added hyperbola \eqref{Hyperbola}, Halphen \eqref{Halphen}, Halphen B \eqref{HalphenB}, inverse Halphen B \eqref{InvHalphenB}, generalized Halphen \eqref{GenHalphen}, Sichel \eqref{Sichel} and Appell Beta~\eqref{AppellBeta} distributions. Thanks to Saralees Nadarajah.}
+% Kudos to Nadarajah for AppellBeta paper.
+
+~
+
+0.10 (2017-02-08)
+Added K \eqref{K}  and generalized K  \eqref{GenK} distributions.
+% Fixed typos.
+% Additional endorsements.
+Clarified notation and nomenclature.
+Thanks to Harish Vangala.
+
+~
+
+0.9 (2016-10-18)
+Added 
+	pseudo Voigt \eqref{PseudoVoigt}, 
+and
+	Student's $t_3$ \eqref{StudentsT3}
+distributions.
+Reparameterized hyperbolic sine \eqref{HyperbolicSine} distribution.
+Renamed inverse Burr to Dagum \eqref{Dagum}. %, and added location scale
+Derived limit of unit gamma to log-normal (p\pageref{UnitGammaToLogNormal}). 
+Corrected spelling of  ``arrises'' (sharp edges formed by the meeting of surfaces) to ``arises'' (emerge; become apparent). 
+% Added figure of limits and reworked limits appendix
+% Added figure for order statistics appendix
+% Added Endorsements page
+% Moved Pearson Exponential to Notes until figure out best organization.
+% Removed stretched exponential distribution (Redundant with Weibull)
+% Removed Moffat, unclear if correct definition, or if redundant.
+% 50% proofed equations
+
+~
+
+0.8 (2016-08-30)
+The Unprincipled edition:
+Added Moyal distribution \eqref{Moyal}, a special case of the gamma-exponential distribution.
+Corrected spelling of ``principle'' to ``principal''. Thanks to Matthew Hankins and Mara Averick.
+% Fixed typos and improved formatting.
+% Added source control
+% Renamed mixture distributions to compound distributions. 
+% Added exponential twist, but not done yet.
+% Changed all distribution names to links.
+% Fixed overfull hboxes
+
+~
+
+0.7 (2016-04-05) 
+%
+Added Hohlfeld distribution. %and Gauss hypergeometric distributions.
+Added appendix on limits.
+Reformatted and rationalized distribution hierarchy diagrams. 
+%Fixed typos and improved formatting.
+Thanks to Phill Geissler.
+
+~
+
+0.6 (2014-12-22)
+%
+Total of 147 named simple, unimodal, univariate, continuous probability distributions, and at least as many synonyms.
+Added appendix on the algebra of random variables.
+Added Box-Muller transformation.
+For the gamma-exponential distribution, switched the sign on the parameter $\alpha$.
+Fixed the relation between beta distributions and ratios of gamma distributions ($\alpha$ and $\gamma$ were switched in most cases).
+%Fixed typos and improved formatting.
+Thanks to Fabian Kr\"uger and Lawrence Leemis.
+
+
+~
+
+
+0.5 (2013-07-01)
+Added uniform product, half generalized Pearson VII, half exponential power distributions, GUD and q-Type distributions. 
+Moved Pearson IV to own section.
+Fixed errors in Inverse Gaussian.
+Added random variate generation to appendix.
+% Fixed typos. 
+Thanks to David Sivak, Dieter Grientschnig, Srividya Iyer-Biswas, and Shervin Fatehi.
+
+~
+
+ 0.4 (2012-03-01) 
+% Fixed typos.
+Added erratics. 
+Moved gamma distribution to own section.
+Renamed log-gamma to gamma-exponential.
+Added permalink.
+Added new tree of distributions. 
+Thanks to David Sivak and Frederik Beaujean.
+
+~
+
+0.3 (2011-06-40) 
+%Fixed many typos.
+Added tree of distributions. 
+%Improved formatting. 
+
+~
+
+0.2 (2011-03-01) 
+%Fixed many typos.
+Expanded families.  
+Thanks to David Sivak. 
+
+~
+
+ 0.1 (2011-01-16)
+ Initial release. Organize over 100  simple, continuous, univariate probability distributions into 14 families. Greatly expands on previous paper that discussed the Amoroso and gamma-exponential families~\cite{_amoroso}. Thanks to David Sivak, Edward E. Ayoub, and Francis J. O'Brien.
+
+%~
+%0.0 (c2010) Genesis, during a particularly enthralling session of the Berkeley Statistical Mechanics meeting. 
+}
+
+
+
+\normalstretch
+\newpage ~\newpage
+
+\SSecS{Endorsements}
+~\\
+
+\noindent
+``\emph{Ridiculously useful}'' -- Mara Averick\footnote{\url{https://twitter.com/dataandme/status/770732084872810496}}
+\\
+
+\noindent
+``\emph{I can't stress how useful I've found this. I wish I'd had a printout of it by my desk every day for the last 6 years}''-- Guillermo Roditi Dominguez\footnote{\url{https://twitter.com/groditi/status/772266190190194688}}
+\\
+
+\noindent
+``\emph{Abramowitz and Stegun for probability distributions}''-- Kranthi K. Mandadapu\footnote{Thursday Lunch with Scientists}
+\\
+
+\noindent
+``\emph{I had no idea how much I needed this guide.}''-- Daniel J. Harris\footnote{\url{https://twitter.com/DHarrisPsyc/status/870614354529370112}}
+\\
+
+
+
+\noindent
+``\emph{Who are you? How did you get in my house?}'' -- Donald Knuth\footnote{\url{https://xkcd.com/163/}}
+\\
+

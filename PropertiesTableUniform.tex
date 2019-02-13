@@ -1,0 +1,40 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[t!]
+\caption[Uniform distribution -- Properties]{Properties of the uniform distribution}
+\begin{align*}
+\text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \text{Uniform}(x \given a,s) 				\checked
+\\
+\text{PDF} \quad & \frac{1}{|s|}								\checked
+\\
+\text{CDF} \big/ \text{CCDF} \quad  &  \tfrac{x-a}{s} & s>0 \ \big/ \   s<0 
+\\
+\text{parameters} \quad & a,\ s \text{ in }  \mathbb{R}			\checked
+\\
+\text{support} \quad &  \phantom{s+{}} a \leq x \leq a+s      & s>0					\checked
+\\
+				&    a+s \leq x \leq a    & s<0					\checked
+\\
+\text{median} \quad  & a + \half s							\checked
+\\
+\text{mode} \quad  & \text{any supported value }				\checked
+\\
+\text{mean} \quad  & a + \half s								\checked
+\\
+\text{variance} \quad  & \sfrac{1}{12}s^2						\checked
+\\
+\text{skew} \quad  & 0									\checked
+\\
+\text{kurtosis} \quad  & -\tfrac{6}{5}							\checked
+\\
+\text{entropy} \quad  & \ln |s|  								\checked
+\\
+\text{MGF} \quad  &  \frac{e^{at}( e^{st}- 1 ) }{ |s| t}				%Double double check
+\\
+\text{CF} \quad  & \frac{e^{iat} (e^{i st})-1 }{ i |s| t}				%Double double check
+\end{align*}
+
+\end{table*}

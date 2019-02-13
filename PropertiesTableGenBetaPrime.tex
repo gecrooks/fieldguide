@@ -1,0 +1,60 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\begin{table*}[p]
+\caption[Generalized beta prime distribution -- Properties]{Properties of the generalized beta prime distribution}
+\begin{align*}
+ \text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
+\text{notation} \quad & \text{GenBetaPrime}(x\given a, s, \alpha,\gamma,\beta)   \checked
+\\
+\text{PDF}\quad &    \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{s}\right|	
+\left(\frac{x-a}{s}\right)^{\alpha\beta -1} \left(1+ \left(\frac{x-a}{s}\right)^\beta \right)^{-\alpha-\gamma } \checked
+\hspace{-30em}
+\\
+\text{CDF / CCDF} \quad  &  
+\frac{B\big(\alpha, \gamma; (1+(\tfrac{x-a}{s})^{-\beta})^{-1} \big) }{B(\alpha,\gamma)} \checked
+\hspace{-7em}
+& \tfrac{\beta}{s} >0 \,\big/ \, \tfrac{\beta}{s} <0
+\\ 
+& \quad = I\left(  \alpha,\gamma; (1+(\tfrac{x-a}{s})^{-\beta})^{-1} \right)  \checked
+% See McDonald1984, table 3.1 GB2. Expresses incomplete beta function as hypergeometric function.
+\\
+\text{parameters}\quad &   a,\ s,\ \alpha,\ \gamma,\ \beta \text{ in } \Real \checked 
+\\ & \alpha>0, \gamma>0	\checked
+\\
+\text{support} \quad &    x \geq a &  s > 0 										
+\\
+&  x\leq a  &  s < 0 
+\\
+%\text{median} \quad  &  \cdots
+%\\
+% \text{mode} \quad  & \cdots
+% \\
+\text{mean} \quad  &   a+\frac{s B(\alpha+\tfrac{1}{\beta},\gamma- \tfrac{1}{\beta}) }{B(\alpha,\gamma)} 
+\checked &   -\alpha< \tfrac{1}{\beta} <\gamma \checked
+% % See McDonald1984, table 3.1 GB2
+\\
+\text{variance} \quad  &s^2\left[\frac{ B(\alpha+\tfrac{2}{\beta},\gamma- \tfrac{2}{\beta}) }{B(\alpha,\gamma)} -  \left(\frac{ B(\alpha+\tfrac{1}{\beta},\gamma- \tfrac{1}{\beta}) }{B(\alpha,\gamma)}\right)^2 \right]  \hspace{-15em}
+& -\alpha< \tfrac{2}{\beta} <\gamma \checked
+\\
+\text{skew} \quad  &  \text{not simple}
+\\
+\text{kurtosis} \quad  &  \text{not simple}
+\\
+\text{entropy} \quad  &   \ln \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{s}\right|
+  +(\tfrac{1}{\beta}-\alpha) \big[ \psi(\alpha) - \psi(\gamma)\big]
+  \hspace{-7em} 
+  \\
+& \quad +(\alpha+\gamma) \big[ \psi(\alpha+\gamma) - \psi(\gamma)\big] \checked & \text{\cite[Eq.~(15)]{Tahmasebi2010}}
+\\
+% \text{MGF} \quad  &  \cdots
+% \\
+% \text{CF} \quad  &  \cdots
+% \\
+E[ X^h]  \quad & \frac{|s|^h B(\alpha+\tfrac{h}{\beta},\gamma- \tfrac{h}{\beta}) }{B(\alpha,\gamma)} 
+& \!\!a=0,\  -\alpha< \tfrac{h}{\beta} <\gamma \quad   \text{\cite{McDonald1984}} \checked
+\end{align*}
+\end{table*}
+
+

@@ -1,0 +1,124 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\subpart{Two shape parameters}
+
+\Sec{Unit Gamma Distribution} 
+\label{sec:UnitGamma}
+\dist{Unit gamma} (log-gamma) distribution~\cite{Olshen1938,Consul1971,Grassia1977,Gupta2004}:
+% log-gamma\sscite{Consul1971}
+\begin{align}
+\label{UnitGamma}
+\opr{UnitGamma}&(x\given a, s,\alpha,\beta) \\ \notag &= \frac{1}{\Gamma(\alpha)} \left|\frac{\beta}{ s}\right|
+\left(\frac{x-a}{s}\right)^{\beta-1} \left(-\beta \ln   \frac{x-a}{s} \right)^{\alpha-1}  \checked
+\notag
+\\ \text{for }& x,\ a,\ s,\ \alpha,\ \beta \text{ in } \mathbb{R},\ \ \alpha >0
+\notag
+ \\ \text{ support } & x \in [a,a+s], s>0,\ \beta>0 \notag \\ \text{ or } &  x\in[a+s,a], s<0,\ \beta>0 
+ \notag 
+ \\  \notag  \text{ or } &  x\in[a+s,+\infty], s>0,\ \beta<0 
+ \\  \notag  \text{ or } &  x\in[-\infty,a+s], s<0,\ \beta<0 
+\end{align}
+
+A curious distribution that occurs as a limit of the generalized beta \eqref{GenBeta}, and as the anti-log transform of the gamma distribution \eqref{Gamma}. For this reason, it is also sometimes called the log-gamma distribution.
+
+% Note Olsehn1938 uses parameterization with negative of beta used here.}
+
+
+\SSec{Special cases}
+
+
+\dist{Uniform product} distribution~\cite{Springer1979a}:
+\begin{align}
+\label{UniformProduct}
+\opr{UniformProduct}(x\given n) &=  \frac{1}{\Gamma(n)} \left( -\ln x \right)^{n-1} 	\checked
+ \\ \notag & = \opr{UnitGamma}(x\given 0, 1,n,1)							\checked
+ \\ \notag & \qquad 0>x>1, \quad n = 1,\ 2,\ 3,\ \ldots							\checked
+\end{align}
+The product of $n$ standard uniform distributions \eqref{StdUniform}.
+
+
+
+\SSec{Interrelations}
+With  $\alpha=1$ we obtain the power function distribution \eqref{PowerFn} as a special case.
+\[
+\opr{UnitGamma}(x\given a, s,1,\beta) = \opr{PowerFn}(x\given a,s,\beta) \checked
+\]
+
+The  unit gamma is the anti-log transform of the standard gamma distribution \eqref{StdGamma}.
+\begin{align*}
+\opr{UnitGamma}(0,1,\alpha,\beta)& \sim \exp\bigl(-\opr{Gamma}(0, \tfrac{1}{\beta}, \alpha)\bigr) \checked
+\\
+\opr{UnitGamma}(0,1,\alpha,1) &\sim \exp\bigl(-\opr{StdGamma}( \alpha)\bigr) \checked
+\end{align*}
+
+
+
+
+The unit gamma distribution is a limit of the generalized beta distribution \eqref{GenBeta}, and limits to the gamma \eqref{Gamma} and log-normal  \eqref{LogNormal}~\cite{\self} distributions.
+\[
+\opr{Gamma}(x\given a,s,\alpha) &= \lim_{\beta\rightarrow\infty} \opr{UnitGamma}(x\given a+\beta s,-\beta s, \alpha,\beta) 
+\notag
+\]
+\begin{align*}
+\lim_{\alpha\rightarrow\infty}& \opr{UnitGamma} (x\given a, \vartheta e^{ \sigma\sqrt{\alpha}}, \alpha, \tfrac{\sqrt{\alpha}}{\sigma} )
+\\ 
+& \propto  \lim_{\alpha\rightarrow\infty}  \left(\frac{x-a}{ \vartheta e^{ \sigma\sqrt{\alpha}} }\right)^{ \tfrac{\sqrt{\alpha}}{\sigma} -1}
+\left(-  \frac{\sqrt{\alpha}}{\sigma} \ln  \frac{x-a}{ \vartheta e^{ \sigma\sqrt{\alpha}} } \right)^{\alpha-1}
+\\ 
+& \propto  \left(\frac{x-a}{\vartheta}\right)^{-1}   \lim_{\alpha\rightarrow\infty}
+\exp\left\{\sqrt{\alpha}\frac{1}{\sigma} \ln \frac{x-a}{ \vartheta}\right\}
+\left( 1 - \frac{1}{\sqrt{\alpha}} \frac{1}{\sigma} \ln  \frac{x-a}{ \vartheta  } \right)^{\alpha-1}
+\\
+& \propto  \left(\frac{x-a}{\vartheta}\right)^{-1}   \lim_{\alpha\rightarrow\infty} e^{-z \sqrt{\alpha}}  \bigl( 1+\frac{z}{\sqrt{\alpha}} \bigr)^{\alpha} , \quad  z = -\tfrac{1}{\sigma} \ln \tfrac{x-a}{\vartheta}
+\\
+&  \propto \left(\frac{x-a}{\vartheta}\right)^{-1} \exp\left\{-\frac{1}{2\sigma^2} \left( \ln \frac{x-a}{\vartheta} \right)^2 \right\} 
+\\
+& \quad  =  \opr{LogNormal} (x\given a, \vartheta, \sigma)
+\end{align*}
+\label{UnitGammaToLogNormal}
+Here we utilize the Gaussian function limit $
+\lim_{c \rightarrow \infty} e^{-z \sqrt{c}}  \bigl( 1+\frac{z}{\sqrt{c}} \bigr)^c = e^{-\half z^2}$ \secref{sec:Limits}.
+\index{Gaussian function limit}
+
+
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfUnitGamma}
+\end{center}
+\caption[Unit gamma, finite support.]{Unit gamma, finite support, $\opr{UnitGamma}(x\given 0, 1,\alpha,\beta)$, $\beta>0$.}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfUnitGammaNegBeta}
+\end{center}
+\caption[Unit gamma, semi-infinite support.]{Unit gamma, semi-infinite support. $\opr{UnitGamma}(x\given 0, 1,\alpha,\beta)$, $\beta<0$}
+\end{figure}
+
+
+
+The product of two unit-gamma distributions with common $\beta$ is again a unit-gamma distribution~\cite{Consul1971,\self}. 
+\begin{align*}
+\opr{UnitGamma}_1 (0,s_1,\alpha_1, \beta )\ & \opr{UnitGamma}_2(0,s_2, \alpha_2, \beta ) 
+ \\
+&\sim \opr{UnitGamma}_3(0,s_1 s_2,\alpha_1 + \alpha_2, \beta )  \checked
+\end{align*}
+The property is related to the  analogous additive relation of the gamma distribution.
+\begin{align*}
+&\opr{UnitGamma}_1(0,s_1,\alpha_1, \beta )\ \opr{UnitGamma}_2(0,s_2, \alpha_2, \beta ) 
+\\
+&\sim s_1 s_2 \left(\opr{UnitGamma}_1(0,1,\alpha_1,1)\ \opr{UnitGamma}_2(0,1,\alpha_2,1)  \right)^{\tfrac{1}{\beta}}
+\\
+&\sim s_1 s_2 \left(e^{- \opr{StdGamma}_1(\alpha_1) - \opr{StdGamma}_2(\alpha_2 ) } \right)^{ \tfrac{1}{\beta}}
+\\
+&\sim s_1 s_2 \left(e^{- \opr{StdGamma}_3(\alpha_1+ \alpha_2 )  }\right)^{\tfrac{1}{\beta}}
+\\
+&\sim \opr{UnitGamma}_3(0,s_1 s_2,\alpha_1 + \alpha_2, \beta ) \checked
+\end{align*}
+
+
+\input{PropertiesTableUnitGamma}
+

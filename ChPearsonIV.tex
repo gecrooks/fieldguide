@@ -1,0 +1,64 @@
+
+% !TEX encoding = UTF-8 Unicode 
+% !TEX root = FieldGuide.tex
+
+\clearpage
+\Sec{Pearson IV Distribution}
+%\addcontentsline{toc}{subsection}{~~~~~~~~~~~~Pearson IV} 
+\label{sec:PearsonIV}
+
+\dist{Pearson IV} (skew-$t$) distribution~\cite{Pearson1895,Heinrich2004}
+is a four parameter, continuous, univariate, unimodal probability density, with infinite support. The functional form is
+\begin{align}
+\label{PearsonIV}
+& \opr{PearsonIV}(x\given a,s, m,v) 
+\\ \notag &= \frac{{}_{2}F_1(-i v, i v ; m;1)  }{|s| B(m-\frac{1}{2}, \frac{1}{2} )}  
+%\times \\ \notag & \qquad 
+\left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-m}  \exp \left\{ - 2 v \arctan \left( \frac{x-a}{s}\right) \right\}
+\checked
+\\ \notag &=  \frac{{}_{2}F_1(-i v, i v ; m;1)  }{|s| B(m-\frac{1}{2}, \frac{1}{2} )} 
+%\times \\ \notag & \qquad  
+\left( 1 + i \frac{x-a}{s} \right)^{-m+iv} \left( 1 -i \frac{x-a}{s} \right)^{-m-iv}
+\checked
+\\ \notag & \quad x,a,s,m,v \in {\mathbb R} 
+\\ \notag & \quad m>\tfrac{1}{2}
+%\\ \notag & \qquad K = \frac{{}_{2}F_1(-i v, i v , m;1)  }{s B(m-\frac{1}{2}, \frac{1}{2} )} 
+\end{align}
+Note that the two forms are equivalent, since $\arctan(z) = \tfrac{1}{2} i \ln \frac{1-i z}{1+iz}\checked$. The first form is more conventional, but the second form displays  the essential simplicity of this distribution. The density is an analytic function with two singularities, located at conjugate points in  the complex plain, with conjugate, complex order. This is the one member of the Pearson distribution family that has not found  significant utility.
+
+
+%(Note that our parameters  $a, s, m, v$ correspond to Heinrich's $\lambda, a, m, v/2$. 
+
+\SSec{Interrelations}
+The distribution parameters obey the symmetry 
+\[
+\opr{PearsonIV}(x\given a,s, m,v) =\opr{PearsonIV}(x\given a,-s, m,-v)\, .\checked
+\notag
+\] 
+
+Setting the complex part of the exponents to zero, $v=0$, gives the Pearson VII family \eqref{PearsonVII}, which includes the Cauchy and Student's t distributions. 
+\[
+\opr{PearsonIV}(x\given a,s, m,0) = \opr{PearsonVII}(x\given a,s, m)  \checked
+\notag
+\]
+
+Suitable rescaled,  the exponentiated arctan limits to an exponential of the reciprocal argument.
+\[
+ \lim_{v\rightarrow\infty} \exp(- 2 v  \arctan( -2 v x)  -  \pi  v) =  e^{-\tfrac{1}{x}}
+ \checked
+ \notag
+\] 
+% Checked with Wolfram Alpha limit_{v-> \infty} exp(- 2 v  arctan( -2 v x)  -  pi  v) 
+ Consequently, the high $v$ limit of the Pearson IV distribution is an inverse gamma (Pearson V) distribution \eqref{InvGamma}, which acts an intermediate distribution between the beta prime (Pearson VI) and Pearson IV distributions.
+\[
+ \lim_{v\rightarrow\infty} \opr{PearsonIV}(x\given 0,-\tfrac{\theta}{2 v}, \tfrac{\alpha+1}{2},v) = \opr{InvGamma}(x\given \theta, \alpha) 
+ \checked
+ \notag
+\]
+The inverse exponential distribution \eqref{InvExp} is therefore also a special case when $\alpha=1$ ($m=1$).
+
+
+%\addcontentsline{toc}{subsection}{Pearson IV} 
+\input{PropertiesTablePearsonIV}
+
+\clearpage
