@@ -214,8 +214,22 @@ Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the unifor
 	\label{Landau}
 	\opr{Landau}(x\given \mu,c) = \opr{Stable}(x\given \mu,c,1,1) \checked
 \end{align}
-A stable distribution~\eqref{Stable}. 
+A stable distribution~\eqref{Stable}.
 Describes the average energy loss of a charged particles traveling through a thin layer of matter~\cite{Landau1944}.
+
+\secbreak
+\dist{Log-Cauchy} distribution~\cite{Marshall2007}:
+\begin{align}
+\label{LogCauchy}
+\opr{LogCauchy}(x\given a, s, \beta) &= \frac{|\beta|}{|s| \pi } \left(\frac{x-a}{s}\right)^{-1} \frac{1}{1 +\left( \ln\left(\frac{x-a}{s}\right)^\beta \right)^2 }
+\end{align}
+A logstable distribution with very heavy tails. 
+The anti-log transform of the Cauchy distribution~\eqref{Cauchy}.
+\[
+\opr{LogCauchy}(0,s,\beta) & \sim \exp\bigl(-\opr{Cauchy}(-\ln s,\sfrac{1}{\beta})\bigr) 
+\notag
+\]
+% Not a special case of GenBetaPrime, despite rumors to the contrary.
 
 
 
@@ -327,7 +341,7 @@ Note that $lim_{x\rightarrow 0} \opr{Slash}(x)= 1/\sqrt{8\pi}$\checked.
 %===========================================================================
 \secbreak
 
-\dist{Stable} (L\'evy skew alpha-stable, L\'{e}vy stable) distribution~\cite{Nolan2015}:
+\dist{Stable} (L\'evy skew alpha-stable, L\'{e}vy stable) distribution~\cite{Nolan2015}:\index{logstable}
  The PDF of the stable distribution does not have a closed form in general. Instead,  the stable distribution can be defined via the characteristic function 
 \begin{align}
 \label{Stable}
@@ -360,7 +374,7 @@ A distribution is stable if it is closed under scaling and addition,
 a_1\, \opr{Stable}_1(\mu,c,\alpha,\beta) + a_2\, \opr{Stable}_2(\mu,c,\alpha,\beta) 
  \sim a_3 \,\opr{Stable}_3(\mu,c,\alpha,\beta) + b \checked
 \end{align*}
-for real  constants $a_1,a_2,a_3,b$. 
+for real  constants $a_1,a_2,a_3,b$. The anti-log transform of a stable distribution is logstable: it is stable under multiplication instead of addition\index{stable}.
 
 
 There are three special cases of the stable distribution where the probability density functions can be expressed with elementary functions: The  normal \eqref{Normal}, Cauchy \eqref{Cauchy}, and L\'evy \eqref{Levy} distributions, all of which are simple.
