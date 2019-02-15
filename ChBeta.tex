@@ -148,6 +148,30 @@ As the name suggests, the probability density describes a semicircle, or more pr
 Used in non-parametric kernel density estimation.
 
 
+\dist{Biweight} (Quartic) distribution: % TODO: Citation
+\begin{align}
+\label{Biweight}
+\opr{Biweight}(x\given \mu, b) 
+&= \frac{15}{16} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right)^2 
+ \\
+& = \opr{PearsonII}(x\given \mu, b, 3) \notag  \\
+& = \opr{Beta}(x\given \mu-b, 2 b, 3, 3) \notag    \\
+& = \opr{GenBeta}(x\given \mu-b, 2b, 3, 3,1)  \notag 
+\end{align}
+Used in non-parametric kernel density estimation.
+
+\dist{Triweight} distribution: % TODO: Citation
+\begin{align}
+\label{Triweight}
+\opr{Triweight}(x\given \mu, b) 
+&= \frac{35}{32} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right)^3 
+ \\
+& = \opr{PearsonII}(x\given \mu, b, 4) \notag  \\
+& = \opr{Beta}(x\given \mu-b, 2 b, 3, 4) \notag    \\
+& = \opr{GenBeta}(x\given \mu-b, 2b, 4, 4,1)  \notag 
+\end{align}
+Used in non-parametric kernel density estimation.
+
 
 
 \SSec{Interrelations}
