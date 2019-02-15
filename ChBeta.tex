@@ -86,10 +86,13 @@ A monotonic, J-shaped special case of the beta distribution noted by Pearson~\ci
 \label{PearsonII}
 \opr{PearsonII}(x\given \mu, b,\alpha) 
 %&= \frac{1}{2s}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha) } \left(1-\frac{x^2}{4 s^2} \right)^{\alpha-1} \\
-&= \frac{1}{4^{\alpha-1} 2 |b|}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha)^2 } \left(1-\left(\frac{x-\mu}{ b}\right)^2 \right)^{\alpha-1}
+&= \frac{1}{2^{2\alpha-1}  |b|}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha)^2 } \left(1-\left(\frac{x-\mu}{ b}\right)^2 \right)^{\alpha-1}
+\checked
  \\
 & = \opr{Beta}(x\given \mu-b, 2b,\alpha, \alpha) \notag  \\
-& = \opr{GenBeta}(x\given \mu-b, 2 b ,\alpha, \alpha,1) \notag 
+\checked
+& = \opr{GenBeta}(x\given \mu-b, 2 b ,\alpha, \alpha,1) \notag
+\checked
 \end{align}
 A symmetric centered distribution with support $[\mu-b, \mu+b]$.
 
@@ -132,17 +135,18 @@ A common variant of the arcsin, with support $x\in [-b,b]$ symmetric about the o
 \end{align}
 As the name suggests, the probability density describes a semicircle, or more properly a half-ellipse. This distribution arises as the distribution of eigenvectors of various large random symmetric matrices. 
 
-\dist{Epanechnikov} distribution~\cite{Epanechnikov1969a}:
+\dist{Epanechnikov} (parabolic) distribution~\cite{Epanechnikov1969a}:
 \begin{align}
 \label{Epanechnikov}
 \opr{Epanechnikov}(x\given \mu, b) 
-&= \frac{3}{4} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right)
+&= \frac{3}{4} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right) \checked
  \\
-& = \opr{PearsonII}(x\given \mu, b, 2) \notag \\
-& = \opr{Beta}(x\given \mu-b, 2 b,\alpha, 2) \notag  \\
-& = \opr{GenBeta}(x\given \mu-b, 2b,\alpha, 2,1) \notag 
+& = \opr{PearsonII}(x\given \mu, b, 2) \notag \checked \\
+& = \opr{Beta}(x\given \mu-b, 2 b, 2, 2) \notag   \checked \\
+& = \opr{GenBeta}(x\given \mu-b, 2b, 2, 2,1) \checked \notag 
 \end{align}
 Used in non-parametric kernel density estimation.
+
 
 
 
