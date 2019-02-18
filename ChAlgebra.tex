@@ -92,7 +92,7 @@ The Weibull transform with $a=0$, $s=1$, and $\beta=-1$.
 \[
 \opr{Gamma}(0,1,\alpha) \sim \opr{InvGamma}(0,1,\alpha)^{-1} \notag  \\
 \opr{Exp}(0,1) \sim \opr{InvExp}(0,1)^{-1} \notag  \\
-\opr{Cauchy}(0,1) \sim \opr{Cauchy}(0,1)^{-1} \notag  \\
+\opr{Cauchy}(0,1) \sim \opr{Cauchy}(0,1)^{-1} \notag
 \]
 
 
@@ -148,7 +148,7 @@ The anti-log transform converts a location parameter into a scale parameter, and
 
 
 
-\paragraph*{Prime transformation}~\cite{\self}\index{prime transform}
+\paragraph*{Prime transformation}\hspace{-0.8em}\cite{\self}\index{prime transform}
 \[
 \op{prime}(x) =\frac{1}{\sfrac{1}{x}-1 }\ ,  \quad
 \op{prime}^{-1}(y) = \frac{1}{\sfrac{1}{y}+1 }  \checked
@@ -175,17 +175,19 @@ f_Z(z) = (f_X * f_Y)(z) = \int_{-\infty}^{+\infty}  f_X(x)\ f_Y(z-x)\ dx
 \]
 The characteristic function for a sum of independent random variables is the product of the respective characteristic functions (p\pageref{characteristic_function}). \index{characteristic function}
 \[
-\phi_{X+Y}(t) = \phi_{X}(t) \phi_{Y}(t) 
+\phi_{X+Y}(t) = \phi_{X}(t) \phi_{Y}(t) \checked
 \notag
 \]
 
+Examples:
 \[
 \opr{Normal}_1(\mu_1, \sigma_1) + \opr{Normal}_2(\mu_2, \sigma_2) &\sim \opr{Normal}_3(\mu_1+\mu_2, \sqrt{\sigma^2_1 + \sigma^2_2}) 
+\checked
 \notag \\
 \opr{Exp}_1(a_1, \theta) + \opr{Exp}(a_2, \theta) &\sim \opr{Gamma}(a_1, a_2, \theta, 2) 
-\notag \\
+\checked \notag \\
 \opr{Gamma}_1(a_1, \theta, \alpha_1) + \opr{Gamma}_2(a_2, \theta, \alpha_2) &\sim \opr{Gamma}_3(a_1+a_2,\theta, \alpha_1+\alpha_2) 
-\notag
+\checked \notag
 \]
 Stable distributions \eqref{Stable} are those that are invariant under summation, changing only location and scale. 
 
@@ -198,6 +200,7 @@ Z \sim X - Y  \checked
 \]
 \[
 \phi_{X-Y}(t) = \phi_{X}(t) \phi_{Y}(-t) 
+\checked
 \notag
 \]
 
@@ -252,7 +255,7 @@ Examples:
 \checked
 \notag
 \\
-\opr{StdCauchy}() & \sim  \frac{\oprr{StdNormal}{Normal}_1()}{\oprr{StdNormal}{Normal}_2() }
+\opr{StdCauchy}() & \sim  \frac{\oprr{StdNormal}{Normal}_1()}{\oprr{StdNormal}{Normal}_2() } \checked
 \end{align*}
 
 
@@ -322,7 +325,7 @@ The integral (or sum, if $z$ takes discrete values) in the denominator ensures t
 = f(x) e^{\theta x - \kappa(\theta) }  \checked
 \notag
 \]
-Here $\kappa(\theta)= \ln \int  f(x) e^{\theta x} dx\checked$ is the cumulant generating function~\pageref{CGF}.
+Here $\kappa(\theta)= \ln \int  f(x) e^{\theta x} dx\checked$ is the cumulant generating function~(p.\pageref{CGF}).
 
 
 
