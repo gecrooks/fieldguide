@@ -45,6 +45,13 @@ The beta-logistic distribution is perhaps most commonly referred to as `generali
 \notag
 \end{align}
 
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfBurrII}
+\end{center}
+\caption[Burr II distributions]{Burr type II distributions, $\opr{BurrII}(x\given0,1,\gamma)$}
+\end{figure}
+
 
 \dist{Reversed Burr type II} (generalized logistic type II) distribution~\cite{Johnson1994}:
 \begin{align}
@@ -129,6 +136,13 @@ The hyperbolic secant cumulative distribution function features the Gudermannian
 \end{align*}
 The standardized hyperbolic secant distribution (zero mean, unit variance) is $\opr{HyperbolicSecant}(x\given 0, 1/\pi)\checked$.
 
+\newcommand{\oo}{\infty}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfSymBetaLogistic}
+\end{center}
+\caption[Symmetric beta-logistic distributions]{Special cases of the symmetric beta-logistic distribution~\eqref{SymBetaLogistic}: Standardized (zero mean, unit variance) normal~($\alpha\rightarrow\oo$), logistic~($\alpha=1$), hyperbolic secant~($\alpha=\tfrac{1}{2}$), and Laplace~($\alpha\rightarrow 0$)  (low to high peaks).}
+\end{figure}
 
 
 
@@ -173,7 +187,7 @@ The beta-logistic limits to the gamma exponential~\eqref{GammaExp} and Laplace \
 \notag
 \\
 \opr{Laplace}(x\given \eta,\theta)   & = 
-\lim_{\alpha\rightarrow 0} \opr{BetaLogistic}( x\given \eta, \theta\sqrt{\alpha},\alpha,\alpha)
+\lim_{\alpha\rightarrow 0} \opr{BetaLogistic}( x\given \eta, \theta\alpha\,\alpha,\alpha) \checked
 \notag
 \]
 

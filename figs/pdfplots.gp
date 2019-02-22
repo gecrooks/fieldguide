@@ -38,6 +38,7 @@ LogNormalPDF(x,a,V,B) = (V/(x-a)) * exp(- (B * log((x-a)/V))**2 /2) * abs(B) / (
 
 BetaExpPDF(x,nu,lambda, A, G) = (1./Beta(A,G)) * abs(1./lambda)  * exp( -A * ((x-nu)/lambda)) * ( 1.-  exp( - ((x-nu)/lambda)) )**(G-1.)
 
+BetaLogisticPDF(x,nu,lambda, A, G) = (1./Beta(A,G)) * abs(1./lambda)  * exp( -A * ((x-nu)/lambda)) * ( 1.+  exp( - ((x-nu)/lambda)) )**(-A-G)
 
 
 set xtics 0,1
@@ -361,12 +362,37 @@ set xtics -3.,1.
 plot[0:4]  BetaExpPDF(x,0., 0.5, 0.25, 0.5) lt 1, BetaExpPDF(x,0., 1., 0.5, 0.5) lt 1
 
 
+unset label
+set border 3
+set output "pdfLogistic.pdf"
+set yrange[0:1.]
+set xtics -3.,1.
+plot[-4:4]   BetaLogisticPDF(x,0., 1, 1, 1) lt 1
+
+unset label
+set border 3
+set output "pdfSymBetaLogistic.pdf"
+set yrange[0:0.75]
+set xtics -3.,1.
+plot[-3:3]  exp(- abs(x*sqrt(2) ) )/(2./sqrt(2)), BetaLogisticPDF(x, 0., 0.318, 0.5, 0.5) lt 1, BetaLogisticPDF(x, 0., 0.55, 1, 1) lt 1, NormalPDF(x, 0., 1) lt 1
+
+
+unset label
+set border 3
+set output "pdfBurrII.pdf"
+set yrange[0:0.5]
+set xtics -3.,1.
+set label "{/Symbol g=2}" at first 0.5, first 0.35
+set label "{/Symbol g=8}" at first 2.1, first 0.40
+plot[-3:6]  BetaLogisticPDF(x, 0., 1, 1, 2) lt 1, BetaLogisticPDF(x, 0., 1, 1, 8) lt 1
+
+
 LogLogisticPDF(x,a,s,B) = BetaPrimePDF(x, a, s, 1., 1.,B)
 unset label
 set border 3
 set output "pdfLogLogistic.pdf"
 set yrange[0:2.1]
-plot[0:2]  LogLogisticPDF(x,0,1.,1) lt 1,LogLogisticPDF(x,0,1.,2) lt 1,LogLogisticPDF(x,0,1.,4) lt 1, LogLogisticPDF(x,0,1.,8) lt 1, LogLogisticPDF(x,0,1.,0.5) lt 1
+plot[0:2]  LogLogisticPDF(x,0, 1.,1) lt 1,LogLogisticPDF(x,0,1.,2) lt 1,LogLogisticPDF(x,0,1.,4) lt 1, LogLogisticPDF(x,0,1.,8) lt 1, LogLogisticPDF(x,0,1.,0.5) lt 1
 
 
 
