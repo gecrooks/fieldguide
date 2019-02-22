@@ -71,7 +71,7 @@ The distribution of a sum of squares of $k$ independent standard normal random v
 
 
 
-\dist{Scaled chi-square}  distribution~\cite{Lee2012}:
+\dist{Scaled chi-square} distribution~\cite{Lee2012}:
 \begin{align}
 \label{ScaledChiSqr}
 \opr{ScaledChiSqr}(x \given \sigma, k) 
@@ -83,6 +83,21 @@ The distribution of a sum of squares of $k$ independent standard normal random v
 &=  \opr{Amoroso}(x\given  0, 2\sigma^2, \tfrac{k}{2}, 1) \checked \notag 
 \end{align}
 The distribution of a sum of squares of $k$ independent normal random variables with variance $\sigma^2$.
+
+
+\dist{Porter-Thomas} distribution~\cite{Porter1956a}:
+\begin{align}
+\label{PorterThomas}
+\opr{PorterThomas}(x \given \sigma) 
+&= \frac{1}{2\sigma^2\Gamma(\tfrac{1}{2})} \left(\frac{x}{2\sigma^2}\right)^{-\tfrac{1}{2}} 
+\exp\left\{-\left(\frac{x}{2\sigma^2} \right)\right\}  \\
+&=  \opr{Stacy}(x\given 2\sigma^2, \tfrac{1}{2},1)  \checked\notag \\
+&=\opr{Gamma}(x\given 0, 2\sigma^2, \tfrac{1}{2}) \checked \notag \\
+&=  \opr{Amoroso}(x\given  0, 2\sigma^2, \tfrac{1}{2}, 1) \checked \notag 
+\end{align}
+A chi-square distribution with a single degree of freedom.
+Used to model fluctuations in decay mode strengths of excited nuclei~\cite{Porter1956a}
+
 
 \input{PropertiesTableGamma}
 
