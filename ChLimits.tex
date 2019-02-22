@@ -142,7 +142,8 @@ Essentially the same limit takes the beta-exponential and beta-logistic distribu
 \checked
 \\
 \opr{Normal}(x\given \mu,\sigma)   & = 
-\lim_{\alpha\rightarrow\infty} \opr{InvGamma} (x\given \mu-\sigma/\alpha, \sigma \alpha^{\tfrac{3}{2}}, \alpha)
+\lim_{\alpha\rightarrow\infty} \opr{InvGamma} (x\given \mu-\sigma\sqrt{\alpha}, \sigma \alpha^{\tfrac{3}{2}}, \alpha)
+\checked
 \end{align*}
 
 
@@ -161,6 +162,7 @@ Essentially the same limit takes the beta-exponential and beta-logistic distribu
 \\
  \opr{Normal}(x\given \mu, \sigma) & = 
 \lim_{\alpha\rightarrow\infty} \opr{GammaExp}(x\given  \mu+\sigma\sqrt{\alpha}\ln\alpha, \sigma\sqrt{\alpha},\alpha)
+\checked
 \notag
 \]
 
@@ -186,13 +188,15 @@ See \secref{sec:PearsonIV}
 \\
 \opr{Normal}(x\given \mu,\sigma)   & = 
 \lim_{\alpha\rightarrow\infty} \opr{PearsonII}( x\given \mu, \sigma\sqrt{8\alpha},\alpha)
+\checked
 \notag
 \]
 
 \[
 \opr{Laplace}(x\given \eta,\theta)   & = 
-\lim_{\alpha\rightarrow 0} \opr{BetaLogistic}( x\given \eta, \theta\sqrt{\alpha},\alpha,\alpha)
+\lim_{\alpha\rightarrow 0} \opr{BetaLogistic}( x\given \eta, \theta\alpha, \alpha, \alpha)
 \notag
+\checked
 \]
 
 
@@ -215,7 +219,7 @@ See \secref{sec:PearsonIV}
 \draw (2.5,12.5) node (beta) {\hyperref[sec:Beta]{Beta}};
 \draw (5,12.5) node (betaexp) {\hyperref[sec:BetaExp]{Beta Exp.}};
 \draw (7.5,12.5) node (betaprime) {\hyperref[sec:BetaPrime]{Beta Prime}};
-\draw (10,12.5) node (betalogistic) {\hyperref[sec:BetaLogistic]{Beta-Logistic}};
+\draw (10,12.5) node (betalogistic) {\hyperref[sec:BetaLogistic]{~Beta-Logistic}};
 \draw (12.5,12.5) node (pearsoniv) {\hyperref[sec:PearsonIV]{Pearson IV}};
 %
 \draw (2.5,10) node (unitgamma) {\hyperref[sec:UnitGamma]{Unit Gamma}};
