@@ -159,7 +159,7 @@ Not all interesting distributions have finite means, notably the Cauchy family~\
 \paragraph*{variance}\index{variance}\index{standard deviation} The variance measures the spread of a distribution.
 \[
 \op{var}[X] =  
- \expect\Left[ (X-\expect[X])^2\Right]     = \expect\bigl[X^2\bigr] - \expect\bigl[X\bigr]^2
+ \expect\Left[ (X-\expect[X])^2\Right] = \expect\bigl[X^2\bigr] - \expect\bigl[X\bigr]^2
 \notag \checked
 \]
 The variance is also know as the second central moment, or second cumulant, and commonly denoted by the symbol $\sigma$. The standard deviation is the square root of the variance.
@@ -168,7 +168,8 @@ The variance is also know as the second central moment, or second cumulant, and 
 \paragraph*{central moment}\index{central moment}
 \[
 \mu_n[X] =  
- \expect\Left[ (X-\expect[X])^n\Right]   
+\expect\Left[ \bigl(X-\expect[X]\bigr)^n\Right]
+\checked 
 \]
 The $n$th moment about the mean. The first central moment is zero, and the second is the variance. 
 
@@ -177,8 +178,9 @@ The $n$th moment about the mean. The first central moment is zero, and the secon
 The standard measure of skew is the third cumulant (third central moment) normalized by the $\tfrac{3}{2}$ power of the second cumulant.
 \[
 \op{skew}[X]    
-=  \expect\Left[ \Left( \frac{X-\expect[X]} {\op{var}[X]} \Right)^3 \Right]
-=\frac{\kappa_3\phantom{^{\tfrac{3}{2}}}}{{\kappa_2}^{\tfrac{3}{2}}} 
+= \expect\Left[ \Left( \frac{X-\expect[X]} {{\sigma}[X]} \Right)^3 \Right]
+= \frac{\kappa_3\phantom{^{\tfrac{3}{2}}}}{{\kappa_2}^{\tfrac{3}{2}}}
+\checked
 \notag 
 \]
 
@@ -236,15 +238,16 @@ The $n$th derivative of the cumulant generating function, evaluated at $0$, is e
 The $n$th cumulant is a function of the first $n$ moments of the distribution, and the second and third are equal to the second and third central moments.
 \begin{align*}
 \kappa_1 &= \expect[X] \checked \\
-\kappa_2 &= \expect\left[ (X-\expect[X])^2 \right] \checked\\
-\kappa_3 &= \expect\left[ (X-\expect[X])^3 \right] \checked \\
-\kappa_4 &= \expect\left[ (X-\expect[X])^4 \right]  - 3 \expect\left[ (X-\expect[X])^2 \right] \checked
+\kappa_2 &= \expect\Left[ (X-\expect[X])^2 \Right] \checked\\
+\kappa_3 &= \expect\Left[ (X-\expect[X])^3 \Right] \checked \\
+\kappa_4 &= \expect\Left[ (X-\expect[X])^4 \Right] - 3 \expect\Left[ (X-\expect[X])^2 \Right] \checked
 \end{align*}
 The cumulant expansion, if it exists, either terminates at second order (normal distribution), or continues to infinite order.
 
 Cumulants are often more useful than central moments, since cumulants are additive under summation of independent random variables. 
 \[
-\op{CGF}_{X+Y}(t) = \op{CGF}_{X}(t) + \op{CGF}_{Y}(t)  \checked
+\op{CGF}_{X+Y}(t) = \op{CGF}_{X}(t) + \op{CGF}_{Y}(t) 
+\checked
 \notag
 \]
 
@@ -261,11 +264,13 @@ Neither the moment nor cumulant generating functions need exist for a given dist
 essentially the Fourier transform of the probability density function. The characteristic function for a  sum of independent random variables is the product of the respective characteristic functions. 
 \[
 \phi_{ X+ Y}(t) = \phi_{X}( t)\  \phi_{Y}(t) 
+\checked
 \notag
 \]
 More generally, the characteristic function of any linear sum of independent random variables is
 \[
 \phi_{Z}(t) = \prod_i \phi_{X_i}(c_i t), \quad Z = \sum_i c_i X_i \ .
+\checked
 \notag
 \]
 

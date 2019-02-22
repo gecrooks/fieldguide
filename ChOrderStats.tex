@@ -17,12 +17,14 @@ Order statistics~\cite{David2005}: If we draw $m+n-1$ independent samples from a
 &\opr{OrderStatistic}_{X}(x \given m, n)  
 %\\ \notag &\quad
 = \frac{(m+n-1)!}{(m-1)!(n-1)!} \ F(x)^{m-1}\ f(x)\ (1- F(x))^{n-1}
+\checked
 \end{align*}
 Here $X$ is a random variable, $f(x)$ is the corresponding probability density and $F(x)$ is the cumulative distribution function. The first term is the number of ways to separate $m+n-1$ things into three groups containing 1,$m-1$ and $n-1$ things; the second is the probability of drawing $m-1$ samples smaller than the sample of interest; the third term is the distribution of the $m$th sample; and the fourth term is the probability of drawing $n-1$ larger samples. Note that the smallest value is obtained if $m=1$, the largest value if $n=1$, and the median value if $m=n$.
 
 The cumulative distribution function (CDF) for order statistics can be written in terms of the regularized beta function, $I(p,q;z)$.
 \begin{align*}
 \op{OrderStatisticCDF}_{X}(x \given m, n)  = I\bigl(m,n; F(x) \bigr)
+\checked
 \end{align*}
 Conversely, if a CDF for a distribution has the form $I\bigl(m,n; F(x) \bigr)$, then $F(x)$ is the cumulative distribution function of the corresponding ordering distribution. Since $I\bigl(\alpha,\gamma;x \bigr)$ is the CDF of the beta distribution~\eqref{Beta}, beta-generalized distributions\index{beta-generalized distributions} of the form $I\bigl(\alpha,\gamma; F_X(x) \bigr)$ (with arbitrary positive $\alpha$ and $\gamma$) are often referred to as `beta-X`~\cite{Eugene2002}, e.g.\ the beta-exponential distribution~\eqref{BetaExp}.
 
@@ -52,16 +54,17 @@ The order statistic of the uniform distribution~\eqref{Uniform} is the beta dist
 \\
 \opr{OrderStatistic}_{\opr{Logistic}(\pLoc,\pScale)}  (x \given  \gamma, \alpha)
 %\\ & 
-&=  \opr{BetaLogistic}(x\given \pLoc, \pScale,   \alpha, \gamma)
+&=  \opr{BetaLogistic}(x\given \pLoc, \pScale, \alpha, \gamma)
+\checked
 \\
- \opr{OrderStatistic}_{\opr{LogLogistic}(a,s,\beta)}  (x \given \alpha, \gamma ) 
+ \opr{OrderStatistic}_{\opr{LogLogistic}(a,s,\beta)}(x \given \alpha, \gamma ) 
  %\\ & 
 & =  \opr{GenBetaPrime}(x\given a, s, \alpha, \gamma , \beta) 
 \checked
 \end{align*}
 
 
-%The order of arguments changes for beta-exponential and beta-logistic. This is because of sign flip in scale when taking limits.}
+% Note the order of arguments changes for beta-exponential and beta-logistic. This is because of sign flip in scale when taking limits.}
 
 
 \SSec{Extreme order statistics}\index{extreme order statistics}
@@ -74,17 +77,20 @@ In the limit that $n\gg m$ (or equivalently $m\gg n$) we obtain the distribution
 \SSec{Median statistics} If we draw $N$ independent samples from a distribution (Where $N$ is odd), then the distribution of the statistical median value is \index{median}\index{median statistics}
 \label{MedianStatistic}
 \begin{align*}
-\op{MedianStatistic}_{X}(x \given N) = \opr{OrderStatistic}_{X}(x \given \tfrac{N-1}{2},  \tfrac{N-1}{2}) 
+\opr{MedianStatistic}_{X}(x \given N) = \opr{OrderStatistic}_{X}(x \given \tfrac{N-1}{2},  \tfrac{N-1}{2})
+\checked
 \end{align*}
 Notable examples of median statistic distributions include
 \begin{align*}
 \op{MedianStatistics}&_{\opr{Uniform}(a,s)}(x \given 2 \alpha +1 )
 %\\ & 
-=  \opr{PearsonII}(x\given a+s, 2s, \alpha) 
+=  \opr{PearsonII}(x\given a+s, 2s, \alpha)
+\checked
 \\
-\op{MedianStatistics}&_{\opr{Logistic}(a,s)}  (x \given 2 \alpha +1 )
+\op{MedianStatistics}&_{\opr{Logistic}(a,s)}  (x \given 2 \alpha +1)
 %\\ & 
 =  \opr{SymBetaLogistic}(x\given a, s, \alpha)
+\checked
 \end{align*}
 The median statistics of symmetric distributions are also symmetric.
 

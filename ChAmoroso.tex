@@ -585,16 +585,19 @@ Special cases of the Fr\'{e}chet  distribution include the inverse exponential (
 
 The Amoroso distribution is  a limiting form of  the generalized beta \eqref{GenBeta} and generalized beta prime \eqref{GenBetaPrime} distributions~\cite{McDonald1984}. Limits of the Amoroso distribution include gamma-exponential \eqref{GammaExp}, log-normal \eqref{LogNormal},  and normal \eqref{Normal}~\cite{Johnson1994}  and power function \eqref{PowerFn} distributions. 
 \[
- \opr{GammaExp}(x\given \nu, \lambda, \alpha) &=  \lim_{\beta\rightarrow\infty} \opr{Amoroso}(x\given \nu+\beta \lambda,-\beta \lambda, \alpha,\beta)
- \notag
+\opr{GammaExp}(x\given \nu, \lambda, \alpha) &=  \lim_{\beta\rightarrow\infty} \opr{Amoroso}(x\given \nu+\beta \lambda,-\beta \lambda, \alpha,\beta)
+\notag
+\checked
 \\
  \opr{LogNormal}(x\given a,\vartheta,\sigma) & =
 \lim_{\alpha\rightarrow\infty} 
 \opr{Amoroso}(x\given  a, \vartheta \alpha^{-\sigma\sqrt{\alpha} } , \alpha, \tfrac{1}{\sigma \sqrt{\alpha}})  
+\checked
 \notag
 \\
 \opr{Normal}(x\given \mu,\sigma)   & = 
 \lim_{\alpha\rightarrow\infty} \opr{Amoroso}(x\given 0,  \mu- \sigma\sqrt{\alpha}, \tfrac{\sigma}{\sqrt{\alpha}}, \alpha, 1)
+\checked
 \notag
 \]
 The log-normal limit is particularly subtle~\cite{Lawless1982}, \secref{sec:Limits}.

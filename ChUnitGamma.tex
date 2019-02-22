@@ -10,8 +10,8 @@
 % log-gamma\sscite{Consul1971}
 \begin{align}
 \label{UnitGamma}
-\opr{UnitGamma}&(x\given a, s,\alpha,\beta) \\ \notag &= \frac{1}{\Gamma(\alpha)} \left|\frac{\beta}{ s}\right|
-\left(\frac{x-a}{s}\right)^{\beta-1} \left(-\beta \ln   \frac{x-a}{s} \right)^{\alpha-1}  \checked
+\opr{UnitGamma}&(x\given a, s,\alpha,\beta) \\ \notag &= \frac{1}{\Gamma(\alpha)} \Left|\frac{\beta}{ s}\Right|
+\Left(\frac{x-a}{s}\Right)^{\beta-1} \Left(-\beta \ln   \frac{x-a}{s} \Right)^{\alpha-1}  \checked
 \notag
 \\ \text{for }& x,\ a,\ s,\ \alpha,\ \beta \text{ in } \mathbb{R},\ \ \alpha >0
 \notag
@@ -32,7 +32,7 @@ A curious distribution that occurs as a limit of the generalized beta \eqref{Gen
 \dist{Uniform product} distribution~\cite{Springer1979a}:
 \begin{align}
 \label{UniformProduct}
-\opr{UniformProduct}(x\given n) &=  \frac{1}{\Gamma(n)} \left( -\ln x \right)^{n-1} 	\checked
+\opr{UniformProduct}(x\given n) &=  \frac{1}{\Gamma(n)} \Left( -\ln x \Right)^{n-1} 	\checked
  \\ \notag & = \opr{UnitGamma}(x\given 0, 1,n,1)							\checked
  \\ \notag & \qquad 0>x>1, \quad n = 1,\ 2,\ 3,\ \ldots							\checked
 \end{align}
@@ -58,28 +58,35 @@ The  unit gamma is the anti-log transform of the standard gamma distribution \eq
 
 The unit gamma distribution is a limit of the generalized beta distribution \eqref{GenBeta}, and limits to the gamma \eqref{Gamma} and log-normal  \eqref{LogNormal}~\cite{\self} distributions.
 \[
-\opr{Gamma}(x\given a,s,\alpha) &= \lim_{\beta\rightarrow\infty} \opr{UnitGamma}(x\given a+\beta s,-\beta s, \alpha,\beta) 
+\opr{Gamma}(x\given a,s,\alpha) &= \lim_{\beta\rightarrow\infty} \opr{UnitGamma}(x\given a+\beta s,-\beta s, \alpha,\beta)
+\checked
 \notag
 \]
 \begin{align*}
-\lim_{\alpha\rightarrow\infty}& \opr{UnitGamma} (x\given a, \vartheta e^{ \sigma\sqrt{\alpha}}, \alpha, \tfrac{\sqrt{\alpha}}{\sigma} )
+\lim_{\alpha\rightarrow\infty}& \opr{UnitGamma} (x\given a, \vartheta e^{ \sigma\sqrt{\alpha}}, \alpha, \tfrac{\sqrt{\alpha}}{\sigma})
+\checked
 \\ 
-& \propto  \lim_{\alpha\rightarrow\infty}  \left(\frac{x-a}{ \vartheta e^{ \sigma\sqrt{\alpha}} }\right)^{ \tfrac{\sqrt{\alpha}}{\sigma} -1}
-\left(-  \frac{\sqrt{\alpha}}{\sigma} \ln  \frac{x-a}{ \vartheta e^{ \sigma\sqrt{\alpha}} } \right)^{\alpha-1}
+& \propto  \lim_{\alpha\rightarrow\infty}  \Left(\frac{x-a}{ \vartheta e^{ \sigma\sqrt{\alpha}} }\Right)^{ \tfrac{\sqrt{\alpha}}{\sigma} -1}
+\Left(-  \frac{\sqrt{\alpha}}{\sigma} \ln  \frac{x-a}{ \vartheta e^{ \sigma\sqrt{\alpha}} } \Right)^{\alpha-1}
+\checked
 \\ 
-& \propto  \left(\frac{x-a}{\vartheta}\right)^{-1}   \lim_{\alpha\rightarrow\infty}
-\exp\left\{\sqrt{\alpha}\frac{1}{\sigma} \ln \frac{x-a}{ \vartheta}\right\}
-\left( 1 - \frac{1}{\sqrt{\alpha}} \frac{1}{\sigma} \ln  \frac{x-a}{ \vartheta  } \right)^{\alpha-1}
+& \propto  \Left(\frac{x-a}{\vartheta}\Right)^{-1}   \lim_{\alpha\rightarrow\infty}
+\exp\Left\{\sqrt{\alpha}\frac{1}{\sigma} \ln \frac{x-a}{ \vartheta}\Right\}
+\Left( 1 - \frac{1}{\sqrt{\alpha}} \frac{1}{\sigma} \ln  \frac{x-a}{ \vartheta  } \Right)^{\alpha-1}
+\checked
 \\
-& \propto  \left(\frac{x-a}{\vartheta}\right)^{-1}   \lim_{\alpha\rightarrow\infty} e^{-z \sqrt{\alpha}}  \bigl( 1+\frac{z}{\sqrt{\alpha}} \bigr)^{\alpha} , \quad  z = -\tfrac{1}{\sigma} \ln \tfrac{x-a}{\vartheta}
+& \propto  \Left(\frac{x-a}{\vartheta}\Right)^{-1}   \lim_{\alpha\rightarrow\infty} e^{-z \sqrt{\alpha}}  \bigl( 1+\frac{z}{\sqrt{\alpha}} \bigr)^{\alpha} , \quad  z = -\tfrac{1}{\sigma} \ln \tfrac{x-a}{\vartheta}
+\checked
 \\
-&  \propto \left(\frac{x-a}{\vartheta}\right)^{-1} \exp\left\{-\frac{1}{2\sigma^2} \left( \ln \frac{x-a}{\vartheta} \right)^2 \right\} 
+&  \propto \Left(\frac{x-a}{\vartheta}\Right)^{-1} \exp\Left\{-\frac{1}{2\sigma^2} \Left( \ln \frac{x-a}{\vartheta} \Right)^2 \Right\}
+\checked
 \\
 & \quad  =  \opr{LogNormal} (x\given a, \vartheta, \sigma)
+\checked
 \end{align*}
 \label{UnitGammaToLogNormal}
 Here we utilize the Gaussian function limit $
-\lim_{c \rightarrow \infty} e^{-z \sqrt{c}}  \bigl( 1+\frac{z}{\sqrt{c}} \bigr)^c = e^{-\half z^2}$ \secref{sec:Limits}.
+\lim_{c \rightarrow \infty} e^{-z \sqrt{c}}  \bigl( 1+\frac{z}{\sqrt{c}} \bigr)^c = e^{-\half z^2} \checked$ \secref{sec:Limits}.
 \index{Gaussian function limit}
 
 
@@ -110,11 +117,11 @@ The property is related to the  analogous additive relation of the gamma distrib
 \begin{align*}
 &\opr{UnitGamma}_1(0,s_1,\alpha_1, \beta )\ \opr{UnitGamma}_2(0,s_2, \alpha_2, \beta ) 
 \\
-&\sim s_1 s_2 \left(\opr{UnitGamma}_1(0,1,\alpha_1,1)\ \opr{UnitGamma}_2(0,1,\alpha_2,1)  \right)^{\tfrac{1}{\beta}}
+&\sim s_1 s_2 \Left(\opr{UnitGamma}_1(0,1,\alpha_1,1)\ \opr{UnitGamma}_2(0,1,\alpha_2,1)  \Right)^{\tfrac{1}{\beta}}
 \\
-&\sim s_1 s_2 \left(e^{- \opr{StdGamma}_1(\alpha_1) - \opr{StdGamma}_2(\alpha_2 ) } \right)^{ \tfrac{1}{\beta}}
+&\sim s_1 s_2 \Left(e^{- \opr{StdGamma}_1(\alpha_1) - \opr{StdGamma}_2(\alpha_2 ) } \Right)^{ \tfrac{1}{\beta}}
 \\
-&\sim s_1 s_2 \left(e^{- \opr{StdGamma}_3(\alpha_1+ \alpha_2 )  }\right)^{\tfrac{1}{\beta}}
+&\sim s_1 s_2 \Left(e^{- \opr{StdGamma}_3(\alpha_1+ \alpha_2 )  }\Right)^{\tfrac{1}{\beta}}
 \\
 &\sim \opr{UnitGamma}_3(0,s_1 s_2,\alpha_1 + \alpha_2, \beta ) \checked
 \end{align*}

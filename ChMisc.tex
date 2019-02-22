@@ -32,8 +32,9 @@ The mean of $n$ independent standard uniform variates.
 &\opr{BetaFisherTippett}(x\given \pLoc,\pScale,\alpha, \gamma,\beta) 
 \\ \notag
 & =
- \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{\pScale}\right| \left(\frac{x-\pLoc}{\pScale}\right)^{\beta-1}
- e^{-\alpha (\frac{x-\pLoc}{\pScale})^{\beta} }  \left(1 - e^{-(\frac{x-\pLoc}{\pScale})^\beta  }\right)^{\gamma-1} 
+\frac{1}{B(\alpha, \gamma)} \Left|\frac{\beta}{\pScale}\Right| \Left(\frac{x-\pLoc}{\pScale}\Right)^{\beta-1}
+e^{-\alpha (\frac{x-\pLoc}{\pScale})^{\beta} }  \Left(1 - e^{-(\frac{x-\pLoc}{\pScale})^\beta  }\Right)^{\gamma-1}
+\checked
  \\ \notag
  & \text{for } x,\ \pLoc,\ \pScale,\ \alpha,\  \gamma,\ \beta \text{ in } \mathbb{R}, 
  \\ \notag & \alpha,\ \gamma >0,\quad  \tfrac{x-\pLoc}{\pScale} >0
@@ -56,7 +57,7 @@ With $\beta=1$ we recover the beta-exponential distribution~\eqref{BetaExp}. Oth
 \begin{align}
 \label{BirnbaumSaunders}
 &\opr{BirnbaumSaunders}  (x\given a,s,\gamma) \\
-&= \frac{1}{2\gamma \sqrt{2 \pi s^2 } } \frac{s}{x-a} (\sqrt{\frac{x-a}{s}}  +\sqrt{\frac{s}{x-a}} ) \exp\left\{  \frac{(\sqrt{\frac{x-a}{s}}  -\sqrt{\frac{s}{x-a}} ) ^2}{2\gamma^2}   \right\} \checked
+&= \frac{1}{2\gamma \sqrt{2 \pi s^2 } } \frac{s}{x-a} (\sqrt{\frac{x-a}{s}}  +\sqrt{\frac{s}{x-a}} ) \exp\Left\{  \frac{(\sqrt{\frac{x-a}{s}}  -\sqrt{\frac{s}{x-a}} ) ^2}{2\gamma^2}   \Right\} \checked
 \notag \\ \notag 
 \notag
 \end{align}
@@ -71,7 +72,7 @@ Models physical fatigue failure due to crack growth.
 \begin{align}
 \label{ExpPower}
 \opr{ExpPower}(x\given \pLoc,\theta,\beta) = \frac{\beta}{2 |\theta| \Gamma(\tfrac{1}{\beta})}
-e^{-\left|\frac{x-\pLoc}{\theta} \right|^\beta} \checked
+e^{-\Left|\frac{x-\pLoc}{\theta} \Right|^\beta} \checked
 \end{align}
 A generalization of the normal distribution. Special cases include the normal, Laplace and uniform distributions.
 \begin{align*}
@@ -111,7 +112,7 @@ The Weibull transform of the K-distribution \eqref{K}. Arises as the product of 
 \begin{align}
 \label{GenPearsonVII}
 \opr{GenPearsonVII}&(x\given a,s, m,\beta)  
-\\= & \frac{\beta}{2 |s| B(m-\frac{1}{\beta}, \frac{1}{\beta} )} \left( 1 +\left| \frac{x-a}{s}\right|^{\beta} \right)^{-m} \checked
+\\= & \frac{\beta}{2 |s| B(m-\frac{1}{\beta}, \frac{1}{\beta} )} \Left( 1 +\Left| \frac{x-a}{s}\Right|^{\beta} \Right)^{-m} \checked
 \notag \\
 \notag & x, a,s, m,\beta \text{ in } {\mathbb R} \\
 &  \beta>0,\ m>0,\ \beta m >1
@@ -196,7 +197,7 @@ The K-distribution has applications to radar scattering~\cite{Jakeman1978,Reddin
 \dist{Irwin-Hall} (uniform sum) distribution~\cite{Irwin1927, Hall1927, Johnson1995}:
 \begin{align}
 \label{IrwinHall}
-\opr{IrwinHall} (x\given n) =\frac{1}{2\left(n-1\right)!}\sum_{k=0}^{n}\left(-1\right)^k\binom{n}{k}\left(x-k\right)^{n-1}\op{sgn}(x-k)
+\opr{IrwinHall} (x\given n) =\frac{1}{2\Left(n-1\Right)!}\sum_{k=0}^{n}\Left(-1\Right)^k\binom{n}{k}\Left(x-k\Right)^{n-1}\op{sgn}(x-k)
 \checked
 \end{align}
 The sum of $n$ independent standard uniform variates. 
@@ -221,13 +222,15 @@ Describes the average energy loss of a charged particles traveling through a thi
 \dist{Log-Cauchy} distribution~\cite{Marshall2007}:
 \begin{align}
 \label{LogCauchy}
-\opr{LogCauchy}(x\given a, s, \beta) &= \frac{|\beta|}{|s| \pi } \left(\frac{x-a}{s}\right)^{-1} \frac{1}{1 +\left( \ln\left(\frac{x-a}{s}\right)^\beta \right)^2 }
+\opr{LogCauchy}(x\given a, s, \beta) &= \frac{|\beta|}{|s| \pi } \Left(\frac{x-a}{s}\Right)^{-1} \frac{1}{1 +\Left( \ln\Left(\frac{x-a}{s}\Right)^\beta \Right)^2 }
+\checked
 \end{align}
 A logstable distribution with very heavy tails. 
 The anti-log transform of the Cauchy distribution~\eqref{Cauchy}.
 \[
 \opr{LogCauchy}(0,s,\beta) & \sim \exp\bigl(-\opr{Cauchy}(-\ln s,\sfrac{1}{\beta})\bigr) 
 \notag
+\checked
 \]
 % Not a special case of GenBetaPrime, despite rumors to the contrary.
 
@@ -238,11 +241,13 @@ The anti-log transform of the Cauchy distribution~\eqref{Cauchy}.
 \dist{Meridian} distribution~\cite[Eq.\ 18]{Aysal2007} :
 \begin{align}
 \label{Meridian}
-	\opr{Meridian}(x\given a,s) = \frac{1}{2|s|} \frac{1}{\left(1 + |\tfrac{x-a}{s}| \right)^2} \checked
+	\opr{Meridian}(x\given a,s) = \frac{1}{2|s|} \frac{1}{\Left(1 + |\tfrac{x-a}{s}| \Right)^2} \checked
 \end{align}
 The Laplace ratio distribution~\cite{Aysal2007}.
 \[
-\opr{Meridian}(x\given 0,\tfrac{s_1}{s_2}) \sim \frac{\opr{Laplace}_1(0,s_1)} {\opr{Laplace}_2(0,s_2)} \checked
+\opr{Meridian}(x\given 0,\tfrac{s_1}{s_2}) \sim \frac{\opr{Laplace}_1(0,s_1)} {\opr{Laplace}_2(0,s_2)}
+\checked
+\notag
 \]
 A special case of the generalized Pearson VII distribution \eqref{GenPearsonVII}. 
 
@@ -254,7 +259,7 @@ A special case of the generalized Pearson VII distribution \eqref{GenPearsonVII}
 \begin{align}
 \label{NoncentralChiSqr}
 \opr{NoncentralChiSqr}&(x\given k,\lambda)  = 
-\frac{1}{2}e^{-(x+\lambda)/2} \left(\frac{x}{\lambda}\right)^{\frac{k}{4} -\frac{1}{2}} I_{\frac{k}{2}-1}(\sqrt{\lambda x})
+\frac{1}{2}e^{-(x+\lambda)/2} \Left(\frac{x}{\lambda}\Right)^{\frac{k}{4} -\frac{1}{2}} I_{\frac{k}{2}-1}(\sqrt{\lambda x})
 \checked
 \\ & k, \lambda, x \text{ in } \mathbb{R}, >0
 \notag
@@ -303,7 +308,7 @@ A linear mixture of Cauchy (Lorentzian) and normal distributions. Used as a more
 \dist{Rice} (Rician, Rayleigh-Rice, generalized Rayleigh, noncentral-chi) distribution~\cite{Rice1945,Talukdar1991}:
 \begin{align}
 \label{Rice}
-\opr{Rice}(x\given \nu,\sigma) = & \frac{x}{\sigma^2} \exp\left(-\frac{x^2+\nu^2 }{2\sigma^2}  \right) I_0(\frac{x |\nu|}{\sigma^2})
+\opr{Rice}(x\given \nu,\sigma) = & \frac{x}{\sigma^2} \exp\Left(-\frac{x^2+\nu^2 }{2\sigma^2}  \Right) I_0(\frac{x |\nu|}{\sigma^2})
 \checked
 \\ 
 & x>0 \notag

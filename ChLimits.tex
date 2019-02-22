@@ -11,7 +11,7 @@
 \label{sec:Limits:exp}
 A common and important limit is 
 \[
-\lim_{c\rightarrow+\infty} \left(1 + \frac{x}{c} \right)^{a c} = e^{a x} \ . \checked
+\lim_{c\rightarrow+\infty} \Left(1 + \frac{x}{c} \Right)^{a c} = e^{a x} \ . \checked
 \notag
 \]
 In particular, the $X$-exponential distributions are the exponential limit of Weibullized distributions.
@@ -22,15 +22,15 @@ In particular, the $X$-exponential distributions are the exponential limit of We
 \\ & \qquad (a = \pLoc + \beta\pScale, \ s = - \beta \pScale) 
 \checked
 \end{align*}
-
-
-
 \begin{align*}
-\opr{Exp}(x\given a,\theta) &=  \lim_{\beta\rightarrow\infty} \opr{PowerFn} (x\given a+\beta\theta,-\beta\theta,\beta) 
+\opr{Exp}(x\given a,\theta) &=  \lim_{\beta\rightarrow\infty} \opr{PowerFn} (x\given a+\beta\theta,-\beta\theta,\beta)
+\checked
 \\
- \opr{GammaExp}(x\given \nu, \lambda, \alpha) &=  \lim_{\beta\rightarrow\infty} \opr{Amoroso}(x\given \nu+\beta \lambda,-\beta \lambda, \alpha,\beta)
+\opr{GammaExp}(x\given \nu, \lambda, \alpha) &=  \lim_{\beta\rightarrow\infty} \opr{Amoroso}(x\given \nu+\beta \lambda,-\beta \lambda, \alpha,\beta)
+\checked
 \\
 \opr{Gamma}(x\given a,s,\alpha) &= \lim_{\beta\rightarrow\infty} \opr{UnitGamma}(x\given a+\beta s,-\beta s, \alpha,\beta) 
+\checked
 \\
 \opr{BetaExp}(x\given \pLoc, \pScale, \alpha, \gamma) 
 & = \lim_{\beta\rightarrow\infty } \opr{GenBeta}(x\given \pLoc+\beta\lambda, -\beta\pScale, \alpha, \gamma, \beta) 
@@ -40,6 +40,7 @@ In particular, the $X$-exponential distributions are the exponential limit of We
 \\
   \opr{BetaLogistic}(x\given \pLoc, \pScale, \alpha, \gamma)  &=
  \lim_{\beta\rightarrow\infty}  \opr{GenBetaPrime}(x\given \pLoc+\beta\pScale, -\beta \pScale, \alpha, \gamma, \beta)  
+\checked
 \\
 \opr{Normal}(x\given \mu, \sigma) & =   \lim_{\beta\rightarrow\infty} \opr{LogNormal}(x\given \mu + \beta\sigma, -\beta\sigma, \beta) \checked
 \end{align*}
@@ -48,8 +49,8 @@ In particular, the $X$-exponential distributions are the exponential limit of We
 
 We can play the same trick with the $\gamma$ shape parameter in the beta  and beta prime families.
 \begin{align*}
-\lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1- \left(\frac{x-a}{s}\right)^{\beta} \bigr)^{\gamma-1} \Bigr]
-& = \lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1-\frac{1}{\gamma} \left(\frac{x-a}{\theta}\right)^{\beta} \bigr)^{\gamma-1} \Bigr]
+\lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1- \Left(\frac{x-a}{s}\Right)^{\beta} \bigr)^{\gamma-1} \Bigr]
+& = \lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1-\frac{1}{\gamma} \Left(\frac{x-a}{\theta}\Right)^{\beta} \bigr)^{\gamma-1} \Bigr]
 \checked
 \\ & =  f\Bigl[ e^{-(\frac{x-a}{\theta})^\beta} \Bigr] 
 \qquad s = \theta \gamma^{\frac{1}{\beta}} \checked
@@ -67,8 +68,8 @@ We can play the same trick with the $\gamma$ shape parameter in the beta  and be
 
 
 \begin{align*}
-\lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1+ \left(\frac{x-a}{s}\right)^{\beta} \bigr)^{-\alpha-\gamma} \Bigr]
-& = \lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1+\frac{1}{\gamma} \left(\frac{x-a}{\theta}\right)^{\beta} \bigr)^{-\alpha-\gamma} \Bigr] \checked
+\lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1+ \Left(\frac{x-a}{s}\Right)^{\beta} \bigr)^{-\alpha-\gamma} \Bigr]
+& = \lim_{\gamma \rightarrow\infty} f\Bigl[ \bigl(1+\frac{1}{\gamma} \Left(\frac{x-a}{\theta}\Right)^{\beta} \bigr)^{-\alpha-\gamma} \Bigr] \checked
 \\ & =  f\Bigl[ e^{-(\frac{x-a}{\theta})^\beta} \Bigr] 
 \qquad s = \theta \gamma^{\frac{1}{\beta}} \checked
 \end{align*}
@@ -112,8 +113,10 @@ Essentially the same limit takes the beta-exponential and beta-logistic distribu
 \]
 
 \[
- \opr{UnitGamma}(x\given a, s, \gamma,\beta) =
- \lim_{\alpha\rightarrow\infty } \opr{GenBeta}(x\given a,s,\alpha, \gamma,\beta/\alpha)  \notag
+\opr{UnitGamma}(x\given a, s, \gamma,\beta) =
+\lim_{\alpha\rightarrow\infty } \opr{GenBeta}(x\given a,s,\alpha, \gamma,\beta/\alpha)
+\checked 
+\notag
 \]
 
 
@@ -124,16 +127,19 @@ Essentially the same limit takes the beta-exponential and beta-logistic distribu
 % From Wolfram Alpha
 % limit  (1-z/{sqrt{c}} )^c exp(z sqrt{c} ) as c->infinity
 \[
-\lim_{c \rightarrow \infty} e^{-z \sqrt{c}}  \bigl( 1+\frac{z}{\sqrt{c}} \bigr)^c = e^{-\half z^2} \checked
+\lim_{c \rightarrow \infty} e^{-z \sqrt{c}}  \bigl( 1+\frac{z}{\sqrt{c}} \bigr)^c = e^{-\half z^2}
+\checked
 \notag
 \]
 
 \begin{align*}
 \opr{LogNormal} (x\given a, \vartheta, \sigma) & =
 \lim_{\gamma\rightarrow\infty} \opr{UnitGamma} (x\given a, \vartheta e^{ \sigma\sqrt{\gamma}}, \alpha, \tfrac{\sqrt{\gamma}}{\sigma} )
+\checked
 \\
 \opr{Normal}(x\given \mu,\sigma)   & = 
 \lim_{\alpha\rightarrow\infty} \opr{Gamma} (x\given \mu- \sigma\sqrt{\alpha}, \tfrac{\sigma}{\sqrt{\alpha}}, \alpha)
+\checked
 \\
 \opr{Normal}(x\given \mu,\sigma)   & = 
 \lim_{\alpha\rightarrow\infty} \opr{InvGamma} (x\given \mu-\sigma/\alpha, \sigma \alpha^{\tfrac{3}{2}}, \alpha)
