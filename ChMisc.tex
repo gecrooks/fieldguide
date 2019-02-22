@@ -190,7 +190,7 @@ The K-distribution arises as the product of Gamma distributions~\cite{Malik1968,
 The K-distribution has applications to radar scattering~\cite{Jakeman1978,Redding1999} and superstatistical thermodynamics~\cite[Eq.~21]{Dixit2013}.
 
 % Generalized K distribution?
-%Jakeman, E. and Tough, R. J. A. (1987) "Generalized K distribution: a statistical model for weak scattering," J. Opt. Soc. Am., 4, (9), pp. 1764 - 1772.
+% Jakeman, E. and Tough, R. J. A. (1987) "Generalized K distribution: a statistical model for weak scattering," J. Opt. Soc. Am., 4, (9), pp. 1764 - 1772.
 
 \secbreak
 %===========================================================================
@@ -206,6 +206,22 @@ The sum of $n$ independent standard uniform variates.
 \notag
 \]
 Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the uniform distribution \eqref{Uniform}, and with $n=2$ the triangular distribution~\eqref{Triangular}.
+
+\secbreak
+\dist{Johnson $S_U$} distributions~\cite{Johsnson1949a,Johnson1994}:
+\[
+\label{JohnsonSU}
+\opr{JohnsonSU}(x\given\mu, \sigma, \gamma, \delta) = 
+\frac{\delta}{\lambda\sqrt{2\pi}} \frac{1}{\sqrt{1 + \left(\frac{x-\xi}{\lambda}\right)^2}} e^{-\frac{1}{2}\left(\gamma+\delta \sinh^{-1} \left(\frac{x-\xi}{\lambda}\right)\right)^2}
+\]
+Johnson's distributions are transforms of the normal distribution, 
+\[
+\opr{Johnson}_g(\mu, \sigma, \gamma, \delta) \sim \sigma g(\tfrac{StdNormal()-\gamma)}{\delta}) + \mu
+\notag
+\]
+Where for Johnson $S_U$ the function is $g(x)=\sinh(x)$.
+For Johnson $S_B$ the function is $g(x)=1/(1+exp(x))$, for Johnson $S_L$, $g(x)=exp(x))$ (i.e. log-normal), and for Johnson $S_N$ the function is constant, recapitulating the normal distribution.
+
 
 
 \secbreak
