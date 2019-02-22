@@ -8,8 +8,8 @@
  \text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
 \text{notation} \quad & \text{GenBetaPrime}(x\given a, s, \alpha,\gamma,\beta)   \checked
 \\
-\text{PDF}\quad &    \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{s}\right|	
-\left(\frac{x-a}{s}\right)^{\alpha\beta -1} \left(1+ \left(\frac{x-a}{s}\right)^\beta \right)^{-\alpha-\gamma } \checked
+\text{PDF}\quad &    \frac{1}{B(\alpha, \gamma)} \Left|\frac{\beta}{s}\Right|	
+\Left(\frac{x-a}{s}\Right)^{\alpha\beta -1} \Left(1+ \Left(\frac{x-a}{s}\Right)^\beta \Right)^{-\alpha-\gamma } \checked
 \hspace{-30em}
 \\
 \text{CDF / CCDF} \quad  &  
@@ -17,7 +17,7 @@
 \hspace{-7em}
 & \tfrac{\beta}{s} >0 \,\big/ \, \tfrac{\beta}{s} <0
 \\ 
-& \quad = I\left(  \alpha,\gamma; (1+(\tfrac{x-a}{s})^{-\beta})^{-1} \right)  \checked
+& \quad = I\Left(  \alpha,\gamma; (1+(\tfrac{x-a}{s})^{-\beta})^{-1} \Right)  \checked
 % See McDonald1984, table 3.1 GB2. Expresses incomplete beta function as hypergeometric function.
 \\
 \text{parameters}\quad &   a,\ s,\ \alpha,\ \gamma,\ \beta \text{ in } \Real \checked 
@@ -35,14 +35,14 @@
 \checked &   -\alpha< \tfrac{1}{\beta} <\gamma \checked
 % % See McDonald1984, table 3.1 GB2
 \\
-\text{variance} \quad  &s^2\left[\frac{ B(\alpha+\tfrac{2}{\beta},\gamma- \tfrac{2}{\beta}) }{B(\alpha,\gamma)} -  \left(\frac{ B(\alpha+\tfrac{1}{\beta},\gamma- \tfrac{1}{\beta}) }{B(\alpha,\gamma)}\right)^2 \right]  \hspace{-15em}
+\text{variance} \quad  &s^2\Left[\frac{ B(\alpha+\tfrac{2}{\beta},\gamma- \tfrac{2}{\beta}) }{B(\alpha,\gamma)} -  \Left(\frac{ B(\alpha+\tfrac{1}{\beta},\gamma- \tfrac{1}{\beta}) }{B(\alpha,\gamma)}\Right)^2 \Right]  \hspace{-15em}
 & -\alpha< \tfrac{2}{\beta} <\gamma \checked
 \\
 \text{skew} \quad  &  \text{not simple}
 \\
 \text{kurtosis} \quad  &  \text{not simple}
 \\
-\text{entropy} \quad  &   \ln \frac{1}{B(\alpha, \gamma)} \left|\frac{\beta}{s}\right|
+\text{entropy} \quad  &   \ln \frac{1}{B(\alpha, \gamma)} \Left|\frac{\beta}{s}\Right|
   +(\tfrac{1}{\beta}-\alpha) \big[ \psi(\alpha) - \psi(\gamma)\big]
   \hspace{-7em} 
   \\

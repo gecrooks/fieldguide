@@ -13,8 +13,8 @@
 \label{Beta}
 \opr{Beta}(x\given &a,s,\alpha, \gamma) \\
 & = 
- \frac{1}{B(\alpha, \gamma)}\frac{1}{ \left|s\right|}
-\left(\frac{x-a}{s} \right)^{\alpha -1} \left (1-\left(\frac{x-a}{s}\right)\right)^{\gamma -1}	\checked
+ \frac{1}{B(\alpha, \gamma)}\frac{1}{ \Left|s\Right|}
+\Left(\frac{x-a}{s} \Right)^{\alpha -1} \Left (1-\Left(\frac{x-a}{s}\Right)\Right)^{\gamma -1}	\checked
 \notag
 \\ & = \opr{GenBeta}(x\given a,s,\alpha, \gamma,1) \notag						\checked
 \end{align}
@@ -37,7 +37,7 @@ With $\alpha<1$ and $\gamma<1$ the distribution is U-shaped with a single anti-m
 \label{StdBeta}
 \opr{StdBeta}(x\given \alpha, \gamma) &= 
  \frac{1}{B(\alpha, \gamma)} 
-x^{\alpha-1} \left (1- x\right)^{\gamma -1}								\checked
+x^{\alpha-1} \Left (1- x\Right)^{\gamma -1}								\checked
 \\ & = \opr{Beta}(x\given  0,1,\alpha,\gamma) \notag						\checked
 \\ & = \opr{GenBeta}(x\given  0,1,\alpha,\gamma, 1) \notag				\checked
 \end{align}
@@ -51,7 +51,7 @@ The standard beta distribution has two shape parameters, $\alpha>0$ and $\gamma>
 \\ \notag
 &=  
  \frac{1}{B(\alpha, \gamma) (b-a)}
-\left(\frac{x-a}{b-a}\right)^{\alpha-1} \left(\frac{b-x}{b-a}\right)^{\gamma-1} \checked
+\Left(\frac{x-a}{b-a}\Right)^{\alpha-1} \Left(\frac{b-x}{b-a}\Right)^{\gamma-1} \checked
 \\ \notag & \qquad x_\text{mean} = \frac{a+4x_\text{mode}+b}{6} \checked
 %\\ & \qquad \alpha = 1 + 4 \frac{m-a}{b-a}, \quad \gamma = 1 + 4 \frac{b-m}{b-a}
 \\ & \qquad \alpha = \frac{(x_\text{mean}-a)(2 x_\text{mode} - a - b)}{(x_\text{mode}-x_\text{mean})(b-a)} \checked
@@ -70,7 +70,7 @@ The PERT (Program Evaluation and Review Technique) distribution is used in proje
 \dist{Pearson XII} distribution~\cite{Pearson1916}: 
 \begin{align}
 \label{PearsonXII}
-\opr{PearsonXII}(x\given a,b,\alpha) &=  \frac{1}{B(\alpha, -\alpha+2)} \frac{1}{|b-a|}\left( \frac{x-a}{b-x} \right)^{\alpha -1} 
+\opr{PearsonXII}(x\given a,b,\alpha) &=  \frac{1}{B(\alpha, -\alpha+2)} \frac{1}{|b-a|}\Left( \frac{x-a}{b-x} \Right)^{\alpha -1} 
 \checked
 \\ &= \opr{Beta}(x\given a,b-a ,\alpha, 2-\alpha) \notag  \checked
 \\ &= \opr{GenBeta}(x\given a,b-a ,\alpha, 2-\alpha,1) \notag \checked
@@ -85,8 +85,8 @@ A monotonic, J-shaped special case of the beta distribution noted by Pearson~\ci
 \begin{align}
 \label{PearsonII}
 \opr{PearsonII}(x\given \mu, b,\alpha) 
-%&= \frac{1}{2s}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha) } \left(1-\frac{x^2}{4 s^2} \right)^{\alpha-1} \\
-&= \frac{1}{2^{2\alpha-1}  |b|}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha)^2 } \left(1-\left(\frac{x-\mu}{ b}\right)^2 \right)^{\alpha-1}
+%&= \frac{1}{2s}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha) } \Left(1-\frac{x^2}{4 s^2} \Right)^{\alpha-1} \\
+&= \frac{1}{2^{2\alpha-1}  |b|}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha)^2 } \Left(1-\Left(\frac{x-\mu}{ b}\Right)^2 \Right)^{\alpha-1}
 \checked
  \\
 & = \opr{Beta}(x\given \mu-b, 2b,\alpha, \alpha) \notag  \\
@@ -139,7 +139,7 @@ As the name suggests, the probability density describes a semicircle, or more pr
 \begin{align}
 \label{Epanechnikov}
 \opr{Epanechnikov}(x\given \mu, b) 
-&= \frac{3}{4} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right) \checked
+&= \frac{3}{4} \frac{1}{|b|} \Left(1-\Left(\frac{x-\mu}{b}\Right)^2 \Right) \checked
  \\
 & = \opr{PearsonII}(x\given \mu, b, 2) \notag \checked \\
 & = \opr{Beta}(x\given \mu-b, 2 b, 2, 2) \notag   \checked \\
@@ -148,11 +148,11 @@ As the name suggests, the probability density describes a semicircle, or more pr
 Used in non-parametric kernel density estimation.
 
 
-\dist{Biweight} (Quartic) distribution: % TODO: Citation
+\dist{Biweight} (Quartic) distribution~\cite{???}:
 \begin{align}
 \label{Biweight}
 \opr{Biweight}(x\given \mu, b) 
-&= \frac{15}{16} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right)^2 
+&= \frac{15}{16} \frac{1}{|b|} \Left(1-\Left(\frac{x-\mu}{b}\Right)^2 \Right)^2 
  \\
 & = \opr{PearsonII}(x\given \mu, b, 3) \notag  \\
 & = \opr{Beta}(x\given \mu-b, 2 b, 3, 3) \notag    \\
@@ -160,11 +160,11 @@ Used in non-parametric kernel density estimation.
 \end{align}
 Used in non-parametric kernel density estimation.
 
-\dist{Triweight} distribution: % TODO: Citation
+\dist{Triweight} distribution~\cite{???}:
 \begin{align}
 \label{Triweight}
 \opr{Triweight}(x\given \mu, b) 
-&= \frac{35}{32} \frac{1}{|b|} \left(1-\left(\frac{x-\mu}{b}\right)^2 \right)^3 
+&= \frac{35}{32} \frac{1}{|b|} \Left(1-\Left(\frac{x-\mu}{b}\Right)^2 \Right)^3 
  \\
 & = \opr{PearsonII}(x\given \mu, b, 4) \notag  \\
 & = \opr{Beta}(x\given \mu-b, 2 b, 3, 4) \notag    \\

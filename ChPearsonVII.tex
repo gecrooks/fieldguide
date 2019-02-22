@@ -10,7 +10,7 @@ The {\bf Pearson type VII} distribution~\cite{Pearson1916} is a three parameter,
 \label{PearsonVII}
 \opr{PearsonVII}(x\given a,s, m) 
 %\\ \notag
-&= \frac{1}{|s| B(m-\frac{1}{2}, \frac{1}{2} )} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-m} 	\checked
+&= \frac{1}{|s| B(m-\frac{1}{2}, \frac{1}{2} )} \Left( 1 +\Left( \frac{x-a}{s}\Right)^2 \Right)^{-m} 	\checked
 \\ \notag
 & \qquad m > \tfrac{1}{2}
 \\ \notag & = \opr{PearsonIV}(x\given a,s, m,0)  \checked
@@ -25,7 +25,7 @@ This distribution family is notable for having long power-law tails in both dire
 \begin{align}
 \label{StudentsT}
 \opr{StudentsT}(x\given k) 
-&= \frac{1}{\sqrt{k} B(\frac{1}{2}, \frac{1}{2} k)} \left( 1 + \frac{x^2}{k} \right)^{-\frac{1}{2}(k+1)} \checked
+&= \frac{1}{\sqrt{k} B(\frac{1}{2}, \frac{1}{2} k)} \Left( 1 + \frac{x^2}{k} \Right)^{-\frac{1}{2}(k+1)} \checked
 \\ &= \opr{PearsonVII}(x\given 0,\sqrt{k},\tfrac{1}{2}(k+1)) \checked
 \notag
 \\ & \qquad \text{integer } k \geq 0
@@ -53,8 +53,8 @@ Here, $\bar{x}$ is the sample mean of $n$ independent normal \eqref{Normal} rand
 \caption[Pearson VII distribution -- Special cases]{Special cases of the Pearson type VII distribution}
 %\begin{align*}
 %&\opr{PearsonIV}(x\given a,s, m,v) 
-%\\ \notag &= \frac{{}_{2}F_1(-i\frac{v}{2}, i\frac{v}{2}, m;1)  }{s B(m-\frac{1}{2}, \frac{1}{2} )} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-m}
-% \exp \left\{ - 2v \arctan \left( \frac{x-a}{s}\right) \right\}
+%\\ \notag &= \frac{{}_{2}F_1(-i\frac{v}{2}, i\frac{v}{2}, m;1)  }{s B(m-\frac{1}{2}, \frac{1}{2} )} \Left( 1 +\Left( \frac{x-a}{s}\Right)^2 \Right)^{-m}
+% \exp \Left\{ - 2v \arctan \Left( \frac{x-a}{s}\Right) \Right\}
 %\end{align*}
 ~\\
 {\renewcommand{\arraystretch}{1.25}
@@ -83,7 +83,7 @@ Here, $\bar{x}$ is the sample mean of $n$ independent normal \eqref{Normal} rand
 \begin{align}
 \label{StudentsT2}
 \StudentsTT(x) 
-&= \frac{1}{\left( 2 + x^2 \right)^{\frac{3}{2} } } \checked
+&= \frac{1}{\Left( 2 + x^2 \Right)^{\frac{3}{2} } } \checked
 \\ \notag 
 & = \opr{StudentsT}(x\given 2) \checked
 \\ \notag
@@ -95,7 +95,7 @@ Student's t distribution with 2 degrees of freedom has a particularly simple for
 \begin{align}
 \label{StudentsT3}
 \StudentsTTT(x)
-&= \frac{2}{\pi \left( 1 + \tfrac{x^2}{3} \right)^{2} } \checked
+&= \frac{2}{\pi \Left( 1 + \tfrac{x^2}{3} \Right)^{2} } \checked
 \\ \notag 
 & = \opr{StudentsT}(x\given 3) \checked
 \\ \notag
@@ -114,7 +114,7 @@ Student's t distribution with 3 degrees of freedom. Notable since the cumulative
 \dist{Student's z}  distribution~\cite{Student1908,Hanley2008}:
 \begin{align}
 \label{StudentsZ}
-\opr{StudentsZ}(z\given n) &= \frac{1}{B(\tfrac{n-1}{2}, \tfrac{1}{2})}  \left( 1 + z^2 \right)^{-\frac{n}{2} } \checked \\
+\opr{StudentsZ}(z\given n) &= \frac{1}{B(\tfrac{n-1}{2}, \tfrac{1}{2})}  \Left( 1 + z^2 \Right)^{-\frac{n}{2} } \checked \\
 &= \opr{PearsonVII}(z\given 0,1,\tfrac{n}{2}) \notag \checked
 \end{align}
 The distribution of the statistic $z$, which was the original distribution investigated by Gosset (aka Student)\footnote{Gosset's employer, the Guinness Brewing Company, insisted that he publish under a pseudonym.} in his famous 1908 paper
@@ -132,7 +132,7 @@ Here, $\bar{x}$ is the sample mean of $n$ independent normal \eqref{Normal} rand
 %
 \begin{align}
 \label{Cauchy}
-\opr{Cauchy}(x\given a,s) &= \frac{1}{s \pi} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-1}		\checked
+\opr{Cauchy}(x\given a,s) &= \frac{1}{s \pi} \Left( 1 +\Left( \frac{x-a}{s}\Right)^2 \Right)^{-1}		\checked
 \\  
 &= \opr{PearsonVII}(x\given a,s,1)												\checked
 \notag 
@@ -171,7 +171,7 @@ The Cauchy distribution is stable \eqref{Stable}\index{stable distributions}: a 
 \dist{Relativistic Breit-Wigner} (modified Lorentzian) distribution~\cite{Breit1936}:
 \begin{align}
 \label{RelBreitWigner}
-\opr{RelBreitWigner}(x\given a, s) &= \frac{2}{ |s| \pi} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-2} \checked
+\opr{RelBreitWigner}(x\given a, s) &= \frac{2}{ |s| \pi} \Left( 1 +\Left( \frac{x-a}{s}\Right)^2 \Right)^{-2} \checked
 \\ \notag &= \opr{PearsonVII}(x\given a,s,2) \checked
 \end{align}
 Used to model the energy distribution of unstable particles in high-energy physics.

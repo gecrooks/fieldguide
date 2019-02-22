@@ -11,7 +11,7 @@ The {\bf Pearson} distributions~\cite{Pearson1895, Pearson1901, Pearson1916, Ord
 \label{Pearson}
  \opr{Pearson}&(x\given a, s; a_1, a_2;  b_0, b_1, b_2) 
  \\ \notag
- &=  \tfrac{1}{N_{\text{P}}} \left(1- \tfrac{1}{r_0}\tfrac{x-a}{s} \right)^{e_0} \left(1- \tfrac{1}{r_1}\tfrac{x-a}{s} \right)^{e_1}
+ &=  \tfrac{1}{N_{\text{P}}} \Left(1- \tfrac{1}{r_0}\tfrac{x-a}{s} \Right)^{e_0} \Left(1- \tfrac{1}{r_1}\tfrac{x-a}{s} \Right)^{e_1}
 \\ \notag
 &  a,\ s,\  a_1,\ a_2,\ b_0,\ b_1,\ b_2,\ x\  \text{ in } \mathbb{R}
 \\ \notag
@@ -62,10 +62,10 @@ All of the Pearson distributions have great utility and are widely applied, with
 \dist{q-Gaussian} (symmetric Pearson) distribution~\cite{Leeuwen1995} :
 \begin{align}
 \label{QGaussian}
-\opr{QGaussian}(x\given \mu,\sigma,q) &= \frac{1}{\sqrt{2\sigma^2}  \ \mathcal{N}} \exp_q\left(-\half \left(\tfrac{x-\mu}{\sigma}\right)^2 \right) \checked
+\opr{QGaussian}(x\given \mu,\sigma,q) &= \frac{1}{\sqrt{2\sigma^2}  \ \mathcal{N}} \exp_q\Left(-\half \Left(\tfrac{x-\mu}{\sigma}\Right)^2 \Right) \checked
 \\
  \notag
-& = \frac{1}{\sqrt{2\sigma^2} \ \mathcal{N}}  \left(1- \half (1-q) \left(\tfrac{x-\mu}{\sigma}\right)^2 \right)^{\frac{1}{1-q} } \checked
+& = \frac{1}{\sqrt{2\sigma^2} \ \mathcal{N}}  \Left(1- \half (1-q) \Left(\tfrac{x-\mu}{\sigma}\Right)^2 \Right)^{\frac{1}{1-q} } \checked
 \\
 & -2 < q < 3
 \notag
@@ -80,12 +80,12 @@ Here $ \exp_q$ is the q-generalized exponential function \secref{sec:math}. The 
 \begin{align*}
 \mathcal{N} &=
  \begin{cases} 
- \sqrt{\pi} \frac{   {2  \Gamma\left({\frac{1}{1-q}}\right)} }{ {(3-q) \sqrt{1-q} \Gamma\left(\frac{3-q }{ 2(1-q)} \right)}  } 
+ \sqrt{\pi} \frac{   {2  \Gamma\Left({\frac{1}{1-q}}\Right)} }{ {(3-q) \sqrt{1-q} \Gamma\Left(\frac{3-q }{ 2(1-q)} \Right)}  } 
  & -2 <q < +1 \checked
 \\
   \sqrt{\pi} & \phantom{-2<}q=+1  \checked
 \\
- \sqrt{\pi}  \frac{{\Gamma\left({\frac{3-q}{2(q-1)}}\right)} }{ {\sqrt{q-1} \Gamma\left(\frac{1 }{ q-1}\right)}}&  +1<q<+3 \checked
+ \sqrt{\pi}  \frac{{\Gamma\Left({\frac{3-q}{2(q-1)}}\Right)} }{ {\sqrt{q-1} \Gamma\Left(\frac{1 }{ q-1}\Right)}}&  +1<q<+3 \checked
 \end{cases}
  \end{align*}
 

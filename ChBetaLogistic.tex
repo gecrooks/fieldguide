@@ -19,8 +19,8 @@ The {\bf beta-logistic } (Prentice, beta prime exponential, generalized logistic
 \label{BetaLogistic}
 \opr{BetaLogistic}(x\given  \pLoc, \pScale,\alpha,\gamma) 
 & =
- \frac{1}{B(\alpha, \gamma) \left| \pScale\right|}
- \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\alpha+\gamma} } \checked
+ \frac{1}{B(\alpha, \gamma) \Left| \pScale\Right|}
+ \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \Left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{\alpha+\gamma} } \checked
 \\  &
 \ x, \pLoc, \pScale,\alpha,\gamma \text{ in } {\mathbb R}
 \\ \notag & \alpha,\gamma >0
@@ -38,7 +38,7 @@ The beta-logistic distribution is perhaps most commonly referred to as `generali
 \begin{align}
 \label{BurrII}
 \opr{BurrII}(x\given \pLoc, \pScale,  \gamma) 
-& = \frac{\gamma}{|\pScale|} \frac{e^{- \frac{x-\pLoc}{\pScale} } } { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\gamma+1} }
+& = \frac{\gamma}{|\pScale|} \frac{e^{- \frac{x-\pLoc}{\pScale} } } { \Left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{\gamma+1} }
 \checked
 \\
 & = \opr{BetaLogistic}(x\given \pLoc, \pScale, 1, \gamma) \checked
@@ -57,7 +57,7 @@ The beta-logistic distribution is perhaps most commonly referred to as `generali
 \begin{align}
 \label{RevBurrII}
 \opr{RevBurrII}(x\given \alpha) 
-& = \frac{\gamma}{|\pScale|}   \frac{e^{+ \frac{x-\pLoc}{\pScale} } } { \left(1 + e^{+\frac{x-\pLoc}{\pScale}  }\right)^{\gamma+1} }
+& = \frac{\gamma}{|\pScale|}   \frac{e^{+ \frac{x-\pLoc}{\pScale} } } { \Left(1 + e^{+\frac{x-\pLoc}{\pScale}  }\Right)^{\gamma+1} }
 \checked
 \\
 & = \opr{BurrII}(x\given \pLoc, -\pScale,  \gamma) \notag \checked \\
@@ -97,8 +97,8 @@ By setting the $\lambda$ parameter to $1$ (instead of $\alpha$) we get a reverse
 \opr{SymBetaLogistic}(x\given \pLoc,\pScale,\alpha) 
 & =
 \frac{1}{B(\alpha, \alpha) |\pScale|}
- \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{2\alpha} } \checked
-  \\ \notag & = \frac{1}{B(\alpha, \alpha) |\pScale|} [\op{sech} \left(\tfrac{x-\pLoc}{2\pScale}  \right)]^{2\alpha}  
+ \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \Left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{2\alpha} } \checked
+  \\ \notag & = \frac{1}{B(\alpha, \alpha) |\pScale|} [\op{sech} \Left(\tfrac{x-\pLoc}{2\pScale}  \Right)]^{2\alpha}  
 \\ \notag & = \opr{BetaLogistic}(x\given \pLoc,\pScale,\alpha,\alpha) \checked
 \end{align}
 With equal shape parameters the  beta-logistic is symmetric. This distribution limits to the Laplace distribution~\eqref{Laplace}.
@@ -109,9 +109,9 @@ With equal shape parameters the  beta-logistic is symmetric. This distribution l
 \label{Logistic}
 \opr{Logistic}(x\given \pLoc,\pScale) 
 & =
- \frac{1}{ \left| \pScale\right|}
- \frac{e^{-\frac{x-\pLoc}{\pScale} }} { \left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\right)^{2} }	\checked
- \\ \notag & = \frac{1}{4 |\pScale|} \op{sech}^2 \left(\frac{x-\pLoc}{\pScale}  \right)  \checked
+ \frac{1}{ \Left| \pScale\Right|}
+ \frac{e^{-\frac{x-\pLoc}{\pScale} }} { \Left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{2} }	\checked
+ \\ \notag & = \frac{1}{4 |\pScale|} \op{sech}^2 \Left(\frac{x-\pLoc}{\pScale}  \Right)  \checked
  \\ \notag & = \opr{BetaLogistic}(x\given \pLoc,\pScale,1,1)	\checked
 \end{align}
 

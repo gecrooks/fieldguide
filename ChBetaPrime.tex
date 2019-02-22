@@ -10,7 +10,7 @@
 \dist{Beta prime} (beta type II, Pearson type VI, inverse beta, variance ratio, gamma ratio, compound gamma,$\beta'$) distribution~\cite{Pearson1901,Johnson1995}:
 \begin{align}
 \label{BetaPrime}
-\opr{BetaPrime}&(x\given  a, s,\alpha, \gamma) \\ \notag&= \frac{1}{B(\alpha,\gamma)}\frac{1}{|s|} \left(\frac{x-a}{s}\right)^{\alpha -1} \left(1+\frac{x-a}{s}\right)^{-\alpha-\gamma }  \checked
+\opr{BetaPrime}&(x\given  a, s,\alpha, \gamma) \\ \notag&= \frac{1}{B(\alpha,\gamma)}\frac{1}{|s|} \Left(\frac{x-a}{s}\Right)^{\alpha -1} \Left(1+\frac{x-a}{s}\Right)^{-\alpha-\gamma }  \checked
 \\
 &= \opr{GenBetaPrime}(x\given a,s, \alpha,\gamma,1) \notag \checked
 \\
@@ -58,7 +58,7 @@ An alternative parameterization of the beta prime distribution that derives from
 \dist{Inverse Lomax} (inverse Pareto) distribution~\cite{Kleiber2003}: 
 \begin{align}
 \label{InvLomax}
-\opr{InvLomax}(x\given a, s,\alpha) &= \frac{\alpha}{|s|} \left(\frac{x-a}{s}\right)^{\alpha -1} \left(1+\frac{x-a}{s}\right)^{-\alpha-1} \checked
+\opr{InvLomax}(x\given a, s,\alpha) &= \frac{\alpha}{|s|} \Left(\frac{x-a}{s}\Right)^{\alpha -1} \Left(1+\frac{x-a}{s}\Right)^{-\alpha-1} \checked
 \\ \notag &= \opr{BetaPrime}(x\given a, s, \alpha,1) \checked
 %\\ \notag &= \opr{GenBeta}(x\given a, s, \alpha,1,-1) 
 \\ \notag &= \opr{GenBetaPrime}(x\given a, s, \alpha,1,1) \checked
@@ -79,12 +79,12 @@ The standard beta prime distribution is closed under inversion.
 
 The beta and beta prime distributions are related by the transformation~\secref{transforms}
 \[
-\opr{StdBetaPrime}(\alpha,\gamma) \sim \left( \frac{1}{\opr{StdBeta}(\alpha,\gamma)}  -1 \right)^{-1} \checked
+\opr{StdBetaPrime}(\alpha,\gamma) \sim \Left( \frac{1}{\opr{StdBeta}(\alpha,\gamma)}  -1 \Right)^{-1} \checked
 \notag
 \]
 and, therefore, the generalized beta prime can be realized as a transformation of the standard beta \eqref{StdBeta} distribution.
 \[
-\opr{GenBetaPrime}(a,s,\alpha,\gamma,\beta) \sim a+ s\left( \opr{StdBeta}(\alpha,\gamma)^{-1} -1\right)^{-\sfrac{1}{\beta}}
+\opr{GenBetaPrime}(a,s,\alpha,\gamma,\beta) \sim a+ s\Left( \opr{StdBeta}(\alpha,\gamma)^{-1} -1\Right)^{-\sfrac{1}{\beta}}
 \checked
 \notag
 \]

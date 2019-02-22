@@ -14,8 +14,8 @@ is  a three parameter, continuous, univariate, unimodal probability density, wit
 \begin{align}
 \label{PowerFn}
 \opr{PowerFn}(x\given a,s,\beta) &= 
-\left|\frac{\beta}{ s}\right|
-\left(\frac{x-a}{s} \right)^{\beta -1} \checked
+\Left|\frac{\beta}{ s}\Right|
+\Left(\frac{x-a}{s} \Right)^{\beta -1} \checked
 %\\ &= \opr{GenBeta}(x\given a,s , \alpha,1,1) \notag 
 \\
 \notag  \text{for } & x, a, s, \beta \text{ in } \mathbb{R}
@@ -40,10 +40,10 @@ With positive $\beta$ we obtain a distribution with finite support. But by allow
 \opr{GenPareto}&(x\given a',s',\xi) 
 \\ & =
  \begin{cases}
-  \frac{1}{|\theta|}\left( 1 + \xi \frac{x-\pLoc}{\theta}\right)^{-\tfrac{1}{\xi}-1} & \xi \neq 0 \checked
+  \frac{1}{|\theta|}\Left( 1 + \xi \frac{x-\pLoc}{\theta}\Right)^{-\tfrac{1}{\xi}-1} & \xi \neq 0 \checked
 \notag
 \\ 
- \frac{1}{|\theta|} \exp \left(-\frac{x-\pLoc}{\theta} \right)& \xi = 0 \checked
+ \frac{1}{|\theta|} \exp \Left(-\frac{x-\pLoc}{\theta} \Right)& \xi = 0 \checked
 \notag
 \end{cases}
 \\
@@ -58,14 +58,14 @@ With positive $\beta$ we obtain a distribution with finite support. But by allow
 \label{QExp}
 \opr{QExp}&(x\given  \pLoc,\theta,q) \\
 \notag
-= & \frac{(2-q)}{|\theta|} \exp_q\left(- \frac{x-\pLoc}{\theta} \right)  \checked
+= & \frac{(2-q)}{|\theta|} \exp_q\Left(- \frac{x-\pLoc}{\theta} \Right)  \checked
 \\  
 = &
 \begin{cases}
-\frac{(2-q)}{|\theta|}\left(1 - (1-q) \frac{x-\pLoc}{\theta} \right)^{\frac{1}{1-q}} & q \neq 1 \checked
+\frac{(2-q)}{|\theta|}\Left(1 - (1-q) \frac{x-\pLoc}{\theta} \Right)^{\frac{1}{1-q}} & q \neq 1 \checked
 \\
 \notag
-\tfrac{1}{|\theta| }\exp\left(- \frac{x-\pLoc}{\theta} \right)  & q=1 \checked
+\tfrac{1}{|\theta| }\exp\Left(- \frac{x-\pLoc}{\theta} \Right)  & q=1 \checked
 \end{cases}
 \notag
 \\
@@ -124,7 +124,7 @@ With a positive scale we obtain an {\bf ascending wedge} (right triangular) dist
 \dist{Pareto} (Pearson XI, Pareto type I) distribution~\cite{Pareto1964, Pearson1916, Johnson1994}:
 \begin{align}
 \label{Pareto}
-\opr{Pareto}(x\given a,s,\gamma) &= \left| \frac{\bar{\beta}}{s}\right| \left(\frac{x-a}{s}\right)^{-\bar{\beta}-1}   \qquad \bar{\beta}>0
+\opr{Pareto}(x\given a,s,\gamma) &= \Left| \frac{\bar{\beta}}{s}\Right| \Left(\frac{x-a}{s}\Right)^{-\bar{\beta}-1}   \qquad \bar{\beta}>0
 \checked
 \\ \notag & \qquad x > a+s, \ s>0
 \\ \notag & \qquad x < a+s, \ s<0
@@ -136,7 +136,7 @@ The most important special case is the Pareto distribution, which has a semi-inf
 \dist{Lomax} (Pareto type II, ballasted Pareto) distribution~\cite{Lomax1954}: 
 \begin{align}
 \label{Lomax}
-\opr{Lomax}(x\given a, s, \gamma) &= \frac{\gamma}{|s|}  \left(1+\frac{x-a}{s}\right)^{-\gamma-1} 
+\opr{Lomax}(x\given a, s, \gamma) &= \frac{\gamma}{|s|}  \Left(1+\frac{x-a}{s}\Right)^{-\gamma-1} 
 \\ \notag & = \opr{Pareto}(x\given a-s, s, \gamma)  
 \\ \notag & = \opr{PowerFn}(x \given a-x, s, -\gamma) 
 \end{align}
@@ -147,7 +147,7 @@ Originally explored as a model of business failure. The alternative name ``balla
 \dist{Exponential ratio} distribution~\cite{\self}:
 \begin{align}
 \label{ExpRatio}
-\opr{ExpRatio}(x\given s) &= \frac{1}{|s|} \frac{1}{\left(1+\frac{x}{s}\right)^{2}} 	\checked
+\opr{ExpRatio}(x\given s) &= \frac{1}{|s|} \frac{1}{\Left(1+\frac{x}{s}\Right)^{2}} 	\checked
 & \\ \notag &= \opr{Lomax}(x\given 0, s,1)
 & \\ \notag &= \opr{PowerFn}(x\given -s, s,1)
 \end{align}
@@ -157,7 +157,7 @@ Arises as the ratio of independent exponential distributions (p~\pageref{sec:Exp
 \dist{Uniform-prime} distribution~\cite{Jones2004,\self}:
 \begin{align}
 \label{UniPrime}
-\opr{UniPrime}(x\given a,s) &= \frac{1}{|s|} \frac{1}{\left(1+\frac{x-a}{s}\right)^{2}}  
+\opr{UniPrime}(x\given a,s) &= \frac{1}{|s|} \frac{1}{\Left(1+\frac{x-a}{s}\Right)^{2}}  
 & \\ \notag &= \opr{Lomax}(x\given a, s,1)
 & \\ \notag &= \opr{PowerFn}(x\given a-s, s,-1) 
 \end{align}
@@ -204,10 +204,10 @@ With $\beta=1$ we recover the uniform distribution.
 As $\beta$ limits to infinity, the power function distribution limits to the exponential distribution \eqref{Exp}.
 \begin{align*}
 \opr{Exp}(x\given \nu,\lambda) &=  \lim_{\beta\rightarrow\infty} \opr{PowerFn} (x\given \nu-\beta\lambda,\beta\lambda,\beta) \checked \\
-	&=  \lim_{\beta\rightarrow\infty}  \left|\frac{1}{ \lambda}\right| \left(1+\frac{x-\nu}{\beta\lambda} \right)^{\beta -1} 
+	&=  \lim_{\beta\rightarrow\infty}  \Left|\frac{1}{ \lambda}\Right| \Left(1+\frac{x-\nu}{\beta\lambda} \Right)^{\beta -1} 
 	\checked
 \end{align*}
-Recall that $\lim_{c\rightarrow\infty} \left(1 + \frac{x}{c} \right)^{c} = e^x$. \checked
+Recall that $\lim_{c\rightarrow\infty} \Left(1 + \frac{x}{c} \Right)^{c} = e^x$. \checked
 
 
 

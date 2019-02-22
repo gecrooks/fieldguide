@@ -8,12 +8,12 @@
 \text{\hyperref[PropertiesSec]{Properties}}  \quad& \\
 \text{notation} \quad & \text{PearsonVII}(x\given a,s, m) \checked
 \\
-\text{PDF}\quad &   \frac{1}{|s| B(m-\frac{1}{2}, \frac{1}{2} )} \left( 1 +\left( \frac{x-a}{s}\right)^2 \right)^{-m} \checked
+\text{PDF}\quad &   \frac{1}{|s| B(m-\frac{1}{2}, \frac{1}{2} )} \Left( 1 +\Left( \frac{x-a}{s}\Right)^2 \Right)^{-m} \checked
 \\
 \text{CDF / CCDF} \quad  &  
-     \frac{1}{2} +  \left(\frac{x-a}{s}\right) 
+     \frac{1}{2} +  \Left(\frac{x-a}{s}\Right) 
      \frac{1}{B(m-\frac{1}{2}, \frac{1}{2})}
-     \,_2F_1 \left ( \frac{1}{2},m;\frac{3}{2}; -\left(\frac{x-a}{s}\right)^2 \right)
+     \,_2F_1 \Left ( \frac{1}{2},m;\frac{3}{2}; -\Left(\frac{x-a}{s}\Right)^2 \Right)
      \checked
      % Checked with Wolfram Alpha
      % D[1/2+ (x/s) Hypergeometric2F1[1/2, m , 3/2, -(x/s)^2] / Beta(m-1/2, 1/2), x]
@@ -41,8 +41,8 @@
 %\\
 \text{MGF} \quad  &  \text{undefined}
 \\
-\text{CF} \quad  &   e^{iat} \frac{2 K_{m-\half} \left( s |t|\right)
-                    \cdot \left(\half s |t| \right)^{m-\half}}
+\text{CF} \quad  &   e^{iat} \frac{2 K_{m-\half} \Left( s |t|\Right)
+                    \cdot \Left(\half s |t| \Right)^{m-\half}}
                     {\Gamma(m-\half)}  & m > \half
                     \checked
 \end{align*}

@@ -12,7 +12,7 @@ The {\bf gamma-exponential} (log-gamma, generalized Gompertz, generalized Gomper
 \label{GammaExp}
 \opr{GammaExp}&(x\given \nu, \lambda, \alpha) 
 \\ \notag &=
-\frac{1}{ \Gamma(\alpha) |\lambda|}  \exp\left\{- \alpha \left(\frac{x-\nu}{\lambda}\right) - \exp\left(- \frac{x-\nu}{\lambda}\right)  \right\} \checked 
+\frac{1}{ \Gamma(\alpha) |\lambda|}  \exp\Left\{- \alpha \Left(\frac{x-\nu}{\lambda}\Right) - \exp\Left(- \frac{x-\nu}{\lambda}\Right)  \Right\} \checked 
 \\ \notag
 & \qquad \text{for } x,\ \nu,\ \lambda,\ \alpha,\   \text{in } \mathbb{R}, 
 \ \alpha>0, \ 
@@ -37,7 +37,7 @@ Also note that the gamma-exponential is often defined with the sign of the scale
 \label{StdGammaExp}
 \opr{StdGammaExp}(x\given  \alpha) 
 =&
-\frac{1}{\Gamma(\alpha) }  \exp\left\{- \alpha\, x - \exp (-x)  \right\}  \checked
+\frac{1}{\Gamma(\alpha) }  \exp\Left\{- \alpha\, x - \exp (-x)  \Right\}  \checked
 \\ \notag =& \opr{GammaExp}(x\given 0,1,\alpha) \checked
 \end{align} 
 The gamma-exponential distribution with zero location and unit scale.
@@ -47,7 +47,7 @@ The gamma-exponential distribution with zero location and unit scale.
 \label{ChiSqrExp}
 \opr{ChiSqrExp}(x\given k) 
  &= \notag
-\frac{1}{2^{\frac{k}{2}} \Gamma(\frac{k}{2})}  \exp\left\{- \frac{k}{2} x - \frac{1}{2} \exp(-x)  \right\} \checked
+\frac{1}{2^{\frac{k}{2}} \Gamma(\frac{k}{2})}  \exp\Left\{- \frac{k}{2} x - \frac{1}{2} \exp(-x)  \Right\} \checked
 \\ & \qquad \text{ for positive integer } k
 \\
 &= \opr{GammaExp}(x\given \ln 2, 1 ,\tfrac{k}{2}) \checked
@@ -61,7 +61,7 @@ The log transform of the chi-square distribution~\eqref{ChiSqr}.
 \label{GenGumbel}
 &\opr{GenGumbel}(x\given u,{\lambda},n) 
 \\ \notag  &= \notag
-\frac{n^n}{\Gamma(n) |{\lambda}|}  \exp\left\{ - n \left(\frac{x-u}{{\lambda}}\right) - n \exp\left(- \frac{x-u}{{\lambda}}\right)  \right\} \checked
+\frac{n^n}{\Gamma(n) |{\lambda}|}  \exp\Left\{ - n \Left(\frac{x-u}{{\lambda}}\Right) - n \exp\Left(- \frac{x-u}{{\lambda}}\Right)  \Right\} \checked
 \\ & \qquad \text{ for positive integer } n
 \notag
 \\
@@ -120,7 +120,7 @@ The limiting distribution of the $n$th largest value of a large number of unboun
 \label{Gumbel}
 \opr{Gumbel}(x\given u,{\lambda}) 
 &=
-\frac{1}{|{\lambda}|}  \exp\left\{ -\left(\frac{x-u}{{\lambda}}\right) - \exp\left(-\frac{x-u}{{\lambda}}\right)  \right\} \checked
+\frac{1}{|{\lambda}|}  \exp\Left\{ -\Left(\frac{x-u}{{\lambda}}\Right) - \exp\Left(-\frac{x-u}{{\lambda}}\Right)  \Right\} \checked
 \\
 &= \opr{GammaExp}(x\given u,{\lambda},1)  \checked
 \notag
@@ -137,7 +137,7 @@ The term ``double exponential distribution'' can refer to either Laplace or Gumb
 \label{StdGumbel}
 \opr{StdGumbel}(x) 
 =&
-  \exp\left\{- x - e^{-x} \right\}  \checked \\
+  \exp\Left\{- x - e^{-x} \Right\}  \checked \\
 =& \opr{GammaExp}(x\given 0,1,1)  \notag \checked
 \end{align}
 The Gumbel distribution with zero location and a unit scale.
@@ -149,7 +149,7 @@ The Gumbel distribution with zero location and a unit scale.
 \label{BHP}
 \opr{BHP}(x\given \nu,\lambda) 
 &=
-\frac{1}{\Gamma(\tfrac{\pi}{2}) |\lambda|}  \exp\left\{ - \frac{\pi}{2}\left(\frac{x-\nu}{\lambda}\right) -  \exp\left(-\frac{x-\nu}{\lambda}\right)  \right\}  \checked
+\frac{1}{\Gamma(\tfrac{\pi}{2}) |\lambda|}  \exp\Left\{ - \frac{\pi}{2}\Left(\frac{x-\nu}{\lambda}\Right) -  \exp\Left(-\frac{x-\nu}{\lambda}\Right)  \Right\}  \checked
 \notag
 \\
 &= \opr{GammaExp}(x\given \nu,\lambda,\frac{\pi}{2})   \checked
@@ -162,9 +162,9 @@ Proposed as a model of rare fluctuations in turbulence and other correlated syst
 \begin{align}
 \label{Moyal}
 \opr{Moyal}(x\given \mu, \lambda) & = 
-%\frac{1}{\sqrt{2\pi} }  \exp\left\{- \half x - \half  e^{-x}  \right\} 	\checked
+%\frac{1}{\sqrt{2\pi} }  \exp\Left\{- \half x - \half  e^{-x}  \Right\} 	\checked
 %\\
-\frac{1}{\sqrt{2\pi}  |\lambda|}  \exp\left\{- \half \left(\frac{x-\mu}{\lambda}\right) - \half \exp\left(- \frac{x-\mu}{\lambda}\right)  \right\} \checked
+\frac{1}{\sqrt{2\pi}  |\lambda|}  \exp\Left\{- \half \Left(\frac{x-\mu}{\lambda}\Right) - \half \exp\Left(- \frac{x-\mu}{\lambda}\Right)  \Right\} \checked
 \\
 &= \opr{GammaExp}(x\given \mu+ \lambda \ln 2, \lambda ,\half)  \checked
 \notag

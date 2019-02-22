@@ -15,7 +15,7 @@ log-beta, exponential generalized beta type I) distribution~\cite{Ahuja1967,Nada
 \label{BetaExp}
 \opr{BetaExp}(x\given \pLoc,\pScale,\alpha, \gamma) =&
  \frac{1}{B(\alpha, \gamma)} \frac{1}{|\pScale|}\
- e^{-\alpha \frac{x-\pLoc}{\pScale} }  \left(1 - e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\gamma-1} 
+ e^{-\alpha \frac{x-\pLoc}{\pScale} }  \Left(1 - e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{\gamma-1} 
  \checked
  \\ \notag
  & \text{for } x,\ \pLoc,\ \pScale,\ \alpha,\  \gamma \text{ in } \mathbb{R}, \checked
@@ -64,8 +64,8 @@ This distribution has a similar shape to the gamma \eqref{Gamma} distribution. N
 \begin{align}
 \label{ExpExp}
 \opr{ExpExp}(x\given \pLoc,\pScale,\gamma) 
- &=  \frac{\gamma}{ \left|\pScale\right|}
- e^{- \frac{x-\pLoc}{\pScale} }  \left(1 - e^{-\frac{x-\pLoc}{\pScale}  }\right)^{\gamma-1} \checked
+ &=  \frac{\gamma}{ \Left|\pScale\Right|}
+ e^{- \frac{x-\pLoc}{\pScale} }  \Left(1 - e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{\gamma-1} \checked
 \\ & = \opr{BetaExp}(x\given \pLoc,\pScale,1, \gamma) \notag \checked
 \end{align}
 A special case similar in shape to the gamma or Weibull \eqref{Weibull} distribution. So named because the cumulative distribution function is equal to the exponential distribution function raise to a power.

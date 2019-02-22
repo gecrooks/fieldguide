@@ -11,11 +11,11 @@ The {\bf Amoroso}  (generalized gamma, Stacy-Mihram) distribution~\cite{Amoroso1
  \opr{Amoroso}(x&\given  a, \theta, \alpha, \beta) 
 \\ \notag&=
 \frac{1}{\Gamma(\alpha)} 
-\left|\frac{\beta}{\theta}\right|
-\left(\frac{x-a}{\theta}\right)^{\alpha \beta -1}
-\exp \left\{
--  \left(\frac{x-a}{\theta}\right)^{\beta}
-\right\}
+\Left|\frac{\beta}{\theta}\Right|
+\Left(\frac{x-a}{\theta}\Right)^{\alpha \beta -1}
+\exp \Left\{
+-  \Left(\frac{x-a}{\theta}\Right)^{\beta}
+\Right\}
 \checked
 \\ \notag
 & \text{for } x,\ a,\ \theta,\ \alpha,\ \beta\  \text{in } \mathbb{R}, 
@@ -93,8 +93,8 @@ The gamma distribution ($\beta=1$) and it's special cases are detailed in \secre
 \begin{align}
 \label{Stacy}
 \opr{Stacy}(x \given \theta, \alpha, \beta) 
-=& \frac{1}{\Gamma(\alpha)} \left|\frac{\beta}{\theta}\right| \left(\frac{x}{\theta}\right)^{\alpha\beta-1} 
-\exp \left\{ -\left(\frac{x}{\theta}\right)^{\beta} \right\} \checked
+=& \frac{1}{\Gamma(\alpha)} \Left|\frac{\beta}{\theta}\Right| \Left(\frac{x}{\theta}\Right)^{\alpha\beta-1} 
+\exp \Left\{ -\Left(\frac{x}{\theta}\Right)^{\beta} \Right\} \checked
 \\=&  \opr{Amoroso}(x\given  0, \theta, \alpha, \beta) \notag \checked
 \end{align}
 If we drop the location parameter from $\opr{Amoroso}$, then we obtain the 
@@ -103,13 +103,13 @@ If $\beta$ is negative then the distribution is  {\bf generalized inverse gamma}
 
 The Stacy distribution is obtained as the positive even powers,  modulus, and powers of the modulus of a centered, normal random variable \eqref{Normal}, 
 \[
-\opr{Stacy}\left((2\sigma^2)^{\tfrac{1}{\beta}} ,\tfrac{1}{2}, \beta\right) \sim \Big|\opr{Normal}(0,\sigma)\Big|^{\tfrac{2}{\beta}}
+\opr{Stacy}\Left((2\sigma^2)^{\tfrac{1}{\beta}} ,\tfrac{1}{2}, \beta\Right) \sim \Big|\opr{Normal}(0,\sigma)\Big|^{\tfrac{2}{\beta}}
 \notag
 \checked
 \]
 and as powers of the sum of squares of $k$ centered, normal random variables. 
 \[
-\opr{Stacy}\left( (2\sigma^2)^{\tfrac{1}{\beta}} ,\tfrac{1}{2}k, \beta\right) \sim  \left( \sum_{i=1}^{k} \Bigl(\opr{Normal}(0,\sigma)\Bigr)^2\right)^{\tfrac{1}{\beta}}
+\opr{Stacy}\Left( (2\sigma^2)^{\tfrac{1}{\beta}} ,\tfrac{1}{2}k, \beta\Right) \sim  \Left( \sum_{i=1}^{k} \Bigl(\opr{Normal}(0,\sigma)\Bigr)^2\Right)^{\tfrac{1}{\beta}}
 \notag
 \checked
 \]
@@ -120,8 +120,8 @@ and as powers of the sum of squares of $k$ centered, normal random variables.
 \begin{align}
 \label{PseudoWeibull}
 \opr{PseudoWeibull}(x\given a, \theta,\beta)  
-=& \frac{1}{\Gamma(1+\tfrac{1}{\beta})} \frac{\beta}{|\theta|} \left(\frac{x-a}{\theta}\right)^{\beta} 
-\exp \left\{ -\left(\frac{x-a}{\theta}\right)^{\beta} \right\} \checked
+=& \frac{1}{\Gamma(1+\tfrac{1}{\beta})} \frac{\beta}{|\theta|} \Left(\frac{x-a}{\theta}\Right)^{\beta} 
+\exp \Left\{ -\Left(\frac{x-a}{\theta}\Right)^{\beta} \Right\} \checked
 \\ & \text{for } \beta>0 \notag 
 \\=&  \opr{Amoroso}(x\given  a, \theta, 1+\tfrac{1}{\beta}, \beta) \notag \checked
 \end{align}
@@ -133,10 +133,10 @@ Proposed as another model of failure times.
 \opr{HalfExpPower}(x\given a, \theta,\beta)
 =& 
 \frac{1}{\Gamma(\tfrac{1}{\beta})} 
-\left|\frac{\beta}{\theta}\right|
-\exp \left\{
--  \left(\frac{x-a}{\theta}\right)^{\beta}
-\right\} \checked
+\Left|\frac{\beta}{\theta}\Right|
+\exp \Left\{
+-  \Left(\frac{x-a}{\theta}\Right)^{\beta}
+\Right\} \checked
 \\=&  \opr{Amoroso}(x\given  a, \theta,\tfrac{1}{\beta}, \beta) \notag \checked
 \end{align}
 As the name implies, half an exponential power \eqref{ExpPower} distribution. Special cases include $\beta=-1$ inverse exponential  \eqref{InvExp}, $\beta=1$ exponential \eqref{Exp}, $\beta=\tfrac{2}{3}$ Hohlfeld  \eqref{Hohlfeld}  and $\beta=2$ half normal \eqref{HalfNormal} distributions. 
@@ -147,10 +147,10 @@ As the name implies, half an exponential power \eqref{ExpPower} distribution. Sp
 \opr{Hohlfeld}(x\given a, \theta)
 =& 
 \frac{1}{\Gamma(\tfrac{2}{3})} 
-\left|\frac{3}{2\theta}\right|
-\exp \left\{
--  \left(\frac{x-a}{\theta}\right)^{3/2}
-\right\} \checked
+\Left|\frac{3}{2\theta}\Right|
+\exp \Left\{
+-  \Left(\frac{x-a}{\theta}\Right)^{3/2}
+\Right\} \checked
 \\=&  \opr{HalfExpPower}(x\given a, \theta,\tfrac{3}{2}) \notag \checked
 \\=&  \opr{Amoroso}(x\given  a, \theta,\tfrac{2}{3}, \tfrac{3}{2}) \notag \checked
 \end{align}
@@ -181,10 +181,10 @@ With $\beta=1$ we obtain the gamma family of distributions: gamma \eqref{Gamma},
 \\ \notag 
 & =
  \frac{2}{\Gamma(\alpha) |\theta| }
-\left(\frac{x-a }{\theta}\right)^{2\alpha -1}
-\exp \left\{
--  \left(\frac{x-a }{\theta}\right)^{2}
-\right\}
+\Left(\frac{x-a }{\theta}\Right)^{2\alpha -1}
+\exp \Left\{
+-  \Left(\frac{x-a }{\theta}\Right)^{2}
+\Right\}
 \checked
 \\ \notag
 & = \opr{Amoroso}(x\given a,\theta, \alpha ,2) \checked
@@ -201,7 +201,7 @@ Used to model attenuation of radio signals that reach a receiver by multiple pat
 \label{HalfNormal}
 \opr{HalfNormal}(x \given a, \sigma ) 
 &= \frac{2}{\sqrt{2\pi \sigma^2}} 
-\exp\left\{-\left( \frac{(x-a)^2}{2\sigma^2}\right) \right\}  
+\exp\Left\{-\Left( \frac{(x-a)^2}{2\sigma^2}\Right) \Right\}  
 \checked
 \\
 & \qquad (x-a)/\sigma>0 \notag \\
@@ -216,8 +216,8 @@ The modulus of a normal distribution about the mean.
 \begin{align}
 \label{Chi}
 \opr{Chi}(x \given k) 
-&= \frac{ \sqrt{2}}{\Gamma(\tfrac{k}{2})} { \left(\frac{x}{\sqrt{2}}\right)}^{k-1} 
-\exp\left\{ -\left( \frac{x^2}{2}    \right)\right\} \checked
+&= \frac{ \sqrt{2}}{\Gamma(\tfrac{k}{2})} { \Left(\frac{x}{\sqrt{2}}\Right)}^{k-1} 
+\exp\Left\{ -\Left( \frac{x^2}{2}    \Right)\Right\} \checked
 \\
 & \qquad \text{for positive integer } k \notag \\
 & = \opr{ScaledChi}(x\given 1,k) \notag \checked \\
@@ -233,8 +233,8 @@ The root-mean-square of $k$ independent standard normal variables, or the square
 \dist{Scaled chi} (generalized Rayleigh) distribution~\cite{Miller1964,Johnson1994}:
 \begin{align}
 \opr{ScaledChi}(x \given \sigma, k) 
-&= \frac{2}{\Gamma(\tfrac{k}{2}) \sqrt{2\sigma^2}} { \left(\frac{x}{\sqrt{2\sigma^2}}\right)}^{k-1} 
-\exp\left\{-\left(\frac{x^2}{2\sigma^2}\right)\right\} 
+&= \frac{2}{\Gamma(\tfrac{k}{2}) \sqrt{2\sigma^2}} { \Left(\frac{x}{\sqrt{2\sigma^2}}\Right)}^{k-1} 
+\exp\Left\{-\Left(\frac{x^2}{2\sigma^2}\Right)\Right\} 
 \notag \checked
 \\
 & \qquad \text{for positive integer } k \notag \checked \\
@@ -261,7 +261,7 @@ The root-mean-square of $k$ independent and identically distributed normal varia
 \begin{align}
 \label{Rayleigh}
 \opr{Rayleigh}(x \given \sigma) 
-&= \frac{1}{\sigma^2 }\ x\  \exp\left\{-\left(\frac{x^2}{2 \sigma^2}\right)\right\}  \checked
+&= \frac{1}{\sigma^2 }\ x\  \exp\Left\{-\Left(\frac{x^2}{2 \sigma^2}\Right)\Right\}  \checked
 \\
 &=\opr{ScaledChi}(x \given \sigma, 2) \notag 							\checked \\
 &=  \opr{Stacy}(x\given  \sqrt{2\sigma^2} ,1,2) \notag					\checked \\
@@ -276,7 +276,7 @@ The root-mean-square of $k$ independent and identically distributed normal varia
 \begin{align}
 \label{Maxwell}
 \opr{Maxwell}(x \given \sigma) 
-&= \frac{\sqrt{2}}{\sqrt{\pi} \sigma^3}\ x^2 \exp\left\{-\left(\frac{x^2}{2\sigma^2}\right)\right\}  \checked
+&= \frac{\sqrt{2}}{\sqrt{\pi} \sigma^3}\ x^2 \exp\Left\{-\Left(\frac{x^2}{2\sigma^2}\Right)\Right\}  \checked
  \\
 %& x>0,   \notag \\
 &=\opr{ScaledChi}(x \given \sigma, 3) \checked \notag \\
@@ -291,7 +291,7 @@ The speed distribution of molecules in thermal equilibrium. The root-mean-square
 \begin{align}
 \label{WilsonHilferty}
 \opr{WilsonHilferty}(x \given \theta, \alpha) 
-&= \frac{3}{\Gamma(\alpha)|\theta|} \left(\frac{x}{\theta}\right)^{3 \alpha-1} \exp\left\{-\left(\frac{x}{\theta}\right)^{3}\right\}
+&= \frac{3}{\Gamma(\alpha)|\theta|} \Left(\frac{x}{\theta}\Right)^{3 \alpha-1} \exp\Left\{-\Left(\frac{x}{\theta}\Right)^{3}\Right\}
 \checked
 \\ 
 &=  \opr{Stacy}(x\given \theta, \alpha, 3) \checked
@@ -323,8 +323,8 @@ With negative $\beta$ we obtain various ``inverse'' distributions related to dis
 \begin{align}
 \label{InvGamma}
 \opr{InvGamma}(x \given \theta, \alpha) 
-&= \frac{1}{\Gamma(\alpha) |\theta|} \left(\frac{\theta}{x-a}\right)^{\alpha+1} 
- \exp\left\{-\left( \frac{\theta}{x-a}   \right)\right\}  \checked
+&= \frac{1}{\Gamma(\alpha) |\theta|} \Left(\frac{\theta}{x-a}\Right)^{\alpha+1} 
+ \exp\Left\{-\Left( \frac{\theta}{x-a}   \Right)\Right\}  \checked
 \\
 %& = \opr{PearsonV}(x\given a,\theta,\alpha)  \notag \checked \\
 &=  \opr{Amoroso}(x\given  a, \theta, \alpha, -1) \notag  \checked
@@ -336,7 +336,7 @@ Occurs as the conjugate prior for an exponential distribution's scale parameter~
 \begin{align}
 \label{InvExp}
 \opr{InvExp}(x \given a, \theta) 
-&= \frac{1}{|\theta|} \left(\frac{\theta}{x-a }\right)^2  \exp\left\{-\left( \frac{\theta}{x-a}   \right)\right\}   \checked \\
+&= \frac{1}{|\theta|} \Left(\frac{\theta}{x-a }\Right)^2  \exp\Left\{-\Left( \frac{\theta}{x-a}   \Right)\Right\}   \checked \\
 &=  \opr{InvGamma}(x\given a,  \theta, 1)  \checked \notag \\
 &=  \opr{Amoroso}(x\given  a, \theta, 1, -1) \checked \notag 
 \end{align}
@@ -358,7 +358,7 @@ Note that the name ``inverse exponential'' is occasionally used for the ordinary
 \begin{align}
 \label{Levy}
 \Levy(x \given a, c) 
-&= \sqrt{\frac{|c|}{2\pi}} \frac{1}{(x-a)^{3/2}}  \exp\left\{-\frac{c}{2(x-a)}\right\}  \checked
+&= \sqrt{\frac{|c|}{2\pi}} \frac{1}{(x-a)^{3/2}}  \exp\Left\{-\frac{c}{2(x-a)}\Right\}  \checked
 \\
 %&= \opr{PearsonV}(x\given a,\tfrac{c}{2},\tfrac{1}{2})  \checked\notag \\
 &=  \opr{Amoroso}(x\given  a, \tfrac{c}{2}, \tfrac{1}{2}, -1) \checked \notag 
@@ -372,8 +372,8 @@ The L\'{e}vy distribution is notable for being stable\index{stable distributions
 \begin{align}
 \label{ScaledInvChiSqr}
 \opr{ScaledInvChiSqr}&(x \given \sigma, k) 
-\\ \notag =& \frac{2 \sigma^2}{\Gamma(\tfrac{k}{2}) } \left(\frac{1}{2 \sigma^2x}\right)^{\frac{k}{2}+1} 
-\exp\left\{-\left( \frac{1}{2 \sigma^2x}   \right)\right\} \checked
+\\ \notag =& \frac{2 \sigma^2}{\Gamma(\tfrac{k}{2}) } \Left(\frac{1}{2 \sigma^2x}\Right)^{\frac{k}{2}+1} 
+\exp\Left\{-\Left( \frac{1}{2 \sigma^2x}   \Right)\Right\} \checked
 \\
 &\qquad  \text{for positive integer } k \notag \\
 &=  \opr{InvGamma}(x\given 0, \tfrac{1}{2 \sigma^2}, \tfrac{k}{2}) \notag  \checked \\
@@ -391,7 +391,7 @@ A special case of the inverse gamma distribution with half-integer $\alpha$. Use
 \begin{align}
 \label{InvChiSqr}
 \opr{InvChiSqr}(x \given k) 
-=& \frac{2}{\Gamma(\tfrac{k}{2}) } \left(\frac{1}{2x}\right)^{\frac{k}{2}+1} \exp\left\{-\left( \frac{1}{2x}  \right)\right\}
+=& \frac{2}{\Gamma(\tfrac{k}{2}) } \Left(\frac{1}{2x}\Right)^{\frac{k}{2}+1} \exp\Left\{-\Left( \frac{1}{2x}  \Right)\Right\}
 \checked  \\
 &\qquad  \text{for positive integer } k \notag \\
 & = \opr{ScaledInvChiSqr}(x\given 1,k)\notag \checked \\
@@ -409,7 +409,7 @@ A standard scaled inverse chi-square distribution.
 \label{ScaledInvChi}
  \opr{ScaledInvChi}&(x \given \sigma, k) 
 \\ \notag
-&= \frac{2 \sqrt{2 \sigma ^2} }{ \Gamma(\tfrac{k}{2})} { \left(\frac{1}{\sqrt{2 \sigma^2} x}\right)}^{k+1} \exp\left\{-\left(\frac{1}{2 \sigma^2 x^2}  \right)\right\} \checked
+&= \frac{2 \sqrt{2 \sigma ^2} }{ \Gamma(\tfrac{k}{2})} { \Left(\frac{1}{\sqrt{2 \sigma^2} x}\Right)}^{k+1} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 x^2}  \Right)\Right\} \checked
 \\
 &=  \opr{Stacy}(x\given \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{k}{2}, -2)  \notag \checked \\
 &=  \opr{Amoroso}(x\given  0, \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{k}{2}, -2) \notag  \checked
@@ -420,7 +420,7 @@ Used as a prior for the standard deviation of a normal distribution.
 \begin{align}
 \label{InvChi}
 \opr{InvChi}(x \given k) 
-&= \frac{2\sqrt{2} }{ \Gamma(\tfrac{k}{2})} { \left(\frac{1}{\sqrt{2} x}\right)}^{k+1} \exp\left\{-\left(\frac{1}{2 x^2}  \right)\right\}
+&= \frac{2\sqrt{2} }{ \Gamma(\tfrac{k}{2})} { \Left(\frac{1}{\sqrt{2} x}\Right)}^{k+1} \exp\Left\{-\Left(\frac{1}{2 x^2}  \Right)\Right\}
 \checked
 \\
 &=  \opr{Stacy}(x\given  \tfrac{1}{\sqrt{2}}, \tfrac{k}{2}, -2)  \notag \checked \\
@@ -432,7 +432,7 @@ Used as a prior for the standard deviation of a normal distribution.
 \begin{align}
 \label{InvRayleigh}
 \opr{InvRayleigh}(x \given \sigma) 
-&= 2 \sqrt{2 \sigma ^2}    \left(\frac{1}{\sqrt{2 \sigma^2} x}\right)^{3} \exp\left\{-\left(\frac{1}{2 \sigma^2 x^2}  \right)\right\}
+&= 2 \sqrt{2 \sigma ^2}    \Left(\frac{1}{\sqrt{2 \sigma^2} x}\Right)^{3} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 x^2}  \Right)\Right\}
 \checked
 \\
 &=  \opr{Stacy}(x\given \tfrac{1}{\sqrt{2 \sigma^2}}, 1, -2)  \notag \checked \\
@@ -468,11 +468,11 @@ The inverse Rayleigh distribution has been used to model  failure time~\cite{Vod
 \\ \notag
 &=
 \frac{n^n}{\Gamma(n)} 
-\left|\frac{\beta}{\omega}\right|
-\left(\frac{x-a}{\omega}\right)^{n \beta -1}
-\exp \left\{
--  n \left(\frac{x-a}{\omega}\right)^{\beta}
-\right\} \checked
+\Left|\frac{\beta}{\omega}\Right|
+\Left(\frac{x-a}{\omega}\Right)^{n \beta -1}
+\exp \Left\{
+-  n \Left(\frac{x-a}{\omega}\Right)^{\beta}
+\Right\} \checked
 \\
 & \quad \text{for positive integer } n
 \\ \notag
@@ -488,11 +488,11 @@ If we take $N$ samples from a probability distribution, then asymptotically for 
 \opr{FisherTippett}&(x\given  a , \omega, \beta) 
 \\ \notag
 &=
-\left|\frac{\beta}{\omega}\right|
-\left(\frac{x-a}{\omega}\right)^{ \beta -1}
-\exp \left\{
--  \left(\frac{x-a}{\omega}\right)^{\beta} 
-\right\} \checked
+\Left|\frac{\beta}{\omega}\Right|
+\Left(\frac{x-a}{\omega}\Right)^{ \beta -1}
+\exp \Left\{
+-  \Left(\frac{x-a}{\omega}\Right)^{\beta} 
+\Right\} \checked
 \\ \notag & = \opr{GenFisherTippett}(x\given a, \omega, 1, \beta) \checked
 \\ \notag & = \opr{Amoroso}(x\given a, \omega, 1, \beta) \checked
 \end{align}
@@ -504,9 +504,9 @@ The maximum of two Fisher-Tippett random variables (minimum if $\beta/\omega>0$)
 \max\Big[ \opr{FisherTippett}(a,\omega_1,\beta),  \opr{FisherTippett}(a, \omega_2,\beta)  \Big]&\\  \sim 
  \opr{FisherTippett}(a, \frac{\omega_1 \omega_2}{(\omega_1^{\beta} + \omega_2^{\beta} )^{1/\beta}},\beta) \checked
 \end{align*}
-This follows since taking the maximum of two random variables is equivalent to multiplying their cumulative distribution functions, and the Fisher-Tippett cumulative distribution function is $\exp \left\{
--  \left(\frac{x-a}{\omega}\right)^{\beta}
-\right\}$.
+This follows since taking the maximum of two random variables is equivalent to multiplying their cumulative distribution functions, and the Fisher-Tippett cumulative distribution function is $\exp \Left\{
+-  \Left(\frac{x-a}{\omega}\Right)^{\beta}
+\Right\}$.
 
 
 
@@ -514,7 +514,7 @@ This follows since taking the maximum of two random variables is equivalent to m
 \begin{align}
 \label{GenWeibull}
 \opr{GenWeibull}&(x \given a , \omega, n, \beta) 
-\\ \notag &=	\frac{n^n}{\Gamma(n)}  \frac{ \beta}{| \omega |} \left(\frac{x-a }{\omega}\right)^{n \beta-1} \exp\left\{-n \left(\frac{x-a }{\omega}\right)^{ \beta}\right\} 
+\\ \notag &=	\frac{n^n}{\Gamma(n)}  \frac{ \beta}{| \omega |} \Left(\frac{x-a }{\omega}\Right)^{n \beta-1} \exp\Left\{-n \Left(\frac{x-a }{\omega}\Right)^{ \beta}\Right\} 
 \\ \notag &\quad \text{for } \beta>0 
 \\ \notag & = \opr{GenFisherTippett}(x\given a, \omega, n, \beta) \checked
 \\ \notag
@@ -530,7 +530,7 @@ If $\omega$ is negative we obtain the distribution of the $n$th largest value.
 \begin{align}
 \label{Weibull}
 \opr{Weibull}(x \given a ,\omega, \beta) 
-&=	\frac{\beta}{| \omega |} \left(\frac{x-a }{\omega}\right)^{\beta-1} \exp\left\{-\left(\frac{x-a }{\omega}\right)^{\beta}\right\}  \checked
+&=	\frac{\beta}{| \omega |} \Left(\frac{x-a }{\omega}\Right)^{\beta-1} \exp\Left\{-\Left(\frac{x-a }{\omega}\Right)^{\beta}\Right\}  \checked
 \\ \notag &\quad \text{for } \beta>0 
 \\ \notag
 & = \opr{FisherTippett}(x\given  a, \omega, \beta) \checked
@@ -547,8 +547,8 @@ Special cases of the Weibull distribution include the exponential ($\beta=1$) an
 \GenFrechet&(x \given a , \omega, n, \bar{\beta}) 
 \\
  \notag 
-&=	\frac{n^n}{\Gamma(n)}  \frac{\bar{\beta}}{| \omega |} \left(\frac{x-a }{\omega}\right)^{-n\bar{\beta}-1} 
-\exp\left\{-n\left(\frac{x-a }{\omega}\right)^{-\bar{\beta}}\right\} 
+&=	\frac{n^n}{\Gamma(n)}  \frac{\bar{\beta}}{| \omega |} \Left(\frac{x-a }{\omega}\Right)^{-n\bar{\beta}-1} 
+\exp\Left\{-n\Left(\frac{x-a }{\omega}\Right)^{-\bar{\beta}}\Right\} 
 \checked
 \\ &\quad \text{for } \bar{\beta}>0  \notag
 \\ \notag
@@ -565,8 +565,8 @@ The limiting distribution of the $n$th largest value of a large number identical
 \begin{align}
 \label{Frechet}
 \Frechet(x \given a , \omega, \bar{\beta}) 
-&=	\frac{\bar{\beta}}{| \omega |} \left(\frac{x-a }{\omega}\right)^{-\bar{\beta}-1} 
-\exp\left\{-\left(\frac{x-a }{\omega}\right)^{-\bar{\beta}}\right\} \checked
+&=	\frac{\bar{\beta}}{| \omega |} \Left(\frac{x-a }{\omega}\Right)^{-\bar{\beta}-1} 
+\exp\Left\{-\Left(\frac{x-a }{\omega}\Right)^{-\bar{\beta}}\Right\} \checked
 \\ \notag &\quad \text{for } \bar{\beta}>0 \checked
 \\  \notag
 & = \opr{FisherTippett}(x\given  a, \omega, -\bar{\beta}) \checked
@@ -608,13 +608,13 @@ The log-normal limit is particularly subtle~\cite{Lawless1982}, \secref{sec:Limi
 \\
 & \text{ \sl  Ignore normalization constants and rearrange,}
 \\
- \propto & \left(\tfrac{x-a}{\theta}\right)^{-1} \exp\left\{\alpha \ln (\tfrac{x-a}{\theta})^\beta - e^{\ln (\tfrac{x-a}{\theta})^\beta} \right\}
+ \propto & \Left(\tfrac{x-a}{\theta}\Right)^{-1} \exp\Left\{\alpha \ln (\tfrac{x-a}{\theta})^\beta - e^{\ln (\tfrac{x-a}{\theta})^\beta} \Right\}
  \checked
 \\
 & \text{ \sl make the requisite substitutions,}
 \\
 \propto &
-\left(\tfrac{x-a}{\vartheta}\right)^{-1} \exp\left\{\alpha \sfrac{1}{\sigma\sqrt{\alpha}} \ln (\tfrac{x-a}{\vartheta}) - \alpha e^{\sfrac{1}{\sigma\sqrt{\alpha}}  \ln (\sfrac{x-a}{\vartheta})} \right\}
+\Left(\tfrac{x-a}{\vartheta}\Right)^{-1} \exp\Left\{\alpha \sfrac{1}{\sigma\sqrt{\alpha}} \ln (\tfrac{x-a}{\vartheta}) - \alpha e^{\sfrac{1}{\sigma\sqrt{\alpha}}  \ln (\sfrac{x-a}{\vartheta})} \Right\}
 \checked
 \\
 & \text{ \sl expand second exponential to second order, }
@@ -622,7 +622,7 @@ The log-normal limit is particularly subtle~\cite{Lawless1982}, \secref{sec:Limi
 & \text{ \sl (once more ignoring normalization terms) }
 \\
  \propto &
-\left(\tfrac{x-a}{\vartheta}\right)^{-1} \exp\left\{- \tfrac{1}{2\sigma^2} \left( \ln \tfrac{x-a}{\vartheta} \right)^2 \right\}
+\Left(\tfrac{x-a}{\vartheta}\Right)^{-1} \exp\Left\{- \tfrac{1}{2\sigma^2} \Left( \ln \tfrac{x-a}{\vartheta} \Right)^2 \Right\}
 \checked
 \\
 & \text{ \sl and reconstitute the normalization constant.}

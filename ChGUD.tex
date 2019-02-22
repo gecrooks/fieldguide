@@ -10,7 +10,7 @@ The Grand Unified Distribution of order $n$ is required to satisfy the following
 \label{GUD}
 \frac{d}{dx} \ln  \opr{GUD}^{(n)}&(x\given a, s; a_0, a_1,\ldots,a_n;  b_0,b_1,\ldots, b_n; \beta)
 \checked \\
-&= \left|\tfrac{\beta}{s}\right| \frac{1}{\bigl(\tfrac{x-a}{s}\bigr)} \frac{a_0  +a_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots +a_n \bigl(\tfrac{x-a}{s}\bigr)^{n\beta}}{b_0+ b_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots+b_n\bigl(\tfrac{x-a}{s}\bigr)^{n\beta}  } 
+&= \Left|\tfrac{\beta}{s}\Right| \frac{1}{\bigl(\tfrac{x-a}{s}\bigr)} \frac{a_0  +a_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots +a_n \bigl(\tfrac{x-a}{s}\bigr)^{n\beta}}{b_0+ b_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots+b_n\bigl(\tfrac{x-a}{s}\bigr)^{n\beta}  } 
 \notag
 \checked
 \\
@@ -140,7 +140,7 @@ The central hypothesis of this compendium is that most interesting univariate co
 \dist{Inverse Gaussian} (Wald, inverse normal) distribution~\cite{Wald1944,Tweedie1945,Folks1978,Chhikara1989,Johnson1994}: 
 \begin{align}
 \label{InvGaussian}
-\opr{InvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x^3}} \exp\left(\frac{-\lambda (x-\mu)^2}{2\mu^2 x}\right)
+\opr{InvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x^3}} \exp\Left(\frac{-\lambda (x-\mu)^2}{2\mu^2 x}\Right)
 \\ \notag
 & = \opr{ExtPearson}(x\given 0,1\ ; \ \lambda\mu^2, -3 \mu^2, -\lambda \ ; \ 0, 2 \mu^2,0 ) 
 \\ \notag
@@ -186,8 +186,8 @@ It follows from the previous two relations the sample mean of an inverse Gaussia
 \label{Halphen}
 &\opr{Halphen}(x\given a,s, \alpha, \kappa) 
 \\
-&= \frac{1}{2 |s| K_{\alpha} (2\kappa)} \left(\frac{x-a}{s}\right)^{\alpha-1} 
-\exp\left\{-\kappa \left(\frac{x-a}{s}\right) -\kappa \left(\frac{x-a}{s}\right)^{-1}\right\},
+&= \frac{1}{2 |s| K_{\alpha} (2\kappa)} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
+\exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right) -\kappa \Left(\frac{x-a}{s}\Right)^{-1}\Right\},
 \checked
 \notag
 \\
@@ -212,8 +212,8 @@ Limits to gamma, inverse gamma, and normal.
 \label{Hyperbola}
 &\opr{Hyperbola}(x\given a,s,\kappa) 
 \\ 
-&= \frac{1}{2 |s| K_0(2\kappa)} \left(\frac{x-a}{s}\right)^{-1} 
-\exp \left\{ -\kappa \left(\frac{x-a}{s}\right) -\kappa \left(\frac{x-a}{s}\right)^{-1} \right\},
+&= \frac{1}{2 |s| K_0(2\kappa)} \Left(\frac{x-a}{s}\Right)^{-1} 
+\exp \Left\{ -\kappa \Left(\frac{x-a}{s}\Right) -\kappa \Left(\frac{x-a}{s}\Right)^{-1} \Right\},
 \checked
 \notag
 \\
@@ -236,8 +236,8 @@ Limits to gamma, inverse gamma, and normal.
 \label{HalphenB}
 &\opr{HalphenB}(x\given a,s, \alpha, \kappa) 
 \\
-&= \frac{2}{|s| H_{2 \alpha}(\kappa)} \left(\frac{x-a}{s}\right)^{\alpha-1} 
-\exp\left\{- \left(\frac{x-a}{s}\right)^{2} +\kappa \left(\frac{x-a}{s}\right)\right\},
+&= \frac{2}{|s| H_{2 \alpha}(\kappa)} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
+\exp\Left\{- \Left(\frac{x-a}{s}\Right)^{2} +\kappa \Left(\frac{x-a}{s}\Right)\Right\},
 \notag
 \\
 & = \op{GUD}(x\given a,s\sep \alpha-1, \kappa,  -2\sep 1,0,0\sep 1)
@@ -255,8 +255,8 @@ Limits to gamma distribution \eqref{Gamma} as $\kappa \rightarrow \infty$.
 \label{InvHalphenB}
 &\opr{InvHalphenB}(x\given a,s, \alpha, \kappa) 
 \\
-&= \frac{2}{|s| H_{2\alpha}(\kappa)} \left(\frac{x-a}{s}\right)^{-\alpha+1} 
-\exp\left\{- \left(\frac{x-a}{s}\right)^{-2} +\kappa \left(\frac{x-a}{s}\right)^{-1}\right\},
+&= \frac{2}{|s| H_{2\alpha}(\kappa)} \Left(\frac{x-a}{s}\Right)^{-\alpha+1} 
+\exp\Left\{- \Left(\frac{x-a}{s}\Right)^{-2} +\kappa \Left(\frac{x-a}{s}\Right)^{-1}\Right\},
 \checked
 \notag
 \\
@@ -275,8 +275,8 @@ Limits to inverse gamma distribution \eqref{InvGamma} as $\kappa \rightarrow \in
 \label{Sichel}
 &\opr{Sichel}(x\given a,s, \alpha, \kappa, \lambda) 
 \\
-&= \frac{(\kappa/\lambda)^{\alpha/2} }{2 |s| K_{\alpha} (2\sqrt{\kappa\lambda})} \left(\frac{x-a}{s}\right)^{\alpha-1} 
-\exp\left\{-\kappa \left(\frac{x-a}{s}\right) -\lambda \left(\frac{x-a}{s}\right)^{-1}\right\},
+&= \frac{(\kappa/\lambda)^{\alpha/2} }{2 |s| K_{\alpha} (2\sqrt{\kappa\lambda})} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
+\exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right) -\lambda \Left(\frac{x-a}{s}\Right)^{-1}\Right\},
 \notag
 \checked
 \\
@@ -296,7 +296,7 @@ Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gau
 &\opr{LibbyNovick}(x\given a,s,c,\alpha,\gamma) 
 \\ \notag
 &=  \frac{1}{|s| B(\alpha,\gamma)}
-\left(\tfrac{x-a}{s}\right)^{\alpha-1}  \left(1-\tfrac{x-a}{s}\right)^{\gamma-1} \left(1- (1-c) \tfrac{x-a}{s}\right)^{-\alpha-\gamma}
+\Left(\tfrac{x-a}{s}\Right)^{\alpha-1}  \Left(1-\tfrac{x-a}{s}\Right)^{\gamma-1} \Left(1- (1-c) \tfrac{x-a}{s}\Right)^{-\alpha-\gamma}
 \checked
 \notag
 \\ \notag
@@ -322,7 +322,7 @@ Limits to both the beta ($u=1$) and beta-prime ($u\rightarrow \infty$ ) distribu
 &\opr{GaussHypergeometric}(x\given a,s,u, \alpha, \gamma, \rho) 
 \\ \notag
 & =   \frac{1}{|s| \mathcal{N}} 
-\left(\frac{x-a}{s}\right)^{\alpha-1}  \left(1-\frac{x-a}{s}\right)^{\gamma-1} \left(1- (1-u) \frac{x-a}{s}\right)^{-\delta}
+\Left(\frac{x-a}{s}\Right)^{\alpha-1}  \Left(1-\frac{x-a}{s}\Right)^{\gamma-1} \Left(1- (1-u) \frac{x-a}{s}\Right)^{-\delta}
 \checked
 \notag
 \\ \notag
@@ -346,7 +346,7 @@ A natural generalization of the three-beta distribution.  Motivated by the Euler
 \\& =
 \notag
 \frac{1}{\mathcal{N}}  
-\left(\frac{x-a}{s}\right)^{\alpha-1} \left(1- \left(\frac{x-a}{s}\right)\right)^{\gamma-1} \exp\left\{-\kappa \left(\frac{x-a}{s}\right)\right\} \checked
+\Left(\frac{x-a}{s}\Right)^{\alpha-1} \Left(1- \Left(\frac{x-a}{s}\Right)\Right)^{\gamma-1} \exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)\Right\} \checked
 \notag
 \\
 & \qquad \mathcal{N} = B(\alpha, \gamma)\ {}_1 F_1(\alpha; \alpha+\gamma; -\kappa)
@@ -372,8 +372,8 @@ This distribution was introduced by Gordy~\cite{Gordy1988a} for applications to 
 \label{GenHalphen}
 &\opr{GenHalphen}(x\given a,s, \alpha, \kappa, \beta) 
 \\
-&= \frac{|\beta|}{2 |s| K_{\alpha} (2\kappa)} \left(\frac{x-a}{s}\right)^{\beta \alpha-1} 
-\exp\left\{-\kappa \left(\frac{x-a}{s}\right)^\beta -\kappa \left(\frac{x-a}{s}\right)^{-\beta}\right\}  \checked
+&= \frac{|\beta|}{2 |s| K_{\alpha} (2\kappa)} \Left(\frac{x-a}{s}\Right)^{\beta \alpha-1} 
+\exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)^\beta -\kappa \Left(\frac{x-a}{s}\Right)^{-\beta}\Right\}  \checked
 \notag
 \\
 & = GUD(a,s; \kappa, \alpha-1 , -\kappa; 0,1,0;\beta) \checked
@@ -415,7 +415,7 @@ Here $F_1$ is the Appell hypergeometric function of the first kind.
 \dist{Laha} distribution~\cite{Rider1957,Laha1958,Popescu1999}:
 \begin{align}
 \label{Laha}
-	\opr{Laha}(x\given a,s) &= \frac{\sqrt{2}}{|s|\ \pi} \frac{1}{\left(1 + (\tfrac{x-a}{s})^4 \right)} \checked
+	\opr{Laha}(x\given a,s) &= \frac{\sqrt{2}}{|s|\ \pi} \frac{1}{\Left(1 + (\tfrac{x-a}{s})^4 \Right)} \checked
 	\\ & = \opr{GUD}^{(4)}(x \given  a,s\ ;\ 0,0,0,0,4\ ;\ 1,0,0,0,1\ ;\ 1)  \checked \notag
 \end{align}
 A  symmetric, continuous, univariate, unimodal probability density, with infinite support. 
