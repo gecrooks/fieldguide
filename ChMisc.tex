@@ -212,12 +212,13 @@ Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the unifor
 \[
 \label{JohnsonSU}
 \opr{JohnsonSU}(x\given\mu, \sigma, \gamma, \delta) = 
-\frac{\delta}{\lambda\sqrt{2\pi}} \frac{1}{\sqrt{1 + \Left(\frac{x-\xi}{\lambda}\Right)^2}} e^{-\frac{1}{2}\Left(\gamma+\delta \sinh^{-1} \Left(\frac{x-\xi}{\lambda}\Right)\Right)^2}
+\frac{\delta}{\lambda\sqrt{2\pi}} \frac{1}{\sqrt{1 + \Left(\frac{x-\xi}{\lambda}\Right)^2}} e^{-\frac{1}{2}\Left(\gamma+\delta \sinh^{-1} \Left(\frac{x-\xi}{\lambda}\Right)\Right)^2} \checked
 \]
 Johnson's distributions are transforms of the normal distribution, 
 \[
 \opr{Johnson}_g(\mu, \sigma, \gamma, \delta) \sim \sigma g(\tfrac{StdNormal()-\gamma)}{\delta}) + \mu
 \notag
+\checked
 \]
 Where for Johnson $S_U$ the function is $g(x)=\sinh(x)$.
 For Johnson $S_B$ the function is $g(x)=1/(1+exp(x))$, for Johnson $S_L$, $g(x)=exp(x))$ (i.e. log-normal), and for Johnson $S_N$ the function is constant, recapitulating the normal distribution.
