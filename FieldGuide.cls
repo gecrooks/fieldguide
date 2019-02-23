@@ -266,7 +266,7 @@
 	
 	\iftoggle{bookHeader} {
 		\iffloatpage{
-			\fancyhead[C]{}g
+			\fancyhead[C]{}
 			\fancyfoot[C]{\small \scshape \titlemark}
 		} {
 			\fancyhead[C]{\nouppercase{\scshape\leftmark}}	
