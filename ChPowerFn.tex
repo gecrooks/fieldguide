@@ -136,9 +136,9 @@ The most important special case is the Pareto distribution, which has a semi-inf
 \dist{Lomax} (Pareto type II, ballasted Pareto) distribution~\cite{Lomax1954}: 
 \begin{align}
 \label{Lomax}
-\opr{Lomax}(x\given a, s, \gamma) &= \frac{\gamma}{|s|}  \Left(1+\frac{x-a}{s}\Right)^{-\gamma-1} 
-\\ \notag & = \opr{Pareto}(x\given a-s, s, \gamma)  
-\\ \notag & = \opr{PowerFn}(x \given a-x, s, -\gamma) 
+\opr{Lomax}(x\given a, s, \bar{\beta}) &= \frac{\bar{\beta}}{|s|}  \Left(1+\frac{x-a}{s}\Right)^{-\bar{\beta}-1}  \checked
+\\ \notag & = \opr{Pareto}(x\given a-s, s, \bar{\beta})  \checked
+\\ \notag & = \opr{PowerFn}(x \given a-s, s, -\bar{\beta})  \checked
 \end{align}
 Originally explored as a model of business failure. The alternative name ``ballasted Pareto'' arises since this distribution is a shifted Pareto distribution~\eqref{Pareto} whose origin is fixed at zero, and no longer moves with changes in scale.
 
@@ -148,8 +148,8 @@ Originally explored as a model of business failure. The alternative name ``balla
 \begin{align}
 \label{ExpRatio}
 \opr{ExpRatio}(x\given s) &= \frac{1}{|s|} \frac{1}{\Left(1+\frac{x}{s}\Right)^{2}} 	\checked
-& \\ \notag &= \opr{Lomax}(x\given 0, s,1)
-& \\ \notag &= \opr{PowerFn}(x\given -s, s,1)
+& \\ \notag &= \opr{Lomax}(x\given 0, s,1)\checked
+& \\ \notag &= \opr{PowerFn}(x\given -s, s,1)\checked
 \end{align}
 Arises as the ratio of independent exponential distributions (p~\pageref{sec:ExpRatio}).
 
@@ -157,9 +157,9 @@ Arises as the ratio of independent exponential distributions (p~\pageref{sec:Exp
 \dist{Uniform-prime} distribution~\cite{Jones2004,\self}:
 \begin{align}
 \label{UniPrime}
-\opr{UniPrime}(x\given a,s) &= \frac{1}{|s|} \frac{1}{\Left(1+\frac{x-a}{s}\Right)^{2}}  
-& \\ \notag &= \opr{Lomax}(x\given a, s,1)
-& \\ \notag &= \opr{PowerFn}(x\given a-s, s,-1) 
+\opr{UniPrime}(x\given a,s) &= \frac{1}{|s|} \frac{1}{\Left(1+\frac{x-a}{s}\Right)^{2}}  \checked
+& \\ \notag &= \opr{Lomax}(x\given a, s,1) \checked
+& \\ \notag &= \opr{PowerFn}(x\given a-s, s,-1)  \checked
 \end{align}
 An exponential ratio~\eqref{ExpRatio} distribution with a shift parameter. So named since this distribution is related to the uniform distribution as beta is to beta prime. The ordering distribution \secref{OrderStatistic} of the beta-prime distribution.
 %

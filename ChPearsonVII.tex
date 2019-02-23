@@ -99,7 +99,7 @@ Student's t distribution with 2 degrees of freedom has a particularly simple for
 \\ \notag 
 & = \opr{StudentsT}(x\given 3) \checked
 \\ \notag
-& = \opr{RelBreitWigner}(x\given 0, \sqrt{3}, s) 
+& = \opr{RelBreitWigner}(x\given 0, \sqrt{3})\checked 
 \\ \notag 
 &= \opr{PearsonVII}(x\given 0,\sqrt{3},2) \checked
 \end{align}
@@ -120,9 +120,9 @@ Student's t distribution with 3 degrees of freedom. Notable since the cumulative
 The distribution of the statistic $z$, which was the original distribution investigated by Gosset (aka Student)\footnote{Gosset's employer, the Guinness Brewing Company, insisted that he publish under a pseudonym.} in his famous 1908 paper
  on the statistical error of sample means~\cite{Student1908}.
 \begin{align*}
-	z &= \frac {\bar{x} - \mu}{s} \\ 
-	\bar{x} &= \tfrac{1}{n} \sum_{i=1}^{n} \opr{Normal}_i (\mu,\sigma) \ , \\
-	s^2 &= \tfrac{1}{n} \sum_{i=1}^{n} \bigl( \opr{Normal}_i (\mu,\sigma) - \bar{x} \bigr)^2
+	z &= \frac {\bar{x} - \mu}{s}  \checked \\ 
+	\bar{x} &= \tfrac{1}{n} \sum_{i=1}^{n} \opr{Normal}_i (\mu,\sigma) \ ,  \checked\\
+	s^2 &= \tfrac{1}{n} \sum_{i=1}^{n} \bigl( \opr{Normal}_i (\mu,\sigma) - \bar{x} \bigr)^2 \checked
 \end{align*}
 Here, $\bar{x}$ is the sample mean of $n$ independent normal \eqref{Normal} random variables with mean $\mu$ and variance  $\sigma^2$, and $s^2$ is the sample variance, except normalized by $n$ rather than the now conventional $n-1$. Latter work by Student and Fisher~\cite{Fisher1925b} resulted in a switch to the statistic $t= z/\sqrt{n-1}$.
 

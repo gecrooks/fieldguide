@@ -90,7 +90,7 @@ The distribution of a sum of squares of $k$ independent normal random variables 
 \label{PorterThomas}
 \opr{PorterThomas}(x \given \sigma) 
 &= \frac{1}{2\sigma^2\Gamma(\tfrac{1}{2})} \Left(\frac{x}{2\sigma^2}\Right)^{-\tfrac{1}{2}} 
-\exp\Left\{-\Left(\frac{x}{2\sigma^2} \Right)\Right\}  \\
+\exp\Left\{-\Left(\frac{x}{2\sigma^2} \Right)\Right\} \checked \\
 &=  \opr{Stacy}(x\given 2\sigma^2, \tfrac{1}{2},1)  \checked\notag \\
 &=\opr{Gamma}(x\given 0, 2\sigma^2, \tfrac{1}{2}) \checked \notag \\
 &=  \opr{Amoroso}(x\given  0, 2\sigma^2, \tfrac{1}{2}, 1) \checked \notag 
@@ -146,17 +146,14 @@ A large variety of distributions can be obtained from transformations of 1~or~2 
 \\
 \opr{GammaExp}(a,s,\alpha) &\sim a - s \ln\bigl(\opr{StdGamma}(\alpha)\bigr) 		& \eqref{GammaExp} \checked
 \\
-\opr{PearsonVII}(a,s, m) & \sim a + s\ \op{Sgn}() \sqrt{ \frac{(2m-1) \opr{StdGamma}_1(\half)}{\opr{StdGamma}_2(m-\half) } }		 \hspace{-1.5em}& \eqref{PearsonVII} 
-% Devroye1986. 
+\opr{PearsonVII}(a,s, m) & \sim a + s\ \op{Sgn}() \sqrt{ \frac{ \opr{StdGamma}_1(\half)}{\opr{StdGamma}_2(m-\half) } }		 \hspace{-1.5em}& \eqref{PearsonVII} 
+\checked
+% Follows since HalfPearsonVII is special case of GenBetaPrime
 \\
  \opr{Cauchy}(a,s) & \sim a + s\ \op{Sgn}() \sqrt{\frac{\opr{StdGamma}_1(\half)}{\opr{StdGamma}_2(\half) } } 		& \eqref{Cauchy} \checked % Devroye1986 p445
 \\
 \opr{UnitGamma}(a,s,\alpha,\beta) &\sim a+ s\ \exp  \bigl(- \tfrac{1}{\beta}\opr{StdGamma}(\alpha)\bigr)		& \eqref{UnitGamma} \checked
 \\
-%\opr{Beta}(a,s,\alpha,\gamma) & %& \eqref{Beta} \checked \\ \notag 
-%\sim a + s\   \frac{\opr{StdGamma}_1(\alpha)}{\opr{StdGamma}_1(\alpha)+ \opr{StdGamma}_2(\gamma) }
-%& \eqref{Beta} \checked 
-%\\
 \opr{Beta}(a,s,\alpha,\gamma) & 
 \sim a + s\   \Left(1 + \frac{\opr{StdGamma}_2(\gamma)}{\opr{StdGamma}_1(\alpha)} \Right)^{-1}
 & \eqref{Beta} \checked 

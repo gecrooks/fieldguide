@@ -15,27 +15,27 @@
 We write  $\opr{Amoroso}(x\given a, \theta, \alpha, \beta)$ for a density function,  $\oprr{AmorosoCDF}{Amoroso}(x\given a, \theta, \alpha, \beta)$ for the cumulative distribution function, $\opr{Amoroso}(a, \theta, \alpha, \beta)$ for the corresponding random variable,  and  $X\sim\opr{Amoroso}(a, \theta, \alpha, \beta)$ to indicate that two random variables have the same probability distribution~\cite{Gelman2004}. The semicolon, which we verbalize as ``given'' or ``parameterized by``, separates the arguments from the parameters.  \index{given} 
 
 \begin{center}
-\begin{tabular}{ccl}
-parameter & type &  notes\\
+\begin{tabular}{ccll}
+parameter  & type &  notes\\
 \hline
 $a$			&location& power-function \\
 $b$			&location& arcsine, $b= a+s$\\
-$\pLoc$		 & location &	exponential \\
-$\mu$		 & location & normal \\
-$\nu$	& location & gamma-exponential \\	% Change?
+$\pLoc$		 & location &	exponential & eta\\
+$\mu$		 & location & normal & mu\\
+$\nu$  & location & gamma-exponential & nu\\
 $s$			&scale& power function\\
-$\pScale$		 & scale & 		exponential \\
-$\sigma$		 & scale	& normal\\
-$\ \vartheta^\dagger$ & scale&	log-normal \\
-$\theta$		& scale & Amoroso \\
-$\omega$		 &scale& gen. Fisher Tippett \\
+$\pScale$ 		 & scale & 		exponential & lambda\\
+$\sigma$ 		 & scale	& normal & sigma\\
+$\vartheta^\dagger$ & scale&	log-normal & theta\\
+$\theta$ 		& scale & Amoroso & theta\\
+$\omega$		 &scale& gen. Fisher Tippett & omega\\
 %$c$			& &scale & Levy, stable \\
-$\beta$		& power & power function	 \\
-$\alpha$		& shape	& $>0$, beta and beta prime families \\
-$\gamma$	& shape	& $>0$, beta and beta prime families \\
-$n$			 &  shape& integer $>0$, number of samples  or events\\
-$k$	& shape	& integer $>0$, degrees of freedom\\%, e.g.\ Chi, Students-t, F\\
-$m$   		& shape & $>\tfrac{1}{2}$, Pearson IV\\
+$\beta$		 & power & power function	& beta \\
+$\alpha$ 		& shape	& $>0$, beta and beta prime families & alpha\\
+$\gamma$ 	& shape	& $>0$, beta and beta prime families & gamma\\
+$n$		 	 &  shape& integer $>0$, number of samples or events \hspace{-2em} \\
+$k$	 & shape	& integer $>0$, degrees of freedom\\%, e.g.\ Chi, Students-t, F\\
+$m$    		& shape & $>\tfrac{1}{2}$, Pearson IV\\
 $v$			& shape & $>0$, Pearson IV\\ % Perhaps use u instead of v, too close to nu\\
 \\
 && \footnotesize{$\dagger$ A curly theta, or ``vartheta''.}
@@ -60,7 +60,7 @@ In tables of special cases, for clarity we use a dot `.' to indicate repetition 
 
 \paragraph*{shifted-X} \index{shifted} (or translated-X) A distribution with an additional location parameter. \index{location parameters}
 
-\paragraph*{anchored-X} \index{anchored} A distribution without a location parameter (typically set to zero).
+\paragraph*{anchored-X} \index{anchored}\index{ballasted} (or ballasted-X) A distribution with a fixed location (typically with a lower bound set to zero).
 
 \paragraph*{scaled-X} \index{scaled}(or scale-X) A distribution with an additional scale parameter. \index{scale parameter}
 
