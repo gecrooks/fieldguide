@@ -18,7 +18,7 @@
 \newcommand{\expect}{\operatorname{\mathbb E}}
 \newcommand{\arxiv}[1]{{arXiv}:\href{http://arxiv.org/abs/#1}{#1}}
 
-%\hidenotes		% Comment this line to hide notes and checkmarks
+\hidenotes		% Comment this line to show notes and checkmarks
 \overfullrule=1mm
 
 \newcommand{\normalhbadness}{9000}
@@ -35,7 +35,6 @@
 %\usepackage[letter,center]{crop}
 \makeindex
 \renewcommand{\indexname}{Subject Index}
-
 
 \usepackage{tikz}
 
@@ -105,7 +104,7 @@
 \renewcommand{\@pnumwidth}{1.75em}  % Enough room for triple digit page numbers
 \makeatother
 
-\newcommand{\version}{v~0.13 dev}
+\newcommand{\version}{v~0.12}
 
 \renewcommand{\titlemark}{G.~E.~Crooks -- Field Guide to  Probability Distributions} 
 \renewcommand{\sectionmark}[1]{\markboth{{\thesection~~#1}}{}}
@@ -153,8 +152,8 @@
 
 \author{{\Large Gavin E. Crooks}}
 
-
-\date{\vspace{1em}\version\\ ~\\ \number\year}
+\date{\vspace{1em}~{\version}~\\  ~\\ ~{\number\year}~\\ \includegraphics[scale=1.25]{pdfCauchyNB}}
+%\date{\vspace{1em}\version\\ ~\\ \number\year}
 \maketitle
 \thispagestyle{empty}
 % \clearpage % BOOK
@@ -183,7 +182,7 @@ typeset on \isotoday~with XeTeX version  \the\XeTeXversion\XeTeXrevision
 fonts: Trump Mediaeval (text), Euler (math)
 \\
 % 2~7~1~8~2~8~1~8~2~8~4~5~9~0~4~5~2~3~5~3~6~0~2~8~7~4~7~1~3~5~2~7
-    2~7~1~8~2~8~1~8~2~8~4~5~9~0
+  2~7~1~8~2~8~1~8~2~8~4~5~9~0
 \\
 ~ 
 \\
@@ -201,7 +200,7 @@ fonts: Trump Mediaeval (text), Euler (math)
 
 
 \SecS{Preface: The search for GUD}
-\phantomsection\addcontentsline{toc}{section}{Preface: The search for GUD} 
+\phantomsection\addcontentsline{toc}{section}{Preface: The search for GUD}
 
 A common problem is that of describing the probability distribution of a single, continuous variable. A few distributions, such as the normal and exponential, were discovered in the 1800's or earlier. But about a century ago the great statistician, Karl Pearson, realized that the known probability distributions were not sufficient to handle all of the phenomena then under investigation, and set out to create new distributions with useful properties. 
 
@@ -217,18 +216,20 @@ Fortunately, the situation is less confused than it might at first appear. Most 
 
 
 \clearpage
-\phantomsection\addcontentsline{toc}{section}{Contents} 
+\phantomsection\addcontentsline{toc}{section}{Contents}
 \thispagestyle{chapter}
 \tableofcontents
 \clearpage
 
 % Use short alternative Table and Figure captions to keep one line per
-\listoftables
-\thispagestyle{chapter}
-% \clearpage % BOOK
-\newpage
 \listoffigures
-\thispagestyle{chapter}
+\phantomsection\addcontentsline{toc}{section}{List of figures}
+%\thispagestyle{chapter}
+\clearpage % BOOK
+%\newpage
+%\thispagestyle{chapter}
+\phantomsection\addcontentsline{toc}{section}{List of tables}
+\listoftables
 \clearpage
 
 

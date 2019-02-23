@@ -76,7 +76,6 @@ The shape parameter $\alpha$ is positive, and in many special cases an integer, 
 \eqref{GenWeibull} & generalized Weibull  & . & . & $n$ & $>\!\!0$  \\
 \eqref{Weibull} & Weibull & . & . & 1 &  $>\!\!0$  \\
 \eqref{PseudoWeibull} & pseudo-Weibull & . & . & $1$+$\tfrac{1}{\beta}$ &  $>\!\!0$  \\
-\\
 & $(k,\ n\ \text{positive integers})$
 \end{tabular} 
 }
@@ -205,8 +204,6 @@ Used to model attenuation of radio signals that reach a receiver by multiple pat
 \checked
 \\
 & \qquad (x-a)/\sigma>0 \notag \\
-%&=\opr{ScaledChi}(x \given  \sigma, 1) \notag \checked \\
-%&=  \opr{Stacy}(x\given  \sqrt{2\sigma^2} ,\tfrac{1}{2},2) \notag \checked \\
 &=  \opr{Amoroso}(x\given  a, \sqrt{2\sigma^2} , \tfrac{1}{2}, 2) \notag  \checked
 \end{align}
 The modulus of a normal distribution about the mean.
@@ -326,7 +323,6 @@ With negative $\beta$ we obtain various ``inverse'' distributions related to dis
 &= \frac{1}{\Gamma(\alpha) |\theta|} \Left(\frac{\theta}{x-a}\Right)^{\alpha+1} 
  \exp\Left\{-\Left( \frac{\theta}{x-a}   \Right)\Right\}  \checked
 \\
-%& = \opr{PearsonV}(x\given a,\theta,\alpha)  \notag \checked \\
 &=  \opr{Amoroso}(x\given  a, \theta, \alpha, -1) \notag  \checked
 \end{align}
 Occurs as the conjugate prior for an exponential distribution's scale parameter~\cite{Johnson1994}, or the prior for variance of a  normal distribution with known mean~\cite{Gelman2004}. Frequently defined with zero scale parameter.
@@ -377,7 +373,6 @@ The L\'{e}vy distribution is notable for being stable\index{stable distributions
 \\
 &\qquad  \text{for positive integer } k \notag \\
 &=  \opr{InvGamma}(x\given 0, \tfrac{1}{2 \sigma^2}, \tfrac{k}{2}) \notag  \checked \\
-%&= \opr{PearsonV}(x\given 0,\tfrac{1}{2 \sigma ^2},\tfrac{k}{2})  \notag  \checked \\
 &= \opr{Stacy}(x\given  \tfrac{1}{2 \sigma ^2},\tfrac{k}{2}, -1)  \notag  \checked \\
 &=  \opr{Amoroso}(x\given  0, \tfrac{1}{2 \sigma ^2}, \tfrac{k}{2}, -1) \checked \notag 
 \end{align}
@@ -396,7 +391,6 @@ A special case of the inverse gamma distribution with half-integer $\alpha$. Use
 &\qquad  \text{for positive integer } k \notag \\
 & = \opr{ScaledInvChiSqr}(x\given 1,k)\notag \checked \\
 &=  \opr{InvGamma}(x\given 0, \tfrac{1}{2}, \tfrac{k}{2}) \notag \checked \\
-%&= \opr{PearsonV}(x\given 0,\tfrac{1}{2},\tfrac{k}{2})  \notag \checked \\
 &=  \opr{Stacy}(x\given \tfrac{1}{2}, \tfrac{k}{2},-1) \notag  \checked\\
 &=  \opr{Amoroso}(x\given  0, \tfrac{1}{2}, \tfrac{k}{2}, -1)  \checked\notag 
 \end{align}

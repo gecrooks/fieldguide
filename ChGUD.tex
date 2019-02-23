@@ -10,7 +10,7 @@ The Grand Unified Distribution of order $n$ is required to satisfy the following
 \label{GUD}
 \frac{d}{dx} \ln  \opr{GUD}^{(n)}&(x\given a, s; a_0, a_1,\ldots,a_n;  b_0,b_1,\ldots, b_n; \beta)
 \checked \\
-&= \Left|\tfrac{\beta}{s}\Right| \frac{1}{\bigl(\tfrac{x-a}{s}\bigr)} \frac{a_0  +a_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots +a_n \bigl(\tfrac{x-a}{s}\bigr)^{n\beta}}{b_0+ b_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots+b_n\bigl(\tfrac{x-a}{s}\bigr)^{n\beta}  } 
+&= -\Left|\tfrac{\beta}{s}\Right| \frac{1}{\bigl(\tfrac{x-a}{s}\bigr)} \frac{a_0  +a_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots +a_n \bigl(\tfrac{x-a}{s}\bigr)^{n\beta}}{b_0+ b_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots+b_n\bigl(\tfrac{x-a}{s}\bigr)^{n\beta}  } 
 \notag
 \checked
 \\
@@ -26,11 +26,6 @@ The central hypothesis of this compendium is that most interesting univariate co
 
 
 
-
-
-
-
-%\SSec{Special cases: Extended Pearson}
 \SSec{Special cases}
 
 \dist{Extended Pearson} distribution~\cite{Roy1971}: With $\beta=1$ we obtain an extended Pearson distribution.
@@ -38,7 +33,7 @@ The central hypothesis of this compendium is that most interesting univariate co
 \label{ExtPearson}
 &\frac{d}{dx} \ln  \opr{ExtPearson}(x\given 0, 1;\ a_0, a_1, a_2;\ b_0, b_1, b_2) \checked \\
 \notag
-&= \frac{1}{x} \frac{a_0 +a_1 x+ a_2 x^2}{b_0+ b_1 x+  b_2 x^2  } \\
+&= - \frac{1}{x} \frac{a_0 +a_1 x+ a_2 x^2}{b_0+ b_1 x+  b_2 x^2  } \\
 \notag
 & a,\ s,\ a_0,\ a_1,\ a_2,\ b_0,\ b_1,\ b_2 \text{ in } \Real
 \end{align}
@@ -120,31 +115,32 @@ The central hypothesis of this compendium is that most interesting univariate co
 \begin{tabular}{llcccccccccc}
 \eqref{GUD}  & GUD & $a$ & $s$ & $a_0$ & $a_1$ & $a_2$ & $b_0$ & $b_1$ & $b_2$  & $\beta$ \\
 \hline
-\eqref{ExtPearson} & Ext. Pearson  &.&.&.&.&.&.&.&.&$1$\\
-\eqref{Pearson}	 & Pearson  &.&.&0&.&.&.&.&.&$1$\\
-\eqref{GenBeta} & gen. beta &.&.&.&.&0&0&1&-1&.\\
-\eqref{GenBeta} & gen. beta prime &.&.&.&.&0&0&1&1&.\\
-\eqref{InvGaussian}	 & inv. Gaussian  &0&1&.&.&.&0&.&0&1 \\	
-\eqref{InvGaussian}	 & inv. Gaussian &.&.&.&-$\half$&.&0&1&0&1 ??\\	
-\eqref{Halphen} & Halphen &.&.&$\kappa$&.&-$\kappa$&0&1&0&1 \\
-\eqref{Hyperbola} & Hyperbola &.&.&$\kappa$&-1&-$\kappa$&0&1&0&1 \\
-
-\eqref{Sichel} & Sichel &.&.&.&.&.&0&1&0&1 \\
+\eqref{ExtPearson} & Ext. Pearson  &.&.&.&.&.&.&.&.&$1$ \checked\\
+\eqref{Pearson}	 & Pearson  &.&.&0&.&.&.&.&.&$1$ \checked\\
+\eqref{GenBeta} & gen. beta &.&.&.&.&0&0&1&-1&. \checked\\
+\eqref{GenBeta} & gen. beta prime &.&.&.&.&0&0&1&1&. \checked\\
+\eqref{InvGaussian}	 & inv. Gaussian &.&.&.&$\tfrac{2}{3}$&.&0&1&0&1 \checked\\	
+\eqref{Halphen} & Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
+\eqref{GenHalphen} & gen. Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$  \\
+\eqref{Hyperbola} & Hyperbola &.&.&$-\kappa$&1&$\kappa$&0&1&0&1 \checked\\
+\eqref{HalphenB} & Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$2$&0&1&0&1 \checked\\
+\eqref{InvHalphenB} & inv. Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$-2$&0&1&0&1 \checked\\
+\eqref{Sichel} & Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked\\
 \end{tabular} 
 }
 \end{center}
 \end{table*}
 
-
+% -D[log( x^{(-2/3)} e^{-L(x-m)^2/(2 m^2)}),x]
 %===========================================================================
 \dist{Inverse Gaussian} (Wald, inverse normal) distribution~\cite{Wald1944,Tweedie1945,Folks1978,Chhikara1989,Johnson1994}: 
 \begin{align}
 \label{InvGaussian}
-\opr{InvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x^3}} \exp\Left(\frac{-\lambda (x-\mu)^2}{2\mu^2 x}\Right)
+\opr{InvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x^3}} \exp\Left(\frac{-\lambda (x-\mu)^2}{2\mu^2 x}\Right) \checked
 \\ \notag
-& = \opr{ExtPearson}(x\given 0,1\ ; \ \lambda\mu^2, -3 \mu^2, -\lambda \ ; \ 0, 2 \mu^2,0 ) 
+& = \opr{ExtPearson}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{2}{3}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0) \checked 
 \\ \notag
-& = \opr{GUD}(x\given 0,1\ ; \ \lambda\mu^2, -3 \mu^2, -\lambda \ ; \ 0, 2 \mu^2,0 \ ; \ 1) 
+& = \opr{GUD}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{2}{3}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0 \ ; \ 1) \checked
 \end{align}
 with support $x>0$, mean $\mu>0$, and shape $\lambda>0$. The name `inverse Gaussian' is misleading, since this is not in any direct sense the inverse of a Gaussian distribution. 
 The {\bf Wald} distribution is a special case with $\mu=1$.
@@ -153,7 +149,7 @@ The inverse Gaussian distribution describes first passage time in one dimensiona
 
 In the limit that $\mu$ goes to infinity we recover the L\'evy distribution \eqref{Levy}, the first passage time distribution for Brownian diffusion without drift.
 \[
-\lim_{\mu\rightarrow\infty} \opr{InvGaussian}(x\given \mu, \lambda) = \Levy(x\given 0,\lambda)
+\lim_{\mu\rightarrow\infty} \opr{InvGaussian}(x\given \mu, \lambda) = \Levy(x\given 0,\lambda) \checked
 \notag
 \]
 
@@ -161,18 +157,18 @@ The sum of independent inverse Gaussian random variables is also inverse Gaussia
 \begin{align*}
 \sum_i \opr{InvGaussian}_i &(x\given \mu' w_i, \lambda' w_i^2) 
 \\
-& \sim \opr{InvGaussian}\Bigl(x\given \mu' \sum_i w_i, \lambda' \bigl(\sum_i w_i\bigr)^2 \Bigr)
+& \sim \opr{InvGaussian}\Bigl(x\given \mu' \sum_i w_i, \lambda' \bigl(\sum_i w_i\bigr)^2 \Bigr) \checked
 \end{align*}
 
 Scaling an inverse Gaussian scales both $\mu$ and $\lambda$. 
 \[
-c\ \opr{InvGaussian} (\mu, \lambda) \sim \opr{InvGaussian} (c \mu, c \lambda)
+c\ \opr{InvGaussian} (\mu, \lambda) \sim \opr{InvGaussian} (c \mu, c \lambda) \checked
 \notag
 \]
 
 It follows from the previous two relations the sample mean of an inverse Gaussian is inverse Gaussian.
 \[
-\frac{1}{N} \sum_{i=1}^N \opr{InvGaussian}_i (\mu, \lambda) \sim \opr{InvGaussian} (\mu, N \lambda)
+\frac{1}{N} \sum_{i=1}^N \opr{InvGaussian}_i (\mu, \lambda) \sim \opr{InvGaussian} (\mu, N \lambda) \checked
 \notag 
 \]
 
@@ -191,7 +187,7 @@ It follows from the previous two relations the sample mean of an inverse Gaussia
 \checked
 \notag
 \\
- &=  \op{GUD}(x\given a,s \sep \kappa, \alpha-1 , -\kappa\sep 0,1,0 \sep 1)
+ &=  \op{GUD}(x\given a,s \sep -\kappa, 1-\alpha, \kappa\sep 0,1,0 \sep 1)
 \notag
 \checked
 \\& \qquad  0 \leq \tfrac{x-a}{s}
@@ -221,7 +217,7 @@ Limits to gamma, inverse gamma, and normal.
 \checked
 \notag
 \\
-& = \op{GUD}(x\given a,s\sep \kappa, -1 , -\kappa\sep 0,1,0\sep 1) 
+& = \op{GUD}(x\given a,s\sep -\kappa, 1 , \kappa\sep 0,1,0\sep 1) 
 \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s}
@@ -238,9 +234,10 @@ Limits to gamma, inverse gamma, and normal.
 \\
 &= \frac{2}{|s| H_{2 \alpha}(\kappa)} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
 \exp\Left\{- \Left(\frac{x-a}{s}\Right)^{2} +\kappa \Left(\frac{x-a}{s}\Right)\Right\},
+\checked
 \notag
 \\
-& = \op{GUD}(x\given a,s\sep \alpha-1, \kappa,  -2\sep 1,0,0\sep 1)
+& = \op{GUD}(x\given a,s\sep 1-\alpha, -\kappa,  2\sep 1,0,0\sep 1) \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s}
 \notag
@@ -260,10 +257,7 @@ Limits to gamma distribution \eqref{Gamma} as $\kappa \rightarrow \infty$.
 \checked
 \notag
 \\
-& = \op{GUD}(x; a,s; 2, -\kappa , -\alpha+1; 0,0,1;1)
-\notag
-\\
-& = \op{GUD}(x ; a,s; \alpha-1, \kappa,  -2; 0,0,1;-1)
+& = \op{GUD}(x ; a,s; 1-\alpha, \kappa,  -2; 0,0,1;1) \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s}
 \notag
@@ -280,12 +274,12 @@ Limits to inverse gamma distribution \eqref{InvGamma} as $\kappa \rightarrow \in
 \notag
 \checked
 \\
-& = \op{GUD}(x \given a,s \sep \lambda, \alpha-1 , -\kappa \sep 0,1,0 \sep 1)
+& = \op{GUD}(x \given a,s \sep -\lambda, 1-\alpha , \kappa \sep 0,1,0 \sep 1)
 \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s} \notag
 \end{align}
-Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gaussian \eqref{InvGaussian} $\alpha = -\half$. 
+Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gaussian \eqref{InvGaussian} $\alpha = \tfrac{1}{3}$. 
 
 
 
@@ -300,7 +294,7 @@ Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gau
 \checked
 \notag
 \\ \notag
-& = \op{GUD}(x|a,s; 1-\alpha, \alpha + c + c\gamma-3, 2- 2c; 
+& = \op{GUD}(x|a,s; \alpha-1, 3-\alpha - c - c\gamma, 2c-2; 
 \\ \notag & \qquad\qquad\qquad 1, c-2, 1-c;1) \checked
 \\ \notag
 & \qquad \text{for } a,s,c,\alpha,\gamma  \text{ in } {R},  \alpha,\gamma  >0
@@ -319,7 +313,7 @@ Limits to both the beta ($u=1$) and beta-prime ($u\rightarrow \infty$ ) distribu
 \dist{Gauss hypergeometric} distribution~\cite{Armero1994,Sarabia2006}
 \begin{align}
 \label{GaussHypergeometric}
-&\opr{GaussHypergeometric}(x\given a,s,u, \alpha, \gamma, \rho) 
+&\opr{GaussHypergeometric}(x\given a,s,u, \alpha, \gamma, \delta) 
 \\ \notag
 & =   \frac{1}{|s| \mathcal{N}} 
 \Left(\frac{x-a}{s}\Right)^{\alpha-1}  \Left(1-\frac{x-a}{s}\Right)^{\gamma-1} \Left(1- (1-u) \frac{x-a}{s}\Right)^{-\delta}
@@ -330,9 +324,9 @@ Limits to both the beta ($u=1$) and beta-prime ($u\rightarrow \infty$ ) distribu
 \\ \notag
 & \qquad \text{for } a, s, u,\alpha,\gamma, \delta  \text{ in } \mathbb{R},  \alpha,\gamma, \delta >0
 \\ \notag &
-=\op{GUD}(x\given a, s \sep \alpha-1,2 - \alpha -\gamma + (1-u)(1+ \rho+\alpha),\\
+=\op{GUD}(x\given a, s \sep \alpha-1,2 - \alpha -\gamma + (1-u)(1+ \rho+\alpha), \checked \\
 & \qquad\qquad \qquad\notag
-u(\alpha+\gamma-\rho-2) \sep 1, -1-c, -u \sep 1) %CHECKME
+u(\alpha+\gamma-\rho-2) \sep 1, -1-c, -u \sep 1)
 \\ \notag
 & \qquad 0\leq \tfrac{x-a}{s} \leq1
 \end{align}
@@ -376,7 +370,7 @@ This distribution was introduced by Gordy~\cite{Gordy1988a} for applications to 
 \exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)^\beta -\kappa \Left(\frac{x-a}{s}\Right)^{-\beta}\Right\}  \checked
 \notag
 \\
-& = GUD(a,s; \kappa, \alpha-1 , -\kappa; 0,1,0;\beta) \checked
+& = GUD(x\given a,s; -\kappa, 1-\alpha , \kappa; 0,1,0;\beta) \checked
 \notag
 \\
 & \qquad0 \leq \tfrac{x-a}{s} \leq 1 \notag
@@ -416,11 +410,10 @@ Here $F_1$ is the Appell hypergeometric function of the first kind.
 \begin{align}
 \label{Laha}
 	\opr{Laha}(x\given a,s) &= \frac{\sqrt{2}}{|s|\ \pi} \frac{1}{\Left(1 + (\tfrac{x-a}{s})^4 \Right)} \checked
-	\\ & = \opr{GUD}^{(4)}(x \given  a,s\ ;\ 0,0,0,0,4\ ;\ 1,0,0,0,1\ ;\ 1)  \checked \notag
+	\\ & = \opr{GUD}^{(4)}(x \given  a,s\ ;\ 0,-4,0,0,0\ ;\ 1,0,2,0,1\ ;\ 1)  \checked \notag
 \end{align}
 A  symmetric, continuous, univariate, unimodal probability density, with infinite support. 
 Originally introduced to disprove the belief that the ratio of two independent and identically distributed random variables is distributed as Cauchy \eqref{Cauchy} if, and only if, the distribution is normal. A 4th order Grand Unified Distribution \secref{sec:GUD}, 
-% an extended Pearson \eqref{ExtPearson} distribution, 
 and a special case of the generalized Pearson VII distribution~\eqref{GenPearsonVII}.
 
 In contradiction to the literature~\cite{Popescu1999}, Laha random variates can be easily generated by noting that the distribution is symmetric, and that the half-Laha distribution \eqref{HalfGenPearsonVII} is a special case of the generalized beta prime distribution, which can itself be generated as the ratio of two gamma distributions~\cite{\self}. 

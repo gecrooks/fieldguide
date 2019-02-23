@@ -102,9 +102,6 @@ The limiting distribution of the $n$th largest value of a large number of unboun
 \eqref{StdGumbel} &standard Gumbel &   0 & 1 & 1 & \\ 
 \eqref{BHP} &BHP   & . & . & $\frac{\pi}{2}$ &  \\
 \eqref{Moyal} & Moyal & . & . & \half 
-%\\
-% & \underline{Limits} \\
-%\eqref{Normal} & normal  & . &  . & $\alpha$& $\lim_{\alpha\rightarrow\infty}$  \\
 \end{tabular}
 }
 \end{center}
@@ -162,8 +159,6 @@ Proposed as a model of rare fluctuations in turbulence and other correlated syst
 \begin{align}
 \label{Moyal}
 \opr{Moyal}(x\given \mu, \lambda) & = 
-%\frac{1}{\sqrt{2\pi} }  \exp\Left\{- \half x - \half  e^{-x}  \Right\} 	\checked
-%\\
 \frac{1}{\sqrt{2\pi}  |\lambda|}  \exp\Left\{- \half \Left(\frac{x-\mu}{\lambda}\Right) - \half \exp\Left(- \frac{x-\mu}{\lambda}\Right)  \Right\} \checked
 \\
 &= \opr{GammaExp}(x\given \mu+ \lambda \ln 2, \lambda ,\half)  \checked

@@ -208,6 +208,8 @@ set yrange[0:0.5]
 plot[-4:4] \
 	PearsonVIIPDF(x,1) lt 1
 
+
+
 StudentsTPDF(x, k) = ((1.+ (x**2)/k )**(-(k+1)/2.)) / (sqrt(k) * Beta(1./2, k/2.))
 
 unset label
@@ -441,4 +443,11 @@ set yrange[0:2.1]
 plot[0:2]  LogLogisticPDF(x,0, 1.,1) lt 1,LogLogisticPDF(x,0,1.,2) lt 1,LogLogisticPDF(x,0,1.,4) lt 1, LogLogisticPDF(x,0,1.,8) lt 1, LogLogisticPDF(x,0,1.,0.5) lt 1
 
 
+unset label
+set border 0
+unset key; unset tics; unset border
+set output "pdfCauchyNB.pdf"
+set yrange[0:0.5]
+plot[-4:4] \
+	PearsonVIIPDF(x,1) lt 1
 

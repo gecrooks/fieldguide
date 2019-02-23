@@ -32,7 +32,6 @@ Special cases of the beta prime distribution are listed in table~\ref{GenBetaPri
 \label{StdBetaPrime}
 \opr{StdBetaPrime}(x\given \alpha, \gamma) &= \frac{1}{B(\alpha,\gamma)} x^{\alpha -1} (1+x )^{-\alpha-\gamma } \checked
 \\&= \opr{BetaPrime}(x\given  0,1, \alpha,\gamma) \notag	\checked
-%\\&= \opr{GenBeta}(x\given  0,1, \alpha,\gamma,-1) \notag
 \\&= \opr{GenBetaPrime}(x\given  0,1, \alpha,\gamma,1) \notag \checked
 \end{align}
 
@@ -68,7 +67,6 @@ An alternative parameterization of the beta prime distribution that derives from
 \label{InvLomax}
 \opr{InvLomax}(x\given a, s,\alpha) &= \frac{\alpha}{|s|} \Left(\frac{x-a}{s}\Right)^{\alpha -1} \Left(1+\frac{x-a}{s}\Right)^{-\alpha-1} \checked
 \\ \notag &= \opr{BetaPrime}(x\given a, s, \alpha,1) \checked
-%\\ \notag &= \opr{GenBeta}(x\given a, s, \alpha,1,-1) 
 \\ \notag &= \opr{GenBetaPrime}(x\given a, s, \alpha,1,1) \checked
 \end{align}
 

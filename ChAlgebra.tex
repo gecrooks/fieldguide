@@ -75,11 +75,7 @@ The Weibull transform only applies to distributions with non-negative support.
 
 
 The Weibull transform is increasing if $\tfrac{s}{\beta}>0$, and decreasing if $\tfrac{s}{\beta}<0$. 
-%{Which is what causes cdf/ccdf flip.}
 
-%\[
-%\frac{d}{dy} h(y) = \tfrac{s}{\beta} y^{\tfrac{1}{\beta}-1}
-%\]
 
 \paragraph*{Inverse (reciprocal) transformation}
 \[
@@ -110,7 +106,6 @@ The log and anti-log transforms are inverses of one another. See p.\pageref{log-
 \opr{StdUniform}() &\sim \exp\bigl(-\oprr{StdExp}{Exp}()\bigr) \checked
 \\
 \oprr{StdLogNormal}{LogNormal}() &\sim \exp\bigl(-\oprr{StdNormal}{Normal}()\bigr) \checked
-% \\ \opr{StdUnitGamma}(\alpha) &\sim \exp\bigl(- \opr{StdGamma}(\alpha)\bigr)
 \\
 \opr{StdGamma}(\alpha) &\sim \exp\bigl(-\opr{StdGammaExp}(\alpha)\bigr)  \checked
 \\

@@ -168,29 +168,8 @@ The K-distribution arises as the product of Gamma distributions~\cite{Malik1968,
 \end{align*}
 
 
-
-%
-%\begin{align}
-%\label{K}
-%\opr{K}(x\given s, \alpha, \gamma) &= 
-%\frac{2}{\Gamma(\alpha)\Gamma(\gamma)} \frac{1}{x} \bigl(\alpha \gamma \frac{x}{s} \bigr)^{\half(\alpha+\gamma)} K_{\alpha-\gamma} \bigl(2 \sqrt{\alpha\gamma \frac{x}{s}} \bigr)
-%\\
-%& x\geq 0, \alpha>0, \gamma>0 \notag
-%\end{align}
-
-
-%The K-distribution arrises as both a mixture~\cite{Jakeman1978} and product~\cite{Redding1999} of %Gamma distributions.
-%\begin{align*}
-%\opr{K}( s, \alpha, \gamma) &=  \opr{Gamma}(0,\sfrac{\sigma}{\gamma},\gamma) \mix{\sigma}
-% \opr{Gamma}(0,\sfrac{s}{\alpha}, \alpha)
-% \\
-%\opr{K}(s, \alpha, \gamma)  & =  \opr{Gamma}(0,\sfrac{1}{\gamma}, \gamma)  \opr{Gamma}(0,\sfrac{s}{\alpha}, \alpha) 
-%\end{align*}
-
 The K-distribution has applications to radar scattering~\cite{Jakeman1978,Redding1999} and superstatistical thermodynamics~\cite[Eq.~21]{Dixit2013}.
 
-% Generalized K distribution?
-% Jakeman, E. and Tough, R. J. A. (1987) "Generalized K distribution: a statistical model for weak scattering," J. Opt. Soc. Am., 4, (9), pp. 1764 - 1772.
 
 \secbreak
 %===========================================================================
@@ -208,7 +187,7 @@ The sum of $n$ independent standard uniform variates.
 Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the uniform distribution \eqref{Uniform}, and with $n=2$ the triangular distribution~\eqref{Triangular}.
 
 \secbreak
-\dist{Johnson $S_U$} distributions~\cite{Johsnson1949a,Johnson1994}:
+\dist{Johnson SU} distributions~\cite{Johnson1949a,Johnson1994}:
 \[
 \label{JohnsonSU}
 \opr{JohnsonSU}(x\given\mu, \sigma, \gamma, \delta) = 
@@ -216,7 +195,7 @@ Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the unifor
 \]
 Johnson's distributions are transforms of the normal distribution, 
 \[
-\opr{Johnson}_g(\mu, \sigma, \gamma, \delta) \sim \sigma g(\tfrac{StdNormal()-\gamma)}{\delta}) + \mu
+\op{Johnson}_g(\mu, \sigma, \gamma, \delta) \sim \sigma g(\tfrac{StdNormal()-\gamma)}{\delta}) + \mu
 \notag
 \checked
 \]
@@ -454,77 +433,6 @@ The difference of two independent standard uniform distributions~\eqref{StdUnifo
 \opr{Voigt}(a,\sigma,s) = \opr{Normal}(0,\sigma) + \opr{Cauchy}(a,s) \checked
 \end{align}
 The convolution of a Cauchy (Lorentzian) distribution with a normal distribution. Models the broadening of spectral lines in spectroscopy~\cite{Armstrong1967}. See also Pseudo Voigt distribution~\eqref{PseudoVoigt}.
-
-
-
-
-
-%===========================================================================
-%\secbreak
-
-
-\SSec{Apocrypha}
-The following non-simple univariate continuous distributions are not included in this compendium:
-%
-%
-%
-%
-alpha;
-alpha Laplace (Linnik);	% Not interesting
-% alpha semi Laplace;
-anglit;				% Obscure and uninteresting
-% Bates;
-Benini;
-beta warning time;
-Bradford; 	% truncated beta prime 
-Burr types IV, V, VI, VII, VIII, IX, X and XI;
-double gamma; % Reflected
-double Weibull; 
-Champernowne;
-Chernoff;
-chi-bar-square;
-Dagum types II and III;	% II is Dagum with extra probability at origin, III is truncated type II
-entropic;
-Erlang-B;
-Erlang-C;
-%Exponentiated Weibull; %Choudhury2005
-%fatigue lifetime;	% Another name for Birgam-sanders
-%folded normal;
-Gaussian tail;	% Check uninteresting
-%Gompertz;
-Hoyt (Nakagami-q); % (Uncommon and complicated)
-inbe;
-%Irwin-Hall (uniform sum);
-%K;
-Kummer;
-%Johnson B;
-%Johnson U;
-%Landau;
-Leipnik;
-% L\'{e}vy  skew alpha-stable; 
-% log-Laplace;
-normal-inverse Gaussian;
-McLeish;			% Uninteresting
-Muth;
-%noncentral t;
-raised cosine (cosine);
-rectangular mean;
-%Rice (generalized Rayleigh, Rayleigh-Rice, noncentral-chi);
-Sargan;								% Complicated and uninteresting
-%Sichel (generalized inverse Gaussian);		% Complicated and not interesting. Nope: Part of Ext Pearson. ADD!
-%slash;
-skew Laplace;
-skew normal;
-Stoppa;	% Looks like special case of generalized beta, negative beta, but has finite support, so isn't. 
-% Subbotin (power-exponential, Box-Tiao, error, generalized normal);Turkey lambda;
-Tweedie distributions;		
-U-quadratic;
-variance gamma; 
-% Von Mises (circular normal);
-%Voigt profile;
-Wakeby;
-% Wald (inverse normal,  inverse Gaussian);
-Wiebull-exponential.
 
 
 
