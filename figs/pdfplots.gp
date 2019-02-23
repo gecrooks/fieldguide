@@ -219,17 +219,63 @@ plot[-4:4] \
 	StudentsTPDF(x,2.) lt 1, \
 	StudentsTPDF(x,3.) lt 1, \
 	NormalPDF(x,0,1) lt 1
-	
 
 unset label
 set border 11
 set output "pdfBeta.pdf"
-set yrange[0:3]
+set yrange[0:3.0]
 plot[0:1] \
-	BetaPDF(x,0.,1.,1.,1.) lt 1, \
-	BetaPDF(x,0.,1.,2.,2.) lt 1, \
-	BetaPDF(x,0.,1.,8.,8.) lt 1
+	BetaPDF(x, 0, 1, 2, 4) lt 1
 
+
+unset label
+set border 11
+set output "pdfKumaraswamy.pdf"
+set yrange[0:3.0]
+plot[0:1] \
+	GenBetaPDF(x, 0, 1, 1, 2, 4) lt 1
+
+unset label
+set border 3
+set output "pdfBetaPrime.pdf"
+set yrange[0:1.5]
+plot[0:2] \
+	BetaPrimePDF(x, 0, 1, 2, 4, 1) lt 1
+
+unset label
+set border 3
+set output "pdfInverseLomax.pdf"
+set yrange[0:0.4]
+plot[0:6] \
+	BetaPrimePDF(x, 0, 1, 2, 1, 1) lt 1
+
+
+unset label
+set border 3
+set output "pdfPearsonXII.pdf"
+set yrange[0:3.0]
+plot[0:1] \
+	BetaPDF(x, 0, 1, 0.25, 1.75) lt 1
+
+
+unset label
+set border 11
+set output "pdfPearsonII.pdf"
+set yrange[0:1.25]
+set label "Arcsine" at first 0.0, first 0.4 center
+set label "Uniform" at first 0.0, first 0.55 center
+set label "Semicircle" at first 0.0, first 0.69 center
+set label "Epanechnikov" at first 0.0, first 0.825 center
+set label "Biweight" at first 0.0, first 1.0 center
+set label "Triweight" at first 0.0, first 1.15 center
+
+plot[-1:1] \
+	BetaPDF(x,-1,2.,1.,1.) lt 1, \
+	BetaPDF(x,-1,2.,0.5,0.5) lt 1, \
+	BetaPDF(x,-1,2.,1.5,1.5) lt 1, \
+	BetaPDF(x,-1,2.,2,2) lt 1, \
+	BetaPDF(x,-1,2.,3,3) lt 1, \
+	BetaPDF(x,-1,2.,4,4) lt 1
 
 unset label
 set border 3

@@ -43,6 +43,12 @@ x^{\alpha-1} \Left (1- x\Right)^{\gamma -1}								\checked
 \end{align}
 The standard beta distribution has two shape parameters, $\alpha>0$ and $\gamma>0$, and support $x\in[0,1]$. 
 
+\begin{figure}[tp!]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfBeta}
+\end{center}
+\caption[Beta distribution]{A beta distribution, $\opr{Beta}(0, 1, 2, 4)$}
+\end{figure}
 
 \dist{Pert} (beta-pert) distribution~\cite{Clark1962, Vose2000} is a subset of the beta distribution, parameterized by minimum ($a$), maximum ($b$) and mode ($x_\text{mode}$).  
 \begin{align}
@@ -74,10 +80,16 @@ The PERT (Program Evaluation and Review Technique) distribution is used in proje
 \checked
 \\ &= \opr{Beta}(x\given a,b-a ,\alpha, 2-\alpha) \notag  \checked
 \\ &= \opr{GenBeta}(x\given a,b-a ,\alpha, 2-\alpha,1) \notag \checked
-\\ \qquad \alpha<2 \notag
+\\ \qquad 0<\alpha<2 \notag
 \end{align}
 A monotonic, J-shaped special case of the beta distribution noted by Pearson~\cite{Pearson1916}.
 
+\begin{figure}[tp!]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfPearsonXII}
+\end{center}
+\caption[Pearson XII distribution]{A J-shaped Pearson XII distribution, $\opr{Beta}(0, 1, \tfrac{1}{4}, 1\tfrac{3}{4})$}
+\end{figure}
 
 % ============================
 \dist{Pearson II} (Symmetric beta) distribution~\cite{Pearson1895}: 
@@ -96,6 +108,12 @@ A monotonic, J-shaped special case of the beta distribution noted by Pearson~\ci
 \end{align}
 A symmetric centered distribution with support $[\mu-b, \mu+b]$.
 
+\begin{figure}[tp!]
+\begin{center}
+\includegraphics[width=\textwidth]{pdfPearsonII}
+\end{center}
+\caption[Pearson II distributions]{Special cases of the Pearson II distribution, $\alpha=\tfrac{1}{2}, 1, \tfrac{3}{2}, 2, 3, 4$.}
+\end{figure}
 
 
 % ============================
