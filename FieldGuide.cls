@@ -4,7 +4,7 @@
 % rename \titlemark?
 
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{gecstyle} % Started July 2016
+\ProvidesClass{FieldGuide} % Started July 2016
 
 
 % ========== Process options ==========
@@ -266,7 +266,7 @@
 	
 	\iftoggle{bookHeader} {
 		\iffloatpage{
-			\fancyhead[C]{}
+			\fancyhead[C]{}g
 			\fancyfoot[C]{\small \scshape \titlemark}
 		} {
 			\fancyhead[C]{\nouppercase{\scshape\leftmark}}	
