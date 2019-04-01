@@ -248,13 +248,30 @@ The Laplace ratio distribution~\cite{Aysal2007}.
 A special case of the generalized Pearson VII distribution \eqref{GenPearsonVII}. 
 
 
+\secbreak
+%===========================================================================
+\dist{Noncentral chi} (Noncentral $\chi$) distribution~\cite{Fisher1928,Johnson1995}:
+\begin{align}
+\label{NoncentralChi}
+\opr{NoncentralChi}&(x\given k,\lambda) =
+\lambda e^{-\frac{1}{2}(x^2+\lambda^2)} \Left(\frac{x}{\lambda}\Right)^{\frac{k}{2}} I_{\frac{k}{2}-1}(\lambda x)
+\\ & k, \lambda, x \text{ in } \mathbb{R}, >0
+\notag
+\end{align}
+Here, $I_v(z)$ is a modified Bessel function of the first kind (p.\pageref{ModBesselFirst}). A generalization of the chi distribution~\eqref{Chi}.
+\[
+\opr{NoncentralChi}(k,\lambda) \sim \sqrt{\opr{NoncentralChiSqr}(k,\lambda)} \notag
+\]
+
+
+
 
 \secbreak
 %===========================================================================
-\dist{Noncentral chi-square} (Noncentral $\chi^2$, ${\chi'}^2$) distribution \cite{Fisher1928,Johnson1995}:
+\dist{Noncentral chi-square} (Noncentral $\chi^2$, ${\chi'}^2$) distribution~\cite{Fisher1928,Johnson1995}:
 \begin{align}
 \label{NoncentralChiSqr}
-\opr{NoncentralChiSqr}&(x\given k,\lambda)  = 
+\opr{NoncentralChiSqr}&(x\given k,\lambda) =
 \frac{1}{2}e^{-(x+\lambda)/2} \Left(\frac{x}{\lambda}\Right)^{\frac{k}{4} -\frac{1}{2}} I_{\frac{k}{2}-1}(\sqrt{\lambda x})
 \checked
 \\ & k, \lambda, x \text{ in } \mathbb{R}, >0
@@ -263,15 +280,17 @@ A special case of the generalized Pearson VII distribution \eqref{GenPearsonVII}
 Here, $I_v(z)$ is a modified Bessel function of the first kind (p.\pageref{ModBesselFirst}). A generalization of the chi-square distribution. The distribution of the sum of $k$ squared, independent, normal random variables with means $\mu_i$ and standard deviations $\sigma_i$,
 \[
 \opr{NoncentralChiSqr}(k,\lambda) \sim \sum_{i=1}^{k} \bigl(\frac{1}{\sigma_i} \opr{Normal}_i(\mu_i, \sigma_i)\bigr)^2 \checked
+\notag
 \]
-where the non-centrality parameter $\lambda= \sum_{i=1}^k (\mu_i/\sigma_i)^2$. \checked
+where the non-centrality parameter $\lambda = \sum_{i=1}^k (\mu_i/\sigma_i)^2$. \checked
 
 
 
 \secbreak
 %===========================================================================
 
-\dist{Non-central F} distribution~\cite{Fisher1928, Johnson1995} : \begin{align}
+\dist{Noncentral F} distribution~\cite{Fisher1928, Johnson1995}:
+\begin{align}
 \label{NoncentralF}
 \opr{NoncentralF}(k_1,k_2,\lambda_1,\lambda_2) &\sim \frac{\opr{NoncentralChiSqr}_1(k_1,\lambda_1)/k_1 }{\opr{NoncentralChiSqr}_2(k_2,\lambda_2)/k_2 }
 \checked
@@ -281,7 +300,6 @@ where the non-centrality parameter $\lambda= \sum_{i=1}^k (\mu_i/\sigma_i)^2$. \
 & \text{support } x>0
 \end{align}
 The ratio distribution of non-central chi square distributions. If both centrality parameters $\lambda_1,\lambda_2$ are non zero, then we have a {\bf doubly non-central F} distribution; if one is zero then we have a {\bf singly non-central F distribution}; and if both are zero we recover the standard F distribution~\eqref{F}.
-
 
 
 
