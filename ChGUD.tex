@@ -28,7 +28,7 @@ The central hypothesis of this compendium is that most interesting univariate co
 
 \SSec{Special cases}
 
-\dist{Extended Pearson} distribution~\cite{Roy1971}: With $\beta=1$ we obtain an extended Pearson distribution.
+\dist{Extended Pearson} distribution~\cite{Roy1971, Shakil2011}: With $\beta=1$ we obtain an extended Pearson distribution.
 \begin{align}
 \label{ExtPearson}
 &\frac{d}{dx} \ln  \opr{ExtPearson}(x\given 0, 1;\ a_0, a_1, a_2;\ b_0, b_1, b_2) \checked \\
@@ -119,31 +119,33 @@ The central hypothesis of this compendium is that most interesting univariate co
 \eqref{Pearson}	 & Pearson  &.&.&0&.&.&.&.&.&$1$ \checked\\
 \eqref{GenBeta} & gen. beta &.&.&.&.&0&0&1&-1&. \checked\\
 \eqref{GenBeta} & gen. beta prime &.&.&.&.&0&0&1&1&. \checked\\
-\eqref{InvGaussian}	 & inv. Gaussian &.&.&.&$\tfrac{2}{3}$&.&0&1&0&1 \checked\\	
+\eqref{InvGaussian}	 & inv. Gaussian &.&.&.&$\tfrac{3}{2}$&.&0&1&0&1 \checked \\
 \eqref{Halphen} & Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
-\eqref{GenHalphen} & gen. Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$  \\
-\eqref{Hyperbola} & Hyperbola &.&.&$-\kappa$&1&$\kappa$&0&1&0&1 \checked\\
-\eqref{HalphenB} & Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$2$&0&1&0&1 \checked\\
-\eqref{InvHalphenB} & inv. Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$-2$&0&1&0&1 \checked\\
-\eqref{Sichel} & Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked\\
+\eqref{GenHalphen} & gen. Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
+\eqref{Hyperbola} & Hyperbola &.&.&$-\kappa$&1&$\kappa$&0&1&0&1 \checked \\
+\eqref{HalphenB} & Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$2$&0&1&0&1 \checked \\
+\eqref{InvHalphenB} & inv. Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$-2$&0&1&0&1 \checked \\
+\eqref{Sichel} & Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
+\eqref{GenSichel} & gen. Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
 \end{tabular} 
 }
 \end{center}
 \end{table*}
 
-% -D[log( x^{(-2/3)} e^{-L(x-m)^2/(2 m^2)}),x]
+
 %===========================================================================
 \dist{Inverse Gaussian} (Wald, inverse normal) distribution~\cite{Wald1944,Tweedie1945,Folks1978,Chhikara1989,Johnson1994}: 
 \begin{align}
 \label{InvGaussian}
 \opr{InvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x^3}} \exp\Left(\frac{-\lambda (x-\mu)^2}{2\mu^2 x}\Right) \checked
 \\ \notag
-& = \opr{ExtPearson}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{2}{3}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0) \checked 
+& = \opr{ExtPearson}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0) \checked
 \\ \notag
-& = \opr{GUD}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{2}{3}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0 \ ; \ 1) \checked
+& = \opr{GUD}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0 \ ; \ 1) \checked
 \end{align}
 with support $x>0$, mean $\mu>0$, and shape $\lambda>0$. The name `inverse Gaussian' is misleading, since this is not in any direct sense the inverse of a Gaussian distribution. 
 The {\bf Wald} distribution is a special case with $\mu=1$.
+% D[-Log[sqrt(L /(2 pi x^3)) exp(-{L(x- m)^2} / {2m^2 x})], x]
 
 The inverse Gaussian distribution describes first passage time in one dimensional Brownian diffusion with drift~\cite{Chhikara1989}. The displacement $x$ of a diffusing particle after a time $t$, with diffusion constant $D$ and drift velocity $v$,  is $\opr{Normal}(vt, \sqrt{2 D t})$. The `inverse' problem is to ask for the first passage time, the time taken to first reach a particular position $y>0$, which is distributed as $\opr{InvGaussian}(\tfrac{y}{v},\tfrac{y^2}{2D})$. \index{first passage time}\index{diffusion}
 
@@ -275,11 +277,10 @@ Limits to inverse gamma distribution \eqref{InvGamma} as $\kappa \rightarrow \in
 \checked
 \\
 & = \op{GUD}(x \given a,s \sep -\lambda, 1-\alpha , \kappa \sep 0,1,0 \sep 1)
-\checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s} \notag
 \end{align}
-Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gaussian \eqref{InvGaussian} $\alpha = \tfrac{1}{3}$. 
+Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gaussian \eqref{InvGaussian} $\alpha = -\tfrac{1}{2}$.
 
 
 
@@ -373,8 +374,27 @@ This distribution was introduced by Gordy~\cite{Gordy1988a} for applications to 
 & = GUD(x\given a,s; -\kappa, 1-\alpha , \kappa; 0,1,0;\beta) \checked
 \notag
 \\
-& \qquad0 \leq \tfrac{x-a}{s} \leq 1 \notag
+& \qquad0 \leq (\tfrac{x-a}{s})^\beta \notag
 \end{align}
+
+
+\dist{Generalized Sichel} (generalized generalized inverse Gaussian) distribution~\cite{Shakil2011}:
+\begin{align}
+\label{GenSichel}
+&\opr{GenSichel}(x\given a,s, \alpha, \kappa, \lambda, \beta)
+\\
+&= \frac{|\beta| (\kappa/\lambda)^{\alpha/2} }{2 |s| K_{\alpha} (2\sqrt{\kappa\lambda})} \Left(\frac{x-a}{s}\Right)^{|\beta\alpha-1}
+\exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)^\beta -\lambda \Left(\frac{x-a}{s}\Right)^{-\beta}\Right\},
+\notag
+\\
+& = \op{GUD}(x \given a,s \sep -\lambda, 1-\alpha , \kappa \sep 0,1,0 \sep \beta)
+\notag
+\\& \qquad  0 \leq  (\tfrac{x-a}{s})^\beta \notag
+\end{align}
+Special cases include the generalized Halphen \eqref{GenHalphen} $\lambda= \kappa$, and Sichel distributions $\beta = 1$.
+
+
+
 
 
 \SSec{Greater Grand Unified Distributions}
