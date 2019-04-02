@@ -5,10 +5,13 @@
 \Sec{Grand Unified Distribution}
 \label{sec:GUD}
 
+\newcommand{\sep}{\ ; \ } % Separator between parameter groups
+
+
 The Grand Unified Distribution of order $n$ is required to satisfy the following differential equation.
 \begin{align}
 \label{GUD}
-\frac{d}{dx} \ln  \opr{GUD}^{(n)}&(x\given a, s; a_0, a_1,\ldots,a_n;  b_0,b_1,\ldots, b_n; \beta)
+\frac{d}{dx} \ln  \opr{GUD}^{(n)}&(x\given a, s \sep a_0, a_1,\ldots,a_n\sep  b_0,b_1,\ldots, b_n\sep \beta)
 \checked \\
 &= -\Left|\tfrac{\beta}{s}\Right| \frac{1}{\bigl(\tfrac{x-a}{s}\bigr)} \frac{a_0  +a_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots +a_n \bigl(\tfrac{x-a}{s}\bigr)^{n\beta}}{b_0+ b_1 \bigl(\tfrac{x-a}{s}\bigr)^{\beta}+\cdots+b_n\bigl(\tfrac{x-a}{s}\bigr)^{n\beta}  } 
 \notag
@@ -28,10 +31,10 @@ The central hypothesis of this compendium is that most interesting univariate co
 
 \SSec{Special cases}
 
-\dist{Extended Pearson} distribution~\cite{Roy1971, Shakil2011}: With $\beta=1$ we obtain an extended Pearson distribution.
+\dist{Extended Pearson} distribution~\cite{Roy1971, Shakil2010}: With $\beta=1$ we obtain an extended Pearson distribution.
 \begin{align}
 \label{ExtPearson}
-&\frac{d}{dx} \ln  \opr{ExtPearson}(x\given 0, 1;\ a_0, a_1, a_2;\ b_0, b_1, b_2) \checked \\
+&\frac{d}{dx} \ln  \opr{ExtPearson}(x\given 0, 1\sep a_0, a_1, a_2\sep b_0, b_1, b_2) \checked \\
 \notag
 &= - \frac{1}{x} \frac{a_0 +a_1 x+ a_2 x^2}{b_0+ b_1 x+  b_2 x^2  } \\
 \notag
@@ -115,18 +118,19 @@ The central hypothesis of this compendium is that most interesting univariate co
 \begin{tabular}{llcccccccccc}
 \eqref{GUD}  & GUD & $a$ & $s$ & $a_0$ & $a_1$ & $a_2$ & $b_0$ & $b_1$ & $b_2$  & $\beta$ \\
 \hline
-\eqref{ExtPearson} & Ext. Pearson  &.&.&.&.&.&.&.&.&$1$ \checked\\
+\eqref{ExtPearson} & Ext.\ Pearson  &.&.&.&.&.&.&.&.&$1$ \checked\\
 \eqref{Pearson}	 & Pearson  &.&.&0&.&.&.&.&.&$1$ \checked\\
-\eqref{GenBeta} & gen. beta &.&.&.&.&0&0&1&-1&. \checked\\
-\eqref{GenBeta} & gen. beta prime &.&.&.&.&0&0&1&1&. \checked\\
-\eqref{InvGaussian}	 & inv. Gaussian &.&.&.&$\tfrac{3}{2}$&.&0&1&0&1 \checked \\
+\eqref{GenBeta} & gen.\ beta &.&.&.&.&0&0&1&-1&. \checked\\
+\eqref{GenBeta} & gen.\ beta prime &.&.&.&.&0&0&1&1&. \checked\\
+\eqref{InvGaussian}	 & inv.\ Gaussian &.&.&.&$\tfrac{3}{2}$&.&0&1&0&1 \checked \\
+\eqref{RecipInvGaussian}   & rec.\ inv.\ Gaussian$\!\!\!\!$ &.&.&.&$\tfrac{3}{2}$&.&0&1&0&-1 \\
 \eqref{Halphen} & Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
-\eqref{GenHalphen} & gen. Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
+\eqref{GenHalphen} & gen.\ Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
 \eqref{Hyperbola} & Hyperbola &.&.&$-\kappa$&1&$\kappa$&0&1&0&1 \checked \\
 \eqref{HalphenB} & Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$2$&0&1&0&1 \checked \\
-\eqref{InvHalphenB} & inv. Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$-2$&0&1&0&1 \checked \\
+\eqref{InvHalphenB} & inv.\ Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$-2$&0&1&0&1 \checked \\
 \eqref{Sichel} & Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
-\eqref{GenSichel} & gen. Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
+\eqref{GenSichel} & gen.\ Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
 \end{tabular} 
 }
 \end{center}
@@ -139,9 +143,9 @@ The central hypothesis of this compendium is that most interesting univariate co
 \label{InvGaussian}
 \opr{InvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x^3}} \exp\Left(\frac{-\lambda (x-\mu)^2}{2\mu^2 x}\Right) \checked
 \\ \notag
-& = \opr{ExtPearson}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0) \checked
+& = \opr{ExtPearson}(x\given 0,1 \sep -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \sep 0, 1,0) \checked
 \\ \notag
-& = \opr{GUD}(x\given 0,1\ ; \ -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \ ; \ 0, 1,0 \ ; \ 1) \checked
+& = \opr{GUD}(x\given 0,1 \sep -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \sep  0, 1,0 \sep 1) \checked
 \end{align}
 with support $x>0$, mean $\mu>0$, and shape $\lambda>0$. The name `inverse Gaussian' is misleading, since this is not in any direct sense the inverse of a Gaussian distribution. 
 The {\bf Wald} distribution is a special case with $\mu=1$.
@@ -175,7 +179,22 @@ It follows from the previous two relations the sample mean of an inverse Gaussia
 \]
 
 
-\newcommand{\sep}{\ ; \ } % Separator between parameter groups
+
+\dist{Reciprocal inverse Gaussian} distribution~\cite{Johnson1994}: 
+\begin{align}
+\label{RecInvGaussian}
+\opr{RecInvGaussian}(x\given \mu,\lambda) &= \sqrt{\frac{\lambda}{2\pi x}} \exp\Left(\frac{-\lambda (1-\mu x)^2}{2\mu^2 x}\Right) \checked
+\\ \notag
+& = \opr{ExtPearson}(x\given 0,1 \sep -\tfrac{\lambda}{2\mu^2}, \tfrac{1}{2}, \tfrac{\lambda}{2} \sep 0, 1,0) \checked
+\\ \notag
+& = \opr{GUD}(x\given 0,1 \sep -\tfrac{\lambda}{2}, \tfrac{3}{2}, \tfrac{\lambda}{2\mu^2} \sep 0, 1,0 \sep -1) \checked
+\end{align}
+with support $x>0$, mean $\mu>0$, and shape $\lambda>0$. An inverted (in standard sense) inverse Gaussian distribution. 
+\[
+\opr{RecInvGaussian}(\mu,\lambda) \sim \opr{InvGaussian}(\mu,\lambda)^{-1}
+\notag
+\]
+% D[-Log[sqrt(L /(2 pi x)) exp(-{L(1- m x)^2} / {2m^2 x})], x]
 
 
 
@@ -378,7 +397,7 @@ This distribution was introduced by Gordy~\cite{Gordy1988a} for applications to 
 \end{align}
 
 
-\dist{Generalized Sichel} (generalized generalized inverse Gaussian) distribution~\cite{Shakil2011}:
+\dist{Generalized Sichel} (generalized generalized inverse Gaussian) distribution~\cite{Shakil2010}:
 \begin{align}
 \label{GenSichel}
 &\opr{GenSichel}(x\given a,s, \alpha, \kappa, \lambda, \beta)

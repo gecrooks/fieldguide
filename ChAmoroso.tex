@@ -49,9 +49,12 @@ The shape parameter $\alpha$ is positive, and in many special cases an integer, 
 \eqref{FisherTippett} &  Fisher-Tippett & . & . & 1 & .  \\
 \eqref{Frechet} &Fr\'{e}chet  & . & . & 1 &  $<\!\!0$  \\
 \eqref{GenFrechet} &  generalized Fr\'{e}chet & . & . & $n$ & $<\!\!0$ \\
+\eqref{InvNakagami} & inverse Nakagami & . & . & . & -2 \\
 \eqref{ScaledInvChi} &scaled inverse chi& 0 & . & $\tfrac{1}{2}k$  & -2  \\
 \eqref{InvChi} & inverse chi  & 0 & $\frac{1}{\sqrt{2}}$ & $\tfrac{1}{2}k$ & -2 \\
+\eqref{InvMaxwell} & inverse Maxwell& 0 & . & $\frac{3}{2}$  & -2  \\
 \eqref{InvRayleigh} &  inverse Rayleigh  & $0$ & . & $1$ & -2 \\
+\eqref{InvHalfNormal} & inverse half normal & 0 & . & $\tfrac{1}{2}$ & -2 & \\  
 \eqref{InvGamma} & inverse gamma & . & . & . & -1 \\
 \eqref{ScaledInvChiSqr} & scaled inverse chi-square & 0 & . & $\tfrac{1}{2}k$ & -1 \\
 \eqref{InvChiSqr} & inverse chi-square & 0 & $\frac{1}{2}$ & $\tfrac{1}{2}k$ & -1 \\
@@ -75,9 +78,10 @@ The shape parameter $\alpha$ is positive, and in many special cases an integer, 
 \eqref{WilsonHilferty} &Wilson-Hilferty& 0 & . & .  & 3  \\
 \eqref{GenWeibull} & generalized Weibull  & . & . & $n$ & $>\!\!0$  \\
 \eqref{Weibull} & Weibull & . & . & 1 &  $>\!\!0$  \\
-\eqref{PseudoWeibull} & pseudo-Weibull & . & . & $1$+$\tfrac{1}{\beta}$ &  $>\!\!0$  \\
-& $(k,\ n\ \text{positive integers})$
-\end{tabular} 
+\eqref{PseudoWeibull} & pseudo-Weibull & . & . & $1$+$\tfrac{1}{\beta}$ &  $>\!\!0$
+ \\
+  & $(k,\ n\ \text{positive integers})$
+ \end{tabular} 
 }
 \end{center}
 \end{table*}
@@ -380,7 +384,6 @@ A special case of the inverse gamma distribution with half-integer $\alpha$. Use
 
 
 
-
 \dist{Inverse chi-square} distribution~\cite{Gelman2004}: 
 %
 \begin{align}
@@ -410,6 +413,8 @@ A standard scaled inverse chi-square distribution.
 \end{align}
 Used as a prior for the standard deviation of a normal distribution.
 
+
+
 \dist{Inverse chi} distribution~\cite{Lee2012}: 
 \begin{align}
 \label{InvChi}
@@ -420,6 +425,7 @@ Used as a prior for the standard deviation of a normal distribution.
 &=  \opr{Stacy}(x\given  \tfrac{1}{\sqrt{2}}, \tfrac{k}{2}, -2)  \notag \checked \\
 &=  \opr{Amoroso}(x\given  0, \tfrac{1}{\sqrt{2}} , \tfrac{k}{2}, -2) \notag  \checked
 \end{align}
+
 
 
 \dist{Inverse Rayleigh} distribution~\cite{Evans2000}:
@@ -433,8 +439,50 @@ Used as a prior for the standard deviation of a normal distribution.
 & = \Frechet(x\given 0, \tfrac{1}{\sqrt{2 \sigma^2}}, 2)\notag \\
 &=  \opr{Amoroso}(x\given  0, \tfrac{1}{\sqrt{2 \sigma^2}}, 1, -2)  \checked \notag 
 \end{align}
-The inverse Rayleigh distribution has been used to model  failure time~\cite{Voda1972}.
+The inverse Rayleigh distribution has been used to model failure time~\cite{Voda1972}.
 
+
+
+\dist{Inverse Maxwell} distribution~\cite{Shakil2010}:
+%
+\begin{align}
+\label{InvMaxwell}
+\opr{InvMaxwell}(x \given \sigma) 
+&= \frac{\sqrt{2 \sigma ^2} }{ \sqrt{pi}} { \Left(\frac{1}{\sqrt{2 \sigma^2} x}\Right)}^{4} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 x^2}  \Right)\Right\} 
+\\
+&= \opr{ScaledInvChi}(x \given \sigma, 3) \checked \notag \\
+&= \opr{Amoroso}(x\given  0, \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{3}{2}, -2) \notag  \checked
+\end{align}
+
+
+
+\dist{Inverse half normal} distribution~\cite{Shakil2010}:
+%
+\begin{align}
+\label{InvHalfNormal}
+\opr{InvHalfNormal}(x \given a, \sigma)
+&= \frac{2}{\sqrt{2 \sigma ^2}}   \frac{1}{(x-a)^2} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 (x-a)^2}  \Right)\Right\} 
+\\
+&=  \opr{Amoroso}(x\given  a, \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{k}{2}, -2) \notag  \checked
+\end{align}
+
+
+
+\dist{Inverse Nakagami} distribution~\cite{Louzada2018}:
+\begin{align}
+\label{InvNakagami}
+ \opr{InvNakagami}&(x \given a, \theta, \alpha) 
+\\ \notag 
+& =
+ \frac{2}{\Gamma(\alpha) |\theta| }
+\Left(\frac{\theta}{x-a}\Right)^{2\alpha+1}
+\exp \Left\{
+-  \Left(\frac{\theta}{x-a}\Right)^{2}
+\Right\}
+\\ \notag
+& = \opr{Amoroso}(x\given a,\theta, \alpha, -2)
+\notag
+\end{align}
 
 % ====================================================================
 
