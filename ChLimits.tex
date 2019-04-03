@@ -97,6 +97,14 @@ Essentially the same limit takes the beta-exponential and beta-logistic distribu
 \opr{GammaExp}(x\given \nu, \lambda, \alpha)  & =
 {\lim_{\gamma\rightarrow\infty} \opr{BetaLogistic}(x \given \nu+\lambda/\ln\gamma,\lambda, \alpha, \gamma)  }
 \checked
+\\
+\notag
+\opr{Gumbel}(x\given \nu, \lambda)  & =
+{\lim_{\gamma\rightarrow\infty} \opr{ExpExp}(x \given \nu+\lambda/\ln\gamma, \lambda, \gamma)  }
+\\
+\notag
+\opr{Gumbel}(x\given \nu, \lambda)  & =
+{\lim_{\gamma\rightarrow\infty} \opr{BurrII}(x \given \nu+\lambda/\ln\gamma,\lambda, \gamma)  }
 \]
 
 
@@ -185,7 +193,7 @@ See \secref{sec:PearsonIV}
 \notag
 \\
 \opr{Normal}(x\given \mu,\sigma)   & = 
-\lim_{\alpha\rightarrow\infty} \opr{PearsonII}( x\given \mu, \sigma\sqrt{8\alpha},\alpha)
+\lim_{\alpha\rightarrow\infty} \opr{CentralBeta}( x\given \mu, \sigma\sqrt{8\alpha},\alpha)
 \checked
 \notag
 \]
@@ -224,7 +232,7 @@ See \secref{sec:PearsonIV}
 \draw (7.5,10) node (amoroso) {\hyperref[sec:Amoroso]{Amoroso}};
 %\draw (12.5,10) node (burr) {\hyperref[Burr]{Burr}};
 %
-\draw (0,7.5) node  (pearsonii) {\hyperref[PearsonII]{Pearson II}};
+\draw (0,7.5) node  (pearsonii) {\hyperref[CentralBeta]{Central Beta}};
 \draw (2.5,5) node (power)  {\hyperref[sec:PowerFn]{Power Func.}};
 \draw (5,7.5) node  (gamma) {\hyperref[sec:Gamma]{Gamma}};
 \draw (7.5,7.5) node (gammaexp)  {\hyperref[sec:GammaExp]{Gamma-Exp.}};

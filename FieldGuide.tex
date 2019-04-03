@@ -10,6 +10,7 @@
 \documentclass[mediaeval, pagebackref, book]{FieldGuide}
 
 \usepackage{gecmath}
+\usepackage{longtable}
 
 % These should be moved to style
 %\newcommand{\given}{\mathrel{\vert}}
@@ -32,7 +33,7 @@
 \usepackage{graphicx}
 \graphicspath{ {./figs/} }
 \usepackage{makeidx} 
-%\usepackage[letter,center]{crop}
+\usepackage[letter,center,frame]{crop}
 \makeindex
 \renewcommand{\indexname}{Subject Index}
 
@@ -85,6 +86,9 @@
 
 \newcommand{\Real}{\mathbb{R}}
 
+%\newcommand{\sep}{\ ; \ } % Separator between parameter groups
+\newcommand{\sep}{, \  \ } % Separator between parameter groups
+
 
 % Parametersr for log-logistic, beta-exp, and exponential.
 \newcommand{\pScale}{\lambda}
@@ -104,7 +108,7 @@
 \renewcommand{\@pnumwidth}{1.75em}  % Enough room for triple digit page numbers
 \makeatother
 
-\newcommand{\version}{v~0.12}
+\newcommand{\version}{v~1.0}
 
 \renewcommand{\titlemark}{G.~E.~Crooks -- Field Guide to  Probability Distributions} 
 \renewcommand{\sectionmark}[1]{\markboth{{\thesection~~#1}}{}}
@@ -148,11 +152,11 @@
 %\setcounter{page}{0}
 
 
-\title{\vspace{3em}\scshape{Field Guide  \\ to  \\ Continuous \\ Probability  Distributions} \vspace{1em} }
+\title{\scshape{Field Guide  \\ to  \\ Continuous \\ Probability  Distributions} \vspace{1em} }
 
 \author{{\Large Gavin E. Crooks}}
 
-\date{\vspace{1em}~{\version}~\\  ~\\ ~{\number\year}~\\ \includegraphics[scale=1.25]{pdfCauchyNB}}
+\date{\vspace{1em}~{\version}~\\  ~\\ ~{\number\year}~\\ \vspace{3em}\includegraphics[scale=1.25]{pdfCauchyNB}}
 %\date{\vspace{1em}\version\\ ~\\ \number\year}
 \maketitle
 \thispagestyle{empty}
@@ -231,11 +235,12 @@ Fortunately, the situation is less confused than it might at first appear. Most 
 \phantomsection\addcontentsline{toc}{section}{List of tables}
 \listoftables
 \clearpage
-~
-\clearpage
+
+% ~ \clearpage
 
 \include{FigPrincipalHierarchy}
 \include{FigPearsonHierarchy}
+\include{FigPearsonExpHierarchy}
 \include{FigExtremeOrderStatistics}
 \include{FigSymmetricHierarchy}
 
