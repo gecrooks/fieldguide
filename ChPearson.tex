@@ -9,7 +9,7 @@
 The {\bf Pearson} distributions~\cite{Pearson1895, Pearson1901, Pearson1916, Ord1972, Johnson1994} are a family of continuous, univariate, unimodal probability densities with distribution function
 \begin{align}
 \label{Pearson}
- \opr{Pearson}&(x\given a, s; a_1, a_2;  b_0, b_1, b_2) 
+ \opr{Pearson}&(x\given a, s\sep a_1, a_2\sep  b_0, b_1, b_2) 
  \\ \notag
  &=  \tfrac{1}{N_{\text{P}}} \Left(1- \tfrac{1}{r_0}\tfrac{x-a}{s} \Right)^{e_0} \Left(1- \tfrac{1}{r_1}\tfrac{x-a}{s} \Right)^{e_1}
 \\ \notag
@@ -24,7 +24,7 @@ Here $N_{\text{P}}$ is the normalization constant. Note that the parameter $a_2$
 
 Pearson constructed his family of distributions by requiring that they satisfy the differential equation
 \begin{align*}
-\frac{d}{dx} \ln  \opr{Pearson}(x\given 0, 1; a_1, a_2; b_0, b_1, b_2) 
+\frac{d}{dx} \ln  \opr{Pearson}(x\given 0, 1\sep a_1, a_2\sep b_0, b_1, b_2) 
 &= - \frac{a_1 + a_2 x  }{b_0+ b_1 x+ b_2 x^2  } \ ,  \checked \\
 &= - \frac{1}{x} \frac{\phantom{a_0 + {} } a_1 x + a_2 x^2  }{b_0+ b_1 x+ b_2 x^2  } \ ,  \checked \\
 &= \frac{e_0}{x-r_0} + \frac{e_1}{x-r_1} \ . \checked
@@ -89,7 +89,7 @@ Here $ \exp_q$ is the q-generalized exponential function \secref{sec:math}. The 
 \end{cases}
  \end{align*}
 
-A special case of the Pearson family that interpolates between all of the symmetric Pearson distributions: the Pearson II \eqref{PearsonII}, normal \eqref{Normal} and Pearson VII \eqref{PearsonVII} families. See also the hierarchy of symmetric distributions in Fig.~\ref{SymmetricHierarchy}.
+A special case of the Pearson family that interpolates between all of the symmetric Pearson distributions: the central beta \eqref{CentralBeta}, normal \eqref{Normal} and Pearson VII \eqref{PearsonVII} families. See also the hierarchy of symmetric distributions in Fig.~\ref{SymmetricHierarchy}.
 \begin{align*}
 \opr{QGaussian}&(x\given \mu,\sigma,q) \\ &=
 %\\
@@ -97,7 +97,7 @@ A special case of the Pearson family that interpolates between all of the symmet
 \opr{Beta}(x\given a-\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}},\tfrac{2\sqrt{2}\sigma}{\sqrt{1-q}},\tfrac{2-q}{1-q},\tfrac{2-q}{1-q}) 
  & -2 <q < 1 \checked
  \\
-\opr{PearsonII}(x\given a,\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}}, \tfrac{2-q}{1-q}) 
+\opr{CentralBeta}(x\given a,\tfrac{\sqrt{2}\sigma}{\sqrt{1-q}}, \tfrac{2-q}{1-q}) 
  & -2 <q < 1 \checked
 \\
 \opr{Normal}(x\given \mu,\sigma)   & \phantom{1<}q=1  \checked
@@ -118,7 +118,7 @@ type & notes & Eq. & Ref.\\
 \hline
  & normal & \eqref{Normal} & \cite{Pearson1895}  \\
 I  & beta & \eqref{Beta} & \cite{Pearson1895}  \\
-II &  symmetric beta & \eqref{PearsonII} & \cite{Pearson1895}  \\
+II &  central beta & \eqref{CentralBeta} & \cite{Pearson1895}  \\
 III  &   gamma & \eqref{Gamma}& \cite{Pearson1893}  \\
 IV  & Includes Pearson VII & \eqref{PearsonIV}& \cite{Pearson1895}  \\
 V   &  inverse gamma & \eqref{InvGamma}& \cite{Pearson1901}  \\
@@ -146,7 +146,7 @@ XII   & J-shaped beta  &\eqref{PearsonXII} & \cite{Pearson1916}  \\
 \eqref{Pearson}  & Pearson & $a$ & $s$ & $a_1$ & $a_2$  & $b_0$ & $b_1$ & $b_2$ \\
 \hline
 \eqref{Uniform} 	& uniform 		&  $a$  &  $s$  &  $0$  &  $0$    &     $0$    & $1$ & $-1$  \checked\\
-\eqref{PearsonII} 	& Pearson II 	&  $\mu$-$b$  &  $2b$  &  $\alpha-1$  &  $2\alpha-2$    &    $0$   & $1$ &$-1$ \checked\\
+\eqref{CentralBeta} 	& central beta 	&  $\mu$-$b$  &  $2b$  &  $\alpha-1$  &  $2\alpha-2$    &    $0$   & $1$ &$-1$ \checked\\
 \eqref{Beta}     		& {beta} 		&  $a$  &  $s$  &  $\alpha-1$  &  $\alpha+\gamma-2$  &  $0$    &    $1$    &  $-1$  \checked \\
 \eqref{Exp} 		& exponential 	&  $a$  &  $\theta$  &  $0$  &  $-1$    &    $0$    & $1$ & $0$ \checked \\
 \eqref{Gamma} 	& gamma 		&  $a$  &  $\theta$  &  $\alpha-1$  &  $-1$    &    $0$    & $1$ & $0$ \checked \\

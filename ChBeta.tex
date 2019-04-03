@@ -92,11 +92,11 @@ A monotonic, J-shaped special case of the beta distribution noted by Pearson~\ci
 \end{figure}
 
 % ============================
-\dist{Pearson II} (Symmetric beta) distribution~\cite{Pearson1895}: 
+\dist{Central Beta} (Pearson II, Symmetric beta) distribution~\cite{Pearson1895}: 
 %
 \begin{align}
-\label{PearsonII}
-\opr{PearsonII}(x\given \mu, b,\alpha) 
+\label{CentralBeta}
+\opr{CentralBeta}(x\given \mu, b,\alpha) 
 %&= \frac{1}{2s}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha) } \Left(1-\frac{x^2}{4 s^2} \Right)^{\alpha-1} \\
 &= \frac{1}{2^{2\alpha-1}  |b|}\frac{\Gamma(2\alpha) }{ \Gamma(\alpha)^2 } \Left(1-\Left(\frac{x-\mu}{ b}\Right)^2 \Right)^{\alpha-1}
 \checked
@@ -112,7 +112,7 @@ A symmetric centered distribution with support $[\mu-b, \mu+b]$.
 \begin{center}
 \includegraphics[width=\textwidth]{pdfPearsonII}
 \end{center}
-\caption[Pearson II distributions]{Special cases of the Pearson II distribution, $\alpha=\tfrac{1}{2}, 1, \tfrac{3}{2}, 2, 3, 4$.}
+\caption[Central beta distributions]{Special cases of the central beta distribution, $\alpha=\tfrac{1}{2}, 1, \tfrac{3}{2}, 2, 3, 4$.}
 \end{figure}
 
 
@@ -133,11 +133,11 @@ $.
 
  
 % ============================
-\dist{Central arcsine} distribution~\cite{Norton1975}: 
+\dist{Centered arcsine} distribution~\cite{Norton1975}: 
 \begin{align}
-\label{CentralArcsine}
-\opr{CentralArcsine}(x\given b) &= \frac{1}{2 \pi  \sqrt{b^2-x^2}} \checked \\
-%& =\opr{PearsonII}(x\given b, \tfrac{1}{2} ) \notag \\
+\label{CenteredArcsine}
+\opr{CenteredArcsine}(x\given b) &= \frac{1}{2 \pi  \sqrt{b^2-x^2}} \checked \\
+%& =\opr{CentralBeta}(x\given b, \tfrac{1}{2} ) \notag \\
 & =\opr{Beta}(x\given b,-2b, \tfrac{1}{2}, \tfrac{1}{2})  \checked \notag \\
 & =\opr{GenBeta}(x\given b,-2b, \tfrac{1}{2}, \tfrac{1}{2},1)  \checked \notag
 \end{align}
@@ -159,7 +159,7 @@ As the name suggests, the probability density describes a semicircle, or more pr
 \opr{Epanechnikov}(x\given \mu, b) 
 &= \frac{3}{4} \frac{1}{|b|} \Left(1-\Left(\frac{x-\mu}{b}\Right)^2 \Right) \checked
  \\
-& = \opr{PearsonII}(x\given \mu, b, 2) \notag \checked \\
+& = \opr{CentralBeta}(x\given \mu, b, 2) \notag \checked \\
 & = \opr{Beta}(x\given \mu-b, 2 b, 2, 2) \notag   \checked \\
 & = \opr{GenBeta}(x\given \mu-b, 2b, 2, 2,1) \checked \notag 
 \end{align}
@@ -173,7 +173,7 @@ Used in non-parametric kernel density estimation.
 &= \frac{15}{16} \frac{1}{|b|} \Left(1-\Left(\frac{x-\mu}{b}\Right)^2 \Right)^2 
 \checked
  \\
-& = \opr{PearsonII}(x\given \mu, b, 3) \notag  \checked\\
+& = \opr{CentralBeta}(x\given \mu, b, 3) \notag  \checked\\
 & = \opr{Beta}(x\given \mu-b, 2 b, 3, 3) \notag   \checked \\
 & = \opr{GenBeta}(x\given \mu-b, 2b, 3, 3,1)  \notag \checked
 \end{align}
@@ -186,7 +186,7 @@ Used in non-parametric kernel density estimation.
 &= \frac{35}{32} \frac{1}{|b|} \Left(1-\Left(\frac{x-\mu}{b}\Right)^2 \Right)^3 
 \checked
  \\
-& = \opr{PearsonII}(x\given \mu, b, 4) \notag  \checked\\
+& = \opr{CentralBeta}(x\given \mu, b, 4) \notag  \checked\\
 & = \opr{Beta}(x\given \mu-b, 2 b, 4, 4) \notag   \checked \\
 & = \opr{GenBeta}(x\given \mu-b, 2b, 4, 4,1)  \notag \checked
 \end{align}

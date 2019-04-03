@@ -78,7 +78,7 @@ By setting the $\lambda$ parameter to $1$ (instead of $\alpha$) we get a reverse
 \hline  
 \eqref{BurrII} & Burr type II					&. & . & 1 & . & \\
 \eqref{RevBurrII}& Reversed Burr type II		&	. & . & . & 1 &\\
-\eqref{SymBetaLogistic}& Symmetric Beta-Logistic		&	. &   . & $\alpha$ & $\alpha$ & \\
+\eqref{CentralLogistic}& Central Logistic		&	. &   . & $\alpha$ & $\alpha$ & \\
 \eqref{Logistic}& Logistic					& 	. & . & 1 & 1 & \\
 \eqref{HyperbolicSecant}& Hyperbolic secant	&	. & . & $\tfrac{1}{2}$ & $\tfrac{1}{2}$ & \\
 \end{tabular}
@@ -90,10 +90,10 @@ By setting the $\lambda$ parameter to $1$ (instead of $\alpha$) we get a reverse
 \input{PropertiesTableBetaLogistic}
 
 
-\dist{Symmetric Beta-Logistic} (generalized logistic type III, inverse cosh) distribution~\cite{Johnson1995}:
+\dist{Central logistic} (generalized logistic type III, inverse cosh, symmetric beta-logistic) distribution~\cite{Johnson1995}:
 \begin{align}
-\label{SymBetaLogistic}
-\opr{SymBetaLogistic}(x\given \pLoc,\pScale,\alpha) 
+\label{CentralLogistic}
+\opr{CentralLogistic}(x\given \pLoc,\pScale,\alpha) 
 & =
 \frac{1}{B(\alpha, \alpha) |\pScale|}
  \frac{e^{-\alpha \frac{x-\pLoc}{\pScale} }} { \Left(1 + e^{-\frac{x-\pLoc}{\pScale}  }\Right)^{2\alpha} } \checked
@@ -101,7 +101,7 @@ By setting the $\lambda$ parameter to $1$ (instead of $\alpha$) we get a reverse
   \checked 
 \\ \notag & = \opr{BetaLogistic}(x\given \pLoc,\pScale,\alpha,\alpha) \checked
 \end{align}
-With equal shape parameters the  beta-logistic is symmetric. This distribution limits to the Laplace distribution~\eqref{Laplace}.
+With equal shape parameters the beta-logistic is symmetric. This distribution limits to the Laplace distribution~\eqref{Laplace}.
 
 
 \dist{Logistic} (sech-square, hyperbolic secant square, logit) distribution~\cite{Verhulst1845, Balakrishnan1991, Johnson1995}:
@@ -141,7 +141,7 @@ The standardized hyperbolic secant distribution (zero mean, unit variance) is $\
 \begin{center}
 \includegraphics[width=\textwidth]{pdfSymBetaLogistic}
 \end{center}
-\caption[Symmetric beta-logistic distributions]{Special cases of the symmetric beta-logistic distribution~\eqref{SymBetaLogistic}: Standardized (zero mean, unit variance) normal~($\alpha\rightarrow\oo$), logistic~($\alpha=1$), hyperbolic secant~($\alpha=\tfrac{1}{2}$), and Laplace~($\alpha\rightarrow 0$)  (low to high peaks).}
+\caption[Central logistic distributions]{Special cases of the symmetric central logistic distribution~\eqref{CentralLogistic}: Standardized (zero mean, unit variance) normal~($\alpha\rightarrow\oo$), logistic~($\alpha=1$), hyperbolic secant~($\alpha=\tfrac{1}{2}$), and Laplace~($\alpha\rightarrow 0$)  (low to high peaks).}
 \end{figure}
 
 

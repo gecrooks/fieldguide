@@ -5,7 +5,6 @@
 \Sec{Grand Unified Distribution}
 \label{sec:GUD}
 
-\newcommand{\sep}{\ ; \ } % Separator between parameter groups
 
 
 The Grand Unified Distribution of order $n$ is required to satisfy the following differential equation.
@@ -419,19 +418,20 @@ Special cases include the generalized Halphen \eqref{GenHalphen} $\lambda= \kapp
 
 \begin{table*}[tp]
 \begin{center}
-\caption[Pearson-exponential Distribution -- Special cases]{Special cases of the Pearson Exponential Family}
-\label{PearsonExp}
+\caption[Pearson-exponential distributions -- Special cases]{Special cases of the Pearson exponential family}
+\label{PearsonExpTable}
 \begin{tabular}{llcccccccccc}
 \eqref{PearsonExp}  & Pearson Exp. & $\pLoc$ & $\pScale$ & $a_0$ & $a_1$ & $a_2$ & $b_0$ & $b_1$ & $b_2$  \\
 % 
 \hline
 \eqref{BetaExp} & Beta exp.  &.&.&0&$\alpha$+$\gamma$-$1$&-$\alpha$  &0&1&-1\\ %D[-Log[Exp(- a x) (1 - Exp(-x) )^(g-1) ],x]
 \eqref{BetaLogistic} & Beta logistic    &.&.&0&-$\gamma$&$\alpha$  &0&1&1 \\ % D[Log[ Exp(- a x) (1 + Exp(-x) )^(-a-g) ],x]
-\eqref{GammaExp} & Gamma exp.    &.&.&0&-$\alpha$&1&0&1&0 \\
-\eqref{Exp} & Exponential    &.&.&0&1&0&0&1&0 \\
+\eqref{CentralLogistic} & Central logistic    &.&.&0&-$\alpha$&$\alpha$  &0&1&1 \\
 \eqref{Perks} & Perks    &.&.&-1&0&1&1&$c$&1 \\
-% \eqref{Logistic} & Logistic    &.&.&-1&0&0&1&0&0 \\
-% \eqref{HyperbolicSecant} & Hyperbolic secant    &.&.&-1&0&0&1&0&0 \\
+\eqref{Logistic} & Logistic     &.&.&0&-1&1  &0&1&1 \\
+\eqref{HyperbolicSecant} & Hyperbolic secant     &.&.&0&-\half&\half  &0&1&1\\
+\eqref{GammaExp} & Gamma exp.    &.&.&0&-$\alpha$&1&0&1&0 \\
+\eqref{Exp} & Exponential    &.&.&0&1&0&0&1&0
 \end{tabular} 
 \end{center}
 \end{table*}
@@ -440,11 +440,11 @@ Special cases include the generalized Halphen \eqref{GenHalphen} $\lambda= \kapp
 
 \SSec{Pearson-exponential distributions}
 
-If we take the limit of $\beta$ to infinity (See \secref{???}), then we get the family of Pearson exponential distributions.
+If we take the limit of $\beta$ to infinity (See \secref{sec:Limits:exp}), then we get the family of Pearson exponential distributions.
 
 \dist{Pearson-exponential} distribution~\cite{\self}:
 \begin{align}
-\opr{PearsonExp}&(x\given  \pLoc, \pScale; a_0, a_1,a_2;  b_0,b_1,b_2)
+\opr{PearsonExp}&(x\given  \pLoc, \pScale \sep a_0, a_1,a_2 \sep  b_0,b_1,b_2)
  \label{PearsonExp}
   \\ &= \lim_{\beta\rightarrow \infty} \opr{GUD}(x\given \pLoc + \beta \pScale, \beta \pScale\sep a_0, a_1,a_2\sep  b_0,b_1,b_2\sep \beta) 
 \notag
@@ -459,7 +459,7 @@ Because we can generally interchange limits and differentiation, such distributi
 {b_0+ b_1 e^{\tfrac{x-\pLoc}{\pScale}}+b_2 e^{2\tfrac{x-\pLoc}{\pScale} }}
 \notag
 \end{align}
-See table~\ref{PearsonExp} and Fig.~\ref{PearsonExpHierarchy}.
+See table~\ref{PearsonExpTable} and Fig.~\ref{PearsonExpHierarchy}.
 
 
 \dist{Perks} distribution~\cite{Perks1932,Talacko1956,Devroye1986}:
