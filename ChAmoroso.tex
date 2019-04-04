@@ -35,18 +35,18 @@ The shape parameter $\alpha$ is positive, and in many special cases an integer, 
 
 \pagebreak[4]
 
-\begin{longtable}[tp]{llccccl}
-%\begin{center}\
-\caption[Amoroso and gamma distributions -- Special cases]{Special cases of the Amoroso and gamma families}
+\begin{table}[tp]
+\begin{center}
+\caption[Amoroso distribution -- Special cases]{Special cases of the Amoroso family}
 \label{AmorosoTable}
 ~\\
-%{\renewcommand{\arraystretch}{1.1} 
-%\begin{tabular}{llccccl}
+{\renewcommand{\arraystretch}{1.2} 
+\begin{tabular}{llccccl}
 \eqref{Amoroso} & Amoroso & $a$ & $\theta$ & $\alpha$ & $\beta$  \\ 
 \hline
 \eqref{Stacy} & Stacy & $0$ & . & . & . \\
 \eqref{HalfExpPower} & half exponential power & . & . & $\tfrac{1}{\beta}$ & . \\
-\eqref{GenFisherTippett} & gen. Fisher-Tippett  & . & . & $n$ & .  \\
+\eqref{GenFisherTippett} & gen.\ Fisher-Tippett  & . & . & $n$ & .  \\
 \eqref{FisherTippett} &  Fisher-Tippett & . & . & 1 & .  \\
 \eqref{Frechet} &Fr\'{e}chet  & . & . & 1 &  $<\!\!0$  \\
 \eqref{GenFrechet} &  generalized Fr\'{e}chet & . & . & $n$ & $<\!\!0$ \\
@@ -62,13 +62,13 @@ The shape parameter $\alpha$ is positive, and in many special cases an integer, 
 \eqref{Levy} & L\'{e}vy &  . & . & $\frac{1}{2}$ & -1 \\
 \eqref{InvExp} &  inverse exponential & 0  & . & 1 & -1 \\
 \eqref{Gamma} &gamma & . & . & . & $1$ \\
-\eqref{Gamma} & Erlang & $0$ & $>\!\!0$ & $n$ & $1$ \\
-\eqref{StdGamma} &standard gamma & 0 & 1 & . & 1  \\ 
-\eqref{PorterThomas} & Porter-Thomas & 0 & 2 & $\tfrac{1}{2}$ & 1 \\
-\eqref{ScaledChiSqr} & scaled chi-square & 0 & . & $\tfrac{1}{2}k$ & 1 \\
-\eqref{ChiSqr} & chi-square & 0 & 2 & $\tfrac{1}{2}k$ & 1 \\
-\eqref{Exp} & exponential & . & . & $1$ & $1$ \\
-\eqref{Gamma} & Wien & 0 & . & 4& 1 \\
+%\eqref{Gamma} & Erlang & $0$ & $>\!\!0$ & $n$ & $1$ \\
+%\eqref{StdGamma} &standard gamma & 0 & 1 & . & 1  \\ 
+%\eqref{PorterThomas} & Porter-Thomas & 0 & 2 & $\tfrac{1}{2}$ & 1 \\
+%\eqref{ScaledChiSqr} & scaled chi-square & 0 & . & $\tfrac{1}{2}k$ & 1 \\
+%\eqref{ChiSqr} & chi-square & 0 & 2 & $\tfrac{1}{2}k$ & 1 \\
+%\eqref{Exp} & exponential & . & . & $1$ & $1$ \\
+%\eqref{Gamma} & Wien & 0 & . & 4& 1 \\
 \eqref{Hohlfeld} & Hohlfeld & 0 & . & $\tfrac{2}{3}$ & $\tfrac{3}{2}$ \\
 \eqref{Nakagami} & Nakagami & . & . & . & $2$ \\
 \eqref{ScaledChi} &scaled chi& 0 & . & $\tfrac{1}{2}k$  & 2  \\
@@ -82,18 +82,21 @@ The shape parameter $\alpha$ is positive, and in many special cases an integer, 
 \eqref{PseudoWeibull} & pseudo-Weibull & . & . & $1$+$\tfrac{1}{\beta}$ &  $>\!\!0$
  \\
   & $(k,\ n\ \text{positive integers})$
-% \end{tabular} 
-%}
-%\end{center}
-\end{longtable}
+ \end{tabular} 
+}
+\end{center}
+For special cases of the gamma distribution ($\beta=1$) see table~\ref{GammaTable}.
 
-\pagebreak[2]
+\end{table}
+
+
+
 
 \SSec{Special cases: Miscellaneous}
 
 The gamma distribution ($\beta=1$) and it's special cases are detailed in \secref{sec:Gamma}.
 
-\dist{Stacy} (hyper gamma, generalized Weibull, Nukiyama-Tanasawa, generalized gamma, generalized semi-normal, hydrograph, Leonard hydrograph, transformed gamma)  distribution~\cite{Stacy1962,Dadpay2007}:
+\dist{Stacy} (anchored Amoroso, hyper gamma, generalized Weibull, Nukiyama-Tanasawa, generalized gamma, generalized semi-normal, Leonard hydrograph, hydrograph,  transformed gamma)  distribution~\cite{Stacy1962,Dadpay2007}:
 \begin{align}
 \label{Stacy}
 \opr{Stacy}(x \given \theta, \alpha, \beta) 
@@ -102,7 +105,7 @@ The gamma distribution ($\beta=1$) and it's special cases are detailed in \secre
 \\=&  \opr{Amoroso}(x\given  0, \theta, \alpha, \beta) \notag \checked
 \end{align}
 If we drop the location parameter from $\opr{Amoroso}$, then we obtain the 
-Stacy, or generalized gamma distribution, the parent of the gamma family of distributions.
+Stacy, or generalized gamma distribution.
 If $\beta$ is negative then the distribution is  {\bf generalized inverse gamma}, the parent of various inverse distributions, including the inverse gamma \eqref{InvGamma} and inverse chi \eqref{InvChi}. 
 
 The Stacy distribution is obtained as the positive even powers,  modulus, and powers of the modulus of a centered, normal random variable \eqref{Normal}, 
@@ -171,7 +174,7 @@ Occurs in the extreme statistics of Brownian ratchets  \cite[Suppl. p.5]{Hohlfel
 \begin{center}
 \includegraphics[width=\textwidth]{pdfAmorosoBetaPDF}
 \end{center}
-\caption[Gamma, scaled chi and Wilson-Hilferty distributions]{Gamma, scaled chi and Wilson-Hilferty distributions, $\opr{Amoroso}(x\given 0,1,2,\beta)$}
+\caption[Gamma, scaled chi and Wilson-Hilferty distributions]{Gamma, scaled chi, and Wilson-Hilferty distributions, $\opr{Amoroso}(x\given 0,1,2,\beta)$}
 \end{figure}
 
 With $\beta=1$ we obtain the gamma family of distributions: gamma \eqref{Gamma}, standard gamma \eqref{StdGamma} and chi square \eqref{ChiSqr} distributions. See \secref{sec:Gamma}.
@@ -253,7 +256,7 @@ The root-mean-square of $k$ independent and identically distributed normal varia
 \begin{center}
 \includegraphics[width=\textwidth]{pdfAmorosoBeta2PDF}
 \end{center}
-\caption[Half normal, Rayleigh and Maxwell distributions]{Half normal, Rayleigh and Maxwell distributions, $\opr{Amoroso}(x\given 0,1,\alpha,2)$}
+\caption[Half normal, Rayleigh and Maxwell distributions]{Half normal, Rayleigh, and Maxwell distributions, $\opr{Amoroso}(x\given 0,1,\alpha,2)$}
 \end{figure}
 
 
@@ -317,7 +320,7 @@ A related approximation using quartic roots of gamma variables~\cite{Hawkins1986
 \SSec{Special cases: Negative integer \texorpdfstring{$\beta$}{beta}}
 
 
-With negative $\beta$ we obtain various ``inverse'' distributions related to distributions with positive $\beta$ by the reciprocal transformation $ (\tfrac{x-a}{\theta} ) \mapsto (\tfrac{\theta}{x-a} )$.
+With negative $\beta$ we obtain various ``inverse'' distributions related to distributions with positive $\beta$ by the reciprocal transformation $ (\tfrac{x-a}{\theta} ) \to (\tfrac{\theta}{x-a} )$.
 
 
 
@@ -449,7 +452,8 @@ The inverse Rayleigh distribution has been used to model failure time~\cite{Voda
 \begin{align}
 \label{InvMaxwell}
 \opr{InvMaxwell}(x \given \sigma) 
-&= \frac{\sqrt{2 \sigma ^2} }{ \sqrt{pi}} { \Left(\frac{1}{\sqrt{2 \sigma^2} x}\Right)}^{4} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 x^2}  \Right)\Right\} 
+&= \frac{\sqrt{2 \sigma ^2} }{ \sqrt{\pi}} { \Left(\frac{1}{\sqrt{2 \sigma^2} x}\Right)}^{4} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 x^2}  \Right)\Right\}
+\checked 
 \\
 &= \opr{ScaledInvChi}(x \given \sigma, 3) \checked \notag \\
 &= \opr{Amoroso}(x\given  0, \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{3}{2}, -2) \notag  \checked
@@ -457,14 +461,15 @@ The inverse Rayleigh distribution has been used to model failure time~\cite{Voda
 
 
 
-\dist{Inverse half normal} distribution~\cite{Shakil2010a}:
+\dist{Inverse half-normal} distribution~\cite{Shakil2010a}:
 %
 \begin{align}
 \label{InvHalfNormal}
 \opr{InvHalfNormal}(x \given a, \sigma)
 &= \frac{2}{\sqrt{2 \sigma ^2}}   \frac{1}{(x-a)^2} \exp\Left\{-\Left(\frac{1}{2 \sigma^2 (x-a)^2}  \Right)\Right\} 
+\checked
 \\
-&=  \opr{Amoroso}(x\given  a, \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{k}{2}, -2) \notag  \checked
+&=  \opr{Amoroso}(x\given  a, \tfrac{1}{\sqrt{2 \sigma^2}}, \tfrac{1}{2}, -2) \notag  \checked
 \end{align}
 
 
@@ -601,7 +606,7 @@ Special cases of the Weibull distribution include the exponential ($\beta=1$) an
 &= \opr{Amoroso}(x\given  a , {\omega}/{n^{\frac{1}{\beta} }},n,-\bar{\beta}),
 \checked
 \end{align}
-The limiting distribution of the $n$th largest value of a large number identically distributed random variables whose moments are not all finite (i.e. heavy tailed distributions).  (If the shape parameter $\omega$ is negative then minimum rather than maxima.)
+The limiting distribution of the $n$th largest value of a large number of identically distributed random variables whose moments are not all finite (i.e. heavy tailed distributions).  (If the shape parameter $\omega$ is negative then minimum rather than maxima.)
 
 
 \dist{Fr\'{e}chet} (extreme value type II, Fisher-Tippett type II, Gumbel type II, inverse Weibull) distribution~\cite{Frechet1927,Gumbel1958}:
@@ -616,14 +621,13 @@ The limiting distribution of the $n$th largest value of a large number identical
 \\ \notag 
 &= \opr{Amoroso}(x\given  a , \omega,1,-\bar{\beta})\notag \checked
 \end{align}
-The limiting distribution of the maximum of a large number identically distributed random variables whose moments are not all finite (i.e. heavy tailed distributions).  (If the shape parameter $\omega$ is negative then minimum rather than maxima.)
+The limiting distribution of the maximum of a large number of identically distributed random variables whose moments are not all finite (i.e.\ heavy tailed distributions).  (If the shape parameter $\omega$ is negative then minimum rather than maxima.)
 Special cases of the Fr\'{e}chet  distribution include the inverse exponential ($\bar{\beta}=1$) and inverse Rayleigh ($\bar{\beta}=2$) distributions.
  
 
 
-
-
 \input{PropertiesTableAmoroso}
+
 
 \SSec{Interrelations}
 

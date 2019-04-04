@@ -45,7 +45,6 @@ The gamma distribution often appear as a solution to problems in statistical phy
 \]
     
 
-
 \dist{Chi-square} ($\chi^2$)  distribution~\cite{Fisher1924,Johnson1994}:
 \begin{align}
 \label{ChiSqr}
@@ -84,6 +83,30 @@ The distribution of a sum of squares of $k$ independent standard normal random v
 \end{align}
 The distribution of a sum of squares of $k$ independent normal random variables with variance $\sigma^2$.
 
+\begin{table}[tp]
+\begin{center}
+\caption[Gamma distribution -- Special cases]{Special cases of the gamma family}
+\label{GammaTable}
+~\\
+{\renewcommand{\arraystretch}{1.2} 
+\begin{tabular}{llccccl}
+\eqref{Gamma} & gamma & $a$ & $\theta$ & $\alpha$   \\ 
+\hline
+\eqref{Gamma} & Erlang & $0$ & $>\!\!0$ & $n$ \\
+\eqref{StdGamma} &standard gamma & 0 & 1 & .  \\ 
+\eqref{PorterThomas} & Porter-Thomas & 0 & 2 & $\tfrac{1}{2}$  \\
+\eqref{ScaledChiSqr} & scaled chi-square & 0 & . & $\tfrac{1}{2}k$  \\
+\eqref{ChiSqr} & chi-square & 0 & 2 & $\tfrac{1}{2}k$ \\
+\eqref{Exp} & exponential & . & . & $1$  \\
+\eqref{Gamma} & Wien & 0 & . & 4 \\
+ \\
+  & $(k,\ n\ \text{positive integers})$
+ \end{tabular} 
+}
+\end{center}
+\end{table}
+
+
 
 \dist{Porter-Thomas} distribution~\cite{Porter1956a}:
 \begin{align}
@@ -113,7 +136,7 @@ Gamma distributions with common scale obey an addition property:
 \end{align*}
 The  sum of two independent, gamma distributed random variables (with common $\theta$'s, but possibly different $\alpha$'s) is again a gamma random variable~\cite{Johnson1994}.
 
-The Amoroso distribution can be obtained from the standard gamma distribution by the Weibull change of variables, $x \mapsto \Left(\tfrac{x-a}{\theta}\Right)^\beta$.
+The Amoroso distribution can be obtained from the standard gamma distribution by the Weibull change of variables, $x \to \Left(\tfrac{x-a}{\theta}\Right)^\beta$.
 \[
 \opr{Amoroso}(a ,\theta,\alpha,\beta) \sim
 a+\theta \Big[{\opr{StdGamma}}(\alpha)\Big]^{1/\beta} 

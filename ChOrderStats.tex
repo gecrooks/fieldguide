@@ -19,7 +19,7 @@ Order statistics~\cite{David2005}: If we draw $m+n-1$ independent samples from a
 = \frac{(m+n-1)!}{(m-1)!(n-1)!} \ F(x)^{m-1}\ f(x)\ (1- F(x))^{n-1}
 \checked
 \end{align*}
-Here $X$ is a random variable, $f(x)$ is the corresponding probability density and $F(x)$ is the cumulative distribution function. The first term is the number of ways to separate $m+n-1$ things into three groups containing 1,$m-1$ and $n-1$ things; the second is the probability of drawing $m-1$ samples smaller than the sample of interest; the third term is the distribution of the $m$th sample; and the fourth term is the probability of drawing $n-1$ larger samples. Note that the smallest value is obtained if $m=1$, the largest value if $n=1$, and the median value if $m=n$.
+Here $X$ is a random variable, $f(x)$ is the corresponding probability density and $F(x)$ is the cumulative distribution function. The first term is the number of ways to separate $m+n-1$ things into three groups containing 1, $m-1$, and $n-1$ things; the second is the probability of drawing $m-1$ samples smaller than the sample of interest; the third term is the distribution of the $m$th sample; and the fourth term is the probability of drawing $n-1$ larger samples. Note that the smallest value is obtained if $m=1$, the largest value if $n=1$, and the median value if $m=n$.
 
 The cumulative distribution function (CDF) for order statistics can be written in terms of the regularized beta function, $I(p,q;z)$.
 \begin{align*}
@@ -77,17 +77,17 @@ In the limit that $n\gg m$ (or equivalently $m\gg n$) we obtain the distribution
 \SSec{Median statistics} If we draw $N$ independent samples from a distribution (Where $N$ is odd), then the distribution of the statistical median value is \index{median}\index{median statistics}
 \label{MedianStatistic}
 \begin{align*}
-\opr{MedianStatistic}_{X}(x \given N) = \opr{OrderStatistic}_{X}(x \given \tfrac{N-1}{2},  \tfrac{N-1}{2})
+\opr{MedianStatistic}_{X}(x \given N) = \opr{OrderStatistic}_{X}(x \given \tfrac{N+1}{2},  \tfrac{N+1}{2})
 \checked
 \end{align*}
 Notable examples of median statistic distributions include
 \begin{align*}
-\op{MedianStatistics}&_{\opr{Uniform}(a,s)}(x \given 2 \alpha +1 )
+\op{MedianStatistics}&_{\opr{Uniform}(a,s)}(x \given 2 \alpha - 1 )
 %\\ & 
 =  \opr{CentralBeta}(x\given a+s, 2s, \alpha)
 \checked
 \\
-\op{MedianStatistics}&_{\opr{Logistic}(a,s)}  (x \given 2 \alpha +1)
+\op{MedianStatistics}&_{\opr{Logistic}(a,s)}  (x \given 2 \alpha - 1)
 %\\ & 
 =  \opr{CentralLogistic}(x\given a, s, \alpha)
 \checked

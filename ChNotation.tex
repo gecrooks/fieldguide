@@ -12,7 +12,7 @@
 \index{Weibull transform}
 
 \SSec{Notation}
-We write  $\opr{Amoroso}(x\given a, \theta, \alpha, \beta)$ for a density function,  $\oprr{AmorosoCDF}{Amoroso}(x\given a, \theta, \alpha, \beta)$ for the cumulative distribution function, $\opr{Amoroso}(a, \theta, \alpha, \beta)$ for the corresponding random variable,  and  $X\sim\opr{Amoroso}(a, \theta, \alpha, \beta)$ to indicate that two random variables have the same probability distribution~\cite{Gelman2004}. The semicolon, which we verbalize as ``given'' or ``parameterized by``, separates the arguments from the parameters.  \index{given} 
+We write  $\opr{Amoroso}(x\given a, \theta, \alpha, \beta)$ for a density function, $\oprr{AmorosoCDF}{Amoroso}(x\given a, \theta, \alpha, \beta)$ for the cumulative distribution function, $\opr{Amoroso}(a, \theta, \alpha, \beta)$ for the corresponding random variable,  and  $X\sim\opr{Amoroso}(a, \theta, \alpha, \beta)$ to indicate that two random variables have the same probability distribution~\cite{Gelman2004}. The semicolon, which we verbalize as ``given'' or ``parameterized by``, separates the arguments from the parameters.  \index{given} 
 
 \begin{center}
 \begin{tabular}{ccll}
@@ -44,8 +44,8 @@ $v$			& shape & $>0$, Pearson IV\\ % Perhaps use u instead of v, too close to nu
 \end{center}
 
 
-Throughout I have endeavored to use consistent parameterization, both within families, and between subfamilies and superfamilies. For instance, $\beta$ is always the Weibull parameter. Location (or translation) parameters: $a$, $b$, $\nu$, $\mu$. Scale parameters: $s$, $\theta$, $\sigma$. Shape parameters: $\alpha$, $\gamma$, $m$, $v$. All parameters are real and the shape parameters $\alpha$, $\gamma$ and $m$ are positive. The negation of a standard parameter is indicated by a bar, e.g.\ $\beta = -\bar{\beta}$. 
-In tables of special cases, for clarity we use a dot `.' to indicate repetition of the base distribution's parameters. 
+Throughout I have endeavored to use consistent parameterization, both within families, and between subfamilies and superfamilies. For instance, $\beta$ is always the Weibull power parameter. Location (or translation) parameters: $a$, $b$, $\nu$, $\mu$. Scale parameters: $s$, $\theta$, $\sigma$. Shape parameters: $\alpha$, $\gamma$, $m$, $v$. All parameters are real and the shape parameters $\alpha$, $\gamma$ and $m$ are positive. The negation of a standard parameter is indicated by a bar, e.g.\ $\beta = -\bar{\beta}$. 
+For clarity we use a dot `.' in tables of special cases to indicate repetition of the base distribution's parameters. 
 
 
 
@@ -58,13 +58,13 @@ In tables of special cases, for clarity we use a dot `.' to indicate repetition 
 
 \paragraph*{standard-X} \index{standard} \index{standardized} The distribution ``X'' with the location parameter set to 0 and scale to 1. Not to be confused with {\it standardized} which generally indicates zero mean and unit variance. 
 
-\paragraph*{shifted-X} \index{shifted} (or translated-X) A distribution with an additional location parameter. \index{location parameters}
+\paragraph*{shifted-X} \index{shifted} (or translated-X) A distribution with an additional location parameter. \index{location parameter}
 
 \paragraph*{anchored-X} \index{anchored}\index{ballasted} (or ballasted-X) A distribution with a fixed location (typically with a lower bound set to zero).
 
 \paragraph*{scaled-X} \index{scaled}(or scale-X) A distribution with an additional scale parameter. \index{scale parameter}
 
-\paragraph*{inverse-X}\index{inverse}\index{reciprocal}\index{inverted} (Occasionally inverted-X, reciprocal-X, or negative-X) Generally labels the transformed distribution with $x\mapsto\tfrac{1}{x}$, or more generally the distribution with the Weibull shape parameter negated, $\beta\mapsto-\beta$. An exception is the inverse Gaussian distribution \eqref{InvGaussian}~\cite{Johnson1994}. 
+\paragraph*{inverse-X}\index{inverse}\index{reciprocal}\index{inverted} (Occasionally inverted-X, reciprocal-X, or negative-X) Generally labels the transformed distribution with $x\to\tfrac{1}{x}$, or more generally the distribution with the Weibull shape parameter negated, $\beta\to-\beta$. An exception is the inverse Gaussian distribution \eqref{InvGaussian}~\cite{Johnson1994}. 
 
 \paragraph*{log-X}  \index{log transform}\index{anti-log transform} Either the anti-logarithmic or logarithmic transform of the random variable X, i.e.\ either  $\exp - \op{X}() \sim \op{log-X}()$ (e.g.\ log-normal)  or $-\ln \text{X}() \sim \op{log-X}()$.  This ambiguity arises because although the second convention may seem more logical, the log-normal convention has historical precedence. Herein, we follow the log-normal convention. 
 \label{log-transform-name}
@@ -187,7 +187,7 @@ The standard measure of skew is the third cumulant (third central moment) normal
 \]
 
 
-\paragraph*{kurtosis} \index{kurtosis}\index{excess kurtosis} Kurtosis measures the peakedness of a distribution. The normal distribution has zero excess kurtosis. A positive kurtosis distribution longer tails, while a negative kurtosis distribution has shorter tails.
+\paragraph*{kurtosis} \index{kurtosis}\index{excess kurtosis} Kurtosis measures the spread of a distribution. The normal distribution has zero excess kurtosis. A positive kurtosis distribution longer tails, while a negative kurtosis distribution has shorter tails.
 
 The standard measure of kurtosis is the forth cumulant normalized by the square of the second cumulant.
 \[
@@ -257,7 +257,7 @@ Cumulants are often more useful than central moments, since cumulants are additi
 \paragraph*{characteristic function (CF)} 
 \label{characteristic_function}
 \index{characteristic function}
-\index{$\phi(t)$| see{characteristic function}}
+\index{$\phi(t)$|see{characteristic function}}
 Neither the moment nor cumulant generating functions need exist for a given distribution. An alternative that always exists is the characteristic function
 \[
 \phi_X(t) = \expect[e^{i t X}]  \ , \checked

@@ -48,7 +48,7 @@ The Beta-Fisher-Tippett occurs as the weibullization of the beta-exponential dis
 \end{align*}
 The order statistics of the Weibull \eqref{Weibull} and Fr\'{e}chet \eqref{Frechet} distributions are therefore also Beta-Fisher-Tippett.
 
-With $\beta=1$ we recover the beta-exponential distribution~\eqref{BetaExp}. Other special cases include the {\bf inverse beta-exponential}, $\beta=-1$~\cite{\self} (The order statistics of the inverse exponential distribution, \eqref{InvExp} ), and the {\bf exponentiated Weibull} (Weibull-exponential) distribution, $\alpha=1$~\cite{Zacks1984,Mudholkar1995}. 
+With $\beta=1$ we recover the beta-exponential distribution~\eqref{BetaExp}. Other special cases include the {\bf inverse beta-exponential}, $\beta=-1$~\cite{\self} (The order statistics of the inverse exponential distribution, \eqref{InvExp}), and the {\bf exponentiated Weibull} distribution, $\alpha=1$~\cite{Zacks1984,Mudholkar1995}. 
 
 
 %===========================================================================
@@ -68,7 +68,7 @@ Models physical fatigue failure due to crack growth.
 
 %===========================================================================
 \secbreak
-\dist{Exponential power} (Box-Tiao, generalized normal, generalized error, Subbotin\checked) distribution~\cite{Box1962,Nadarajah2005}:
+\dist{Exponential power} (Box-Tiao, generalized normal, generalized error, Subbotin) distribution~\cite{Box1962,Nadarajah2005}:
 \begin{align}
 \label{ExpPower}
 \opr{ExpPower}(x\given \pLoc,\theta,\beta) = \frac{\beta}{2 |\theta| \Gamma(\tfrac{1}{\beta})}
@@ -128,7 +128,7 @@ A  generalization of the Pearson type VII distribution \eqref{PearsonVII}. Speci
 \checked
 \end{align*}
 
-A related distribution is the {\bf half generalized Pearson VII} \eqref{HalfGenPearsonVII}, a special case of generalized beta prime 
+A related distribution is the { half generalized Pearson VII} \eqref{HalfGenPearsonVII}, a special case of generalized beta prime 
 \eqref{GenBetaPrime}.
 
 
@@ -187,7 +187,7 @@ The sum of $n$ independent standard uniform variates.
 Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the uniform distribution \eqref{Uniform}, and with $n=2$ the triangular distribution~\eqref{Triangular}.
 
 \secbreak
-\dist{Johnson SU} distributions~\cite{Johnson1949a,Johnson1994}:
+\dist{Johnson \texorpdfstring{$S_U$}{SU}} distributions~\cite{Johnson1949a,Johnson1994}:
 \[
 \label{JohnsonSU}
 \opr{JohnsonSU}(x\given\mu, \sigma, \gamma, \delta) = 
@@ -195,12 +195,12 @@ Related to the Bates distribution \eqref{Bates}. For $n=1$ we recover the unifor
 \]
 Johnson's distributions are transforms of the normal distribution, 
 \[
-\op{Johnson}_g(\mu, \sigma, \gamma, \delta) \sim \sigma g(\tfrac{StdNormal()-\gamma)}{\delta}) + \mu
+\op{Johnson}_g(\mu, \sigma, \gamma, \delta) \sim \sigma g(\tfrac{\op{StdNormal}()-\gamma)}{\delta}) + \mu
 \notag
 \checked
 \]
 Where for Johnson $S_U$ the function is $g(x)=\sinh(x)$.
-For Johnson $S_B$ the function is $g(x)=1/(1+exp(x))$, for Johnson $S_L$, $g(x)=exp(x))$ (i.e. log-normal), and for Johnson $S_N$ the function is constant, recapitulating the normal distribution.
+For Johnson $S_B$ the function is $g(x)=1/(1+\exp(x))$, for Johnson $S_L$, $g(x)=\exp(x))$ (i.e. log-normal), and for Johnson $S_N$ the function is constant, recapitulating the normal distribution.
 
 
 
@@ -221,7 +221,7 @@ Describes the average energy loss of a charged particles traveling through a thi
 \opr{LogCauchy}(x\given a, s, \beta) &= \frac{|\beta|}{|s| \pi } \Left(\frac{x-a}{s}\Right)^{-1} \frac{1}{1 +\Left( \ln\Left(\frac{x-a}{s}\Right)^\beta \Right)^2 }
 \checked
 \end{align}
-A logstable distribution with very heavy tails. 
+A log-stable distribution with very heavy tails. 
 The anti-log transform of the Cauchy distribution~\eqref{Cauchy}.
 \[
 \opr{LogCauchy}(0,s,\beta) & \sim \exp\bigl(-\opr{Cauchy}(-\ln s,\sfrac{1}{\beta})\bigr) 
@@ -255,7 +255,7 @@ A special case of the generalized Pearson VII distribution \eqref{GenPearsonVII}
 \label{NoncentralChi}
 \opr{NoncentralChi}&(x\given k,\lambda) =
 \lambda e^{-\frac{1}{2}(x^2+\lambda^2)} \Left(\frac{x}{\lambda}\Right)^{\frac{k}{2}} I_{\frac{k}{2}-1}(\lambda x)
-\\ & k, \lambda, x \text{ in } \mathbb{R}, >0
+\\ & k, \lambda, x \text{ in } \mathbb{R}, >0 \checked
 \notag
 \end{align}
 Here, $I_v(z)$ is a modified Bessel function of the first kind (p.\pageref{ModBesselFirst}). A generalization of the chi distribution~\eqref{Chi}.
@@ -306,7 +306,7 @@ The ratio distribution of non-central chi square distributions. If both centrali
 
 %===========================================================================
 \secbreak
-\dist{Pseudo Voigt} distribution~\cite{Wertheim1974}: 
+\dist{Pseudo-Voigt} distribution~\cite{Wertheim1974}: 
 \begin{align}
 \label{PseudoVoigt}
 \opr{PseudoVoigt}(x\given a,\sigma, s, \eta) &= (1-\eta) \opr{Normal}(x\given a,\sigma) + \eta \opr{Cauchy}(x\given a,s)
@@ -319,7 +319,7 @@ A linear mixture of Cauchy (Lorentzian) and normal distributions. Used as a more
 
 \secbreak
 %===========================================================================
-\dist{Rice} (Rician, Rayleigh-Rice, generalized Rayleigh, noncentral-chi) distribution~\cite{Rice1945,Talukdar1991}:
+\dist{Rice} (Rician, Rayleigh-Rice, generalized Rayleigh) distribution~\cite{Rice1945,Talukdar1991}:
 \begin{align}
 \label{Rice}
 \opr{Rice}(x\given \nu,\sigma) = & \frac{x}{\sigma^2} \exp\Left(-\frac{x^2+\nu^2 }{2\sigma^2}  \Right) I_0(\frac{x |\nu|}{\sigma^2})
@@ -382,7 +382,7 @@ Note that $lim_{x\rightarrow 0} \opr{Slash}(x)= 1/\sqrt{8\pi}$\checked.
 %===========================================================================
 \secbreak
 
-\dist{Stable} (L\'evy skew alpha-stable, L\'{e}vy stable) distribution~\cite{Nolan2015}:\index{logstable}
+\dist{Stable} (L\'evy skew alpha-stable, L\'{e}vy stable) distribution~\cite{Nolan2015}:\index{log-stable}
  The PDF of the stable distribution does not have a closed form in general. Instead,  the stable distribution can be defined via the characteristic function 
 \begin{align}
 \label{Stable}
@@ -415,7 +415,7 @@ A distribution is stable if it is closed under scaling and addition,
 a_1\, \opr{Stable}_1(\mu,c,\alpha,\beta) + a_2\, \opr{Stable}_2(\mu,c,\alpha,\beta) 
  \sim a_3 \,\opr{Stable}_3(\mu,c,\alpha,\beta) + b \checked
 \end{align*}
-for real  constants $a_1,a_2,a_3,b$. The anti-log transform of a stable distribution is logstable: it is stable under multiplication instead of addition\index{stable}.
+for real  constants $a_1,a_2,a_3,b$. The anti-log transform of a stable distribution is log-stable: it is stable under multiplication instead of addition\index{stable}.
 
 
 There are three special cases of the stable distribution where the probability density functions can be expressed with elementary functions: The  normal \eqref{Normal}, Cauchy \eqref{Cauchy}, and L\'evy \eqref{Levy} distributions, all of which are simple.

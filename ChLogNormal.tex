@@ -29,14 +29,14 @@ With $a=0$, $\vartheta=1$, $\sigma=1$  we obtain the  {\bf standard log-normal} 
 \SSec{Interrelations}
 The log-normal forms a location-scale-power distribution family.
 \begin{align*}
-\opr{LogNormal}(a, \vartheta, \beta) &\sim a+ \vartheta  \oprr{StdLogNormal}{LogNormal}()^{1/\beta}
+\opr{LogNormal}(a, \vartheta, \beta) &\sim a+ \vartheta  \oprr{StdLogNormal}{LogNormal}()^{\frac{1}{\beta}}
 \checked
 \end{align*}
 
 
 The log-normal distribution is the anti-log transform of a normal random variable. 
 \begin{align*}
-\opr{LogNormal}(a, \vartheta, \beta) &\sim a+ \exp\Bigl(- \opr{Normal}(-\ln \vartheta,1/\beta)\Bigr) 
+\opr{LogNormal}(a, \vartheta, \beta) &\sim a+ \exp\Bigl(- \opr{Normal}(-\ln \vartheta,\tfrac{1}{\beta})\Bigr) 
 \checked
 \end{align*}
 Because of this close connection to the normal distribution, the log-normal is often parameterized with the mean and standard deviation of the corresponding normal distribution, $\mu=\ln \vartheta$, $\sigma=1/\beta$ rather than standard scale and power parameters. 

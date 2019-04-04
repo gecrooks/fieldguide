@@ -113,6 +113,7 @@ The central hypothesis of this compendium is that most interesting univariate co
 \begin{table*}[bp]
 \begin{center}
 \caption[Grand Unified Distribution -- Special cases]{Special cases of the Grand Unified Distribution}
+~\\
 {\renewcommand{\arraystretch}{1.25} 
 \begin{tabular}{llcccccccccc}
 \eqref{GUD}  & GUD & $a$ & $s$ & $a_0$ & $a_1$ & $a_2$ & $b_0$ & $b_1$ & $b_2$  & $\beta$ \\
@@ -349,7 +350,8 @@ u(\alpha+\gamma-\rho-2) \sep 1, -1-c, -u \sep 1)
 \\ \notag
 & \qquad 0\leq \tfrac{x-a}{s} \leq1
 \end{align}
-A natural generalization of the three-beta distribution.  Motivated by the Euler integral formula for the Gauss hypergeometric function~\secref{sec:math}. 
+% A natural generalization of the three-beta distribution. 
+Motivated by the Euler integral formula for the Gauss hypergeometric function~\secref{sec:math}. 
 
 
 \dist{Confluent hypergeometric} distribution~\cite{Gordy1988a,Nadarajah2006a,Nadarajah2007}
@@ -402,14 +404,14 @@ This distribution was introduced by Gordy~\cite{Gordy1988a} for applications to 
 &\opr{GenSichel}(x\given a,s, \alpha, \kappa, \lambda, \beta)
 \\
 &= \frac{|\beta| (\kappa/\lambda)^{\alpha/2} }{2 |s| K_{\alpha} (2\sqrt{\kappa\lambda})} \Left(\frac{x-a}{s}\Right)^{\beta\alpha-1}
-\exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)^\beta -\lambda \Left(\frac{x-a}{s}\Right)^{-\beta}\Right\},
+\exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)^\beta -\lambda \Left(\frac{x-a}{s}\Right)^{-\beta}\Right\}, \checked
 \notag
 \\
-& = \op{GUD}(x \given a,s \sep -\lambda, 1-\alpha , \kappa \sep 0,1,0 \sep \beta)
+& = \op{GUD}(x \given a,s \sep -\lambda, 1-\alpha , \kappa \sep 0,1,0 \sep \beta) \checked
 \notag
 \\& \qquad  0 \leq  (\tfrac{x-a}{s})^\beta \notag
 \end{align}
-Special cases include the generalized Halphen \eqref{GenHalphen} $\lambda= \kappa$, and Sichel distributions $\beta = 1$.
+Special cases include the generalized Halphen \eqref{GenHalphen} $\lambda= \kappa$, and Sichel \eqref{Sichel} distributions $\beta = 1$.
 
 
 
@@ -419,19 +421,20 @@ Special cases include the generalized Halphen \eqref{GenHalphen} $\lambda= \kapp
 \begin{table*}[tp]
 \begin{center}
 \caption[Pearson-exponential distributions -- Special cases]{Special cases of the Pearson exponential family}
+~\\
 \label{PearsonExpTable}
 \begin{tabular}{llcccccccccc}
 \eqref{PearsonExp}  & Pearson Exp. & $\pLoc$ & $\pScale$ & $a_0$ & $a_1$ & $a_2$ & $b_0$ & $b_1$ & $b_2$  \\
 % 
 \hline
-\eqref{BetaExp} & Beta exp.  &.&.&0&$\alpha$+$\gamma$-$1$&-$\alpha$  &0&1&-1\\ %D[-Log[Exp(- a x) (1 - Exp(-x) )^(g-1) ],x]
-\eqref{BetaLogistic} & Beta logistic    &.&.&0&-$\gamma$&$\alpha$  &0&1&1 \\ % D[Log[ Exp(- a x) (1 + Exp(-x) )^(-a-g) ],x]
-\eqref{CentralLogistic} & Central logistic    &.&.&0&-$\alpha$&$\alpha$  &0&1&1 \\
+\eqref{BetaExp} & beta-exp.  &.&.&0&$\alpha$+$\gamma$-$1$&-$\alpha$  &0&1&-1\\ %D[-Log[Exp(- a x) (1 - Exp(-x) )^(g-1) ],x]
+\eqref{BetaLogistic} & beta-logistic    &.&.&0&-$\gamma$&$\alpha$  &0&1&1 \\ % D[Log[ Exp(- a x) (1 + Exp(-x) )^(-a-g) ],x]
+\eqref{CentralLogistic} & central-logistic    &.&.&0&-$\alpha$&$\alpha$  &0&1&1 \\
 \eqref{Perks} & Perks    &.&.&-1&0&1&1&$c$&1 \\
-\eqref{Logistic} & Logistic     &.&.&0&-1&1  &0&1&1 \\
-\eqref{HyperbolicSecant} & Hyperbolic secant     &.&.&0&-\half&\half  &0&1&1\\
-\eqref{GammaExp} & Gamma exp.    &.&.&0&-$\alpha$&1&0&1&0 \\
-\eqref{Exp} & Exponential    &.&.&0&1&0&0&1&0
+\eqref{Logistic} & logistic     &.&.&0&-1&1  &0&1&1 \\
+\eqref{HyperbolicSecant} & hyperbolic secant     &.&.&0&-\half&\half  &0&1&1\\
+\eqref{GammaExp} & gamma exp.    &.&.&0&-$\alpha$&1&0&1&0 \\
+\eqref{Exp} & exponential    &.&.&0&1&0&0&1&0
 \end{tabular} 
 \end{center}
 \end{table*}
@@ -466,9 +469,9 @@ See table~\ref{PearsonExpTable} and Fig.~\ref{PearsonExpHierarchy}.
 \begin{align}
 \label{Perks}
 \opr{Perks}(x\given \pLoc, \pScale, c)
-&= \frac{1}{\mathcal{N}} \frac{1}{c + e^{-\tfrac{x-\pLoc}{\pScale}} + e^{+\tfrac{x-\pLoc}{\pScale}}}
+&= \frac{1}{\mathcal{N}} \frac{1}{c + e^{-\tfrac{x-\pLoc}{\pScale}} + e^{+\tfrac{x-\pLoc}{\pScale}}} \checked
 \\
-& = \op{PearsonExp}(x \given \pLoc, \pScale \sep -1, 0 , -1 \sep 1, c, 1)
+& = \op{PearsonExp}(x \given \pLoc, \pScale \sep -1, 0 , -1 \sep 1, c, 1) \checked
 \notag
 \end{align}
 Special cases include logistic ($c=0$) \eqref{Logistic} and 

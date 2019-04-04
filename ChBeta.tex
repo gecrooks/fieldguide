@@ -92,7 +92,7 @@ A monotonic, J-shaped special case of the beta distribution noted by Pearson~\ci
 \end{figure}
 
 % ============================
-\dist{Central Beta} (Pearson II, Symmetric beta) distribution~\cite{Pearson1895}: 
+\dist{Central-beta} (Pearson II, symmetric beta, generalized arcsin) distribution \cite{Pearson1895}: 
 %
 \begin{align}
 \label{CentralBeta}
@@ -197,8 +197,6 @@ Used in non-parametric kernel density estimation.
 \SSec{Interrelations}
 
 
-
-
 The beta distribution describes the order statistics of a rectangular \eqref{Uniform} distribution.
 \begin{align*}
 \opr{OrderStatistic}_{\opr{Uniform}(a,s)} & (x \given \alpha, \gamma) =  \opr{Beta}(x\given a, s, \alpha, \gamma) \checked
@@ -207,7 +205,6 @@ Conversely, the uniform \eqref{Uniform} distribution is a special case of the be
 \begin{align*}
 \opr{Beta}(x\given a, s, 1, 1) & = \opr{Uniform}(x\given a,s) \checked
 \end{align*}
-
 
 
 The beta and gamma distributions are related by
@@ -219,11 +216,13 @@ The beta and gamma distributions are related by
 which provides a convenient method of generating beta random variables, given a source of gamma random variables.
 
 
-The Dirichlet distribution~\cite{Durbin1998,Gelman2004} is a multivariate generalization of the beta distribution. \index{Dirchlet distribution}
-
 The beta distribution is a special case of the generalized beta distribution~\eqref{GenBeta}, and limits to the gamma distribution~\eqref{Gamma}.
 \[
 \opr{Gamma}(x\given a, \theta,\alpha)   \
 & =  \lim_{\gamma\rightarrow\infty} \opr{Beta}(x\given a, \theta \gamma ,\alpha, \gamma ) \checked
 \notag
 \]
+
+
+The Dirichlet distribution~\cite{Durbin1998,Gelman2004} is a multivariate generalization of the beta distribution. \index{Dirchlet distribution}
+

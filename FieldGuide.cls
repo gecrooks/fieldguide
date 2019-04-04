@@ -47,6 +47,7 @@
 	% woside article option + geometry package seem to generate many underfull vboxes for no obvious reason. 
 	\RequirePackage[
 			paperwidth=6in,paperheight=9in,
+			%paperwidth=156mm,paperheight=234mm,
 			textheight=7in, 
 			textwidth=4.5in, 
 %			footskip=27pt,  headsep=15pt, headheight=12pt,

@@ -84,7 +84,7 @@ h(x) = x^{-1}
 \]
 The Weibull transform with $a=0$, $s=1$, and $\beta=-1$.
 \index{inverse transform}
-\index{reciprocal transform}
+\index{reciprocal}
 \[
 \opr{Gamma}(0,1,\alpha) \sim \opr{InvGamma}(0,1,\alpha)^{-1} \notag  \\
 \opr{Exp}(0,1) \sim \opr{InvExp}(0,1)^{-1} \notag  \\
@@ -281,7 +281,7 @@ Folded distributions arise when only magnitude, and not the sign, of a random va
 \] 
 An important % continuous, univariate, unimodal 
 example is the {\bf folded normal} distribution
-\index{folded distributions}
+\index{folded distributions}\label{FoldedNormal}
 \begin{align*}
 \op{FoldedNormal}&(x\given \mu,\sigma) 
 \\ \notag
@@ -294,6 +294,7 @@ If we fold about  the  center of a symmetric distribution we obtain a `halved' d
 
 
 \paragraph*{Truncate} \index{truncate}
+
 A truncated distribution arises from restricting the support of a distribution.
 \[
 \op{Truncated}_X(x\given a,b) = \frac{f(x)}{|F(a) - F(b)|} \checked
@@ -301,7 +302,7 @@ A truncated distribution arises from restricting the support of a distribution.
 \]
  The truncation of a continuous, univariate, unimodal distribution is also continuous, univariate and unimodal.
   Examples include the {\bf Gompertz} distribution (a left-truncated Gumbel \eqref{Gumbel} distribution) and the
-  {\bf truncated normal distribution}.
+  {\bf truncated normal distribution}. \label{Gompertz}\label{TruncatedNormal}
 
 \paragraph*{Dual}\index{dual distributions}
 We create a dual distribution by interchanging the role of a variable and parameter in the probability density function.
