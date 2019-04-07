@@ -161,7 +161,7 @@ In the limit that $\mu$ goes to infinity we recover the L\'evy distribution \eqr
 
 The sum of independent inverse Gaussian random variables is also inverse Gaussian, provided that $\mu^2/\lambda$ is a constant.
 \begin{align*}
-\sum_i \opr{InvGaussian}_i &(x\given \mu' w_i, \lambda' w_i^2) 
+\sum_i \opr{InvGaussian}_i &(x\given \mu' w_i, \lambda' w_i^2)
 \\
 & \sim \opr{InvGaussian}\Bigl(x\given \mu' \sum_i w_i, \lambda' \bigl(\sum_i w_i\bigr)^2 \Bigr) \checked
 \end{align*}
@@ -201,7 +201,7 @@ with support $x>0$, mean $\mu>0$, and shape $\lambda>0$. An inverted (in standar
 \dist{Halphen} (Halphen A) distribution~\cite{Halphen1941}:
 \begin{align}
 \label{Halphen}
-&\opr{Halphen}(x\given a,s, \alpha, \kappa) 
+&\opr{Halphen}(x\given a,s, \alpha, \kappa)
 \\
 &= \frac{1}{2 |s| K_{\alpha} (2\kappa)} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
 \exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right) -\kappa \Left(\frac{x-a}{s}\Right)^{-1}\Right\},
@@ -227,18 +227,18 @@ Limits to gamma, inverse gamma, and normal.
 \dist{Hyperbola} (harmonic) distribution~\cite{Halphen1941,Perreault1999}:
 \begin{align}
 \label{Hyperbola}
-&\opr{Hyperbola}(x\given a,s,\kappa) 
+&\opr{Hyperbola}(x\given a,s,\kappa)
 \\ 
 &= \frac{1}{2 |s| K_0(2\kappa)} \Left(\frac{x-a}{s}\Right)^{-1} 
 \exp \Left\{ -\kappa \Left(\frac{x-a}{s}\Right) -\kappa \Left(\frac{x-a}{s}\Right)^{-1} \Right\},
 \checked
 \notag
 \\
-& = \op{Halphen}(x\given a,s, 0, \kappa) 
+& = \op{Halphen}(x\given a,s, 0, \kappa)
 \checked
 \notag
 \\
-& = \op{GUD}(x\given a,s\sep -\kappa, 1 , \kappa\sep 0,1,0\sep 1) 
+& = \op{GUD}(x\given a,s\sep -\kappa, 1 , \kappa\sep 0,1,0\sep 1)
 \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s}
@@ -251,7 +251,7 @@ Limits to gamma, inverse gamma, and normal.
 \dist{Halphen B} distribution~\cite{Halphen1941,Perreault1999}:
 \begin{align}
 \label{HalphenB}
-&\opr{HalphenB}(x\given a,s, \alpha, \kappa) 
+&\opr{HalphenB}(x\given a,s, \alpha, \kappa)
 \\
 &= \frac{2}{|s| H_{2 \alpha}(\kappa)} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
 \exp\Left\{- \Left(\frac{x-a}{s}\Right)^{2} +\kappa \Left(\frac{x-a}{s}\Right)\Right\},
@@ -271,14 +271,14 @@ Limits to gamma distribution \eqref{Gamma} as $\kappa \rightarrow \infty$.
 \dist{Inverse Halphen B} distribution~\cite{Morlat1956a,Perreault1999}:
 \begin{align}
 \label{InvHalphenB}
-&\opr{InvHalphenB}(x\given a,s, \alpha, \kappa) 
+&\opr{InvHalphenB}(x\given a,s, \alpha, \kappa)
 \\
 &= \frac{2}{|s| H_{2\alpha}(\kappa)} \Left(\frac{x-a}{s}\Right)^{-\alpha+1} 
 \exp\Left\{- \Left(\frac{x-a}{s}\Right)^{-2} +\kappa \Left(\frac{x-a}{s}\Right)^{-1}\Right\},
 \checked
 \notag
 \\
-& = \op{GUD}(x ; a,s; 1-\alpha, \kappa,  -2; 0,0,1;1) \checked
+& = \op{GUD}(x \given a,s\sep 1-\alpha, \kappa,  -2\sep 0,0,1\sep1) \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s}
 \notag
@@ -288,7 +288,7 @@ Limits to inverse gamma distribution \eqref{InvGamma} as $\kappa \rightarrow \in
 \dist{Sichel} (generalized inverse Gaussian) distribution~\cite{Good1953, Sichel1973, Barndorff-Nielsen1977}:
 \begin{align}
 \label{Sichel}
-&\opr{Sichel}(x\given a,s, \alpha, \kappa, \lambda) 
+&\opr{Sichel}(x\given a,s, \alpha, \kappa, \lambda)
 \\
 &= \frac{(\kappa/\lambda)^{\alpha/2} }{2 |s| K_{\alpha} (2\sqrt{\kappa\lambda})} \Left(\frac{x-a}{s}\Right)^{\alpha-1} 
 \exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right) -\lambda \Left(\frac{x-a}{s}\Right)^{-1}\Right\},
@@ -307,15 +307,15 @@ Special cases include Halphen \eqref{Halphen} $\lambda= \kappa$, and inverse Gau
 \dist{Libby-Novick} distribution~\cite{Libby1982a, McDonald1995, Sarabia2006, Nadarajah2007}
 \begin{align}
 \label{LibbyNovick}
-&\opr{LibbyNovick}(x\given a,s,c,\alpha,\gamma) 
+&\opr{LibbyNovick}(x\given a,s,c,\alpha,\gamma)
 \\ \notag
 &=  \frac{1}{|s| B(\alpha,\gamma)}
 \Left(\tfrac{x-a}{s}\Right)^{\alpha-1}  \Left(1-\tfrac{x-a}{s}\Right)^{\gamma-1} \Left(1- (1-c) \tfrac{x-a}{s}\Right)^{-\alpha-\gamma}
 \checked
 \notag
 \\ \notag
-& = \op{GUD}(x|a,s; \alpha-1, 3-\alpha - c - c\gamma, 2c-2; 
-\\ \notag & \qquad\qquad\qquad 1, c-2, 1-c;1) \checked
+& = \op{GUD}(x\given a,s\sep \alpha-1, 3-\alpha - c - c\gamma, 2c-2\sep
+\\ \notag & \qquad\qquad\qquad 1, c-2, 1-c\sep 1) \checked
 \\ \notag
 & \qquad \text{for } a,s,c,\alpha,\gamma  \text{ in } {R},  \alpha,\gamma  >0
 \\ \notag
@@ -333,14 +333,14 @@ Limits to both the beta ($u=1$) and beta-prime ($u\rightarrow \infty$ ) distribu
 \dist{Gauss hypergeometric} distribution~\cite{Armero1994,Sarabia2006}
 \begin{align}
 \label{GaussHypergeometric}
-&\opr{GaussHypergeometric}(x\given a,s,u, \alpha, \gamma, \delta) 
+&\opr{GaussHypergeometric}(x\given a,s,u, \alpha, \gamma, \delta)
 \\ \notag
 & =   \frac{1}{|s| \mathcal{N}} 
 \Left(\frac{x-a}{s}\Right)^{\alpha-1}  \Left(1-\frac{x-a}{s}\Right)^{\gamma-1} \Left(1- (1-u) \frac{x-a}{s}\Right)^{-\delta}
 \checked
 \notag
 \\ \notag
-& \quad \mathcal{N} = B(\alpha,\gamma)\  {}_2F_1(\alpha,\delta;\alpha+\gamma,1-u)  \checked
+& \quad \mathcal{N} = B(\alpha,\gamma)\  {}_2F_1(\alpha,\delta;\alpha+\gamma,1-u) \checked
 \\ \notag
 & \qquad \text{for } a, s, u,\alpha,\gamma, \delta  \text{ in } \mathbb{R},  \alpha,\gamma, \delta >0
 \\ \notag &
@@ -367,7 +367,7 @@ Motivated by the Euler integral formula for the Gauss hypergeometric function~\s
 & \qquad \mathcal{N} = B(\alpha, \gamma)\ {}_1 F_1(\alpha; \alpha+\gamma; -\kappa)
 \notag 
 \\
-&= \op{GUD}(x\given 0,1 ;1-\alpha, \alpha+\gamma+\kappa -2; -\kappa ;1,-1,0 ; 1) \checked
+&= \op{GUD}(x\given 0,1 \sep 1-\alpha, \alpha+\gamma+\kappa -2, -\kappa \sep 1,-1,0 \sep 1) \checked
 \notag
 \\
 & \qquad0 \leq \tfrac{x-a}{s} \leq 1 \notag
@@ -391,7 +391,7 @@ This distribution was introduced by Gordy~\cite{Gordy1988a} for applications to 
 \exp\Left\{-\kappa \Left(\frac{x-a}{s}\Right)^\beta -\kappa \Left(\frac{x-a}{s}\Right)^{-\beta}\Right\}  \checked
 \notag
 \\
-& = GUD(x\given a,s; -\kappa, 1-\alpha , \kappa; 0,1,0;\beta) \checked
+& = GUD(x\given a,s\sep -\kappa, 1-\alpha , \kappa\sep 0,1,0\sep\beta) \checked
 \notag
 \\
 & \qquad0 \leq (\tfrac{x-a}{s})^\beta \notag
@@ -499,7 +499,7 @@ There are only a few interesting specials cases of the Grand Unified Distributio
 &\qquad \mathcal{N}  = B(\alpha, \gamma)\ F_1(\alpha,\rho,\delta,\alpha+\gamma;  u, v)\checked
 \notag
 \\ \notag
-&= \op{GUD}^{(3)}(x\given a,s \given a_0,a_1,a_2,a_3\ ;\  b_0,b_1,b_2,b_3 \ ;\ 1) 
+&= \op{GUD}^{(3)}(x\given a,s \sep a_0,a_1,a_2,a_3 \sep  b_0,b_1,b_2,b_3 \sep 1)
 \\ \notag &
 b_0= -1,\ b_1 =1+u+v,\ b_2= -u-v-uv,\ b_3= uv \checked
 \notag
@@ -515,7 +515,7 @@ Here $F_1$ is the Appell hypergeometric function of the first kind.
 \begin{align}
 \label{Laha}
 	\opr{Laha}(x\given a,s) &= \frac{\sqrt{2}}{|s|\ \pi} \frac{1}{\Left(1 + (\tfrac{x-a}{s})^4 \Right)} \checked
-	\\ & = \opr{GUD}^{(4)}(x \given  a,s\ ;\ 0,-4,0,0,0\ ;\ 1,0,2,0,1\ ;\ 1)  \checked \notag
+	\\ & = \opr{GUD}^{(4)}(x \given  a,s \sep 0,-4,0,0,0 \sep 1,0,2,0,1 \sep 1)  \checked \notag
 \end{align}
 A  symmetric, continuous, univariate, unimodal probability density, with infinite support. 
 Originally introduced to disprove the belief that the ratio of two independent and identically distributed random variables is distributed as Cauchy \eqref{Cauchy} if, and only if, the distribution is normal. A 4th order Grand Unified Distribution \secref{sec:GUD}, 
