@@ -9,8 +9,11 @@
  
 \documentclass[mediaeval, pagebackref, book]{FieldGuide}
 
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" FieldGuide.tex
+% \usepackage{pdfx} 
+
 \usepackage{gecmath}
-\usepackage{longtable}
+%\usepackage{longtable}
 
 % These should be moved to style
 %\newcommand{\given}{\mathrel{\vert}}
@@ -108,7 +111,7 @@
 \renewcommand{\@pnumwidth}{1.75em}  % Enough room for triple digit page numbers
 \makeatother
 
-\newcommand{\version}{v~1.0}
+\newcommand{\version}{v~1.0.0}
 
 \renewcommand{\titlemark}{G.~E.~Crooks -- Field Guide to Probability Distributions} 
 \renewcommand{\sectionmark}[1]{\markboth{{\thesection~~#1}}{}}
@@ -119,7 +122,15 @@
 	pdftitle={Field Guide to Continuous Probability Distributions}
 }
 
-
+%% Metadata for pdfx package
+%% Delete FieldGuide.xmpdata after changes here
+%\begin{filecontents*}{\jobname.xmpdata}
+%\Title{Field Guide to Continuous Probability Distributions}
+%\Author{Gavin E. Crooks}
+%\Publisher{Berkeley Institute for Theoretical Science}
+%\Copyright{Copyright \copyright~2010-\number\year~ Gavin E. Crooks}
+%%\Isbn{978-1-7339381-0-5}
+%\end{filecontents*}
 
 % Use so that sections open on left hand pages
 \makeatletter
@@ -138,6 +149,10 @@
 \renewcommand{\=}[1]{$\bar{\text{#1}}$}
 \renewcommand{\:}[1]{$\ddot{\text{#1}}$}
 
+% \usepackage{pagecolor}
+% \pagecolor{black}
+% \color{white}
+
 \begin{document} 
 %\sloppy
 \newcommand{\self}{_fieldguide}
@@ -152,11 +167,12 @@
 %\setcounter{page}{0}
 
 
-\title{\scshape{Field Guide  \\ to  \\ Continuous \\ Probability  Distributions} \vspace{1em} }
+\title{\scshape{\huge Field Guide  \\ to  \\ Continuous \\ Probability  Distributions} \vspace{1em} }
 
 \author{{\Large Gavin E. Crooks}}
 
 \date{\vspace{1em}~{\version}~\\  ~\\ ~{\number\year}~\\ \vspace{3em}\includegraphics[scale=1.25]{pdfCauchyNB}}
+%\date{\vspace{1em}~{}~\\  ~\\ ~{}~\\ \vspace{3em}\includegraphics[scale=1.25]{pdfCauchyNB}}
 %\date{\vspace{1em}\version\\ ~\\ \number\year}
 \maketitle
 \thispagestyle{empty}
@@ -178,9 +194,9 @@ ISBN: 978-1-7339381-0-5
 ~\\~\\
 \url{http://threeplusone.com/fieldguide} 
 \\
-\url{https://github.com/gecrooks/fieldguide}
-~
-\\
+%\url{https://github.com/gecrooks/fieldguide}
+%~
+%\\
 Berkeley Institute for Theoretical Sciences (BITS)
 \\
 typeset on \isotoday~with XeTeX version  \the\XeTeXversion\XeTeXrevision
