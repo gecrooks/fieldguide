@@ -9,8 +9,21 @@
  
 \documentclass[mediaeval, pagebackref, book]{FieldGuide}
 
+% Use for print book pdf file
 % xelatex -shell-escape -output-driver="xdvipdfmx -z 0" FieldGuide.tex
-% \usepackage{pdfx} 
+% \usepackage[x-1a1]{pdfx} 
+
+%% Metadata for pdfx package
+%% Delete FieldGuide.xmpdata after changes here
+\begin{filecontents*}{\jobname.xmpdata}
+\Title{Field Guide to Continuous Probability Distributions}
+\Author{Gavin E. Crooks}
+\Publisher{Berkeley Institute for Theoretical Science}
+\Copyright{Copyright \copyright~2010-\number\year~ Gavin E. Crooks}
+%\Isbn{978-1-7339381-0-5}
+\end{filecontents*}
+
+
 
 \usepackage{gecmath}
 %\usepackage{longtable}
@@ -122,15 +135,7 @@
 	pdftitle={Field Guide to Continuous Probability Distributions}
 }
 
-%% Metadata for pdfx package
-%% Delete FieldGuide.xmpdata after changes here
-%\begin{filecontents*}{\jobname.xmpdata}
-%\Title{Field Guide to Continuous Probability Distributions}
-%\Author{Gavin E. Crooks}
-%\Publisher{Berkeley Institute for Theoretical Science}
-%\Copyright{Copyright \copyright~2010-\number\year~ Gavin E. Crooks}
-%%\Isbn{978-1-7339381-0-5}
-%\end{filecontents*}
+
 
 % Use so that sections open on left hand pages
 \makeatletter

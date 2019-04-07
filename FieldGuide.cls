@@ -199,7 +199,7 @@
     }
 
 % ========== HyperRef setup ==========
-\RequirePackage[usenames,dvipsnames]{xcolor}
+\RequirePackage[usenames,dvipsnames,cmyk,hyperref]{xcolor}
 
 % To DO : Sort?\ RequirePackage[square,comma, numbers, sort]{natbib} \RequirePackage[square,comma, numbers, sort&compress]{natbib}
 
