@@ -127,8 +127,8 @@ The central hypothesis of this compendium is that most interesting univariate co
 \eqref{Halphen} & Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
 \eqref{GenHalphen} & gen.\ Halphen &.&.&$-\kappa$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
 \eqref{Hyperbola} & Hyperbola &.&.&$-\kappa$&1&$\kappa$&0&1&0&1 \checked \\
-\eqref{HalphenB} & Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$2$&0&1&0&1 \checked \\
-\eqref{InvHalphenB} & inv.\ Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$-2$&0&1&0&1 \checked \\
+\eqref{HalphenB} & Halphen B&.&.&$1$-$\alpha$&$-\kappa$&$2$ &1&0&0 &1  \\
+\eqref{InvHalphenB} & inv.\ Halphen B&.&.&-2&$-\kappa$&$\!\!1$-$\alpha$&0&1&0&1 \checked \\
 \eqref{Sichel} & Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&1 \checked \\
 \eqref{GenSichel} & gen.\ Sichel &.&.&$-\lambda$&$1$-$\alpha$&$\kappa$&0&1&0&$\beta$ \\
 \end{tabular} 
@@ -221,8 +221,8 @@ Limits to gamma, inverse gamma, and normal.
 
 % D[log(x^{(-1)} e^{-k x -k/x}),x]
 % D[log(x^{(a-1)} e^{-k x -k/x}),x]
-% D[log(x^{(a-1)} e^{-x^2 +k x}),x]
-% D[log(x^{(a-1)} e^{-x^(-2) +k / x}),x]
+% Halphen B: D[-log(x^{(a-1)} e^{-x^2 +k x}),x]
+% Inv. Halphen B:  D[-log(x^{(a-1)} e^{-x^(-2) +k / x}),x] 
 % Sichel: D[log(x^{(a-1)} e^{-k x -L/x}),x]
 \dist{Hyperbola} (harmonic) distribution~\cite{Halphen1941,Perreault1999}:
 \begin{align}
@@ -278,7 +278,7 @@ Limits to gamma distribution \eqref{Gamma} as $\kappa \rightarrow \infty$.
 \checked
 \notag
 \\
-& = \op{GUD}(x \given a,s\sep 1-\alpha, \kappa,  -2\sep 0,0,1\sep1) \checked
+& = \op{GUD}(x \given a,s\sep -2, -\kappa, 1-\alpha\sep 0,0,1\sep1) \checked
 \notag
 \\& \qquad  0 \leq \tfrac{x-a}{s}
 \notag
