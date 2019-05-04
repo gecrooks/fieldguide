@@ -18,6 +18,10 @@
 *.fdb_latexmk
 *.fls
 *.xdv
+*.lua
+*.timestamp
+*.xmpdata
+*.xmpi
 FieldGuide.pdf
 
 .DS_Store
