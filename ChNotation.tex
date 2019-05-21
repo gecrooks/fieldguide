@@ -110,10 +110,10 @@ P[ a\leq X \leq b] = \int_a^b f_X(x) dx \ . \checked
 
 \paragraph*{cumulative density function (CDF)} 
 \index{CDF|see{cumulative distribution function}}
-\index{CCDF|see{complimentary cumulative distribution function}}
+\index{CCDF|see{complementary cumulative distribution function}}
 \index{$F(x)$|see{cumulative distribution function}}
 \index{cumulative distribution function}
-\index{complimentary cumulative distribution function}
+\index{complementary cumulative distribution function}
 \index{distribution function|see{cumulative distribution function}}
 The probability that a random variable has a value equal or less than $x$, typically denoted by $F_X(x)$, and also called the distribution function for short.
 \[
@@ -125,21 +125,21 @@ The probability density is equal to the derivative of the distribution function,
 f_X(x) = \frac{d}{dx} F_X(x) \checked
 \notag
 \]
-Negating a scale parameter gives a reversed distribution with the cumulative distribution function replaced by the complimentary cumulative distribution function ($\text{CCDF}=1-\text{CDF}$).
+Negating a scale parameter gives a reversed distribution with the cumulative distribution function replaced by the complementary cumulative distribution function ($\text{CCDF}=1-\text{CDF}$).
 
 
 
-\paragraph*{complimentary cumulative density function (CCDF)}  (survival function, reliability function)
-\index{CCDF|see{complimentary cumulative distribution function}}
-\index{complimentary cumulative distribution function}
+\paragraph*{complementary cumulative density function (CCDF)}  (survival function, reliability function)
+\index{CCDF|see{complementary cumulative distribution function}}
+\index{complementary cumulative distribution function}
 \index{survival function}
 \index{reliability function}
-One minus the cumulative distribution function,  $1-F_X(x)$.\checked The probability that a random variable has a value greater than~$x$. In lifetime analysis the complimentary cumulative distribution function is also called the survival function or reliability function.
+One minus the cumulative distribution function,  $1-F_X(x)$.\checked The probability that a random variable has a value greater than~$x$. In lifetime analysis the complementary cumulative distribution function is also called the survival function or reliability function.
 
 
 
 \paragraph*{support}\index{range}\index{support}\index{image}
-The support of a probability density function are the set of values that have non-zero probability. The compliment of the support has zero probability. The range (or image) of a random variable (the set of values that can be generated) is the support of the corresponding probability density.
+The support of a probability density function are the set of values that have non-zero density. The compliment of the support has zero probability. The range (or image) of a random variable (the set of values that can be generated) is the support of the corresponding probability density.
 
 
 
@@ -164,7 +164,7 @@ Not all interesting distributions have finite means, notably the Cauchy family~\
  \expect\Left[ (X-\expect[X])^2\Right] = \expect\bigl[X^2\bigr] - \expect\bigl[X\bigr]^2
 \notag \checked
 \]
-The variance is also know as the second central moment, or second cumulant, and commonly denoted by the symbol $\sigma$. The standard deviation is the square root of the variance.
+The variance is also know as the second central moment, or second cumulant, and commonly denoted by the symbol $\sigma^2$. The standard deviation is the square root of the variance.
 
 
 \paragraph*{central moment}\index{central moment}
@@ -292,7 +292,7 @@ The quantile and median rarely have simple forms.
 
 
 \paragraph*{hazard function}\index{hazard function}\index{survival function}
-The ratio of the probability density function to the complimentary cumulative distribution function
+The ratio of the probability density function to the complementary cumulative distribution function
 \[
 \op{hazard}_X(x) = \frac{f_X(x)}{1-F_X(x)} \checked
 \notag
