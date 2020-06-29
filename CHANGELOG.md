@@ -1,0 +1,22 @@
+# Changelog
+
+## [1.0.1] - (In progress)
+
+### Added
+
+### Fixed
+- Added changelog
+- Updated urls, http -> https
+- Fix inconsistent use of scale and location in ch 17 (#2) Kudos: Albert Alex Zevelev
+- Added Pert to table 17.1 (#1) Kudos: Albert Alex Zevelev
+- Added "exponentiated Weibull" as alternative name for Beta-Fisher-Tippett
+- Added citations
+- Made hyphenation of central-X distributions consistent
+- Added missing minus sign when explaining logarithmic transform in Appendix A
+- Fix spelling (complimentary -> complementary). Kudos: Stefan Huschens
+- Fixed spelling and minor typos
+
+
+
+## [1.0.0] - 2019-04-01
+First print edition. For version history see Acknowledgments (page 4).
