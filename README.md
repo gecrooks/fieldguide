@@ -5,7 +5,7 @@ Gavin E. Crooks
 A survey of probability distributions used to describe a single, continuous, univariate random variable.
 
 PDF:
-	http://threeplusone.com/fieldguide
+	https://threeplusone.com/fieldguide
 
 Source Code:
 	https://github.com/gecrooks/fieldguide
@@ -15,3 +15,11 @@ Amazon:
 
 Compile: `latexmk -xelatex FieldGuide.tex`
 
+Citation:
+	@book{FieldGuide,
+		Author = {Gavin E. Crooks},
+		Edition = {1.0},
+		Note = {\url{https://threeplusone.com/fieldguide}},
+		Publisher = {BITS},
+		Title = {Field guide to continuous probability distributions},
+		Year = {2019}}
