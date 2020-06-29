@@ -71,10 +71,10 @@ Most commonly encountered as a model of income distribution.
 \eqref{GenBetaPrime}  & generalized beta prime & $a$ & $s$ & $\alpha$  &  $\gamma$ & ${\beta}$  \\
 \hline
 \eqref{Burr} & Burr 	        			&  .  &  .  &  1  &  .    &    .     \\
-\eqref{Dagum} & Dagum			&  0  &  1 &  .  &  1   &    .     \\
-\eqref{Paralogistic} & paralogistic			&  0 &  1  &  1  &  $\beta$    &    .     \\
-\eqref{InvParalogistic} & inverse paralogistic	&  0 &  1  &   $\beta$& 1    &    .     \\
-\eqref{LogLogistic} & log-logistic			&  0  &  . &  1  &  1  &    .     \\
+\eqref{Dagum} & Dagum			&  .  &  . &  .  &  1   &    .     \\
+\eqref{Paralogistic} & paralogistic			&  . &  .  &  1  &  $\beta$    &    .     \\
+\eqref{InvParalogistic} & inverse paralogistic	&  . &  .  &   $\beta$& 1    &    .     \\
+\eqref{LogLogistic} & log-logistic			&  .  &  . &  1  &  1  &    .     \\
 \eqref{GenBetaPrime} & transformed beta			&  0  &  . &  .  &  .  &    .     \\
 \eqref{HalfGenPearsonVII} & half gen. Pearson VII 		&  .  &  . &  $\tfrac{1}{\beta}$  &  $m$-$\tfrac{1}{\beta}$  &    .     \\
 \eqref{BetaPrime} & beta prime		& . & . & . & . & 1  \\
@@ -98,7 +98,7 @@ Most commonly encountered as a model of income distribution.
 \dist{Dagum} (Inverse Burr, Burr type III, Dagum type I,  beta-kappa, beta-k, Mielke) distribution~\cite{Burr1942, Dagum1977, Tadikamalla1980}:
 \begin{align}
 \label{Dagum}
-\opr{Dagum}(x\given  \gamma,\beta) 
+\opr{Dagum}(x \given a, s, \gamma, \beta)
 %&= \gamma \beta \frac{x^{\gamma\beta-1}}{ (1+x^\beta)^{\gamma +1} }  \\
 &=  \frac{\beta \gamma}{|s|} \Left(\frac{x-a}{s}\Right)^{\gamma \beta-1}  \Left(1+\Left(\frac{x-a}{s}\Right)^\beta\Right)^{-\gamma-1} 
 \checked
@@ -132,7 +132,7 @@ Most commonly encountered as a model of income distribution.
 \label{LogLogistic}
 \opr{LogLogistic}(x\given a,s,\beta) &=\Left|\frac{\beta}{s}\Right| \frac{\Left(\frac{x-a}{s}\Right)^{\beta-1}}{ \Left(1+\Left(\frac{x-a}{s}\Right)^{\beta}\Right)^{2} } \checked
 \\ \notag &= \opr{Burr}(x\given a, s, 1,\beta) \checked
-\\ \notag &= \opr{GenBetaPrime}(x\given 0, s, 1,1,\beta) \checked
+\\ \notag &= \opr{GenBetaPrime}(x\given a, s, 1,1,\beta) \checked
 \end{align}
 Used as a parametric model for survival analysis and, in economics, as a model for the distribution of wealth or income.
 The logistic and log-logistic distributions are related by an exponential transform. 
