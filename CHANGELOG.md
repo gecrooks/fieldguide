@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.0.1] - (In progress)
-
-### Added
+## [1.0.1] - 2021-01-18
 
 ### Fixed
+- Made non-central consistently noncentral
+- Fixed LogLogistic relation to GenBetaPrime Kudos: Robert Calvert Jump
 - Added changelog
 - Updated urls, http -> https
 - Fix inconsistent use of scale and location in ch 17 (#2) Kudos: Albert Alex Zevelev
