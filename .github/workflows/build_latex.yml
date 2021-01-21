@@ -8,5 +8,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Install latex
         run: sudo apt-get install -y texlive-xetex
+        run: sudo apt-get install -y latexmk        
       - name: Compile LaTeX document
         run: latexmk -xelatex FieldGuide.tex
