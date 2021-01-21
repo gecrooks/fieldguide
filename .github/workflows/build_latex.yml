@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+      - name: Install latex
+        run: apt-get install -y latexmk
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: FieldGuide.tex
+        run: latexmk -xelatex FieldGuide.tex
