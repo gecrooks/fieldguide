@@ -1,7 +1,7 @@
 # Changelog
 
 
-## v1.0.2
+## v1.0.2 (2021-01-21)
 - Added an Oxford comma
 - Added font resources
 
