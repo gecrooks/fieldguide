@@ -7,6 +7,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Install latex
-        run: sudo apt-get install -y texlive-xetex latexmk
+        run: sudo apt-get install -y texlive texlive-xetex latexmk
       - name: Compile LaTeX document
         run: latexmk -xelatex FieldGuide.tex
