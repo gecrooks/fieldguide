@@ -16,7 +16,7 @@ jobs:
       - name: Install latex
         run: sudo apt-get install -y texlive texlive-xetex texlive-fonts-extra latexmk
       - name: Compile LaTeX document
-        run: latexmk -xelatex FieldGuide.tex          
+        run: make build         
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
