@@ -9,7 +9,7 @@ help:
 
 
 version: ## Extract version from git tag and write to version.tex
-	git describe --tags --always --abbrev=0 > version.txt
+	git describe --tags  --abbrev=0 > version.txt || echo "No tags"
 	@git describe --tags
 
 
@@ -24,6 +24,5 @@ edit:  ## Open all tex documents
 
 clean:	## Clean
 	latexmk -C
-
 
 .PHONY: help
