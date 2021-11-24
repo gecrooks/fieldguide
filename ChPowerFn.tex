@@ -122,11 +122,11 @@ With a positive scale we obtain an {\bf ascending wedge} (right triangular) dist
 \dist{Pareto} (Pearson XI, Pareto type I) distribution~\cite{Pareto1964, Pearson1916, Johnson1994}:
 \begin{align}
 \label{Pareto}
-\opr{Pareto}(x\given a,s,\gamma) &= \Left| \frac{\bar{\beta}}{s}\Right| \Left(\frac{x-a}{s}\Right)^{-\bar{\beta}-1}   \qquad \bar{\beta}>0
+\opr{Pareto}(x\given a,s,\gamma) &= \Left| \frac{\gamma}{s}\Right| \Left(\frac{x-a}{s}\Right)^{\gamma-1}   \qquad \gamma>0
 \checked
 \\ \notag & \qquad x > a+s, \ s>0
 \\ \notag & \qquad x < a+s, \ s<0
- \\ \notag &= \opr{PowerFn}(x\given a, s, -\bar{\beta}) \checked
+ \\ \notag &= \opr{PowerFn}(x\given a, s, \bar{\beta}) \checked
 \end{align}
 The most important special case is the Pareto distribution, which has a semi-infinite support with a power-law tail. The Zipf distribution \index{Zipf distribution} is the discrete analog of the Pareto distribution.
 
