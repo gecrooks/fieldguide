@@ -16,7 +16,7 @@ jobs:
       - name: Install latex
         run: sudo apt-get install -y texlive texlive-xetex texlive-fonts-extra latexmk
       - name: Compile LaTeX document  
-        run: 
+        run: |
           git fetch --unshallow --tags   
           make build         
       - name: Create Release
