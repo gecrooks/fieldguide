@@ -1,6 +1,11 @@
 # Changelog
 
 
+## v1.0.3 (202?-??-??)
+- Fixed parameterization of Pareto distribution. Kudos: Marijan Smetko
+
+
+
 ## v1.0.2 (2021-01-21)
 - Added an Oxford comma
 - Added font resources
