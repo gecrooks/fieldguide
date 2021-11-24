@@ -1,7 +1,7 @@
 # Changelog
 
 
-## v1.0.3 (202?-??-??)
+## v1.0.3 (2021-11-24)
 - Fixed parameterization of Pareto distribution. Kudos: Marijan Smetko
 
 
