@@ -9,7 +9,7 @@ help:
 
 
 version: ## Extract version from git tag and write to version.tex
-	git describe --tags --abbrev=0 > version.txt
+	git describe --tags --always --abbrev=0 > version.txt
 	@git describe --tags
 
 
