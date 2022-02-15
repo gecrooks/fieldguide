@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.4 (2022-02-14)
+- Fix parameterization linking the generalized Gumbel distribution to its parent
+  gamma-exponential distribution (8.4). Kudos: John Ashley Burgoyne @jaburgoyne
+
 
 ## v1.0.3 (2021-11-24)
 - Fixed parameterization of Pareto distribution. Kudos: Marijan Smetko
